@@ -1,1 +1,6 @@
+---
 
+templateKey: 'home-page'
+path: /
+
+---
