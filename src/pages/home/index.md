@@ -1,6 +1,1 @@
----
 
-templateKey: 'home-page'
-path: /
-
----

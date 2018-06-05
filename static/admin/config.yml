@@ -26,10 +26,9 @@ collections:
         label: "About"
         name: "about"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
-          - {label: "Banner Image", name: "bannerImg", widget: "image"}
-          - {label: "Primary Text", name: "primaryText", widget: "string"}
-          - {label: "Secondary Text", name: "secondaryText", widget: "string"}
+          - {label: "Banner Image", name: "banner_img", widget: "image"}
+          - {label: "Primary Text", name: "primary_text", widget: "string"}
+          - {label: "Secondary Text", name: "secondary_text", widget: "string"}
           - {label: "Intro", name: "intro", widget: "markdown"}
       - file: "src/pages/products/index.md"
         label: "Products Page"
