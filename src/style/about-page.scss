@@ -3,51 +3,63 @@
 div.splash {
   font-family: $jd-sans;
   display: grid;
-  grid-template-rows: repeat(2, 50%);
-  div.hed {
-    font-weight: bold;
-    font-size: 72px;
+  grid-template-columns: repeat(2, 50%);
+  div.hed, div.subhed {
     color: white;
     grid-column-start: 1;
     grid-column-end: 1;
+  }
+  div.hed {
+    font-weight: bold;
+    font-size: 72px;
     text-transform: uppercase;
   }
   div.subhed {
     font-weight: medium;
     font-size: 36px;
-    color: white;
   }
-  form.splash-signup {
-    display: grid;
-    width: 50%;
+  div.form {
+    grid-column-start: 1;
+    form.splash-signup {
+      display: grid;
+      width: 100%;
+      @include breakpoint(desktop) {
+        grid-template-columns: repeat(2, $desktop/2);
+        grid-column-gap: 30px;
+      }
+      @include breakpoint(laptop) {
+        grid-template-columns: 100%;
+      }
+      div.field {
+        grid-column: span 1;
+      }
+      input {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      input::placeholder {
+        color: white;
+      }
+      input[type="text"] {
+        height: 80px;
+        // max-width: 410px;
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid white;
+      }
+      input[type="submit"] {
+        border: 0px;
+        grid-column-start: span 2;
+        height: 100px;
+        @include orange-bg;
+      }
+    }
+  }
+  div.content {
     @include breakpoint(desktop) {
-      grid-template-columns: repeat(2, $desktop/2);
-      grid-column-gap: 30px;
+      grid-column-start: 2;
     }
     @include breakpoint(laptop) {
-      grid-template-columns: 100%;
-    }
-    input {
-      display:inline;
-      font-size: 20px;
-      font-weight: bold;
-      grid-column-start: span 1;
-      width: 100%;
-    }
-    input::placeholder {
-      color: white;
-    }
-    input[type="text"] {
-      height: 80px;
-      max-width: 410px;
-      background-color: rgba(0, 0, 0, 0);
-      border: 1px solid white;
-    }
-    input[type="submit"] {
-      border: 0px;
-      grid-column-start: span 2;
-      height: 100px;
-      @include orange-bg;
+      grid-column-start: 1;
     }
   }
 }

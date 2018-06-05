@@ -12,8 +12,12 @@ export const SplashPageTemplate = ({ title, hed, subhed, content, bgimg, content
       <div className="subhed">{subhed}</div>
       <div className="form">
         <form className="splash-signup" name="splash-signup" netlify="true">
-          <input type="text" name="name" placeholder="Name [required]" />
-          <input type="text" name="email" placeholder="Email [required]" />
+          <div className="field">
+            <input type="text" name="name" placeholder="Name [required]" />
+          </div>
+          <div className="field">
+            <input type="text" name="email" placeholder="Email [required]" />
+          </div>
           <input type="text" name="zip" placeholder="Zip [required]" />
           <input type="text" name="phone" placeholder="Phone [optional]" />
           <input type="submit" name="submit" value="JOIN US" />
