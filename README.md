@@ -2,8 +2,6 @@
 
 This is cloned from https://github.com/AustinGreen/gatsby-starter-netlify-cms.
 
-Continuous deployment is set up from master, so be careful!
-
 ## Running Locally
 
 I'm using Node 8.11.2.
