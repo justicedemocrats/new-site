@@ -1,0 +1,12 @@
+// Color definitions
+$jd-dark-blue: #1c6087;
+$jd-light-blue: #0096b4;
+$jd-orange: #ff8c06;
+
+// Font definitions
+$jd-sans: Montserrat, sans-serif;
+
+@mixin orange-bg {
+  background-color: $jd-orange;
+  color: white;
+}
