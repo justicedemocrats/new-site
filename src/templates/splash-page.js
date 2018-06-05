@@ -8,14 +8,20 @@ export const SplashPageTemplate = ({ title, hed, subhed, content, bgimg, content
 
   return (
     <div className="splash" style={{backgroundImage: `url(${bgimg})`}}>
-      <form className="splash-signup" name="splash-signup" netlify="true">
-        <input type="text" name="name" placeholder="Name [required]" />
-        <input type="text" name="email" placeholder="Email [required]" />
-        <input type="text" name="zip" placeholder="Zip [required]" />
-        <input type="text" name="phone" placeholder="Phone [optional]" />
-        <input type="submit" name="submit" value="JOIN US" />
-      </form>
-      <PageContent className="content" content={content} />
+      <div className="hed">{hed}</div>
+      <div className="subhed">{subhed}</div>
+      <div className="form">
+        <form className="splash-signup" name="splash-signup" netlify="true">
+          <input type="text" name="name" placeholder="Name [required]" />
+          <input type="text" name="email" placeholder="Email [required]" />
+          <input type="text" name="zip" placeholder="Zip [required]" />
+          <input type="text" name="phone" placeholder="Phone [optional]" />
+          <input type="submit" name="submit" value="JOIN US" />
+        </form>
+      </div>
+      <div className="content">
+        <PageContent className="content" content={content} />
+      </div>
     </div>
   )
 }

@@ -1,6 +1,22 @@
 @import 'includes/includes';
 
 div.splash {
+  font-family: $jd-sans;
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+  div.hed {
+    font-weight: bold;
+    font-size: 72px;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    text-transform: uppercase;
+  }
+  div.subhed {
+    font-weight: medium;
+    font-size: 36px;
+    color: white;
+  }
   form.splash-signup {
     display: grid;
     width: 50%;
@@ -15,7 +31,6 @@ div.splash {
       display:inline;
       font-size: 20px;
       font-weight: bold;
-      font-family: $jd-sans;
       grid-column-start: span 1;
       width: 100%;
     }
