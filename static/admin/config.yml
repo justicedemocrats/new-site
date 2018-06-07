@@ -6,6 +6,20 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "candidates"
+    label: "Candidates"
+    folder: "src/pages/candidates"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "candidate-fragment"}
+      - {label: "First Name", name: "firstName", widget: "string"}
+      - {label: "Last Name", name: "lastName", widget: "string"}
+      - {label: "District", name: "district", widget: "string"}
+      - {label: "State", name: "state", widget: "string"}
+      - {label: "Election Date", name: "electionDate", widget: "date"}
+      - {label: "Election Type", name: "electionType", widget: "string"}
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
