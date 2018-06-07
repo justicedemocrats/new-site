@@ -11,13 +11,14 @@ collections:
     folder: "src/pages/candidates"
     create: true
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "candidate"}
-      - {label: "First Name", name: "firstName", widget: "text"}
-      - {label: "Last Name", name: "lastName", widget: "text"}
-      - {label: "District", name: "district", widget: "text"}
-      - {label: "State", name: "state", widget: "text"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "candidate-page"}
+      - {label: "First Name", name: "firstName", widget: "string"}
+      - {label: "Last Name", name: "lastName", widget: "string"}
+      - {label: "District", name: "district", widget: "string"}
+      - {label: "State", name: "state", widget: "string"}
       - {label: "Election Date", name: "electionDate", widget: "date"}
-      - {label: "Election Type", name: "electionType", widget: "text"}
+      - {label: "Election Type", name: "electionType", widget: "string"}
 
   - name: "blog"
     label: "Blog"
