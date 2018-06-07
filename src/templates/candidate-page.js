@@ -73,7 +73,7 @@ export const candidatePageQuery = graphql`
       edges {
         node {
           frontmatter {
-            firstName
+            title
           }
         }
       }
