@@ -7,28 +7,32 @@ export const SplashPageTemplate = ({ title, hed, subhed, content, bgimg, content
   const PageContent = contentComponent || Content
 
   return (
-    <div className="splash" style={{backgroundImage: `url(${bgimg})`}}>
-      <div className="hed">{hed}</div>
-      <div className="subhed">{subhed}</div>
-      <div className="form">
-        <form className="splash-signup" name="splash-signup" netlify="true">
-          <div className="field">
-            <input type="text" name="name" placeholder="Name [required]" />
-          </div>
-          <div className="field">
-            <input type="text" name="email" placeholder="Email [required]" />
-          </div>
-          <input type="text" name="zip" placeholder="Zip [required]" />
-          <input type="text" name="phone" placeholder="Phone [optional]" />
-          <input type="submit" name="submit" value="JOIN US" />
-        </form>
-      </div>
-      <div className="content">
+    <div className="container" style={{backgroundImage: `url(${bgimg})`}}>
+      <div className="splash">
+        <div className="hed">{hed}</div>
+        <div className="subhed">{subhed}</div>
+        <div className="form">
+          <form className="splash-signup" name="splash-signup" netlify="true">
+            <div className="field">
+              <input type="text" name="name" placeholder="Name [required]" />
+            </div>
+            <div className="field">
+              <input type="text" name="email" placeholder="Email [required]" />
+            </div>
+            <div className="field">
+              <input type="text" name="zip" placeholder="Zip [required]" />
+            </div>
+            <div className="field">
+              <input type="text" name="phone" placeholder="Phone [optional]" />
+            </div>
+            <input type="submit" name="submit" value="JOIN US" />
+          </form>
+        </div>
         <PageContent className="content" content={content} />
       </div>
     </div>
-  )
-}
+    )
+  }
 
 SplashPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,

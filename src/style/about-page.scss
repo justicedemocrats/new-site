@@ -1,60 +1,88 @@
 @import 'includes/includes';
 
+$grid-gutter: 20px; // for the overall layout grid
+$form-column-gap: 30px;
+$form-input-maxwidth: 410px;
+$column1-maxwidth: 2*$form-input-maxwidth + $form-column-gap;
+html {
+  @include breakpoint(laptop) {
+    font-size: 16px;
+  }
+  @include breakpoint(tablet) {
+    font-size: 14px;
+  }
+}
+div.container {
+  background-size: cover;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  padding: 2rem;
+}
 div.splash {
   font-family: $jd-sans;
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-column-gap: $grid-gutter;
+  grid-row-gap: $grid-gutter;
+  grid-template-columns: repeat(auto-fit, minmax(auto, $column1-maxwidth));
+  margin: 0 auto;
   div.hed, div.subhed {
     color: white;
-    grid-column-start: 1;
-    grid-column-end: 1;
+    grid-column: 1/2;
   }
   div.hed {
     font-weight: bold;
-    font-size: 72px;
+    font-size: 2.5rem;
     text-transform: uppercase;
+    grid-row: 1/2;
   }
   div.subhed {
     font-weight: medium;
-    font-size: 36px;
+    font-size: 1.5rem;
+    grid-row: 2/3;
   }
   div.form {
     grid-column-start: 1;
     form.splash-signup {
       display: grid;
-      width: 100%;
-      @include breakpoint(desktop) {
-        grid-template-columns: repeat(2, $desktop/2);
-        grid-column-gap: 30px;
-      }
-      @include breakpoint(laptop) {
-        grid-template-columns: 100%;
-      }
-      div.field {
-        grid-column: span 1;
-      }
+      grid-column-gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(auto, $form-input-maxwidth));
       input {
-        font-size: 20px;
+        font-size: 1.5rem;
         font-weight: bold;
+        color: white;
       }
       input::placeholder {
         color: white;
       }
       input[type="text"] {
         height: 80px;
-        // max-width: 410px;
+        width: 100%;
         background-color: rgba(0, 0, 0, 0);
         border: 1px solid white;
+        text-align: center;
       }
       input[type="submit"] {
         border: 0px;
-        grid-column-start: span 2;
+        grid-column: 1/-1;
         height: 100px;
+        font-size: 48px;
+        font-weight: bold;
         @include orange-bg;
       }
     }
   }
   div.content {
+    font-size: 1rem;
+    color: white;
+    h3 {
+      font-weight: bold;
+      color: white;
+    }
+    ul {
+      margin-left: 0;
+      list-style: disc inside;
+    }
     @include breakpoint(desktop) {
       grid-column-start: 2;
     }
