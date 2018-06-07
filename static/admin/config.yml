@@ -10,7 +10,6 @@ collections:
     label: "Candidates"
     folder: "src/pages/candidates"
     create: true
-    slug: "{{ firstName }}-{{ lastName }}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "candidate"}
       - {label: "First Name", name: "firstName", widget: "text"}
