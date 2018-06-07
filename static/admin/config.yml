@@ -12,7 +12,7 @@ collections:
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "candidate-page"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "candidate-fragment"}
       - {label: "First Name", name: "firstName", widget: "string"}
       - {label: "Last Name", name: "lastName", widget: "string"}
       - {label: "District", name: "district", widget: "string"}
