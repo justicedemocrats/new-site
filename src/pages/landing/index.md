@@ -19,5 +19,37 @@ blocks:
       venihicae. Xerum re et reptat fugia cus il in res estiuscil idel imagnih
       itatur aut as atur. Xerum re et reptat fugia cus il in res estiuscil idel
       imagnih itatur aut as atur. Vollori di teniminctur fuga.
+  - bannerButtonText: Donate
+    bannerButtonUrl: /donate
+    bannerText: '$XXX,XXX Raised'
+    calloutIcon: /img/coffee.png
+    calloutText: >-
+      Health care, housing, education, living wage, and a world not destroyed by
+      climate change and aggressive wars of choice should be the standard.
+    header: Social and Economic Justice.
+    moreButtonText: All Policies
+    moreButtonUrl: /platform
+    subheader: >-
+      The question is not "if", but "how" and "when". Every Justice Democrat is
+      fighting for:
+
+
+      * Item #1
+
+      * Item #2
+
+      * Item #3
+  - bannerButtonText: Sign Up
+    bannerButtonUrl: /volunteer
+    bannerText: 'XXX,XXX Volunteers'
+    calloutIcon: /img/coffee-gear.png
+    calloutText: ' '
+    header: Policies and Legislation for the People
+    moreButtonText: Read Report
+    moreButtonUrl: /report
+    subheader: >-
+      **Justice Democrats is teaming up with other organizations to look into
+      policies and data **to something something Something short here about the
+      report. Something short here about the report.
 ---
 
