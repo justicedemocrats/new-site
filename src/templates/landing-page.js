@@ -27,7 +27,7 @@ const LandingPage = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <AboutPageTemplate
+    <LandingPageTemplate
       contentComponent={HTMLContent}
       title={post.frontmatter.title}
       content={post.html}
