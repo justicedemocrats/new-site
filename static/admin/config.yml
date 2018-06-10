@@ -70,9 +70,10 @@ collections:
               - {label: "Banner Text", name: "bannerText", widget: "string"}
               - {label: "Banner Button Text", name: "bannerButtonText", widget: "string"}
               - {label: "Banner Button url", name: "bannerButtonUrl", widget: "string"}
+              - {label: "Alignment", name: "alignment", widget: "string"}
               - {label: "Content Header", name: "header", widget: "string"}
               - {label: "Content Sub-Header", name: "subheader", widget: "string"}
-              - {label: "Content Sub-Header", name: "subheader", widget: "markdown"}
+              - {label: "Content", name: "htmlContent", widget: "markdown"}
               - {label: "More Button Text", name: "moreButtonText", widget: "string"}
               - {label: "More Button Url", name: "moreButtonUrl", widget: "string"}
               - {label: "Call Out Icon", name: "calloutIcon", widget: "image"}
