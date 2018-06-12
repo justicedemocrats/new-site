@@ -7,4 +7,5 @@ district: '100'
 state: New York
 electionDate: '2018-06-07'
 electionType: Fake
+office: governor
 ---

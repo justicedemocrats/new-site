@@ -1,20 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Content, { HTMLContent } from "../components/Content";
+import Candidate from '../components/Candidate'
 
 export const CandidatePageTemplate = ({ candidates }) => {
   return (
     <div>
-      {candidates.map(({ firstName, lastName, electionType, electionDate }) => (
-        <div>
-          <div>
-            {firstName} {lastName}
-          </div>
-          <div>
-            Election for {electionType} on {electionDate}
-          </div>
-        </div>
-      ))}
+      {candidates.map((props, i) => <Candidate key={i} {...props} /> )}
     </div>
   );
 };
@@ -51,8 +43,16 @@ export const pageQuery = graphql`
           frontmatter {
             firstName
             lastName
-            electionDate
+            office
             electionType
+            incumbent
+            district
+            state
+            electionDate
+            image
+            website
+            donationLink
+            outcome
           }
         }
       }
