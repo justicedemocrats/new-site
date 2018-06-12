@@ -1,0 +1,21 @@
+div.navbar {
+  height: 100px;
+}
+
+div.splash-navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  div {
+    display: inline; height: 100px;
+  }
+  div.img {
+    align-self:center;
+    width: 350px;
+  }
+  div.enter-site {
+    align-self: flex-end;
+    width: 350px;
+  }
+}

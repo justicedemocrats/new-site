@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Content, { HTMLContent } from '../components/Content'
-import '../style/about-page.scss'
+import '../style/splash-page.scss'
 
 export const SplashPageTemplate = ({ title, hed, subhed, content, bgimg, contentComponent }) => {
   const PageContent = contentComponent || Content
