@@ -7,11 +7,11 @@ const Navbar = ({path}) => {
   var navbarContents
   switch(path) { // This is clunky, but it seems to be the best way to do route-specific rendering here without swapping out the navbar entirely.
     case '/splash':
-      navbarContents = (<ul className="splash-navbar">
-        <li className="empty"></li>
+      navbarContents =
+      <ul className="splash-navbar">
         <li className="img"><img src="/assets/jd-logo-horiz.png"/></li>
         <li className="enter-site"><div><p>Enter Site</p></div></li>
-      </ul>)
+      </ul>
       break;
     default:
       navbarContents = <div>hello world</div>

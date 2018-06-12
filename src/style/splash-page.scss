@@ -4,14 +4,6 @@ $grid-gutter: 20px; // for the overall layout grid
 $form-column-gap: 30px;
 $form-input-maxwidth: 410px;
 $column1-maxwidth: 2*$form-input-maxwidth + $form-column-gap;
-html {
-  @include breakpoint(laptop) {
-    font-size: 16px;
-  }
-  @include breakpoint(tablet) {
-    font-size: 14px;
-  }
-}
 div.container {
   background-size: cover;
   margin: 0 auto;
