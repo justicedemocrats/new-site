@@ -35,6 +35,10 @@ const Candidate = ({
         <span className="name">{firstName} {lastName}</span>
         <span className="incumbent">{incumbent && '(Incumbent)'}</span>
       </div>
+      <div className="raceTwo">
+        {state}-
+        {office == 'house' ? district : officeTypeMap[office]}
+      </div>
     </div>
   </div>
 )
