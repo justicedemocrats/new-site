@@ -1,13 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Content, { HTMLContent } from "../components/Content";
-import Candidate from '../components/Candidate'
+import Candidate from "../components/Candidate";
 
 export const CandidatePageTemplate = ({ candidates }) => {
   return (
-    <div>
-      {candidates.map((props, i) => <Candidate key={i} {...props} /> )}
-    </div>
+    <div>{candidates.map((props, i) => <Candidate key={i} {...props} />)}</div>
   );
 };
 
@@ -45,17 +43,40 @@ export const pageQuery = graphql`
             lastName
             office
             electionType
-            incumbent
             district
             state
             electionDate
             image
-            website
-            donationLink
-            outcome
           }
         }
       }
     }
   }
 `;
+
+// export const idealQuery = graphql`
+//   query CandidateQuery {
+//     allMarkdownRemark(
+//       filter: { frontmatter: { templateKey: { eq: "candidate-fragment" } } }
+//     ) {
+//       edges {
+//         node {
+//           frontmatter {
+//             firstName
+//             lastName
+//             office
+//             electionType
+//             incumbent
+//             district
+//             state
+//             electionDate
+//             image
+//             website
+//             donationLink
+//             outcome
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;

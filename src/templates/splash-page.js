@@ -1,13 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Content, { HTMLContent } from '../components/Content'
-import '../style/splash-page.scss'
+import React from "react";
+import PropTypes from "prop-types";
+import Content, { HTMLContent } from "../components/Content";
+import "../style/splash-page.scss";
 
-export const SplashPageTemplate = ({ title, hed, subhed, content, bgimg, contentComponent }) => {
-  const PageContent = contentComponent || Content
+export const SplashPageTemplate = ({
+  title,
+  hed,
+  subhed,
+  content,
+  bgimg,
+  contentComponent
+}) => {
+  const PageContent = contentComponent || Content;
 
   return (
-    <div className="container" style={{backgroundImage: `url(${bgimg})`}}>
+    <div className="container" style={{ backgroundImage: `url(${bgimg})` }}>
       <div className="splash">
         <div className="hed">{hed}</div>
         <div className="subhed">{subhed}</div>
@@ -31,8 +38,8 @@ export const SplashPageTemplate = ({ title, hed, subhed, content, bgimg, content
         <PageContent className="content" content={content} />
       </div>
     </div>
-    )
-  }
+  );
+};
 
 SplashPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
@@ -40,11 +47,11 @@ SplashPageTemplate.propTypes = {
   subhed: PropTypes.string.isRequired,
   bgimg: PropTypes.string.isRequired,
   content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
+  contentComponent: PropTypes.func
+};
 
 const SplashPage = ({ data }) => {
-  const { markdownRemark: page } = data
+  const { markdownRemark: page } = data;
 
   return (
     <SplashPageTemplate
@@ -55,14 +62,14 @@ const SplashPage = ({ data }) => {
       content={page.html}
       bgimg={page.frontmatter.bgimg}
     />
-  )
-}
+  );
+};
 
 SplashPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
+  data: PropTypes.object.isRequired
+};
 
-export default SplashPage
+export default SplashPage;
 
 export const splashPageQuery = graphql`
   query SplashPage($id: String!) {
@@ -76,4 +83,4 @@ export const splashPageQuery = graphql`
       }
     }
   }
-`
+`;

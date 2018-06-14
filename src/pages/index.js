@@ -1,22 +1,48 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Link from "gatsby-link";
-import Block from "../components/HomeBlock";
+// import Link from "gatsby-link";
+// import Block from "../components/HomeBlock";
 import HomeBlock from "../components/HomeBlock";
 
-export default class IndexPage extends React.Component {
-  render() {
-    const { data } = this.props;
-    console.log(data.allMarkdownRemark.edges[0].node);
-    const { title, blocks } = data.allMarkdownRemark.edges[0].node.frontmatter;
+const IndexPage = ({ data }) => {
+  const { blocks } = data.allMarkdownRemark.edges[0].node.frontmatter;
+  return (
+    <div className="container">
+      <div className="sign-up row">
+        {["Name", "Email", "Zip", "Phone"].map(name => (
+          <div className="two columns">
+            <input
+              className="u-full-width"
+              placeholder={name}
+              {...{
+                Name: { type: "text" },
+                Email: { type: "email" },
+                Zip: { type: "text", maxLength: 5 },
+                Phone: { type: "tel" }
+              }[name]}
+            />
+          </div>
+        ))}
+        <div className="four columns">
+          <button
+            type="submit"
+            className="button button-primary"
+            style={{ fontWeight: "bold", textTransform: "uppercase" }}
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+      {blocks.map(b => <HomeBlock {...b} />)}
+    </div>
+  );
+};
 
-    return (
-      <section className="section">
-        {blocks.map(b => <HomeBlock {...b} />)}
-      </section>
-    );
-  }
-}
+IndexPage.propTypes = {
+  data: PropTypes.object.isRequired
+};
+
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -38,6 +64,8 @@ export const pageQuery = graphql`
               bannerButtonText
               moreButtonUrl
               moreButtonText
+              htmlContent
+              alignment
             }
           }
         }
