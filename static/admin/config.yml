@@ -24,6 +24,7 @@ collections:
       - {label: "Donation Link", name: "donationLink", widget: "string"}
       - {label: "Outcome", name: "outcome", widget: "select", options: ["Won", "Lost"]}
       - {label: "Image", name: "image", widget: "image"}
+      - {label: "Blurb", name: "blurb", widget: "text"}
 
   - name: "blog"
     label: "Blog"
