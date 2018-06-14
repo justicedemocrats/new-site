@@ -1,0 +1,23 @@
+@import 'includes/vars';
+
+div.candidate {
+  div.headshot {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center;
+    div.meta {
+      background-color: $jd-light-blue;
+      width: 100%;
+      color: white;
+      font-weight: bold;
+      font-size: 2rem;
+      height: 3rem;
+      text-align: center;
+    }
+  }
+}
