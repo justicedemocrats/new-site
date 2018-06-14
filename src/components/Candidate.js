@@ -20,20 +20,20 @@ const Candidate = ({
   website,
   donationLink,
   outcome,
-  office
+  office,
+  incumbent
 }) => (
-  <div className="candidate container">
-    <div className="row">
-      <div className="six columns headshot" style={{ backgroundImage: `url(${image || defaultImage})` }}>
-        <div className="meta">
-          {state}-
-          {office == "house" ? district : officeTypeMap[office]}
-        </div>
+  <div className="candidate">
+    <div className="headshot" style={{ backgroundImage: `url(${image || defaultImage})` }}>
+      <div className="race">
+        {state}-
+        {office == 'house' ? district : officeTypeMap[office]}
       </div>
-      <div className="six columns">
-        <div className="name">
-          {firstName} {lastName}
-        </div>
+    </div>
+    <div className="meta">
+      <div className="nameIncumbent">
+        <span className="name">{firstName} {lastName}</span>
+        <span className="incumbent">{incumbent && '(Incumbent)'}</span>
       </div>
     </div>
   </div>

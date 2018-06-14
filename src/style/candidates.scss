@@ -1,0 +1,8 @@
+div.candidates {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  div.candidate:not(:last-child) {
+    padding-right: 2em;
+  }
+}
