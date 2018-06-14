@@ -7,6 +7,10 @@ const officeTypeMap = {
   governor: 'GOV',
   senate: 'SN'
 }
+const electionTypeMap = {
+  fake: 'FAKE',
+  primary: 'Primary'
+}
 
 const Candidate = ({
   firstName,
@@ -22,26 +26,40 @@ const Candidate = ({
   outcome,
   office,
   incumbent
-}) => (
-  <div className="candidate">
-    <div className="headshot" style={{ backgroundImage: `url(${image || defaultImage})` }}>
-      <div className="race">
-        {state}-
-        {office == 'house' ? district : officeTypeMap[office]}
+}) => {
+  let ed = new Date(electionDate)
+  let [d, m] = [ed.getDate(), ed.getMonth()]
+  m = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][m]
+  return (
+    <div className="candidate">
+      <div className="headshot" style={{ backgroundImage: `url(${image || defaultImage})` }}>
+        <div className="office">
+          {state}-
+          {office == 'house' ? district : officeTypeMap[office]}
+        </div>
+      </div>
+      <div className="meta">
+        <div className="nameIncumbent">
+          <span className="name">{firstName} {lastName}</span>
+          <span className="incumbent">{incumbent && '(Incumbent)'}</span>
+        </div>
+        <div className="office">
+          {state}-
+          {office == 'house' ? district : officeTypeMap[office]}
+        </div>
+        <div className="raceDate">
+          <span className="race">
+            {electionType === 'general' ? 'General Election' : `${state} ${electionTypeMap[electionType]}`}
+          </span>
+          |
+          <span className="date">
+            {m} {d}
+          </span>
+        </div>
       </div>
     </div>
-    <div className="meta">
-      <div className="nameIncumbent">
-        <span className="name">{firstName} {lastName}</span>
-        <span className="incumbent">{incumbent && '(Incumbent)'}</span>
-      </div>
-      <div className="raceTwo">
-        {state}-
-        {office == 'house' ? district : officeTypeMap[office]}
-      </div>
-    </div>
-  </div>
-)
+  )
+}
 
 Candidate.propTypes = {
   firstName: PropTypes.string.isRequired,
