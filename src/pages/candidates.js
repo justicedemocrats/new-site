@@ -20,15 +20,6 @@ export const CandidatePageTemplate = ({ candidates }) => {
   );
 };
 
-CandidatePageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  hed: PropTypes.string.isRequired,
-  subhed: PropTypes.string.isRequired,
-  bgimg: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func
-};
-
 const CandidatePage = ({ data }) => {
   const { allMarkdownRemark: { edges } } = data;
   const candidates = edges.map(edge => edge.node.frontmatter);
