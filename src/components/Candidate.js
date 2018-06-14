@@ -14,30 +14,28 @@ const Candidate = ({
   donationLink,
   outcome,
   office
-}) => {
-  return (
-    <div className="container">
-      <div className="row">
-        <div class="six columns">
-          <a href={website} className="button">
-            Website
-          </a>
-        </div>
-        <div class="six columns">
-          <a href={donationLink} className="button">
-            Donate
-          </a>
-        </div>
+}) => (
+  <div className="container">
+    <div className="row">
+      <div class="six columns">
+        <a href={website} className="button">
+          Website
+        </a>
       </div>
-      <div className="row">
-        {firstName} {lastName}
-      </div>
-      <div className="row" style={{ textTransform: "capitalize" }}>
-        {state} {office == "house" ? district : office}
+      <div class="six columns">
+        <a href={donationLink} className="button">
+          Donate
+        </a>
       </div>
     </div>
-  );
-};
+    <div className="row">
+      {firstName} {lastName}
+    </div>
+    <div className="row" style={{ textTransform: "capitalize" }}>
+      {state} {office == "house" ? district : office}
+    </div>
+  </div>
+)
 
 Candidate.propTypes = {
   firstName: PropTypes.string.isRequired,
