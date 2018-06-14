@@ -1,5 +1,12 @@
 import PropTypes from "prop-types";
 import React from "react";
+import '../style/candidate.scss'
+
+const defaultImage = '/assets/Fist.svg'
+const officeTypeMap = {
+  governor: 'GOV',
+  senate: 'SN'
+}
 
 const Candidate = ({
   firstName,
@@ -17,22 +24,17 @@ const Candidate = ({
 }) => (
   <div className="candidate container">
     <div className="row">
-      <div className="six columns headshot" style={{ backgroundImage: `url(/img/coffee.png)` }}>
-        <a href={website} className="button">
-          Website
-        </a>
+      <div className="six columns headshot" style={{ backgroundImage: `url(${image || defaultImage})` }}>
+        <div className="meta">
+          {state}-
+          {office == "house" ? district : officeTypeMap[office]}
+        </div>
       </div>
       <div className="six columns">
-        <a href={donationLink} className="button">
-          Donate
-        </a>
+        <div className="name">
+          {firstName} {lastName}
+        </div>
       </div>
-    </div>
-    <div className="row">
-      {firstName} {lastName}
-    </div>
-    <div className="row" style={{ textTransform: "capitalize" }}>
-      {state} {office == "house" ? district : office}
     </div>
   </div>
 )
