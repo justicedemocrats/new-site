@@ -27,6 +27,17 @@ collections:
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Blurb", name: "blurb", widget: "text"}
 
+  - name: "issues"
+    label: "Issues"
+    folder: "src/pages/issues"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "issue-fragment"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - {label: "Icon", name: "icon", widget: "icon"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
