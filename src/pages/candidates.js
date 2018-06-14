@@ -43,40 +43,17 @@ export const pageQuery = graphql`
             lastName
             office
             electionType
+            incumbent
             district
             state
             electionDate
             image
+            website
+            donationLink
+            outcome
           }
         }
       }
     }
   }
 `;
-
-// export const idealQuery = graphql`
-//   query CandidateQuery {
-//     allMarkdownRemark(
-//       filter: { frontmatter: { templateKey: { eq: "candidate-fragment" } } }
-//     ) {
-//       edges {
-//         node {
-//           frontmatter {
-//             firstName
-//             lastName
-//             office
-//             electionType
-//             incumbent
-//             district
-//             state
-//             electionDate
-//             image
-//             website
-//             donationLink
-//             outcome
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;

@@ -18,7 +18,12 @@ collections:
       - {label: "District", name: "district", widget: "string"}
       - {label: "State", name: "state", widget: "string"}
       - {label: "Election Date", name: "electionDate", widget: "date"}
-      - {label: "Election Type", name: "electionType", widget: "string"}
+      - {label: "Office", name: "office", widget: "select", options: ["Senate", "House", "Governor", "Fake"]}
+      - {label: "Incumbent", name: "incumbent", widget: "boolean"}
+      - {label: "Website", name: "website", widget: "string"}
+      - {label: "Donation Link", name: "donationLink", widget: "string"}
+      - {label: "Outcome", name: "outcome", widget: "select", options: ["Won", "Lost"]}
+      - {label: "Image", name: "image", widget: "image"}
 
   - name: "blog"
     label: "Blog"
