@@ -17,9 +17,6 @@ export default ({
   calloutIcon,
   calloutText
 }) => {
-  console.log({ bannerImageUrl });
-  console.log({ alignment });
-
   return (
     <section className="home-block">
       <link
@@ -62,7 +59,7 @@ export default ({
           </div>
           <div className="six columns">
             <div className="block-contents-right-chunk">
-              <HTMLContent content={htmlContent} />
+              <HTMLContent content={htmlContent} markdown={true} />
 
               <Link
                 to={moreButtonUrl}
