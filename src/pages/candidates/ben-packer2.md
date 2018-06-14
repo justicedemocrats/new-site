@@ -1,13 +1,13 @@
 ---
-title: Harpo Jaeger
+title: Ben Packer2
 templateKey: candidate-fragment
-firstName: Harpo
-lastName: Jaeger
-district: '101'
-state: AZ
+firstName: Ben
+lastName: Packer
+district: '100'
+state: NY
 electionDate: '2018-06-07'
 electionType: fake
-office: house
+office: governor
 incumbent: true
 website: "https://harpo.space"
 donationLink: "http://actblue.com"

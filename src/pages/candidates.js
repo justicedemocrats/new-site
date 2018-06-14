@@ -2,20 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import Content, { HTMLContent } from "../components/Content";
 import Candidate from "../components/Candidate";
+import '../style/candidates.scss'
+
 
 export const CandidatePageTemplate = ({ candidates }) => {
-  const candidate_rows = candidates.chunk(3); // TODO deprecate this in favor of flexible rows
   return (
-    <div className="container">
-      {candidate_rows.map((candidates, i) => (
-        <div key={i} className="row">
-          {candidates.map((props, i) => (
-            <div key={i} className="four columns">
-              <Candidate {...props} />
-            </div>
-          ))}
-        </div>
-      ))}
+    <div className="candidates">
+      {candidates.map((props, i) => <Candidate key={i} {...props} />)}
     </div>
   );
 };
@@ -63,10 +56,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-Array.prototype.chunk = function(n) {
-  if (!this.length) {
-    return [];
-  }
-  return [this.slice(0, n)].concat(this.slice(n).chunk(n));
-};
