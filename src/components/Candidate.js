@@ -15,14 +15,14 @@ const Candidate = ({
   outcome,
   office
 }) => (
-  <div className="container">
+  <div className="candidate container">
     <div className="row">
-      <div class="six columns">
+      <div className="six columns headshot" style={{ backgroundImage: `url(/img/coffee.png)` }}>
         <a href={website} className="button">
           Website
         </a>
       </div>
-      <div class="six columns">
+      <div className="six columns">
         <a href={donationLink} className="button">
           Donate
         </a>
