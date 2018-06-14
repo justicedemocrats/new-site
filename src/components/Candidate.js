@@ -19,12 +19,12 @@ const Candidate = ({
     <div className="container">
       <div className="row">
         <div class="six columns">
-          <a href={website} class="button">
+          <a href={website} className="button">
             Website
           </a>
         </div>
         <div class="six columns">
-          <a href={donationLink} class="button">
+          <a href={donationLink} className="button">
             Donate
           </a>
         </div>

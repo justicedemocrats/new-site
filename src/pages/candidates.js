@@ -7,10 +7,6 @@ export const CandidatePageTemplate = ({ candidates }) => {
   const candidate_rows = candidates.chunk(3);
   return (
     <div className="container">
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
-      />
       {candidate_rows.map(candidates => (
         <div className="row">
           {candidates.map((props, i) => (

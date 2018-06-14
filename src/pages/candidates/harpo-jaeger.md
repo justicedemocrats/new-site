@@ -1,5 +1,5 @@
 ---
-title: Harpo Jager
+title: Harpo Jaeger
 templateKey: candidate-fragment
 firstName: Harpo
 lastName: Jaeger
@@ -10,6 +10,6 @@ electionType: fake
 office: senate
 incumbent: false
 website: "https://harpo.space"
-donationLink: "actblue.com"
+donationLink: "http://actblue.com"
 outcome: "Won"
 ---

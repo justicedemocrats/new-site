@@ -10,6 +10,6 @@ electionType: fake
 office: governor
 incumbent: false
 website: "https://harpo.space"
-donationLink: "actblue.com"
+donationLink: "http://actblue.com"
 outcome: "Won"
 ---

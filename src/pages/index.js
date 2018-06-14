@@ -1,20 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 // import Link from "gatsby-link";
-// import Block from "../components/HomeBlock";
 import HomeBlock from "../components/HomeBlock";
+require('../style/includes/_skeleton.scss')
 
 const IndexPage = ({ data }) => {
   const { blocks } = data.allMarkdownRemark.edges[0].node.frontmatter;
   return (
     <div className="container">
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
-      />
       <div className="sign-up row">
-        {["Name", "Email", "Zip", "Phone"].map(name => (
-          <div className="two columns">
+        {["Name", "Email", "Zip", "Phone"].map((name, i) => (
+          <div key={i} className="two columns">
             <input
               className="u-full-width"
               placeholder={name}
@@ -37,7 +33,7 @@ const IndexPage = ({ data }) => {
           </button>
         </div>
       </div>
-      {blocks.map(b => <HomeBlock {...b} />)}
+      {blocks.map((b, i) => <HomeBlock key={i} {...b} />)}
     </div>
   );
 };
