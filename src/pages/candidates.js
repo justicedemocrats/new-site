@@ -4,20 +4,24 @@ import Content, { HTMLContent } from "../components/Content";
 import Candidate from "../components/Candidate";
 
 export const CandidatePageTemplate = ({ candidates }) => {
-  const candidate_rows = candidates.chunk(3);
+  const candidate_rows = candidates.chunk(3); // TODO deprecate this in favor of flexible rows
   return (
     <div className="container">
-      {candidate_rows.map(candidates => (
-        <div className="row">
+      {candidate_rows.map((candidates, i) => (
+        <div key={i} className="row">
           {candidates.map((props, i) => (
-            <div className="four columns">
-              <Candidate key={i} {...props} />
+            <div key={i} className="four columns">
+              <Candidate {...props} />
             </div>
           ))}
         </div>
       ))}
     </div>
   );
+};
+
+CandidatePageTemplate.propTypes = {
+  candidates: PropTypes.array.isRequired
 };
 
 const CandidatePage = ({ data }) => {

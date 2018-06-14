@@ -4,10 +4,10 @@ templateKey: candidate-fragment
 firstName: Harpo
 lastName: Jaeger
 district: '101'
-state: New York
+state: AZ
 electionDate: '2018-06-07'
 electionType: fake
-office: senate
+office: house
 incumbent: false
 website: "https://harpo.space"
 donationLink: "http://actblue.com"
