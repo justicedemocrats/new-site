@@ -12,15 +12,28 @@ const Candidate = ({
   blurb,
   website,
   donationLink,
-  outcome
+  outcome,
+  office
 }) => {
   return (
-    <div>
-      <div>
+    <div className="container">
+      <div className="row">
+        <div class="six columns">
+          <a href={website} class="button">
+            Website
+          </a>
+        </div>
+        <div class="six columns">
+          <a href={donationLink} class="button">
+            Donate
+          </a>
+        </div>
+      </div>
+      <div className="row">
         {firstName} {lastName}
       </div>
-      <div>
-        Election for {office} on {electionDate}
+      <div className="row" style={{ textTransform: "capitalize" }}>
+        {state} {office == "house" ? district : office}
       </div>
     </div>
   );

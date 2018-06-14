@@ -8,6 +8,10 @@ const IndexPage = ({ data }) => {
   const { blocks } = data.allMarkdownRemark.edges[0].node.frontmatter;
   return (
     <div className="container">
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+      />
       <div className="sign-up row">
         {["Name", "Email", "Zip", "Phone"].map(name => (
           <div className="two columns">

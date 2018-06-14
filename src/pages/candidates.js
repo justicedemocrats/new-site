@@ -4,8 +4,23 @@ import Content, { HTMLContent } from "../components/Content";
 import Candidate from "../components/Candidate";
 
 export const CandidatePageTemplate = ({ candidates }) => {
+  const candidate_rows = candidates.chunk(3);
   return (
-    <div>{candidates.map((props, i) => <Candidate key={i} {...props} />)}</div>
+    <div className="container">
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+      />
+      {candidate_rows.map(candidates => (
+        <div className="row">
+          {candidates.map((props, i) => (
+            <div className="four columns">
+              <Candidate key={i} {...props} />
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
   );
 };
 
@@ -57,3 +72,10 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+Array.prototype.chunk = function(n) {
+  if (!this.length) {
+    return [];
+  }
+  return [this.slice(0, n)].concat(this.slice(n).chunk(n));
+};

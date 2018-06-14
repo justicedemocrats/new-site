@@ -19,10 +19,6 @@ export default ({
 }) => {
   return (
     <section className="home-block">
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
-      />
       <div
         className="block-banner"
         style={{
