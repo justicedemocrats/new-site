@@ -30,7 +30,7 @@ div.candidate {
         font-size: 2rem;
       }
       span.incumbent {
-        margin-left: 0.5em;
+        margin-left: 0.5rem;
         font-weight: medium;
         color: $jd-light-blue;
       }
@@ -43,9 +43,9 @@ div.candidate {
     div.raceDate {
       span.race {
         font-weight: bold;
-        margin-right: 0.5em;
+        margin-right: 0.5rem;
       }
-      span.date { margin-left: 0.5em }
+      span.date { margin-left: 0.5rem }
     }
   }
 }
