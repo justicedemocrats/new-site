@@ -41,7 +41,6 @@ export const pageQuery = graphql`
           frontmatter {
             firstName
             lastName
-            office
             electionType
             incumbent
             district
@@ -51,6 +50,7 @@ export const pageQuery = graphql`
             website
             donationLink
             outcome
+            office
           }
         }
       }
