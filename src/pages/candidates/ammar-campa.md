@@ -3,7 +3,7 @@ title: Ammar Campa-Najjar
 templateKey: candidate-fragment
 firstName: Ammar
 lastName: Campa-Najjar
-district: 50
+district: "50"
 state: CA
 electionDate: 2018-06-14
 electionType: primary

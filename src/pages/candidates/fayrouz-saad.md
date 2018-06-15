@@ -3,7 +3,7 @@ title: Fayrouz Saad
 templateKey: candidate-fragment
 firstName: Fayrouz
 lastName: Saad
-district: 11
+district: "11"
 state: MI
 electionDate: 2018-06-14
 electionType: primary

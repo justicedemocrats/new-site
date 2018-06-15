@@ -3,7 +3,7 @@ title: Michael DeVito
 templateKey: candidate-fragment
 firstName: Michael
 lastName: DeVito
-district: 11
+district: "11"
 state: NY
 electionDate: 2018-06-14
 electionType: primary

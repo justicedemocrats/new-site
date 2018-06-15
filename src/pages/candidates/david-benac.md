@@ -3,7 +3,7 @@ title: David Benac
 templateKey: candidate-fragment
 firstName: David
 lastName: Benac
-district: 06
+district: "06"
 state: MI
 electionDate: 2018-06-14
 electionType: primary

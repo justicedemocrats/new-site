@@ -3,7 +3,7 @@ title: Matt Morgan
 templateKey: candidate-fragment
 firstName: Matt
 lastName: Morgan
-district: 01
+district: "01"
 state: MI
 electionDate: 2018-06-14
 electionType: primary

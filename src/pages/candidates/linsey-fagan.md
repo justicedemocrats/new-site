@@ -3,7 +3,7 @@ title: Linsey Fagan
 templateKey: candidate-fragment
 firstName: Linsey
 lastName: Fagan
-district: 26
+district: "26"
 state: TX
 electionDate: 2018-06-14
 electionType: primary

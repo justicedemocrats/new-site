@@ -3,7 +3,7 @@ title: James Thompson
 templateKey: candidate-fragment
 firstName: James
 lastName: Thompson
-district: 04
+district: "04"
 state: KS
 electionDate: 2018-06-14
 electionType: primary

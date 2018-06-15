@@ -3,7 +3,7 @@ title: Mary Matiella
 templateKey: candidate-fragment
 firstName: Mary
 lastName: Matiella
-district: 02
+district: "02"
 state: AZ
 electionDate: 2018-06-14
 electionType: primary

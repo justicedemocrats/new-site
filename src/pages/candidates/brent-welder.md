@@ -3,7 +3,7 @@ title: Brent Welder
 templateKey: candidate-fragment
 firstName: Brent
 lastName: Welder
-district: 03
+district: "03"
 state: KS
 electionDate: 2018-06-14
 electionType: primary

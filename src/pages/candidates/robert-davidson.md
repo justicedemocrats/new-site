@@ -3,7 +3,7 @@ title: Robert Davidson
 templateKey: candidate-fragment
 firstName: Robert
 lastName: Davidson
-district: 02
+district: "02"
 state: MI
 electionDate: 2018-06-14
 electionType: primary

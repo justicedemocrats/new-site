@@ -3,7 +3,7 @@ title: Michael Hepburn
 templateKey: candidate-fragment
 firstName: Michael
 lastName: Hepburn
-district: 27
+district: "27"
 state: FL
 electionDate: 2018-06-14
 electionType: primary

@@ -3,7 +3,7 @@ title: Lorie Burch
 templateKey: candidate-fragment
 firstName: Lorie
 lastName: Burch
-district: 03
+district: "03"
 state: TX
 electionDate: 2018-06-14
 electionType: primary

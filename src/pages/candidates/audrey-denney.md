@@ -3,7 +3,7 @@ title: Audrey Denney
 templateKey: candidate-fragment
 firstName: Audrey
 lastName: Denney
-district: 01
+district: "01"
 state: CA
 electionDate: 2018-06-14
 electionType: primary

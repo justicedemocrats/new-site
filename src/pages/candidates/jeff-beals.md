@@ -3,7 +3,7 @@ title: Jeff Beals
 templateKey: candidate-fragment
 firstName: Jeff
 lastName: Beals
-district: 19
+district: "19"
 state: NY
 electionDate: 2018-06-14
 electionType: primary

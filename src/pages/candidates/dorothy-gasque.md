@@ -3,7 +3,7 @@ title: Dorothy Gasque
 templateKey: candidate-fragment
 firstName: Dorothy
 lastName: Gasque
-district: 03
+district: "03"
 state: WA
 electionDate: 2018-06-14
 electionType: primary

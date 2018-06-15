@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 // import Link from "gatsby-link";
 import HomeBlock from "../components/HomeBlock";
-require('../style/includes/_skeleton.scss')
+require("../style/includes/_skeleton.scss");
 
 const IndexPage = ({ data }) => {
   const { blocks } = data.allMarkdownRemark.edges[0].node.frontmatter;

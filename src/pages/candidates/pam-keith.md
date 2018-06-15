@@ -3,7 +3,7 @@ title: Pam Keith
 templateKey: candidate-fragment
 firstName: Pam
 lastName: Keith
-district: 18
+district: "18"
 state: FL
 electionDate: 2018-06-14
 electionType: primary

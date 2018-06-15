@@ -3,7 +3,7 @@ title: Robb Ryerse
 templateKey: candidate-fragment
 firstName: Robb
 lastName: Ryerse
-district: 03
+district: "03"
 state: AR
 electionDate: 2018-06-14
 electionType: primary

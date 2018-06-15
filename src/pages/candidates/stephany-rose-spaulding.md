@@ -3,7 +3,7 @@ title: Stephany Rose Spaulding
 templateKey: candidate-fragment
 firstName: Stephany
 lastName: Rose Spaulding
-district: 05
+district: "05"
 state: CO
 electionDate: 2018-06-14
 electionType: primary

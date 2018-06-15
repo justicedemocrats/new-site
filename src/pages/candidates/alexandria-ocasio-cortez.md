@@ -3,7 +3,7 @@ title: Alexandria Ocasio-Cortez
 templateKey: candidate-fragment
 firstName: Alexandria
 lastName: Ocasio-Cortez
-district: 14
+district: "14"
 state: NY
 electionDate: 2018-06-14
 electionType: primary

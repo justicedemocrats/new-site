@@ -3,7 +3,7 @@ title: Adrienne Bell
 templateKey: candidate-fragment
 firstName: Adrienne
 lastName: Bell
-district: 14
+district: "14"
 state: TX
 electionDate: 2018-06-14
 electionType: primary

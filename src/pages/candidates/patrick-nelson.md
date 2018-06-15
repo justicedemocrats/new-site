@@ -3,7 +3,7 @@ title: Patrick Nelson
 templateKey: candidate-fragment
 firstName: Patrick
 lastName: Nelson
-district: 21
+district: "21"
 state: NY
 electionDate: 2018-06-14
 electionType: primary

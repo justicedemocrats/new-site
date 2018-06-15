@@ -3,7 +3,7 @@ title: Jess King
 templateKey: candidate-fragment
 firstName: Jess
 lastName: King
-district: 11
+district: "11"
 state: PA
 electionDate: 2018-06-14
 electionType: primary

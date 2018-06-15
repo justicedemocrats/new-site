@@ -3,7 +3,7 @@ title: Vanessa Adia
 templateKey: candidate-fragment
 firstName: Vanessa
 lastName: Adia
-district: 12
+district: "12"
 state: TX
 electionDate: 2018-06-14
 electionType: primary

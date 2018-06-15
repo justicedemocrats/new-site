@@ -3,7 +3,7 @@ title: Roger Manno
 templateKey: candidate-fragment
 firstName: Roger
 lastName: Manno
-district: 06
+district: "06"
 state: MD
 electionDate: 2018-06-14
 electionType: primary

@@ -3,7 +3,7 @@ title: Rashida Tlaib
 templateKey: candidate-fragment
 firstName: Rashida
 lastName: Tlaib
-district: 13
+district: "13"
 state: MI
 electionDate: 2018-06-14
 electionType: primary

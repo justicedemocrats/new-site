@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Content, { HTMLContent } from "../components/Content";
 import Candidate from "../components/Candidate";
-import '../style/candidates.scss'
-
+import "../style/candidates.scss";
 
 export const CandidatePageTemplate = ({ candidates }) => {
   return (
@@ -50,6 +49,7 @@ export const pageQuery = graphql`
             donationLink
             outcome
             office
+            district
           }
         }
       }

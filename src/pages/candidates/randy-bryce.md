@@ -3,7 +3,7 @@ title: Randy Bryce
 templateKey: candidate-fragment
 firstName: Randy
 lastName: Bryce
-district: 01
+district: "01"
 state: WI
 electionDate: 2018-06-14
 electionType: primary

@@ -3,7 +3,7 @@ title: Sanjay Patel
 templateKey: candidate-fragment
 firstName: Sanjay
 lastName: Patel
-district: 08
+district: "08"
 state: FL
 electionDate: 2018-06-14
 electionType: primary

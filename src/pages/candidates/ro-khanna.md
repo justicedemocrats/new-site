@@ -3,7 +3,7 @@ title: Ro Khanna
 templateKey: candidate-fragment
 firstName: Ro
 lastName: Khanna
-district: 17
+district: "17"
 state: CA
 electionDate: 2018-06-14
 electionType: primary

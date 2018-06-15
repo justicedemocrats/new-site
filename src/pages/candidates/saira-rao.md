@@ -3,7 +3,7 @@ title: Saira Rao
 templateKey: candidate-fragment
 firstName: Saira
 lastName: Rao
-district: 01
+district: "01"
 state: CO
 electionDate: 2018-06-14
 electionType: primary

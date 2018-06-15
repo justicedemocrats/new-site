@@ -3,7 +3,7 @@ title: Ayanna Pressley
 templateKey: candidate-fragment
 firstName: Ayanna
 lastName: Pressley
-district: 07
+district: "07"
 state: MA
 electionDate: 2018-06-14
 electionType: primary

@@ -3,7 +3,7 @@ title: Raúl Grijalva
 templateKey: candidate-fragment
 firstName: Raúl
 lastName: Grijalva
-district: 03
+district: "03"
 state: AZ
 electionDate: 2018-06-14
 electionType: primary

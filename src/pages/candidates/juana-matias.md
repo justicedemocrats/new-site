@@ -3,7 +3,7 @@ title: Juana Matias
 templateKey: candidate-fragment
 firstName: Juana
 lastName: Matias
-district: 03
+district: "03"
 state: MA
 electionDate: 2018-06-14
 electionType: primary

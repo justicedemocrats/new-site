@@ -3,7 +3,7 @@ title: Ian Golden
 templateKey: candidate-fragment
 firstName: Ian
 lastName: Golden
-district: 23
+district: "23"
 state: NY
 electionDate: 2018-06-14
 electionType: primary

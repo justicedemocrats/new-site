@@ -3,7 +3,7 @@ title: Lisa Ring
 templateKey: candidate-fragment
 firstName: Lisa
 lastName: Ring
-district: 01
+district: "01"
 state: GA
 electionDate: 2018-06-14
 electionType: primary

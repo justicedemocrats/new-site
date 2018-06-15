@@ -3,7 +3,7 @@ title: Pramila Jayapal
 templateKey: candidate-fragment
 firstName: Pramila
 lastName: Jayapal
-district: 07
+district: "07"
 state: WA
 electionDate: 2018-06-14
 electionType: primary

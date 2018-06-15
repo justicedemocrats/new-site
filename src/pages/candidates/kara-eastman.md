@@ -3,7 +3,7 @@ title: Kara Eastman
 templateKey: candidate-fragment
 firstName: Kara
 lastName: Eastman
-district: 02
+district: "02"
 state: NE
 electionDate: 2018-06-14
 electionType: primary

@@ -3,7 +3,7 @@ title: Kaniela Ing
 templateKey: candidate-fragment
 firstName: Kaniela
 lastName: Ing
-district: 01
+district: "01"
 state: HI
 electionDate: 2018-06-14
 electionType: primary

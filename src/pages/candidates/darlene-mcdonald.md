@@ -3,7 +3,7 @@ title: Darlene McDonald
 templateKey: candidate-fragment
 firstName: Darlene
 lastName: McDonald
-district: 04
+district: "04"
 state: UT
 electionDate: 2018-06-14
 electionType: primary

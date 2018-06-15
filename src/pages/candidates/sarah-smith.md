@@ -3,7 +3,7 @@ title: Sarah Smith
 templateKey: candidate-fragment
 firstName: Sarah
 lastName: Smith
-district: 09
+district: "09"
 state: WA
 electionDate: 2018-06-14
 electionType: primary

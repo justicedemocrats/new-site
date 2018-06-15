@@ -3,7 +3,7 @@ title: Cori Bush
 templateKey: candidate-fragment
 firstName: Cori
 lastName: Bush
-district: 01
+district: "01"
 state: MO
 electionDate: 2018-06-14
 electionType: primary
