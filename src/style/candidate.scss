@@ -13,7 +13,7 @@ div.candidate {
     background-size: contain;
     background-repeat: no-repeat;
     background-position:center;
-    div.race {
+    div.office {
       background-color: $jd-light-blue;
       width: 100%;
       color: white;
@@ -30,10 +30,22 @@ div.candidate {
         font-size: 2rem;
       }
       span.incumbent {
-        margin-left: 0.5em;
+        margin-left: 0.5rem;
         font-weight: medium;
         color: $jd-light-blue;
       }
+    }
+    div.office {
+      font-weight: bold;
+      font-size: 2rem;
+      color: $jd-light-blue;
+    }
+    div.raceDate {
+      span.race {
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+      span.date { margin-left: 0.5rem }
     }
   }
 }
