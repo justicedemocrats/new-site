@@ -67,9 +67,10 @@ collections:
             name: "blocks"
             widget: list
             fields:
+              - {label: "Banner Image", name: "bannerImageUrl", widget: "image"}
               - {label: "Banner Text", name: "bannerText", widget: "string"}
               - {label: "Banner Button Text", name: "bannerButtonText", widget: "string"}
-              - {label: "Banner Button url", name: "bannerButtonUrl", widget: "string"}
+              - {label: "Banner Button Url", name: "bannerButtonUrl", widget: "string"}
               - {label: "Alignment", name: "alignment", widget: "string"}
               - {label: "Content Header", name: "header", widget: "string"}
               - {label: "Content Sub-Header", name: "subheader", widget: "string"}

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import { HTMLContent } from "../components/Content";
-import "../style/home-block.scss";
+require("../style/home-block.scss");
 
 export default ({
   alignment,
@@ -32,10 +32,12 @@ export default ({
           fontSize: 40
         }}
       >
-        <div className="block-banner-number" style={{ fontWeight: "bold" }}>
+        <div className="block-banner-number extra-bold-m">
           {bannerText.split(" ")[0]}
         </div>
-        <div className="block-banner-unit">{bannerText.split(" ")[1]}</div>
+        <div className="block-banner-unit bold-m">
+          {bannerText.split(" ")[1]}
+        </div>
         <Link to={bannerButtonUrl} className="block-banner-button">
           {bannerButtonText}
         </Link>
