@@ -22,8 +22,9 @@ export default ({
       <div
         className="block-banner"
         style={{
-          // backgroundImage: `url(${bannerImageUrl})`,
-          backgroundColor: "black",
+          backgroundImage: `url(${bannerImageUrl})`,
+          backgroundSize: "cover",
+          // backgroundColor: "black",
           textAlign: alignment,
           paddingLeft: 30,
           paddingRight: 30,
@@ -41,7 +42,10 @@ export default ({
           {bannerButtonText}
         </Link>
       </div>
-      <div className="block-body container">
+      <div
+        className="block-body container"
+        style={{ paddingLeft: "2rem", paddingRight: "2rem" }}
+      >
         <div className="block-contents row">
           <div className="six columns" style={{ color: "blue" }}>
             <div className="block-contents-left-chunk">
@@ -64,7 +68,7 @@ export default ({
 
               <Link
                 to={moreButtonUrl}
-                className="block-content-button button dark-blue-bg button-text"
+                className="block-content-button button light-blue-bg button-text"
               >
                 {moreButtonText}
               </Link>

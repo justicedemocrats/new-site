@@ -1,25 +1,63 @@
 @import "./includes/_vars";
 
 .home-header-b {
-  font-size: 83px;
-  color: $jd-dark-blue;
+  font-size: 42px;
+  line-height: 42px;
+  color: $jd-light-blue;
 }
 
 .home-header-w {
-  font-size: 83px;
+  font-size: 42px;
   color: white;
 }
 
 .home-subheader-b {
-  font-size: 56px;
+  font-size: 28px;
+  line-height: 28px;
   color: $jd-light-blue;
 }
 
 .button-text {
-  font-size: 44px !important;
+  font-size: 22px !important;
 }
 
 .callout-b {
-  font-size: 35px !important;
+  font-size: 17px !important;
   color: $jd-dark-blue;
+}
+
+.flex-child {
+  width: 15%;
+}
+
+.flex-child > input {
+  width: 100%;
+}
+
+.flex-child > input {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border: 1px solid $jd-dark-blue !important;
+
+  &::-webkit-input-placeholder {
+    color: $jd-dark-blue;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 600px) {
+  .flex-child {
+    width: 90vw;
+    max-width: none;
+    margin-top: 5px !important;
+  }
+
+  .flex-child > input {
+    width: 100%;
+  }
+
+  .sign-up-button {
+    width: 90vw;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
 }

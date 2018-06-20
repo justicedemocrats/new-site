@@ -62,6 +62,19 @@ collections:
           - {label: "Intro Content", name: "introContent", widget: "markdown"}
           - {label: "First Call Out Icon", name: "firstCalloutIcon", widget: "image"}
           - {label: "First Call Out Text", name: "firstCalloutText", widget: "text"}
+          - {label: "Issues Introduction", name: "issuesIntro", widget: "string"}
+
+          - label: "Primary Issues"
+            name: "primaryIssues"
+            widget: "list"
+            fields:
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Url", name: "url", widget: "string"}
+          
+          - {label: "JD Highlight Header", name: "jdHighlightHeader", widget: "string"}
+          - {label: "JD Highlight Text", name: "jdHighlightHeader", widget: "text"}
+          - {label: "JD Highlight Icon", name: "jdHighlightIcon", widget: "image"}
 
           - label: "Blocks"
             name: "blocks"
