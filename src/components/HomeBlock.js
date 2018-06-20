@@ -24,21 +24,20 @@ export default ({
         style={{
           // backgroundImage: `url(${bannerImageUrl})`,
           backgroundColor: "black",
-          padding: 30,
           textAlign: alignment,
-          height: 300,
-          color: "#fff",
-          textTransform: "uppercase",
-          fontSize: 40
+          paddingLeft: 30,
+          paddingRight: 30,
+          textTransform: "uppercase"
         }}
       >
-        <div className="block-banner-number extra-bold-m">
+        <div className="extra-bold-m home-header-w">
           {bannerText.split(" ")[0]}
         </div>
-        <div className="block-banner-unit bold-m">
-          {bannerText.split(" ")[1]}
-        </div>
-        <Link to={bannerButtonUrl} className="block-banner-button">
+        <div className="light-m home-header-w">{bannerText.split(" ")[1]}</div>
+        <Link
+          to={bannerButtonUrl}
+          className="button orange-bg extra-bold-m button-text"
+        >
           {bannerButtonText}
         </Link>
       </div>
@@ -47,21 +46,25 @@ export default ({
           <div className="six columns" style={{ color: "blue" }}>
             <div className="block-contents-left-chunk">
               <div
-                className="header"
-                style={{ textTransform: "uppercase", fontWeight: "bold" }}
+                className="home-header-b extra-bold-m"
+                style={{ textTransform: "uppercase" }}
               >
                 {header}
               </div>
-              <div className="subheader">{subheader}</div>
+              <div className="home-subheader-b light-m">{subheader}</div>
             </div>
           </div>
           <div className="six columns">
             <div className="block-contents-right-chunk">
-              <HTMLContent content={htmlContent} markdown={true} />
+              <HTMLContent
+                content={htmlContent}
+                markdown={true}
+                className="light-m"
+              />
 
               <Link
                 to={moreButtonUrl}
-                className="block-content-button button button-primary"
+                className="block-content-button button dark-blue-bg button-text"
               >
                 {moreButtonText}
               </Link>
@@ -85,7 +88,9 @@ export default ({
                 className="one columns"
                 style={{ backgroundImage: `url(${calloutIcon})`, height: 60 }}
               />
-              <div className="eleven columns">{calloutText}</div>
+              <div className="eleven columns bold-m callout-b">
+                {calloutText}
+              </div>
             </div>
           </div>
         )}
