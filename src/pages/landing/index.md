@@ -18,6 +18,19 @@ firstCalloutIcon: /img/meeting-space.png
 firstCalloutText: >-
   It’s time to rebuild the Democratic Party to be a party that fights for a
   clear progressive vision with policies for people not corporations.
+issuesIntro: 'POLICIES FOR VOTERS, NOT DONORS'
+primaryIssues:
+  - image: /img/jd_website_home_issuebox_600x600_1_antoinette_053118.jpg
+    text: Criminal Justice Reform
+    url: /issues/criminal-justice-reform
+  - image: /img/jd_website_home_issuebox_600x600_2_juana_053118.jpg
+    text: Medicare for All
+    url: /issues/medicare-for-all
+  - image: /img/jd_website_home_issuebox_600x600_3_david_053118.jpg
+    text: Jobs Guarantee
+    url: /issues/jobs-guarantee
+jdHighlightHeader: No Corporate PACs Pledge
+jdHighlightIcon: /img/coffee.png
 blocks:
   - alignment: right
     bannerButtonText: Join Us
