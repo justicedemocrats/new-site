@@ -1,11 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { HTMLContent } from "../components/Content";
 
-export const IssuePageTemplate = ({ issues }) => {
+export const IssuePageTemplate = ({
+  issues,
+  issuePage: {
+    html: body,
+    frontmatter: { title, header, subheader, bannerText }
+  }
+}) => {
   const issues_rows = issues.chunk(2);
   console.log(issues_rows);
   return (
     <div>
+      {header}
+      <HTMLContent content={body} />
+
       {issues_rows.map((issue_batch, row) => (
         <div className="row" style={{ marginBottom: 10, height: 85 }}>
           {issue_batch.map((i, col) => (
@@ -62,11 +72,10 @@ function colorClass(row, col) {
 }
 
 const IssuePage = props => {
-  const data = props.data;
-  const { allMarkdownRemark: { edges } } = data;
-  const issues = edges.map(edge => edge.node.frontmatter);
+  const issuePage = props.data.issuePage.edges[0].node;
+  const issues = props.data.issues.edges.map(edge => edge.node.frontmatter);
 
-  return <IssuePageTemplate issues={issues} />;
+  return <IssuePageTemplate issues={issues} issuePage={issuePage} />;
 };
 
 IssuePage.propTypes = {
@@ -77,7 +86,7 @@ export default IssuePage;
 
 export const pageQuery = graphql`
   query IssueQuery {
-    allMarkdownRemark(
+    issues: allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "issue-fragment" } } }
     ) {
       edges {
@@ -87,6 +96,22 @@ export const pageQuery = graphql`
             title
             subtitle
             icon
+          }
+        }
+      }
+    }
+
+    issuePage: allMarkdownRemark(
+      filter: { frontmatter: { uniq: { eq: "issue-index" } } }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            header
+            subheader
+            bannerText
           }
         }
       }

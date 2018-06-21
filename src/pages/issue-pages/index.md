@@ -1,5 +1,6 @@
 ---
 templateKey: issue-fragment
+uniq: issue-index
 title: Justice Democrats | Platform
 bannerText: Policies for Justice
 header: We are calling for a political -and- cultural revolution
