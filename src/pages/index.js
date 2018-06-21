@@ -8,14 +8,18 @@ require("../style/includes/_skeleton.scss");
 const IndexPage = ({ data }) => {
   const {
     blocks,
+    primaryIssues,
     bannerBackgroundImg,
     bannerTextImg,
     boldHeader,
     boldSubheader,
     introContent,
     firstCalloutIcon,
-    firstCalloutText
+    firstCalloutText,
+    issuesIntro
   } = data.allMarkdownRemark.edges[0].node.frontmatter;
+
+  console.log(primaryIssues);
 
   return (
     <div style={{ paddingLeft: 0, paddingRight: 0 }}>
@@ -74,6 +78,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </div>
+
       <div
         className="block-body container"
         style={{ paddingLeft: "2rem", paddingRight: "2rem" }}
@@ -101,6 +106,7 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
         </div>
+
         {firstCalloutText && (
           <div
             className="container"
@@ -108,6 +114,7 @@ const IndexPage = ({ data }) => {
               height: 80,
               padding: 10,
               borderTop: "1px dotted orange",
+              borderBottom: "1px dotted orange",
               paddingTop: 20,
               marginTop: 20
             }}
@@ -127,6 +134,35 @@ const IndexPage = ({ data }) => {
           </div>
         )}
       </div>
+
+      <div
+        className="extra-bold-m light-blue-color"
+        style={{ fontSize: "42px" }}
+      >
+        {issuesIntro}
+      </div>
+
+      <div className="primary-issues-container container row">
+        {primaryIssues.map(({ text, image, url }) => (
+          <div
+            style={{
+              height: 300,
+              backgroundImage: `url(${image})`,
+              backgroundSize: "cover"
+            }}
+            className="four columns"
+          >
+            <a
+              className="primary-issue-text"
+              style={{ textDecoration: "none", bottom: 0, marginTop: "auto" }}
+              href={url}
+            >
+              <div className="text-container">{text}</div>
+            </a>
+          </div>
+        ))}
+      </div>
+
       {blocks.map((b, i) => <HomeBlock key={i} {...b} />)}
     </div>
   );
@@ -154,6 +190,12 @@ export const pageQuery = graphql`
             introContent
             firstCalloutIcon
             firstCalloutText
+            issuesIntro
+            primaryIssues {
+              text
+              image
+              url
+            }
             blocks {
               header
               subheader

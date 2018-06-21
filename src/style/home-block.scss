@@ -61,3 +61,18 @@
     margin-bottom: 5px !important;
   }
 }
+
+.primary-issue-text {
+  background-color: $jd-light-blue;
+  width: 100%;
+  color: white;
+  text-transform: uppercase;
+  height: 60px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 900;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

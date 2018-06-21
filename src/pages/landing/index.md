@@ -30,6 +30,7 @@ primaryIssues:
     text: Jobs Guarantee
     url: /issues/jobs-guarantee
 jdHighlightHeader: No Corporate PACs Pledge
+jdHighlightText: All Justice Democrats pledge something something Totate arum exerferum auda soluptibus autamus quo cusaeruptam aut elento offic tem sum et.
 jdHighlightIcon: /img/coffee.png
 blocks:
   - alignment: right
@@ -93,4 +94,3 @@ blocks:
     moreButtonUrl: /report
     subheader: Need a subhead sentence here less than this many.
 ---
-

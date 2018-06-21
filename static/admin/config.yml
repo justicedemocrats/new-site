@@ -49,6 +49,18 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
 
+      - file: "src/pages/issue-pages/index.md"
+        label: "Issues"
+        name: "issues"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "issue-fragment"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Banner Text", name: "bannerText", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
+          - {label: "Sub Header", name: "subheader", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+
       - file: "src/pages/landing/index.md"
         label: "Landing"
         name: "landing"
@@ -73,7 +85,7 @@ collections:
               - {label: "Url", name: "url", widget: "string"}
           
           - {label: "JD Highlight Header", name: "jdHighlightHeader", widget: "string"}
-          - {label: "JD Highlight Text", name: "jdHighlightHeader", widget: "text"}
+          - {label: "JD Highlight Text", name: "jdHighlightText", widget: "text"}
           - {label: "JD Highlight Icon", name: "jdHighlightIcon", widget: "image"}
 
           - label: "Blocks"
