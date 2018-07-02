@@ -1,8 +1,20 @@
+@import "./includes/_vars";
+
 div.candidates {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   div.candidate:not(:last-child) {
     padding-right: 2em;
+  }
+}
+
+.candidate-intro-section {
+  .stat-container {
+    display: flex;
+    flex-direction: column;
+    .stat {
+      border-bottom: 1px solid $jd-light-blue;
+    }
   }
 }

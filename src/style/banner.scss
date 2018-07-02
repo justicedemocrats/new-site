@@ -1,12 +1,18 @@
 .banner-container {
   height: 400px;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
   .banner-text {
     float: right;
     margin-right: 50px;
     font-family: "Montserrat", sans-serif;
     color: white;
+    font-size: 60px;
+    text-transform: uppercase;
+    line-height: 55px;
 
     .banner-text-bold {
       font-weight: 800;

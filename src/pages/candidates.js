@@ -8,11 +8,34 @@ import "../style/candidates.scss";
 export const CandidatePageTemplate = ({
   bannerBackgroundImage,
   bannerText,
-  candidates
+  candidates,
+  stats,
+  intro
 }) => {
   return (
     <div>
       <Banner backgroundImage={bannerBackgroundImage} text={bannerText} />,
+      <div className="candidate-intro-section row container">
+        <div className="six columns stat-container">
+          {stats.map(({ title, count }) => {
+            const split = title.split(" ");
+            const first = split.slice(0, split.length - 1).join(" ");
+            const last = split[split.length - 1];
+
+            return (
+              <div className="stat">
+                <span className="light-m light-blue-color"> {first} </span>
+                <span className="bold-m light-blue-color"> {last} </span>
+                <span className="light-m light-blue-color"> = </span>
+                <span className="extra-bold-m orange-color"> {count} </span>
+              </div>
+            );
+          })}
+        </div>
+        <div className="six columns">
+          <p> {intro} </p>
+        </div>
+      </div>
       <div className="candidates">
         {candidates.map((props, i) => <Candidate key={i} {...props} />)}
       </div>
