@@ -1,5 +1,5 @@
 ---
-templateKey: issue-fragment
+templateKey: ignore-fragment
 uniq: issue-index
 title: Justice Democrats | Platform
 bannerText: Policies for Justice

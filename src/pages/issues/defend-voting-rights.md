@@ -1,7 +1,8 @@
 ---
-templateKey: issue-fragment
+templateKey: ignore-fragment
 title: Defend Voting Rights
 subtitle: 'Every citizen must have access and opportunity to vote.'
 icon: /img/chemex.jpb
 ---
- Every citizen must have access and opportunity to vote.
+
+Every citizen must have access and opportunity to vote.

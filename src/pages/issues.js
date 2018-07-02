@@ -87,7 +87,7 @@ export default IssuePage;
 export const pageQuery = graphql`
   query IssueQuery {
     issues: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "issue-fragment" } } }
+      filter: { frontmatter: { templateKey: { eq: "ignore-fragment" } } }
     ) {
       edges {
         node {

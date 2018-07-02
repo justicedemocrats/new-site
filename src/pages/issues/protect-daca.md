@@ -1,7 +1,8 @@
 ---
-templateKey: issue-fragment
+templateKey: ignore-fragment
 title: Protect DACA
 subtitle: 'Pass the DREAM Act with a path to citizenship.'
 icon: /img/chemex.jpb
 ---
- Pass the DREAM Act with a path to citizenship.
+
+Pass the DREAM Act with a path to citizenship.
