@@ -10,10 +10,12 @@ export const CandidatePageTemplate = ({
   bannerText,
   candidates
 }) => {
-  // <Banner backgroundImage={bannerBackgroundImage} text={bannerText} />,
   return (
-    <div className="candidates">
-      {candidates.map((props, i) => <Candidate key={i} {...props} />)}
+    <div>
+      <Banner backgroundImage={bannerBackgroundImage} text={bannerText} />,
+      <div className="candidates">
+        {candidates.map((props, i) => <Candidate key={i} {...props} />)}
+      </div>
     </div>
   );
 };
@@ -23,10 +25,26 @@ CandidatePageTemplate.propTypes = {
 };
 
 const CandidatePage = ({ data }) => {
-  const { allMarkdownRemark: { edges } } = data;
+  const { candidates: { edges } } = data;
   const candidates = edges.map(edge => edge.node.frontmatter);
+  const {
+    bannerBackgroundImage,
+    bannerText,
+    intro,
+    stats
+  } = data.page.edges[0].node.frontmatter;
 
-  return <CandidatePageTemplate candidates={candidates} />;
+  console.log(data.page.edges);
+
+  return (
+    <CandidatePageTemplate
+      candidates={candidates}
+      bannerBackgroundImage={bannerBackgroundImage}
+      bannerText={bannerText}
+      intro={intro}
+      stats={stats}
+    />
+  );
 };
 
 CandidatePage.propTypes = {
@@ -37,7 +55,7 @@ export default CandidatePage;
 
 export const pageQuery = graphql`
   query CandidateQuery {
-    allMarkdownRemark(
+    candidates: allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "candidate-fragment" } } }
     ) {
       edges {
@@ -56,6 +74,24 @@ export const pageQuery = graphql`
             outcome
             office
             district
+          }
+        }
+      }
+    }
+
+    page: allMarkdownRemark(
+      filter: { frontmatter: { uniq: { eq: "candidate-index" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            bannerBackgroundImage
+            bannerText
+            intro
+            stats {
+              count
+              title
+            }
           }
         }
       }

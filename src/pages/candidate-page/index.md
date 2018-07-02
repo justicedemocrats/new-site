@@ -1,7 +1,9 @@
 ---
 templateKey: candidate-fragment
+uniq: candidate-index
 title: Justice Democrats | Candidates
 bannerBackgroundImage: /img/jd_website_home_calloutbanner_1920x540_1_cori_053118.jpg
+bannerText: Candidates For Justice
 intro: >-
   We’re running a broad slate of candidates across the country — many of who we
   have counted on you to nominated. Some have been previously involved in
@@ -11,7 +13,7 @@ intro: >-
 
   our country, and making sure every person has the same protections, rights and
   opportunity.
-states:
+stats:
   - count: '43'
     title: Current Slate
   - count: '33'
@@ -21,4 +23,3 @@ states:
   - count: '3'
     title: Currently Seated
 ---
-

@@ -2,7 +2,8 @@ import PropTypes from "prop-types";
 import React from "react";
 import "../style/banner.scss";
 
-export default ({ backroundImage, text }) => {
+export default props => {
+  const { backgroundImage, text } = props;
   const words = text.split(" ");
   const first = words[0];
   const last = words[words.length - 1];
