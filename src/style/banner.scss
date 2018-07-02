@@ -1,0 +1,19 @@
+.banner-container {
+  height: 400px;
+  background-size: cover;
+
+  .banner-text {
+    float: right;
+    margin-right: 50px;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+
+    .banner-text-bold {
+      font-weight: 800;
+    }
+
+    .banner-text-light {
+      font-weight: 300;
+    }
+  }
+}

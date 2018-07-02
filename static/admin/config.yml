@@ -60,6 +60,20 @@ collections:
           - {label: "Sub Header", name: "subheader", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
 
+      - file: "src/pages/candidate-page/index.md"
+        label: "Candidate"
+        name: "candidate"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "candidate-fragment"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Banner Background Image", name: "title", widget: "string"}
+          - {label: "Intro", name: "intro", widget: "text"}
+          - label: "Stats"
+            name: "states"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Count", name: "count", widget: "string"}
 
       - file: "src/pages/landing/index.md"
         label: "Landing"

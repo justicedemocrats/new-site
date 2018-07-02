@@ -1,10 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Content, { HTMLContent } from "../components/Content";
+// import Content, { HTMLContent } from "../components/Content";
 import Candidate from "../components/Candidate";
+import Banner from "../components/Banner";
 import "../style/candidates.scss";
 
-export const CandidatePageTemplate = ({ candidates }) => {
+export const CandidatePageTemplate = ({
+  bannerBackgroundImage,
+  bannerText,
+  candidates
+}) => {
+  // <Banner backgroundImage={bannerBackgroundImage} text={bannerText} />,
   return (
     <div className="candidates">
       {candidates.map((props, i) => <Candidate key={i} {...props} />)}

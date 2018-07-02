@@ -1,16 +1,16 @@
 import PropTypes from "prop-types";
 import React from "react";
-import '../style/candidate.scss'
+import "../style/candidate.scss";
 
-const defaultImage = '/assets/Fist.svg'
+const defaultImage = "/assets/Fist.svg";
 const officeTypeMap = {
-  governor: 'GOV',
-  senate: 'SN'
-}
+  governor: "GOV",
+  senate: "SN"
+};
 const electionTypeMap = {
-  fake: 'FAKE',
-  primary: 'Primary'
-}
+  fake: "FAKE",
+  primary: "Primary"
+};
 
 const Candidate = ({
   firstName,
@@ -27,29 +27,52 @@ const Candidate = ({
   office,
   incumbent
 }) => {
-  let ed = new Date(electionDate)
-  let [d, m] = [ed.getDate(), ed.getMonth()]
-  m = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][m]
+  let ed = new Date(electionDate);
+  let [d, m] = [ed.getDate(), ed.getMonth()];
+  m = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ][m];
   return (
     <div className="candidate">
-      <div className="headshot" style={{ backgroundImage: `url(${image || defaultImage})` }}>
+      <div
+        className="headshot"
+        style={{
+          backgroundImage: `url(${(image || defaultImage).trim('"')})`,
+          backgroundSize: "cover"
+        }}
+      >
         <div className="office">
           {state}-
-          {office == 'house' ? district : officeTypeMap[office]}
+          {office == "house" ? district : officeTypeMap[office]}
         </div>
       </div>
       <div className="meta">
         <div className="nameIncumbent">
-          <span className="name">{firstName} {lastName}</span>
-          <span className="incumbent">{incumbent && '(Incumbent)'}</span>
+          <span className="name">
+            {firstName} {lastName}
+          </span>
+          <span className="incumbent">{incumbent && "(Incumbent)"}</span>
         </div>
         <div className="office">
           {state}-
-          {office == 'house' ? district : officeTypeMap[office]}
+          {office == "house" ? district : officeTypeMap[office]}
         </div>
         <div className="raceDate">
           <span className="race">
-            {electionType === 'general' ? 'General Election' : `${state} ${electionTypeMap[electionType]}`}
+            {electionType === "general"
+              ? "General Election"
+              : `${state} ${electionTypeMap[electionType]}`}
           </span>
           |
           <span className="date">
@@ -58,8 +81,8 @@ const Candidate = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Candidate.propTypes = {
   firstName: PropTypes.string.isRequired,
