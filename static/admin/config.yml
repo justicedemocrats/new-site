@@ -78,7 +78,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "ignore-fragment"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Banner Background Image", name: "bannerBackgroundImage", widget: "image"}
-          - {label: "Banner Text", name: "bannerTet", widget: "string"}
+          - {label: "Banner Text", name: "bannerText", widget: "string"}
           - {label: "Intro", name: "intro", widget: "text"}
           - label: "Stats"
             name: "stats"

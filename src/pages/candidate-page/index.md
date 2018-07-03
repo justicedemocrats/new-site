@@ -2,7 +2,7 @@
 templateKey: candidate-fragment
 title: Justice Democrats | Candidates
 bannerBackgroundImage: /img/candidates-banner.jpg
-bannerTet: Candidates for Justice
+bannerText: Candidates for Justice
 intro: >-
   We’re running a broad slate of candidates across the country — many of who we
   have counted on you to nominated. Some have been previously involved in
@@ -22,4 +22,3 @@ stats:
   - count: '3'
     title: Currently Seated
 ---
-
