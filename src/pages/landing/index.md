@@ -14,7 +14,7 @@ introContent: >-
   **The solution is not unity with corporate-backed Democrats or catering to an
   imaginary “middle.” **The solution is to challenge them and replace every
   single one of them with people who will fight for voters, not donors.
-firstCalloutIcon: /img/meeting-space.png
+firstCalloutIcon: /img/jd_site_circlefinger_1_50x50.svg
 firstCalloutText: >-
   It’s time to rebuild the Democratic Party to be a party that fights for a
   clear progressive vision with policies for people not corporations.
@@ -30,15 +30,17 @@ primaryIssues:
     text: Jobs Guarantee
     url: /issues/jobs-guarantee
 jdHighlightHeader: No Corporate PACs Pledge
-jdHighlightText: All Justice Democrats pledge something something Totate arum exerferum auda soluptibus autamus quo cusaeruptam aut elento offic tem sum et.
-jdHighlightIcon: /img/coffee.png
+jdHighlightText: >-
+  All Justice Democrats pledge something something Totate arum exerferum auda
+  soluptibus autamus quo cusaeruptam aut elento offic tem sum et.
+jdHighlightIcon: /img/jd_site_circlefinger_1_50x50.svg
 blocks:
   - alignment: right
     bannerButtonText: Join Us
     bannerButtonUrl: /splash
     bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_1_cori_053118.jpg
     bannerText: '300,000 Supporters'
-    calloutIcon: /img/meeting-space.png
+    calloutIcon: /img/jd_site_circlefinger_1_50x50.svg
     calloutText: >-
       All Justice Democrats pledge not to take corporate or lobbyist money and
       to work together once elected to enact the Justice Democrats platform.
@@ -58,7 +60,7 @@ blocks:
     bannerButtonUrl: /donate
     bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_2_alexbump_053118.jpg
     bannerText: '$XXX,XXX Raised'
-    calloutIcon: /img/coffee.png
+    calloutIcon: /img/jd_site_circlefinger_1_50x50.svg
     calloutText: >-
       Health care, housing, education, living wage, and a world not destroyed by
       climate change and aggressive wars of choice should be the standard.
@@ -83,7 +85,7 @@ blocks:
     bannerButtonUrl: /volunteer
     bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_3_greg_053118.jpg
     bannerText: 'XXX,XXX Volunteers'
-    calloutIcon: /img/coffee-gear.png
+    calloutIcon: /img/jd_site_circlefinger_1_50x50.svg
     calloutText: ' '
     header: Policies and Legislation for the People
     htmlContent: >-
@@ -94,3 +96,4 @@ blocks:
     moreButtonUrl: /report
     subheader: Need a subhead sentence here less than this many.
 ---
+
