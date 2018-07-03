@@ -19,8 +19,6 @@ const IndexPage = ({ data }) => {
     issuesIntro
   } = data.allMarkdownRemark.edges[0].node.frontmatter;
 
-  console.log(primaryIssues);
-
   return (
     <div style={{ paddingLeft: 0, paddingRight: 0 }}>
       <div
@@ -66,7 +64,7 @@ const IndexPage = ({ data }) => {
           <div>
             <button
               type="submit"
-              className="button button-primary sign-up-button"
+              className="button button-primary sign-up-button dark-blue-bg"
               style={{
                 fontWeight: "bold",
                 textTransform: "uppercase",

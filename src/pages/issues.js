@@ -10,7 +10,6 @@ export const IssuePageTemplate = ({
   }
 }) => {
   const issues_rows = issues.chunk(2);
-  console.log(issues_rows);
   return (
     <div>
       {header}

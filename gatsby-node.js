@@ -46,7 +46,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 };
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  // console.log(node);
   const { createNodeField } = boundActionCreators;
 
   if (node.internal.type === `MarkdownRemark`) {

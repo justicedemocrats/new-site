@@ -9,7 +9,7 @@ const TemplateWrapper = ({ children, location }) => (
   <div>
     <Helmet title="Home | Gatsby + Netlify CMS" />
     <Navbar path={location.pathname} />
-    <div style={{ marginTop: 50 }}>{children()}</div>
+    <div>{children()}</div>
   </div>
 );
 

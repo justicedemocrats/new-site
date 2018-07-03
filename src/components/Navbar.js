@@ -48,8 +48,10 @@ const Navbar = ({ path }) => {
       <Default>
         <div className="hanger-navbar-container">
           <div className="navbar desktop">
-            <TwitterButton />
-            <FacebookButton />
+            <div className="nav-social-container">
+              <TwitterButton />
+              <FacebookButton />
+            </div>
             <HeaderLogo />
             <Link
               to="/donate"
@@ -83,8 +85,10 @@ const Navbar = ({ path }) => {
 
       <Mobile>
         <div className="navbar mobile">
-          <TwitterButton />
-          <FacebookButton />
+          <div className="nav-social-container">
+            <TwitterButton />
+            <FacebookButton />
+          </div>
           <HeaderLogo />
           <Menu right={true}>
             <DonateLink />
@@ -109,10 +113,26 @@ Navbar.propTypes = {
 
 export default Navbar;
 
-const TwitterButton = () => <Link to="https://twitter.com/justicedems" />;
-const FacebookButton = () => <Link to="https://twitter.com/justicedems" />;
+const TwitterButton = () => (
+  <a
+    className="nav-social"
+    href="https://twitter.com/justicedems"
+    target="_blank"
+  >
+    <img src="/assets/twitter.svg" />
+  </a>
+);
+const FacebookButton = () => (
+  <a
+    className="nav-social"
+    href="https://www.facebook.com/justicedemocrats/"
+    target="_blank"
+  >
+    <img src="/assets/facebook.svg" />
+  </a>
+);
+
 const DonateLink = () => <Link to="/donate" />;
-const JoinLink = () => <Link to="/join" />;
 const HeaderLogo = () => (
   <Link to="/" style={{ height: 30 }}>
     <img style={{ height: 30 }} src="/assets/jd-logo-horiz.svg" />

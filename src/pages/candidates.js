@@ -57,8 +57,6 @@ const CandidatePage = ({ data }) => {
     stats
   } = data.page.edges[0].node.frontmatter;
 
-  console.log(data.page.edges);
-
   return (
     <CandidatePageTemplate
       candidates={candidates}
