@@ -25,7 +25,8 @@ const IndexPage = ({ data }) => {
         className="banner"
         style={{
           backgroundImage: `url(${bannerBackgroundImg})`,
-          backgroundSize: "cover"
+          backgroundSize: "cover",
+          paddingTop: 50
         }}
       >
         <img src={bannerTextImg} />
@@ -123,10 +124,10 @@ const IndexPage = ({ data }) => {
             }}
           >
             <div className="block-call-out row">
-              <div
+              <img
                 className="one columns"
+                src={firstCalloutIcon}
                 style={{
-                  backgroundImage: `url(${firstCalloutIcon})`,
                   height: 60
                 }}
               />

@@ -77,6 +77,7 @@ export default ({
 
                 <Link
                   to={moreButtonUrl}
+                  style={{ marginTop: 10 }}
                   className="block-content-button button light-blue-bg button-text full-width-button"
                 >
                   {moreButtonText}
@@ -97,9 +98,10 @@ export default ({
               }}
             >
               <div className="block-call-out row">
-                <div
+                <img
                   className="one columns"
-                  style={{ backgroundImage: `url(${calloutIcon})`, height: 60 }}
+                  src={calloutIcon}
+                  style={{ height: 60 }}
                 />
                 <div className="eleven columns bold-m callout-b">
                   {calloutText}
