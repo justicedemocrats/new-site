@@ -22,7 +22,9 @@
     "netlify-cms": "^1.7.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
+    "react-burger-menu": "^2.5.2",
     "react-helmet": "^5.2.0",
+    "react-responsive": "^4.1.0",
     "uuid": "^3.2.1"
   },
   "keywords": [
