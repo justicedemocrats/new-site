@@ -60,6 +60,17 @@ collections:
           - {label: "Sub Header", name: "subheader", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
 
+      - file: "src/pages/splash/index.md"
+        label: "Splash"
+        name: "splash"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "splash-page"}
+          - {label: "Background Image", name: "bgimg", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Header", name: "hed", widget: "string"}
+          - {label: "Sub Header", name: "subhed", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
       - file: "src/pages/candidate-page/index.md"
         label: "Candidate"
         name: "candidate"

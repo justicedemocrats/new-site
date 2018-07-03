@@ -154,7 +154,7 @@ ul.splash-navbar {
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: rgba(255, 255, 255, 0.95);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -173,6 +173,20 @@ ul.splash-navbar {
 /* Individual item */
 .bm-item {
   display: inline-block;
+  color: $jd-dark-blue;
+  text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $jd-dark-blue;
+
+  &:last-child {
+    border: none;
+  }
+
+  &::hover {
+    background-color: $jd-light-blue;
+    color: white;
+  }
 }
 
 /* Styling of overlay */

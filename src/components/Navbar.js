@@ -22,90 +22,101 @@ const links = [
   { display: "Join", href: "/join" }
 ];
 
-const Navbar = ({ path }) => {
-  // var navbarContents;
-  // switch (path) { // This is clunky, but it seems to be the best way to do route-specific rendering here without swapping out the navbar entirely.
-  //   case "/splash":
-  //     navbarContents = (
-  //       <ul className="splash-navbar">
-  //         <li className="img">
-  //           <img src="/assets/jd-logo-horiz.png" />
-  //         </li>
-  //         <li className="enter-site">
-  //           <div>
-  //             <p>Enter Site</p>
-  //           </div>
-  //         </li>
-  //       </ul>
-  //     );
-  //     break;
-  //   default:
-  //     navbarContents = undefined;
-  // }
+class Navbar extends React.Component {
+  state = { open: false };
 
-  return (
-    <div className="navbar" style={{ position: "fixed" }}>
-      <Default>
-        <div className="hanger-navbar-container">
-          <div className="navbar desktop">
+  handleMenuChange = ({ isOpen }) => this.setState({ open: isOpen });
+
+  render() {
+    const { path } = this.props;
+    // var navbarContents;
+    // switch (path) { // This is clunky, but it seems to be the best way to do route-specific rendering here without swapping out the navbar entirely.
+    //   case "/splash":
+    //     navbarContents = (
+    //       <ul className="splash-navbar">
+    //         <li className="img">
+    //           <img src="/assets/jd-logo-horiz.png" />
+    //         </li>
+    //         <li className="enter-site">
+    //           <div>
+    //             <p>Enter Site</p>
+    //           </div>
+    //         </li>
+    //       </ul>
+    //     );
+    //     break;
+    //   default:
+    //     navbarContents = undefined;
+    // }
+
+    return (
+      <div className="navbar" style={{ position: "fixed" }}>
+        <Default>
+          <div className="hanger-navbar-container">
+            <div className="navbar desktop">
+              <div className="nav-social-container">
+                <TwitterButton />
+                <FacebookButton />
+              </div>
+              <HeaderLogo />
+              <Link
+                to="/donate"
+                style={{
+                  display: "block",
+                  textDecoration: "none",
+                  color: "white",
+                  padding: 10,
+                  textTransform: "uppercase",
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center"
+                }}
+                className="orange-bg bold-m"
+              >
+                <div> Donate </div>
+              </Link>
+            </div>
+            <div className="navbar-hanger">
+              {links.map(({ display, href }) => (
+                <Link
+                  className={`hanger-link bold-m ${display.toLowerCase()}`}
+                  to={href}
+                >
+                  <div> {display} </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </Default>
+
+        <Mobile>
+          <div className="navbar mobile">
             <div className="nav-social-container">
               <TwitterButton />
               <FacebookButton />
             </div>
             <HeaderLogo />
-            <Link
-              to="/donate"
-              style={{
-                display: "block",
-                textDecoration: "none",
-                color: "white",
-                padding: 10,
-                textTransform: "uppercase",
-                height: "100%",
-                display: "flex",
-                alignItems: "center"
-              }}
-              className="orange-bg bold-m"
+            <Menu
+              right={true}
+              onStateChange={this.handleMenuChange}
+              isOpen={this.state.open}
             >
-              <div> Donate </div>
-            </Link>
+              {links.map(({ display, href }) => (
+                <Link className="bold-m" to={href}>
+                  {display}
+                </Link>
+              ))}
+            </Menu>
           </div>
-          <div className="navbar-hanger">
-            {links.map(({ display, href }) => (
-              <Link
-                className={`hanger-link bold-m ${display.toLowerCase()}`}
-                to={href}
-              >
-                <div> {display} </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </Default>
+        </Mobile>
 
-      <Mobile>
-        <div className="navbar mobile">
-          <div className="nav-social-container">
-            <TwitterButton />
-            <FacebookButton />
-          </div>
-          <HeaderLogo />
-          <Menu right={true}>
-            <DonateLink />
-            {links.map(({ display, href }) => (
-              <Link to={href}> {display} </Link>
-            ))}
-            <DonateLink />
-          </Menu>
-        </div>
-      </Mobile>
-
-      <Default>
-        <div />
-      </Default>
-    </div>
-  );
-};
+        <Default>
+          <div />
+        </Default>
+      </div>
+    );
+  }
+}
 
 Navbar.propTypes = {
   path: PropTypes.string.isRequired
@@ -132,7 +143,12 @@ const FacebookButton = () => (
   </a>
 );
 
-const DonateLink = () => <Link to="/donate" />;
+const DonateLink = () => (
+  <Link to="/donate" className="bold-m orange-bg">
+    {" "}
+    Donate{" "}
+  </Link>
+);
 const HeaderLogo = () => (
   <Link to="/" style={{ height: 30 }}>
     <img style={{ height: 30 }} src="/assets/jd-logo-horiz.svg" />
