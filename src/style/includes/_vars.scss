@@ -2,6 +2,8 @@
 $jd-dark-blue: #1c6087;
 $jd-light-blue: #0096b4;
 $jd-orange: #ff8c06;
+$jd-dark-dark-blue: #051832;
+$jd-text-gray: #77787b;
 
 // Font definitions
 $jd-sans: Montserrat, sans-serif;
@@ -60,4 +62,12 @@ $jd-sans: Montserrat, sans-serif;
 
 .orange-color {
   color: $jd-orange;
+}
+
+.text-gray-color {
+  color: $jd-text-gray;
+
+  strong {
+    color: inherit;
+  }
 }

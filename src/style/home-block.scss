@@ -7,7 +7,8 @@
 }
 
 .home-header-w {
-  font-size: 42px;
+  font-size: 115px;
+  line-height: 110px;
   color: white;
 }
 
@@ -15,10 +16,29 @@
   font-size: 28px;
   line-height: 28px;
   color: $jd-light-blue;
+  margin-top: 10px;
 }
 
-.button-text {
-  font-size: 22px !important;
+.callout-button {
+  margin-top: 10px;
+}
+
+.plain-button {
+  border-radius: 0px !important;
+  border: none !important;
+  width: 400px;
+  text-align: center;
+  font-size: 25px;
+  padding: 10px 90px 10px 90px;
+}
+
+.full-width-button {
+  border-radius: 0px !important;
+  border: none !important;
+  width: 100%;
+  text-align: center;
+  font-size: 25px !important;
+  // padding: 10px 90px 10px 90px !important;
 }
 
 .callout-b {
@@ -67,7 +87,9 @@
   width: 100%;
   color: white;
   text-transform: uppercase;
-  height: 60px;
+  height: 110px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-size: 25px;
   line-height: 30px;
   font-weight: 900;
@@ -75,4 +97,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+
+  &::hover {
+    color: white;
+  }
+}
+
+.standard-padded-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block-body {
+  padding: 40px;
+  padding-top: 60px;
+  max-width: 1120px;
 }

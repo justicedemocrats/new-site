@@ -62,6 +62,7 @@ class Navbar extends React.Component {
               <Link
                 to="/donate"
                 style={{
+                  width: 150,
                   display: "block",
                   textDecoration: "none",
                   color: "white",
@@ -69,7 +70,8 @@ class Navbar extends React.Component {
                   textTransform: "uppercase",
                   height: "100%",
                   display: "flex",
-                  alignItems: "center"
+                  alignItems: "center",
+                  justifyContent: "center"
                 }}
                 className="orange-bg bold-m"
               >

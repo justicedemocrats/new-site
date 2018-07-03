@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => {
             >
               <input
                 placeholder={name}
-                style={{ margin: 0 }}
+                style={{ margin: 0, width: "100%" }}
                 {...{
                   Name: { type: "text" },
                   Email: { type: "email" },
@@ -64,9 +64,9 @@ const IndexPage = ({ data }) => {
           <div>
             <button
               type="submit"
-              className="button button-primary sign-up-button dark-blue-bg"
+              className="button button-primary sign-up-button dark-blue-bg extra-bold-m"
               style={{
-                fontWeight: "bold",
+                fontSize: "18px",
                 textTransform: "uppercase",
                 margin: 0
               }}
@@ -79,7 +79,7 @@ const IndexPage = ({ data }) => {
 
       <div
         className="block-body container"
-        style={{ paddingLeft: "2rem", paddingRight: "2rem" }}
+        style={{ padding: 40, paddingTop: 60, maxWidth: 1120 }}
       >
         <div className="block-contents row">
           <div className="six columns" style={{ color: "blue" }}>
@@ -90,15 +90,20 @@ const IndexPage = ({ data }) => {
               >
                 {boldHeader}
               </div>
-              <div className="home-subheader-b light-m">{boldSubheader}</div>
+              <div
+                className="home-subheader-b medium-m"
+                style={{ marginTop: 10 }}
+              >
+                {boldSubheader}
+              </div>
             </div>
           </div>
           <div className="six columns">
-            <div className="block-contents-right-chunk">
+            <div className="block-contents-right-chunk text-gray-color">
               <HTMLContent
                 content={introContent}
                 markdown={true}
-                className="light-m"
+                className="medium-m"
               />
               <div />
             </div>
@@ -134,31 +139,51 @@ const IndexPage = ({ data }) => {
       </div>
 
       <div
-        className="extra-bold-m light-blue-color"
-        style={{ fontSize: "42px" }}
+        style={{
+          padding: 40,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
       >
-        {issuesIntro}
-      </div>
+        <div
+          className="extra-bold-m light-blue-color"
+          style={{
+            width: 1040,
+            fontSize: "42px"
+          }}
+        >
+          <div style={{ lineHeight: "42px", width: "100%" }}>{issuesIntro}</div>
 
-      <div className="primary-issues-container container row">
-        {primaryIssues.map(({ text, image, url }) => (
           <div
-            style={{
-              height: 300,
-              backgroundImage: `url(${image})`,
-              backgroundSize: "cover"
-            }}
-            className="four columns"
+            className="primary-issues-container row"
+            style={{ marginTop: 30 }}
           >
-            <a
-              className="primary-issue-text"
-              style={{ textDecoration: "none", bottom: 0, marginTop: "auto" }}
-              href={url}
-            >
-              <div className="text-container">{text}</div>
-            </a>
+            {primaryIssues.map(({ text, image, url }) => (
+              <div
+                style={{
+                  height: 300,
+                  backgroundImage: `url(${image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center"
+                }}
+                className="four columns"
+              >
+                <a
+                  className="primary-issue-text"
+                  style={{
+                    textDecoration: "none",
+                    bottom: 0,
+                    marginTop: "auto"
+                  }}
+                  href={url}
+                >
+                  <div className="text-container">{text}</div>
+                </a>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
 
       {blocks.map((b, i) => <HomeBlock key={i} {...b} />)}
