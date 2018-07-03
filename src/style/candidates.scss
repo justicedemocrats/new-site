@@ -10,8 +10,15 @@ div.candidates {
   .stat-container {
     display: flex;
     flex-direction: column;
+    text-transform: uppercase;
+
     .stat {
       border-bottom: 1px solid $jd-light-blue;
+      font-size: 28px;
+
+      &:last-child {
+        border: none;
+      }
     }
   }
 }

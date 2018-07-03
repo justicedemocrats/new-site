@@ -32,7 +32,7 @@ export const CandidatePageTemplate = ({
             );
           })}
         </div>
-        <div className="six columns">
+        <div className="six columns light-m">
           <p> {intro} </p>
         </div>
       </div>
