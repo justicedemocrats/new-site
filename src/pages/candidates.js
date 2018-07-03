@@ -95,6 +95,7 @@ export const pageQuery = graphql`
             outcome
             office
             district
+            blurb
           }
         }
       }

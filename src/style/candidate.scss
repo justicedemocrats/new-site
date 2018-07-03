@@ -1,20 +1,25 @@
 @import "includes/vars";
 
-div.candidate {
-  width: 600px;
-  display: flex;
+.candidate-container {
+  width: 340px;
   margin: 20px;
-  justify-content: space-around;
+}
+
+div.candidate {
+  height: 150px;
+  width: 340px;
 
   div.headshot {
-    width: 300px;
-    height: 300px;
+    float: left;
+    width: 125px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
     div.office {
       background-color: $jd-light-blue;
       width: 100%;
@@ -25,8 +30,13 @@ div.candidate {
       text-align: center;
     }
   }
+
   div.meta {
-    padding: 20px;
+    user-select: none;
+    float: right;
+    width: 215px;
+    padding-left: 10px;
+
     div.nameIncumbent {
       span.name {
         font-weight: bold;
@@ -38,6 +48,7 @@ div.candidate {
         color: $jd-light-blue;
       }
     }
+
     div.office {
       font-weight: bold;
       font-size: 2rem;
@@ -52,5 +63,38 @@ div.candidate {
         margin-left: 0.5rem;
       }
     }
+
+    .links-container {
+      display: flex;
+      justify-content: space-between;
+      width: 70px;
+
+      a {
+        height: 30px;
+        width: 30px;
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+
+    .read-more {
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 5px;
+
+      img {
+        height: 15px;
+        width: 15px;
+        margin-right: 5px;
+      }
+    }
   }
+}
+
+.candidate-blurb {
+  width: 340px;
 }

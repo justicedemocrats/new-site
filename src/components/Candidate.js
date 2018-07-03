@@ -12,77 +12,122 @@ const electionTypeMap = {
   primary: "Primary"
 };
 
-const Candidate = ({
-  firstName,
-  lastName,
-  electionType,
-  district,
-  state,
-  electionDate,
-  image,
-  blurb,
-  website,
-  donationLink,
-  outcome,
-  office,
-  incumbent
-}) => {
-  let ed = new Date(electionDate);
-  let [d, m] = [ed.getDate(), ed.getMonth()];
-  m = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec"
-  ][m];
-  return (
-    <div className="candidate">
-      <div
-        className="headshot"
-        style={{
-          backgroundImage: `url(${(image || defaultImage).trim('"')})`,
-          backgroundSize: "cover"
-        }}
-      >
-        <div className="office">
-          {state}-
-          {office == "house" ? district : officeTypeMap[office]}
+class Candidate extends React.Component {
+  state = { expanded: false };
+
+  toggleExpanded = ev => {
+    ev.stopPropagation();
+    this.setState({ expanded: !this.state.expanded });
+  };
+
+  expand = () => this.setState({ expanded: true });
+  collapse = () => this.setState({ expanded: false });
+
+  render() {
+    const {
+      firstName,
+      lastName,
+      electionType,
+      district,
+      state,
+      electionDate,
+      image,
+      blurb,
+      website,
+      donationLink,
+      outcome,
+      office,
+      incumbent
+    } = this.props;
+
+    let ed = new Date(electionDate);
+    let [d, m] = [ed.getDate(), ed.getMonth()];
+    m = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ][m];
+    return (
+      <div className="candidate-container">
+        <div
+          className={`candidate ${this.state.expanded && "no-fixed-height"}`}
+          onClick={this.expand}
+        >
+          <div
+            className="headshot"
+            style={{
+              backgroundImage: `url(${(image || defaultImage).trim('"')})`,
+              backgroundSize: "cover"
+            }}
+          >
+            <div className="office bold-m">
+              {state}-
+              {office == "house" ? district : officeTypeMap[office]}
+            </div>
+          </div>
+
+          <div className="meta">
+            <div className="nameIncumbent">
+              <span className="name bold-m">
+                {firstName} {lastName}
+              </span>
+              <span className="incumbent">{incumbent && "(Incumbent)"}</span>
+            </div>
+            <div className="office bold-m">
+              {state}-
+              {office == "house" ? district : officeTypeMap[office]}
+            </div>
+            <div className="raceDate">
+              <span className="race bold-m">
+                {electionType === "general"
+                  ? "General Election"
+                  : `${state} ${electionTypeMap[electionType]}`}
+              </span>
+              |
+              <span className="date medium-m">
+                {m} {d}
+              </span>
+            </div>
+
+            <div className="links-container">
+              <a href={website} target="_blank">
+                <img src="/assets/candidate-home.svg" />
+              </a>
+              <a href={donationLink} target="_blank">
+                <img src="/assets/candidate-donate.svg" />
+              </a>
+            </div>
+            <div className="read-more" onClick={this.toggleExpanded}>
+              {this.state.expanded ? (
+                <img src="/assets/small-toggle-minus.svg" />
+              ) : (
+                <img src="/assets/small-toggle-plus.svg" />
+              )}
+
+              {this.state.expanded ? "Close" : "Read More"}
+            </div>
+          </div>
         </div>
+
+        {this.state.expanded && (
+          <div className="candidate-blurb">
+            <br />
+            <p> {blurb} </p>
+          </div>
+        )}
       </div>
-      <div className="meta">
-        <div className="nameIncumbent">
-          <span className="name">
-            {firstName} {lastName}
-          </span>
-          <span className="incumbent">{incumbent && "(Incumbent)"}</span>
-        </div>
-        <div className="office">
-          {state}-
-          {office == "house" ? district : officeTypeMap[office]}
-        </div>
-        <div className="raceDate">
-          <span className="race">
-            {electionType === "general"
-              ? "General Election"
-              : `${state} ${electionTypeMap[electionType]}`}
-          </span>
-          |
-          <span className="date">
-            {m} {d}
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 Candidate.propTypes = {
   firstName: PropTypes.string.isRequired,
