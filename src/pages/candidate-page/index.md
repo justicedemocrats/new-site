@@ -2,16 +2,14 @@
 templateKey: candidate-fragment
 title: Justice Democrats | Candidates
 bannerBackgroundImage: /img/candidates-banner.jpg
-bannerText: Candidates for Justice
+bannerTet: Candidates For Justice
 intro: >-
-  We’re running a broad slate of candidates across the country — many of who we
-  have counted on you to nominated. Some have been previously involved in
-  politics but many who are running or the first time, they are educators,
-  nurses, small business owners and local activist. Every one of them concerned
-  about their community,
-
-  our country, and making sure every person has the same protections, rights and
-  opportunity.
+  We’re running a broad slate of candidates across the country — most of whom we
+  have counted on you to nominate. Some have been previously involved in
+  politics but most are running for the first time; they are educators, nurses,
+  small business owners and local community organizers. Every one of them
+  concerned about their community, our country, and making sure every person has
+  the same protections, rights and opportunity.
 stats:
   - count: '43'
     title: Current Slate
@@ -22,3 +20,4 @@ stats:
   - count: '3'
     title: Currently Seated
 ---
+
