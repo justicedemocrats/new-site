@@ -16,26 +16,63 @@ export const SplashPageTemplate = ({
   return (
     <div className="container" style={{ backgroundImage: `url(${bgimg})` }}>
       <div className="splash">
-        <div className="hed">{hed}</div>
-        <div className="subhed">{subhed}</div>
-        <div className="form">
-          <form className="splash-signup" name="splash-signup" netlify="true">
-            <div className="field">
-              <input type="text" name="name" placeholder="Name [required]" />
-            </div>
-            <div className="field">
-              <input type="text" name="email" placeholder="Email [required]" />
-            </div>
-            <div className="field">
-              <input type="text" name="zip" placeholder="Zip [required]" />
-            </div>
-            <div className="field">
-              <input type="text" name="phone" placeholder="Phone [optional]" />
-            </div>
-            <input type="submit" name="submit" value="JOIN US" />
-          </form>
+        <div className="row">
+          <div className="hed six columns">{hed}</div>
         </div>
-        <PageContent className="content" content={content} />
+        <div className="row">
+          <div className="subhed six columns bold-m" style={{ marginTop: 30 }}>
+            {subhed}
+          </div>
+        </div>
+        <div className="row" style={{ marginTop: 50 }}>
+          <form
+            className="splash-signup six columns"
+            name="splash-signup"
+            netlify="true"
+          >
+            <div className="inputs-container">
+              <input
+                className="splash-input"
+                type="text"
+                name="name"
+                placeholder="Name"
+                required="true"
+              />
+              <input
+                className="splash-input"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required="true"
+              />
+              <input
+                className="splash-input"
+                type="text"
+                maxLength="5"
+                minLength="5"
+                name="zip"
+                placeholder="Zip"
+                required="true"
+              />
+              <input
+                className="splash-input"
+                name="phone"
+                type="tel"
+                placeholder="Phone"
+                required="true"
+              />
+            </div>
+            <input
+              type="submit"
+              name="submit"
+              value="JOIN US"
+              className="extra-bold-m orange-bg"
+            />
+          </form>
+          <div className="five columns content-container">
+            <PageContent className="content" content={content} />
+          </div>
+        </div>
       </div>
     </div>
   );

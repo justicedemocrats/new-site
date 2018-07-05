@@ -29,6 +29,38 @@ class Navbar extends React.Component {
 
   render() {
     const { path } = this.props;
+
+    if (path == "/splash" || path == "/join") {
+      return (
+        <div className="navbar" style={{ osition: "fixed" }}>
+          <div className="navbar desktop">
+            <div className="nav-social-container">
+              {/* <TwitterButton />
+              <FacebookButton /> */}
+            </div>
+            <HeaderLogo />
+            <Link
+              to="/"
+              style={{
+                width: 150,
+                display: "block",
+                textDecoration: "none",
+                color: "white",
+                padding: 10,
+                textTransform: "uppercase",
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+              className="orange-bg bold-m"
+            >
+              <div> Enter Site </div>
+            </Link>
+          </div>
+        </div>
+      );
+    }
     // var navbarContents;
     // switch (path) { // This is clunky, but it seems to be the best way to do route-specific rendering here without swapping out the navbar entirely.
     //   case "/splash":

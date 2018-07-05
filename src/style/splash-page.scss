@@ -1,90 +1,94 @@
-@import 'includes/includes';
+@import "includes/includes";
 
-$grid-gutter: 20px; // for the overall layout grid
 $form-column-gap: 30px;
 $form-input-maxwidth: 410px;
 $column1-maxwidth: 2*$form-input-maxwidth + $form-column-gap;
+
 div.container {
   background-size: cover;
+  background-position-x: right;
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
   padding: 2rem 1rem;
+  height: calc(100vh - 50px);
 }
+
 div.splash {
   font-family: $jd-sans;
-  display: grid;
-  grid-column-gap: $grid-gutter;
-  grid-row-gap: $grid-gutter;
-  grid-template-columns: repeat(auto-fit, minmax(auto, $column1-maxwidth));
   margin: 0 auto;
-  div.hed, div.subhed {
+  padding: 50px;
+
+  div.hed,
+  div.subhed {
     color: white;
-    grid-column: 1/2;
   }
+
   div.hed {
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 35px;
+    line-height: 35px;
     text-transform: uppercase;
-    grid-row: 1/2;
   }
+
   div.subhed {
-    font-weight: medium;
-    font-size: 1.5rem;
-    grid-row: 2/3;
+    font-size: 22px;
+    line-height: 22px;
   }
-  div.form {
-    grid-column-start: 1;
-    form.splash-signup {
-      display: grid;
-      grid-column-gap: 20px;
-      @include breakpoint(mobile) {
-        grid-column-gap: 10px;
-      }
-      grid-template-columns: 1fr 1fr;
-      input, input::placeholder {
+
+  form.splash-signup {
+    flex-direction: column;
+
+    .inputs-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    input,
+    input::placeholder {
+      font-weight: bold;
+      color: white;
+      font-family: "Montserrat", sans-serif;
+      font-size: 22px;
+    }
+
+    .splash-input {
+      height: 60px;
+      width: 48%;
+      border-radius: 0px;
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid white;
+    }
+
+    input[type="submit"] {
+      border: 0px;
+      height: 60px;
+      font-size: 35px;
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+
+  .content-container {
+    padding-left: 50px;
+    margin-left: 50px;
+    border-left: 1px solid white;
+
+    div.content {
+      color: white;
+      font-family: $jd-sans;
+
+      h3 {
         font-weight: bold;
         color: white;
       }
-      input[type="text"] {
-        font-size: 1rem;
-        height: 80px;
-        @include breakpoint(mobile) {
-          height: 60px;
-        }
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0);
-        border: 1px solid white;
-        text-align: center;
+      ul {
+        margin-left: 0;
+        list-style: disc inside;
+        font-weight: medium;
       }
-      input[type="submit"] {
-        border: 0px;
-        grid-column: 1/-1;
-        height: 100px;
-        @include breakpoint(mobile) {
-          height: 60px;
-        }
-        font-size: 2.5rem;
-        @include orange-bg;
-      }
-    }
-  }
-  div.content {
-    font-size: 1rem;
-    color: white;
-    h3 {
-      font-weight: bold;
-      color: white;
-    }
-    ul {
-      margin-left: 0;
-      list-style: disc inside;
-    }
-    @include breakpoint(desktop) {
-      grid-column-start: 2;
-    }
-    @include breakpoint(laptop) {
-      grid-column-start: 1;
     }
   }
 }
