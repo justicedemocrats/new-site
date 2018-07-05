@@ -3,7 +3,7 @@ title: Ben Jealous
 templateKey: candidate-fragment
 firstName: Ben
 lastName: Jealous
-district: Gov
+district: GOV
 state: MD
 electionDate: '2018-11-06'
 electionType: general
