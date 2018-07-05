@@ -1,4 +1,5 @@
 @import "./includes/_vars";
+@import "includes/includes";
 
 .candidates {
   display: flex;
@@ -29,6 +30,47 @@
       &:last-child {
         border: none;
       }
+    }
+  }
+}
+
+.sort-options {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint(mobile) {
+    flex-wrap: wrap;
+  }
+
+  .sort-button {
+    border-radius: 0px;
+    color: $jd-dark-blue;
+    border: 1px solid $jd-dark-blue;
+    text-transform: none;
+    font-size: 15px;
+    display: block;
+    letter-spacing: 0px;
+    width: 19%;
+
+    @include breakpoint(mobile) {
+      width: 100% !important;
+    }
+
+    &.selected,
+    &:hover {
+      color: $jd-light-blue;
+      border: 1px solid $jd-light-blue;
+    }
+  }
+
+  .orange-border {
+    border: 1px solid $jd-orange;
+    &:hover {
+      border: 1px solid $jd-orange;
     }
   }
 }

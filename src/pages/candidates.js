@@ -68,10 +68,21 @@ export class CandidatePageTemplate extends React.Component {
               ["Election Date", "electionDate"],
               ["General Election", "general"]
             ].map(([label, key]) => (
-              <button onClick={this.currySetSort(key)} className="sort-button">
+              <button
+                onClick={this.currySetSort(key)}
+                className={`sort-button bold-m ${this.state.sortFunction ===
+                  key && "selected"}`}
+              >
                 {label}
               </button>
             ))}
+            <a
+              className="sort-button orange-bg extra-bold-m orange-border button"
+              href="https://secure.actblue.com/donate/jd-candidates?refcode=candidatepage"
+              target="_blank"
+            >
+              Donate to All
+            </a>
           </div>
           <div className="candidates">
             {sortFunctions[this.state.sortFunction](candidates).map(
