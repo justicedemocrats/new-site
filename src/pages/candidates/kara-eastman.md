@@ -13,7 +13,7 @@ website: 'http://eastmanforcongress.com/'
 donationLink: 'https://secure.actblue.com/donate/jd-karaeastman'
 outcome: Won
 image: /img/jd_site_karaeastman_550x600_061218.jpg
-blurb: >
+blurb: >-
   Kara Eastman is a longtime community leader running for Congress in Nebraska’s
   2nd District. As the founder of the Omaha Healthy Kids Alliance, Kara led the
   charge to combat lead poisoning in children and ensure access to safe, green
