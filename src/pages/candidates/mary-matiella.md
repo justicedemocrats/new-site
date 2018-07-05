@@ -5,7 +5,7 @@ firstName: Mary
 lastName: Matiella
 district: '02'
 state: AZ
-electionDate: '2018-06-28'
+electionDate: '2018-08-28'
 electionType: primary
 office: house
 incumbent: false
