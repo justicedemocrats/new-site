@@ -27,16 +27,16 @@ collections:
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Blurb", name: "blurb", widget: "text"}
 
-  - name: "issues"
-    label: "Issues"
-    folder: "src/pages/issues"
-    create: true
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "ignore-fragment"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Subtitle", name: "subtitle", widget: "string"}
-      - {label: "Icon", name: "icon", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  # - name: "issues"
+  #   label: "Issues"
+  #   folder: "src/pages/issues"
+  #   create: true
+  #   fields:
+  #     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "ignore-fragment"}
+  #     - {label: "Title", name: "title", widget: "string"}
+  #     - {label: "Subtitle", name: "subtitle", widget: "string"}
+  #     - {label: "Icon", name: "icon", widget: "image"}
+  #     - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "pages"
     label: "Pages"
@@ -47,17 +47,6 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-
-      - file: "src/pages/issue-pages/index.md"
-        label: "Issues"
-        name: "issues"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "ignore-fragment"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Banner Text", name: "bannerText", widget: "string"}
-          - {label: "Header", name: "header", widget: "string"}
-          - {label: "Sub Header", name: "subheader", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
 
       - file: "src/pages/splash/index.md"
@@ -87,6 +76,30 @@ collections:
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Count", name: "count", widget: "string"}
+
+      - file: "src/pages/issue-pages/index.md"
+        label: "Issues"
+        name: "issues"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "ignore-fragment"}
+          - {label: "Unique ID", name: "uniq", widget: "hidden", default: "issue-index"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Banner Background Image", name: "bannerBackgroundImage", widget: "image"}
+          - {label: "Banner Text", name: "bannerText", widget: "string"}
+          - {label: "Header", name: "header", widget: "string"}
+          - {label: "Sub Header", name: "subheader", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            fields: 
+              - {label: "Intro", name: "intro", widget: "text" }
+              - label: "Planks"
+                name: "planks"
+                widget: "list"
+                fields:
+                - {label: "Title", name: "title", widget: "text"}
+                - {label: "Contents", name: "contents", widget: "markdown"}
 
       - file: "src/pages/landing/index.md"
         label: "Landing"
