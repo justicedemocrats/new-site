@@ -16,6 +16,9 @@ image: /img/jd_site_chardorichardson_550x600_061218.jpg
 blurb: >-
   I have fought bullies all my life, and the biggest bullies in the world are
   governments and corporations that put profits before people. My experiences as
-  a veteran and civil rights advocate prepared me to fight.
+  a veteran and civil rights advocate prepared me to fight for your liberties in
+  Congress. Together we will secure health care as a human right through
+  Medicare for All, end mass incarceration, and ensure the right to an education
+  with free public college.
 ---
 
