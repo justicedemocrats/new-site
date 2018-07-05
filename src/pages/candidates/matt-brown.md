@@ -13,7 +13,7 @@ website: 'https://mattbrownforgovernor.com'
 donationLink: 'https://secure.actblue.com/donate/mattjd'
 outcome: Unknown
 image: /img/jd_site_mattbrown_550x600_061218.jpg
-blurb: >
+blurb: >-
   Matt Brown is running for Governor of Rhode Island to roll back the current
   Governor's restrictions on abortion, to end her failed and discredited attempt
   to "buy" a strong economy by spending millions of dollars on corporate
