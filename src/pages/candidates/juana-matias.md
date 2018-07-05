@@ -13,7 +13,7 @@ website: 'https://juanamatias.com/'
 donationLink: 'https://secure.actblue.com/donate/jdjuana'
 outcome: Unknown
 image: /img/jd_site_juanamatias_550x600_061218.jpg
-blurb: >
+blurb: >-
   Juana Matias, an immigrant and one of the first Latinas to serve in her state
   legislature, is running to represent the 3rd Congressional District of
   Massachusetts. Her experience as both a social worker and a lawyer makes her
