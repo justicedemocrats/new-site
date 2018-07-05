@@ -13,10 +13,10 @@ website: 'https://jesskingforcongress.com/'
 donationLink: 'https://secure.actblue.com/donate/jesspa'
 outcome: Won
 image: /img/jd_site_jessking_550x600_061218.jpg
-blurb: >
-  Born and raised in Lancaster County, Pennsylvania, Jess King is working mom
-  running for Congress in PA’s 11th District. Jess is focused on passing
-  Medicare-for-All and building an America that belongs to all of us, not just
-  the wealthiest and well-connected in Washington.
+blurb: >-
+  Born and raised in Lancaster County, Pennsylvania, Jess King is a working mom
+  who is running for Congress in PA’s 11th District. Jess is focused on passing
+  Medicare for All and building an America that belongs to all of us, not just
+  the wealthiest and most well-connected in Washington.
 ---
 
