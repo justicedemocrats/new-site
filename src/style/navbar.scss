@@ -11,7 +11,9 @@
   align-items: center !important;
   width: 100%;
   height: 50px;
+  min-height: auto !important;
   z-index: 100000;
+  font-size: 18px;
 
   .mobile {
     padding-left: 50px;
