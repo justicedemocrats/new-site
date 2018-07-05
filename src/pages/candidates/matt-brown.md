@@ -7,7 +7,7 @@ district: GOV
 state: RI
 electionDate: '2018-09-12'
 electionType: primary
-office: house
+office: governor
 incumbent: false
 website: 'https://mattbrownforgovernor.com'
 donationLink: 'https://secure.actblue.com/donate/mattjd'
