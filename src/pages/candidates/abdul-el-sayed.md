@@ -3,11 +3,11 @@ title: Abdul El-Sayed
 templateKey: candidate-fragment
 firstName: Abdul
 lastName: El-Sayed
-district: GOV
+district: Governor
 state: MI
 electionDate: '2018-08-07'
 electionType: primary
-office: house
+office: governor
 incumbent: false
 website: 'http://abdulformichigan.com/'
 donationLink: 'https://secure.actblue.com/donate/justicedems-aes'
