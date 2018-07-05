@@ -13,13 +13,13 @@ website: 'https://www.stephanyroseforcongress.com'
 donationLink: 'https://secure.actblue.com/donate/stephanyco'
 outcome: Won
 image: /img/jd_site_stephanyrosespaulding_550x600_061218.jpg
-blurb: >
+blurb: >-
   Dr. Stephany Rose Spaulding is a professor, pastor, and lifelong social
   justice champion who is ready to put people over politics. Everyone deserves
   to have representation in Congress and since 1972 there have been whole
   communities ignored in Colorado's 5th Congressional District. In Congress,
-  Stephany will ensure universal healthcare is a right, champion advancements in
-  renewable energies and climate justice, create inclusive economic policies,
+  Stephany will ensure universal health care is a right, champion advancements
+  in renewable energies and climate justice, create inclusive economic policies,
   and protect our most vulnerable and marginalized populations.
 ---
 
