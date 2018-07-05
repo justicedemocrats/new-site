@@ -13,7 +13,7 @@ website: 'https://benacforcongress.com/'
 donationLink: 'https://secure.actblue.com/donate/davidmi'
 outcome: Unknown
 image: /img/jd_site_davidbenac_550x600_061218.jpg
-blurb: >
+blurb: >-
   David is an educator, union representative, and community organizer
   challenging a now-vulnerable 16-term GOP incumbent in Michigan’s 6th. David is
   committed to ensuring health care and education for all and erasing dark money
