@@ -13,7 +13,7 @@ website: 'https://www.matiellaforcongress.com/ '
 donationLink: 'https://secure.actblue.com/donate/maryaz'
 outcome: Unknown
 image: /img/jd_site_marymatiela_550x600_061218.jpg
-blurb: >
+blurb: >-
   After serving as CFO of the US Forest Service, and Assistant CFO of Housing
   and Urban Development, Dr. Matiella was nominated by President Obama to serve
   as Assistant Secretary of the Army. Her nomination was unanimously confirmed
