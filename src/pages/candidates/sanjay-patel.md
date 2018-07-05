@@ -13,7 +13,7 @@ website: 'https://www.votesanjaypatel.com/'
 donationLink: 'https://secure.actblue.com/donate/sanjayjd'
 outcome: Unknown
 image: /img/jd_site_sanjaypatel_550x600_061218.jpg
-blurb: >
+blurb: >-
   Sanjay is a first-generation immigrant and former small business owner who is
   running to represent Florida’s 8th congressional district. As local
   opportunities expand in space travel and exploration, Sanjay aims to ensure
