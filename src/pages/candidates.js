@@ -5,52 +5,73 @@ import Candidate from "../components/Candidate";
 import Banner from "../components/Banner";
 import "../style/candidates.scss";
 
-export const CandidatePageTemplate = ({
-  bannerBackgroundImage,
-  bannerText,
-  candidates,
-  stats,
-  intro
-}) => {
-  return (
-    <div>
-      <Banner backgroundImage={bannerBackgroundImage} text={bannerText} />,
-      <div className="page-container">
-        <div className="candidate-intro-section row">
-          <div className="six columns stat-container">
-            {stats.map(({ title, count }) => {
-              const split = title.split(" ");
-              const first = split.slice(0, split.length - 1).join(" ");
-              const last = split[split.length - 1];
+const sortFunctions = {
+  state: (a, b) => a.state - b.state,
+  alphabetical: (a, b) => a.lastName - b.lastName,
+  primaryDate: (a, b) => new Date(a.electionDate) - new Date(b.electionDate),
+  general: (a, b) => {
+    if (a.outcome === "Won" && b.outcome === "Won") {
+      return a.state - b.state;
+    } else if (a.outcome === "Won" && b.outcome !== "Won") {
+      return -1;
+    } else if (a.outcome !== "Won" && b.outcome === "Won") {
+      return 1;
+    } else {
+      return a.state - b.state;
+    }
+  }
+};
 
-              return (
-                <div className="stat">
-                  <span className="light-m light-blue-color"> {first} </span>
-                  <span className="bold-m light-blue-color"> {last} </span>
-                  <span className="light-m light-blue-color"> = </span>
-                  <span className="extra-bold-m orange-color"> {count} </span>
-                </div>
-              );
-            })}
+export class CandidatePageTemplate extends React.Component {
+  state = { sortFunction: "state" };
+
+  render() {
+    const {
+      bannerBackgroundImage,
+      bannerText,
+      candidates,
+      stats,
+      intro
+    } = this.props;
+    return (
+      <div>
+        <Banner backgroundImage={bannerBackgroundImage} text={bannerText} />,
+        <div className="page-container">
+          <div className="candidate-intro-section row">
+            <div className="six columns stat-container">
+              {stats.map(({ title, count }) => {
+                const split = title.split(" ");
+                const first = split.slice(0, split.length - 1).join(" ");
+                const last = split[split.length - 1];
+
+                return (
+                  <div className="stat">
+                    <span className="light-m light-blue-color"> {first} </span>
+                    <span className="bold-m light-blue-color"> {last} </span>
+                    <span className="light-m light-blue-color"> = </span>
+                    <span className="extra-bold-m orange-color"> {count} </span>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="six columns light-m">
+              <p> {intro} </p>
+            </div>
           </div>
-          <div className="six columns light-m">
-            <p> {intro} </p>
+          <div className="candidates">
+            {candidates.map((props, i) => <Candidate key={i} {...props} />)}
           </div>
-        </div>
-        <div className="candidates">
-          {candidates.map((props, i) => <Candidate key={i} {...props} />)}
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 CandidatePageTemplate.propTypes = {
   candidates: PropTypes.array.isRequired
 };
 
 const CandidatePage = ({ data }) => {
-  console.log(data);
   const { candidates: { edges } } = data;
   const candidates = edges.map(edge => edge.node.frontmatter);
   const {
