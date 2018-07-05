@@ -3,7 +3,7 @@ templateKey: candidate-fragment
 uniq: candidate-index
 title: Justice Democrats | Candidates
 bannerBackgroundImage: /img/candidates-banner.jpg
-bannerTet: Candidates For Justice
+bannerText: Candidates For Justice
 intro: >-
   We’re running a broad slate of candidates across the country — most of whom we
   have counted on you to nominate. Some have been previously involved in

@@ -48,6 +48,7 @@ CandidatePageTemplate.propTypes = {
 };
 
 const CandidatePage = ({ data }) => {
+  console.log(data);
   const { candidates: { edges } } = data;
   const candidates = edges.map(edge => edge.node.frontmatter);
   const {
