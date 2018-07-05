@@ -13,11 +13,11 @@ website: 'http://dorothyforcongress.com/'
 donationLink: 'https://secure.actblue.com/donate/dorothywa'
 outcome: Unknown
 image: /img/jd_site_dorothygasque_550x600_061218.jpg
-blurb: >
+blurb: >-
   While our representatives argue about whether or not to raise the minimum
   wage, families are struggling to make rent. Dorothy Gasque is running for
   Congress in Washington’s 3rd district to reform our government and return
-  power to the people rather than corporate interests Congress currently
+  power to the people rather than the corporate interests Congress currently
   represents.
 ---
 
