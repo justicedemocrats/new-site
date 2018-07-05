@@ -13,11 +13,11 @@ website: 'https://www.deedra2018.com/'
 donationLink: 'https://secure.actblue.com/donate/deedra'
 outcome: Unknown
 image: /img/jd_site_deedraabboud_550x600_061218.jpg
-blurb: >
+blurb: >-
   As a socially conscious immigration and estate planning attorney, Deedra
   Abboud is running a grassroots Arizona U.S. Senate campaign focused on getting
-  special interests and lobbying money out of politics. She champions healthcare
-  for all, quality and affordable public education, protecting net neutrality,
-  and the separation of religion and state, so all may live freely
+  special interests and lobbying money out of politics. She champions health
+  care for all, quality and affordable public education, protecting net
+  neutrality, and the separation of religion and state, so all may live freely.
 ---
 
