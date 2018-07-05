@@ -13,7 +13,7 @@ website: 'https://lorieburchforcongress.com/ '
 donationLink: 'https://secure.actblue.com/donate/jdlorie'
 outcome: Won
 image: /img/jd_site_lorieburch_550x600_061218.jpg
-blurb: >
+blurb: >-
   Lorie Burch has dedicated her career as a lawyer to fighting for vulnerable
   communities and ensuring equal rights for all. Now, Lorie is running for
   Congress in the 3rd District of Texas to continue that critical work in
