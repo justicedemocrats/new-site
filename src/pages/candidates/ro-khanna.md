@@ -13,7 +13,7 @@ website: 'http://www.rokhanna.com/'
 donationLink: 'https://secure.actblue.com/donate/jdro'
 outcome: Won
 image: /img/jd_site_rokhanna_550x600_061218.jpg
-blurb: >
+blurb: >-
   As the freshman Congressman representing California's 17th District, Ro is
   focused on getting special interest and lobbying money out of politics, making
   college affordable and fighting for renewable energy and the environment.
