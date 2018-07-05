@@ -11,7 +11,7 @@ office: house
 incumbent: false
 website: 'https://www.vanessaadia.com/'
 donationLink: 'https://secure.actblue.com/donate/jdadia#'
-outcome: Unknown
+outcome: Won
 image: /img/jd_site_vanessaadia_550x600_061218.jpg
 blurb: >
   As a working mother and teacher, Vanessa is committed to ensuring that
