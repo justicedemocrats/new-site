@@ -13,10 +13,10 @@ website: 'https://www.vanessaadia.com/'
 donationLink: 'https://secure.actblue.com/donate/jdadia#'
 outcome: Won
 image: /img/jd_site_vanessaadia_550x600_061218.jpg
-blurb: >
+blurb: >-
   As a working mother and teacher, Vanessa is committed to ensuring that
   families come before profits in our government. She will fight for the issues
-  that are important to all families-- public education, health care, and an
+  that are important to all families — public education, health care, and an
   economy where everyone can succeed and support their families.
 ---
 
