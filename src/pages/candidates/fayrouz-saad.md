@@ -13,7 +13,7 @@ website: 'https://www.fayrouzsaad.com/'
 donationLink: 'https://secure.actblue.com/donate/jdsaad'
 outcome: Unknown
 image: /img/jd_site_fayrouzsaad_550x600_061218.jpg
-blurb: >
+blurb: >-
   Fayrouz Saad was born and raised in Michigan and has spent her career serving
   the public. She is now running in Michigan’s 11th district to fight for health
   care, education, economic and justice systems that work for all.
