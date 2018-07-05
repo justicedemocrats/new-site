@@ -13,7 +13,7 @@ website: 'https://www.audreyforcongress.com/'
 donationLink: 'https://secure.actblue.com/donate/audrey'
 outcome: Won
 image: /img/jd_site_audreydenney_550x600_061218.jpg
-blurb: >
+blurb: >-
   Audrey Denney has never found a place she loves more than the North State. She
   is running for Congress in California's 1st District because she believes that
   the people of the North State deserve better. They deserve a representative
