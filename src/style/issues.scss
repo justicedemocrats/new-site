@@ -10,3 +10,31 @@
   border-top: 1px dotted orange;
   margin: 25px 0px;
 }
+
+.issues-contents {
+  font-size: 16px;
+}
+
+.plank {
+  .plank-title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin: 10px 0px;
+
+    img {
+      height: 15px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .plank-contents {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.issue-intro {
+  font-size: 18px;
+}

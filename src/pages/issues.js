@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { HTMLContent } from "../components/Content";
 import Banner from "../components/Banner";
+import Plank from "../components/Plank";
 import "../style/issues.scss";
 
 export const IssuePageTemplate = ({
@@ -23,16 +24,29 @@ export const IssuePageTemplate = ({
           <div className="row">
             <div className="six columns">
               <div className="light-blue-color">
-                <div className="extra-bold-m">{header}</div>
-                <div className="medium-m">{subheader}</div>
+                <div
+                  className="extra-bold-m"
+                  style={{ fontSize: 42, lineHeight: "42px" }}
+                >
+                  {header}
+                </div>
+                <div
+                  className="medium-m"
+                  style={{ fontSize: 22, lineHeight: "22px" }}
+                >
+                  {subheader}
+                </div>
               </div>
             </div>
             <div className="six columns">
-              <HTMLContent content={body} className="medium-m" />
+              <HTMLContent
+                content={body}
+                className="medium-m issues-contents"
+              />
             </div>
           </div>
 
-          {sections.map(({ title, icon, intro }) => (
+          {sections.map(({ title, icon, intro, planks }) => (
             <div>
               <Divider />
               <div className="row">
@@ -42,10 +56,14 @@ export const IssuePageTemplate = ({
                 <div className="ten columns">
                   <div>
                     <div className="extra-bold-m light-blue-color">{title}</div>
-                    <div className="medium-m"> {intro} </div>
+                    <div className="medium-m issue-intro"> {intro} </div>
                   </div>
                 </div>
               </div>
+
+              {(planks || []).map((plank, idx) => (
+                <Plank {...plank} index={idx} />
+              ))}
             </div>
           ))}
         </div>
@@ -85,6 +103,10 @@ export const pageQuery = graphql`
               title
               icon
               intro
+              planks {
+                title
+                contents
+              }
             }
           }
         }
