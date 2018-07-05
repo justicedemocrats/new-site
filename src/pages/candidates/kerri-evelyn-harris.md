@@ -3,7 +3,7 @@ title: Kerri Evelyn Harris
 templateKey: candidate-fragment
 firstName: Kerri
 lastName: Evelyn Harris
-district: SN
+district: Senate
 state: DE
 electionDate: '2018-09-06'
 electionType: primary
