@@ -6,7 +6,7 @@ lastName: Eastman
 district: '02'
 state: NE
 electionDate: '2018-11-06'
-electionType: primary
+electionType: general
 office: house
 incumbent: false
 website: 'http://eastmanforcongress.com/'
