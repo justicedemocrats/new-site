@@ -69,10 +69,14 @@ class Candidate extends React.Component {
               backgroundSize: "cover"
             }}
           >
-            <div className="office bold-m">
-              {state}-
-              {office == "house" ? district : officeTypeMap[office]}
-            </div>
+            {outcome == "Won" ? (
+              <div className="office bold-m orange-bg">WON</div>
+            ) : (
+              <div className="office bold-m">
+                {state}-
+                {office == "house" ? district : officeTypeMap[office]}
+              </div>
+            )}
           </div>
 
           <div className="meta">
@@ -92,10 +96,21 @@ class Candidate extends React.Component {
                   ? "General Election"
                   : `${state} ${electionTypeMap[electionType]}`}
               </span>
-              |
-              <span className="date medium-m">
-                {m} {d}
-              </span>
+              {outcome == "Won" ? (
+                <span
+                  className="date bold-m orange-color"
+                  style={{ textTransform: "uppercase" }}
+                >
+                  {m} {d}
+                </span>
+              ) : (
+                <span>
+                  |
+                  <span className="date medium-m">
+                    {m} {d}
+                  </span>
+                </span>
+              )}
             </div>
 
             <div className="links-container">

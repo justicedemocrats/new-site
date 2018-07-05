@@ -1,5 +1,5 @@
 ---
-templateKey: candidate-fragment
+templateKey: ignore-fragment
 uniq: candidate-index
 title: Justice Democrats | Candidates
 bannerBackgroundImage: /img/candidates-banner.jpg

@@ -4,26 +4,26 @@ import PropTypes from "prop-types";
 import Candidate from "../components/Candidate";
 import Banner from "../components/Banner";
 import "../style/candidates.scss";
+import sortBy from "lodash.sortby";
+
+const alphabeticalSort = (a, b) => {
+  return a.toLowerCase() < b.toLowerCase()
+    ? 1
+    : a.toLowerCase() > b.toLowerCase() ? 1 : 0;
+};
 
 const sortFunctions = {
-  state: (a, b) => a.state - b.state,
-  alphabetical: (a, b) => a.lastName - b.lastName,
-  primaryDate: (a, b) => new Date(a.electionDate) - new Date(b.electionDate),
-  general: (a, b) => {
-    if (a.outcome === "Won" && b.outcome === "Won") {
-      return a.state - b.state;
-    } else if (a.outcome === "Won" && b.outcome !== "Won") {
-      return -1;
-    } else if (a.outcome !== "Won" && b.outcome === "Won") {
-      return 1;
-    } else {
-      return a.state - b.state;
-    }
-  }
+  state: candidates => sortBy(candidates, c => c.state),
+  alphabetical: candidates => sortBy(candidates, c => c.lastName),
+  electionDate: candidates => sortBy(candidates, c => new Date(c.electionDate)),
+  general: candidates =>
+    sortBy(candidates, c => `${c.outcome == "Won" ? "A" : "Z"}${c.state}`)
 };
 
 export class CandidatePageTemplate extends React.Component {
   state = { sortFunction: "state" };
+
+  currySetSort = key => () => this.setState({ sortFunction: key });
 
   render() {
     const {
@@ -33,6 +33,9 @@ export class CandidatePageTemplate extends React.Component {
       stats,
       intro
     } = this.props;
+
+    console.log(this.state);
+
     return (
       <div>
         <Banner backgroundImage={bannerBackgroundImage} text={bannerText} />,
@@ -58,8 +61,22 @@ export class CandidatePageTemplate extends React.Component {
               <p> {intro} </p>
             </div>
           </div>
+          <div className="sort-options">
+            {[
+              ["State/District", "state"],
+              ["Alphabetial", "alphabetical"],
+              ["Election Date", "electionDate"],
+              ["General Election", "general"]
+            ].map(([label, key]) => (
+              <button onClick={this.currySetSort(key)} className="sort-button">
+                {label}
+              </button>
+            ))}
+          </div>
           <div className="candidates">
-            {candidates.map((props, i) => <Candidate key={i} {...props} />)}
+            {sortFunctions[this.state.sortFunction](candidates).map(
+              (props, i) => <Candidate key={i} {...props} />
+            )}
           </div>
         </div>
       </div>
