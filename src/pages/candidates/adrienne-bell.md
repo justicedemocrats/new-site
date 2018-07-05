@@ -6,7 +6,7 @@ lastName: Bell
 district: '14'
 state: TX
 electionDate: '2018-11-06'
-electionType: primary
+electionType: general
 office: house
 incumbent: false
 website: 'https://bell2018.com'
