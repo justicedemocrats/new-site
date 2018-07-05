@@ -1,0 +1,12 @@
+@import "./includes/_vars";
+@import "includes/includes";
+
+.page-contents {
+  max-width: 1120;
+}
+
+.divider {
+  width: 100%;
+  border-top: 1px dotted orange;
+  margin: 25px 0px;
+}

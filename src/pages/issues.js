@@ -1,80 +1,64 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { HTMLContent } from "../components/Content";
+import Banner from "../components/Banner";
+import "../style/issues.scss";
 
 export const IssuePageTemplate = ({
-  issues,
-  issuePage: {
-    html: body,
-    frontmatter: { title, header, subheader, bannerText }
+  html: body,
+  frontmatter: {
+    title,
+    header,
+    subheader,
+    bannerBackgroundImage,
+    bannerText,
+    sections
   }
 }) => {
-  const issues_rows = issues.chunk(2);
   return (
     <div>
-      {header}
-      <HTMLContent content={body} />
-
-      {issues_rows.map((issue_batch, row) => (
-        <div className="row" style={{ marginBottom: 10, height: 85 }}>
-          {issue_batch.map((i, col) => (
-            <div
-              className={`six columns`}
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                height: "100%"
-              }}
-            >
-              <div
-                style={{
-                  width: "15%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  height: "100%"
-                }}
-                className={colorClass(row, col)}
-              >
-                <img src={i.icon} />
+      <Banner backgroundImage={bannerBackgroundImage} text={bannerText} />
+      <div className="page-container">
+        <div className="page-contents">
+          <div className="row">
+            <div className="six columns">
+              <div className="light-blue-color">
+                <div className="extra-bold-m">{header}</div>
+                <div className="medium-m">{subheader}</div>
               </div>
-              <div
-                style={{
-                  width: "80%",
-                  padding: 10,
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center"
-                }}
-                className={colorClass(row, col)}
-              >
-                <div
-                  className="extra-bold-m"
-                  style={{ textTransform: "uppercase" }}
-                >
-                  {i.title}
+            </div>
+            <div className="six columns">
+              <HTMLContent content={body} className="medium-m" />
+            </div>
+          </div>
+
+          {sections.map(({ title, icon, intro }) => (
+            <div>
+              <Divider />
+              <div className="row">
+                <div className="two columns">
+                  <img src={icon} />
                 </div>
-                <div className="light-m">{i.subtitle}</div>
+                <div className="ten columns">
+                  <div>
+                    <div className="extra-bold-m light-blue-color">{title}</div>
+                    <div className="medium-m"> {intro} </div>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 };
 
-function colorClass(row, col) {
-  const idx = row * 2 + col;
-  return ["orange-bg", "light-blue-bg", "dark-blue-bg"][idx % 3];
-}
-
 const IssuePage = props => {
-  const issuePage = props.data.issuePage.edges[0].node;
-  const issues = props.data.issues.edges.map(edge => edge.node.frontmatter);
+  console.log(props);
+  const data = props.data.allMarkdownRemark.edges[0].node;
 
-  return <IssuePageTemplate issues={issues} issuePage={issuePage} />;
+  return <IssuePageTemplate {...data} />;
 };
 
 IssuePage.propTypes = {
@@ -85,22 +69,7 @@ export default IssuePage;
 
 export const pageQuery = graphql`
   query IssueQuery {
-    issues: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "ignore-fragment" } } }
-    ) {
-      edges {
-        node {
-          html
-          frontmatter {
-            title
-            subtitle
-            icon
-          }
-        }
-      }
-    }
-
-    issuePage: allMarkdownRemark(
+    allMarkdownRemark(
       filter: { frontmatter: { uniq: { eq: "issue-index" } } }
     ) {
       edges {
@@ -110,7 +79,13 @@ export const pageQuery = graphql`
             title
             header
             subheader
+            bannerBackgroundImage
             bannerText
+            sections {
+              title
+              icon
+              intro
+            }
           }
         }
       }
@@ -118,9 +93,4 @@ export const pageQuery = graphql`
   }
 `;
 
-Array.prototype.chunk = function(n) {
-  if (!this.length) {
-    return [];
-  }
-  return [this.slice(0, n)].concat(this.slice(n).chunk(n));
-};
+const Divider = () => <div className="divider" />;

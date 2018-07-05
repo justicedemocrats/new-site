@@ -47,7 +47,32 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Banner Background Image", name: "bannerBackgroundImage", widget: "image"}
+          - {label: "Banner Text", name: "bannerText", widget: "string"}
+          - {label: "Header", name: "header", widget: "markdown"}
+          - label: "Leadership"
+            name: "leadership"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Headshot", name: "headshot", widget: "image"}
+          
+          - {label: "General Email", name: "generalEmail", widget: "string"}
+          - {label: "Press Email", name: "pressEmail", widget: "string"}
+          - {label: "Phone Number", name: "phone", widget: "string"}
+          - {label: "Mailing Address", name: "address", widget: "string"}
+          - label: "FAQ Sections"
+            name: "sections"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Question", name: "question", widget: "string"}
+                  - {label: "Answer", name: "answer", widget: "markdown"}
 
       - file: "src/pages/splash/index.md"
         label: "Splash"
