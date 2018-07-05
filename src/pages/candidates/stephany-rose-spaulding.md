@@ -5,12 +5,13 @@ firstName: Stephany
 lastName: Rose Spaulding
 district: '05'
 state: CO
-electionDate: 2018-06-14T00:00:00.000Z
-electionType: primary
+electionDate: '2018-11-06'
+electionType: general
+office: house
 incumbent: false
 website: 'https://www.stephanyroseforcongress.com'
 donationLink: 'https://secure.actblue.com/donate/stephanyco'
-outcome: Unknown
+outcome: Won
 image: /img/jd_site_stephanyrosespaulding_550x600_061218.jpg
 blurb: >
   Dr. Stephany Rose Spaulding is a professor, pastor, and lifelong social
