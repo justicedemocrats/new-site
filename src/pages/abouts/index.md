@@ -11,16 +11,16 @@ header: >-
 leadership:
   - headshot: /img/chemex.jpg
     name: Saikat Chakrabarti
-    title: Title
-  - headshot: /img/chemex.jpg
-    name: Nasim Thompson
-    title: Title
+    title: ''
   - headshot: /img/chemex.jpg
     name: Alexandra Rojas
-    title: Title
+    title: ''
+  - headshot: /img/chemex.jpg
+    name: Nasim Thompson
+    title: ''
   - headshot: /img/chemex.jpg
     name: Corbin Trent
-    title: Title
+    title: ''
 generalEmail: us@justicedemocrats.com
 pressEmail: press@justicedemocrats.com
 phone: (865) 245-9567
@@ -162,3 +162,4 @@ sections:
           full ethics regulations here.
     title: YOUR PART
 ---
+
