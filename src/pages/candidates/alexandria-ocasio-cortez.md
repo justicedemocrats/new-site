@@ -6,7 +6,7 @@ lastName: Ocasio-Cortez
 district: '14'
 state: NY
 electionDate: '2018-11-06'
-electionType: primary
+electionType: general
 office: house
 incumbent: false
 website: 'https://ocasio2018.com'
