@@ -125,7 +125,7 @@ collections:
                 name: "planks"
                 widget: "list"
                 fields:
-                - {label: "Title", name: "title", widget: "text"}
+                - {label: "Title", name: "title", widget: "string"}
                 - {label: "Contents", name: "contents", widget: "markdown"}
 
       - file: "src/pages/landing/index.md"
