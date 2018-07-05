@@ -14,13 +14,19 @@ export const SplashPageTemplate = ({
   const PageContent = contentComponent || Content;
 
   return (
-    <div className="container" style={{ backgroundImage: `url(${bgimg})` }}>
+    <div
+      className="container full-height"
+      style={{ backgroundImage: `url(${bgimg})` }}
+    >
       <div className="splash">
         <div className="row">
           <div className="hed six columns">{hed}</div>
         </div>
         <div className="row">
-          <div className="subhed six columns bold-m" style={{ marginTop: 30 }}>
+          <div
+            className="subhed six columns medium-m"
+            style={{ marginTop: 30 }}
+          >
             {subhed}
           </div>
         </div>
@@ -69,7 +75,7 @@ export const SplashPageTemplate = ({
               className="extra-bold-m orange-bg"
             />
           </form>
-          <div className="five columns content-container">
+          <div className="five columns content-container medium-m">
             <PageContent className="content" content={content} />
           </div>
         </div>

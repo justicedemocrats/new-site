@@ -11,6 +11,9 @@ div.container {
   width: 100%;
   max-width: 1920px;
   padding: 2rem 1rem;
+}
+
+.full-height {
   height: calc(100vh - 50px);
 }
 
@@ -87,7 +90,6 @@ div.splash {
       ul {
         margin-left: 0;
         list-style: disc inside;
-        font-weight: medium;
       }
     }
   }
