@@ -3,7 +3,7 @@ title: Abdul El-Sayed
 templateKey: candidate-fragment
 firstName: Abdul
 lastName: El-Sayed
-district: Governor
+district: GOV
 state: MI
 electionDate: '2018-08-07'
 electionType: primary
