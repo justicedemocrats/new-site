@@ -5,7 +5,7 @@ firstName: Michael
 lastName: Hepburn
 district: '27'
 state: FL
-electionDate: '2018-06-28'
+electionDate: '2018-08-28'
 electionType: primary
 office: house
 incumbent: false
