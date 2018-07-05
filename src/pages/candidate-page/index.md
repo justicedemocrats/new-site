@@ -1,5 +1,6 @@
 ---
 templateKey: candidate-fragment
+uniq: candidate-index
 title: Justice Democrats | Candidates
 bannerBackgroundImage: /img/candidates-banner.jpg
 bannerTet: Candidates For Justice
@@ -20,4 +21,3 @@ stats:
   - count: '3'
     title: Currently Seated
 ---
-

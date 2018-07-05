@@ -76,6 +76,7 @@ collections:
         name: "candidate"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "ignore-fragment"}
+          - {label: "Unique ID", name: "uniq", widget: "hidden", default: "candidate-index"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Banner Background Image", name: "bannerBackgroundImage", widget: "image"}
           - {label: "Banner Text", name: "bannerText", widget: "string"}
