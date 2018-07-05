@@ -41,11 +41,12 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/about/index.md"
+      - file: "src/pages/abouts/index.md"
         label: "About"
         name: "about"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "ignore-fragment"}
+          - {label: "Unique", name: "uniq", widget: "hidden", default: "about-index"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Banner Background Image", name: "bannerBackgroundImage", widget: "image"}
           - {label: "Banner Text", name: "bannerText", widget: "string"}

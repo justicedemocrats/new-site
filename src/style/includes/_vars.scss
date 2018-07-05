@@ -58,6 +58,10 @@ $jd-sans: Montserrat, sans-serif;
 
 .light-blue-color {
   color: $jd-light-blue;
+
+  strong {
+    color: $jd-light-blue;
+  }
 }
 
 .orange-color {

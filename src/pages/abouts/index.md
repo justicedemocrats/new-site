@@ -1,5 +1,6 @@
 ---
-templateKey: about-page
+templateKey: ignore-fragment
+uniq: about-index
 title: About Justice Democrats
 bannerBackgroundImage: /img/candidates-banner.jpg
 bannerText: Mission for Justice
@@ -161,4 +162,3 @@ sections:
           full ethics regulations here.
     title: YOUR PART
 ---
-

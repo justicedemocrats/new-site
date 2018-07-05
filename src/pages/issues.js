@@ -5,7 +5,7 @@ import Banner from "../components/Banner";
 import Plank from "../components/Plank";
 import "../style/issues.scss";
 
-export const IssuePageTemplate = ({
+const IssuePageTemplate = ({
   html: body,
   frontmatter: {
     title,
