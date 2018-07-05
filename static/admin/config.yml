@@ -93,6 +93,8 @@ collections:
             name: "sections"
             widget: "list"
             fields: 
+              - {label: "Title", name: "title", widget: "string" }
+              - {label: "Icon", name: "icon", widget: "image" }
               - {label: "Intro", name: "intro", widget: "text" }
               - label: "Planks"
                 name: "planks"

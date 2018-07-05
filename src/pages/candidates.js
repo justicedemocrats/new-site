@@ -64,7 +64,7 @@ export class CandidatePageTemplate extends React.Component {
           <div className="sort-options">
             {[
               ["State/District", "state"],
-              ["Alphabetial", "alphabetical"],
+              ["Alphabetical", "alphabetical"],
               ["Election Date", "electionDate"],
               ["General Election", "general"]
             ].map(([label, key]) => (
