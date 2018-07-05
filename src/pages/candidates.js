@@ -65,7 +65,7 @@ export class CandidatePageTemplate extends React.Component {
             {[
               ["State/District", "state"],
               ["Alphabetical", "alphabetical"],
-              ["Election Date", "electionDate"],
+              ["Upcoming Primary", "electionDate"],
               ["General Election", "general"]
             ].map(([label, key]) => (
               <button
