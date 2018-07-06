@@ -9,16 +9,16 @@ header: >-
   which will create a thriving economy and democracy that works for the people,
   not big money interests.
 leadership:
-  - headshot: /img/chemex.jpg
+  - headshot: /img/jd_site_about_leaders_saikatc_600x600.png
     name: Saikat Chakrabarti
     title: ''
-  - headshot: /img/chemex.jpg
+  - headshot: /img/jd_site_about_leaders_alexr_600x600.png
     name: Alexandra Rojas
     title: ''
   - headshot: /img/chemex.jpg
     name: Nasim Thompson
     title: ''
-  - headshot: /img/chemex.jpg
+  - headshot: /img/jd_site_about_leaders_corbint_600x600.png
     name: Corbin Trent
     title: ''
 generalEmail: us@justicedemocrats.com
