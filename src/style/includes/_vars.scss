@@ -78,11 +78,26 @@ $jd-sans: Montserrat, sans-serif;
 
 .standard-text {
   font-size: 15px !important;
+  line-height: 20px;
   font-family: $jd-sans;
   color: $jd-text-gray;
 }
 
 .subheader-size {
   font-size: 28px !important;
+  line-height: 34px;
   font-family: $jd-sans;
+}
+
+.font-size-25 {
+  font-size: 25px;
+  line-height: 28px;
+  font-family: $jd-sans;
+}
+
+.center-contents-column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
 }

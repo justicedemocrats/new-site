@@ -72,7 +72,7 @@ export default ({
                 <HTMLContent
                   content={htmlContent}
                   markdown={true}
-                  className="medium-m text-gray-color"
+                  className="medium-m standard-text"
                 />
 
                 <Link

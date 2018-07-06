@@ -92,7 +92,7 @@ const IndexPage = ({ data }) => {
                 {boldHeader}
               </div>
               <div
-                className="home-subheader-b medium-m"
+                className="home-subheader-b medium-m "
                 style={{ marginTop: 10 }}
               >
                 {boldSubheader}
@@ -100,7 +100,7 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
           <div className="six columns">
-            <div className="block-contents-right-chunk text-gray-color">
+            <div className="block-contents-right-chunk standard-text">
               <HTMLContent
                 content={introContent}
                 markdown={true}

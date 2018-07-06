@@ -25,6 +25,7 @@ const AboutPageTemplate = ({
             markdown={true}
             className="about-header light-blue-color medium-m subheader-size"
           />
+          <div style={{ paddingBottom: 5 }} />
           <Divider />
           <div className="extra-bold-m about-section-title">
             <span className="light-blue-color"> Justice Democrats </span>

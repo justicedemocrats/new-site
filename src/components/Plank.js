@@ -4,8 +4,15 @@ import { HTMLContent } from "../components/Content";
 export default class Plank extends React.Component {
   state = { open: false };
 
-  close = () => this.setState({ open: false });
-  open = () => this.setState({ open: true });
+  close = ev => {
+    ev.stopPropagation();
+    this.setState({ open: false });
+  };
+
+  open = ev => {
+    ev.stopPropagation();
+    this.setState({ open: true });
+  };
 
   componentWillMount() {
     if (this.props.index == 0) {
@@ -17,7 +24,7 @@ export default class Plank extends React.Component {
     const { title, contents } = this.props;
 
     return (
-      <div className="plank">
+      <div className="plank" onClick={this.state.open ? this.close : this.open}>
         <div
           className="extra-bold-m light-blue-color plank-title"
           style={{ textTransform: "uppercase" }}
@@ -38,10 +45,10 @@ export default class Plank extends React.Component {
         </div>
 
         {this.state.open && (
-          <div style={{ fontSize: 18 }}>
+          <div style={{ fontSize: 18, marginBottom: 20 }}>
             <HTMLContent
               content={contents}
-              className="light-m plank-contents"
+              className="light-m plank-contents standard-text"
               markdown={true}
             />
           </div>

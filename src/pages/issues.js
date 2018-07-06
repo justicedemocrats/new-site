@@ -31,8 +31,8 @@ const IssuePageTemplate = ({
                   {header}
                 </div>
                 <div
-                  className="medium-m"
-                  style={{ fontSize: 22, lineHeight: "22px" }}
+                  className="medium-m font-size-25"
+                  style={{ marginTop: 10 }}
                 >
                   {subheader}
                 </div>
@@ -41,7 +41,7 @@ const IssuePageTemplate = ({
             <div className="six columns">
               <HTMLContent
                 content={body}
-                className="medium-m issues-contents"
+                className="medium-m issues-contents standard-text"
               />
             </div>
           </div>
@@ -51,11 +51,13 @@ const IssuePageTemplate = ({
               <Divider />
               <div className="row">
                 <div className="two columns">
-                  <img src={icon} />
+                  <img src={icon} style={{ maxHeight: 150, maxWidth: 150 }} />
                 </div>
-                <div className="ten columns">
-                  <div>
-                    <div className="extra-bold-m light-blue-color">{title}</div>
+                <div className="ten columns center-contents-column">
+                  <div className="center-contents-column">
+                    <div className="extra-bold-m light-blue-color font-size-25">
+                      {title}
+                    </div>
                     <div className="medium-m issue-intro"> {intro} </div>
                   </div>
                 </div>
