@@ -3,7 +3,7 @@ title: Chardo Richardson
 templateKey: candidate-fragment
 firstName: Chardo
 lastName: Richardson
-district: '27'
+district: '07'
 state: FL
 electionDate: '2018-08-28'
 electionType: primary
