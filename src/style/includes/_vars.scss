@@ -75,3 +75,14 @@ $jd-sans: Montserrat, sans-serif;
     color: inherit;
   }
 }
+
+.standard-text {
+  font-size: 15px !important;
+  font-family: $jd-sans;
+  color: $jd-text-gray;
+}
+
+.subheader-size {
+  font-size: 28px !important;
+  font-family: $jd-sans;
+}

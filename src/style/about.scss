@@ -3,7 +3,7 @@
 
 .about-section-title {
   text-align: left;
-  font-size: 24px;
+  font-size: 25px;
   margin-bottom: 10px;
 }
 
@@ -33,6 +33,7 @@
       text-align: center;
 
       .leader-name {
+        margin-top: 10px;
         font-size: 18px;
       }
 
@@ -52,10 +53,5 @@
 }
 
 .contact-email {
-  font-size: 14px;
   font-weight: bold;
-}
-
-.contact-info {
-  font-size: 14px;
 }

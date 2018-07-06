@@ -23,7 +23,7 @@ const AboutPageTemplate = ({
           <HTMLContent
             content={header}
             markdown={true}
-            className="about-header light-blue-color medium-m"
+            className="about-header light-blue-color medium-m subheader-size"
           />
           <Divider />
           <div className="extra-bold-m about-section-title">
@@ -50,7 +50,7 @@ const AboutPageTemplate = ({
             <span className="light-blue-color"> Justice Democrats </span>
             <span className="orange-color"> Contacts </span>
           </div>
-          <div className="contact-contents row">
+          <div className="contact-contents standard-text row">
             <div className="six columns">
               <div>
                 <div className="contact-section-title extra-bold-m light-blue-color">
@@ -84,8 +84,10 @@ const AboutPageTemplate = ({
               </div>
               {items.map(({ question, answer }) => (
                 <div style={{ marginTop: 10, marginBottom: 10, fontSize: 14 }}>
-                  <div className="question bold-m">{question}</div>
-                  <div className="answer light-m">{answer}</div>
+                  <div className="question standard-text bold-m">
+                    {question}
+                  </div>
+                  <div className="answer standard-text light-m">{answer}</div>
                 </div>
               ))}
             </div>
