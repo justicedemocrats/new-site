@@ -10,11 +10,32 @@ const TemplateWrapper = ({ children, location }) => (
     <Helmet title="Home | Gatsby + Netlify CMS" />
     <Navbar path={location.pathname} />
     <div>{children()}</div>
+    {location.pathname != "/join" && (
+      <div>
+        <div />
+      </div>
+    )}
   </div>
 );
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func
 };
+
+export const pageQuery = graphql`
+  query TemplateQuery {
+    allMarkdownRemark(
+      filter: { frontmatter: { uniq: { eq: "footer-index" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            paidForMessage
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default TemplateWrapper;
