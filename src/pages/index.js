@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import Link from "gatsby-link";
+import Link from "gatsby-link";
 import { HTMLContent } from "../components/Content";
 import HomeBlock from "../components/HomeBlock";
 import Responsive from "react-responsive";
@@ -211,7 +211,10 @@ const IndexPage = ({ data }) => {
           <div style={{ lineHeight: "42px", width: "100%", marginBottom: 10 }}>
             Our Candidates
           </div>
-          <div style={{ overflowX: "scroll" }}>
+          <Link
+            style={{ overflowX: "scroll", display: "block" }}
+            to="/candidates"
+          >
             <div style={{ display: "table", borderSpacing: 8 }}>
               <div className="carousel-container">
                 {sortFunctions
@@ -219,7 +222,7 @@ const IndexPage = ({ data }) => {
                   .map((c, idx) => <CarouselCandidate key={idx} {...c} />)}
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
 
