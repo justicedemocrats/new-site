@@ -186,5 +186,5 @@ collections:
             widget: "list"
             fields: 
               - {label: "Icon", name: "icon", widget: "image"}
-              - {label: "Url", name: "url", widget: "url"}
+              - {label: "Url", name: "url", widget: "string"}
               - {label: "Type", name: "type", widget: "select", options: ["contact", "social"]}            
