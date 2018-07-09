@@ -23,7 +23,7 @@ const TemplateWrapper = ({ data, children, location }) => {
       <Navbar path={location.pathname} />
       <div>{children()}</div>
 
-      {location.pathname != "/join" && (
+      {(location.pathname != "/join" || location.pathname != "/join/") && (
         <div className="my-footer dark-blue-bg row" style={{ color: "white" }}>
           <div className="footer-section six columns">
             <div className="footer-section-title extra-bold-m">Contact Us</div>

@@ -39,7 +39,7 @@ export const SplashPageTemplate = ({
             data-netlify-honeypot="bot-field"
             method="post"
           >
-            <input type="hidden" name="form-name" value="main-signup" />
+            <input type="hidden" name="form-name" value="splash-signup" />
             <div className="inputs-container">
               <input
                 className="splash-input"

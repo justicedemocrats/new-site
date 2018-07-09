@@ -77,7 +77,7 @@ const IndexPage = ({ data }) => {
             name="main-signup"
             data-netlify="true"
             netlify="true"
-            data-netlify-honeypot="true"
+            data-netlify-honeypot="bot-field"
             method="post"
             style={{
               backgroundColor: "rgba(255, 255, 255, .8)",
