@@ -189,9 +189,9 @@ sections:
           Ban the NSA from bulk data-collection and warrantless spying. Shut
           down Guantanamo Bay and all extrajudicial prisons. Prosecute torturers
           and those who violated the Geneva Conventions, Nuremberg Tribunal,
-          International law and US law. Return habeas corpus and due process.
+          International law and US law. Defend habeas corpus and due process.
           Pardon whistleblowers like Edward Snowden. We shouldn’t be leading
-          from behind on human rights, we must be the home of liberty. We should
+          from behind on human rights; we must be the home of liberty. We should
           practice the values we preach.
         title: Stop Constitutional Overreaches
       - contents: >-
@@ -218,7 +218,7 @@ sections:
           path to citizenship. America is a proud nation of immigrants.
         title: Implement Comprehensive Immigration Reform
       - contents: >-
-          Ban arming human rights violators. We recently have gave Saudi Arabia
+          Ban arming human rights violators. We recently gave Saudi Arabia
           billions in weapons and watched the civilian death toll in their
           vicious bombing campaign in Yemen tick up. We continue sending Egypt
           arms as they violently crack down on peaceful protesters. Israel
@@ -227,7 +227,7 @@ sections:
           international law. We must be bold enough to stand up to human rights
           violators who aren’t just our enemies, but our allies. We don’t weaken
           our allies by holding them accountable, we strengthen them.
-        title: No Longer Sell Arms to Human-Rights Violators
+        title: No Longer Sell Arms to Human Rights Violators
       - contents: >-
           The goal is legalization, taxation, and regulation. Prohibition only
           makes drug cartels more powerful, increases crime, and makes drugs
