@@ -19,9 +19,10 @@ const TemplateWrapper = ({ data, children, location }) => {
 
   return (
     <div>
-      <Helmet title="Home | Gatsby + Netlify CMS" />
+      <Helmet title="Justice Democrats" />
       <Navbar path={location.pathname} />
       <div>{children()}</div>
+
       {location.pathname != "/join" && (
         <div className="my-footer dark-blue-bg row" style={{ color: "white" }}>
           <div className="footer-section six columns">

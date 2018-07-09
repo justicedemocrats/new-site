@@ -30,6 +30,8 @@ class Navbar extends React.Component {
   render() {
     const { path } = this.props;
 
+    console.log(path);
+
     if (path == "/splash" || path == "/join") {
       return (
         <div className="navbar" style={{ osition: "fixed" }}>

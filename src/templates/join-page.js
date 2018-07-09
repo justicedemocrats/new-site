@@ -34,8 +34,9 @@ export const SplashPageTemplate = ({
           <form
             className="splash-signup six columns"
             name="splash-signup"
-            netlify="true"
+            data-netlify="true"
           >
+            <input type="hidden" name="form-name" value="main-signup" />
             <div className="inputs-container">
               <input
                 className="splash-input"

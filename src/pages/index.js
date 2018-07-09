@@ -75,12 +75,13 @@ const IndexPage = ({ data }) => {
           <form
             className="sign-up"
             name="main-signup"
-            netlify="true"
+            data-netlify="true"
             style={{
               backgroundColor: "rgba(255, 255, 255, .8)",
               minHeight: 60
             }}
           >
+            <input type="hidden" name="form-name" value="main-signup" />
             {renderSignUpInputs()}
             {renderSignUpButton()}
           </form>
