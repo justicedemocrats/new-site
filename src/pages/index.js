@@ -72,8 +72,10 @@ const IndexPage = ({ data }) => {
       >
         <img src={bannerTextImg} />
         <Default>
-          <div
+          <form
             className="sign-up"
+            name="main-signup"
+            netlify="true"
             style={{
               backgroundColor: "rgba(255, 255, 255, .8)",
               minHeight: 60
@@ -81,7 +83,7 @@ const IndexPage = ({ data }) => {
           >
             {renderSignUpInputs()}
             {renderSignUpButton()}
-          </div>
+          </form>
         </Default>
         <Mobile>
           <div
