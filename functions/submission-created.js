@@ -28,10 +28,6 @@ exports.handler = (event, content, callback) => {
     password: process.env.AK_PASSWORD
   });
 
-  console.log("Event");
-  console.log(event.body);
-  consle.log(JSON.parse(event.body));
-
   api
     .post("/action")
     .send(
