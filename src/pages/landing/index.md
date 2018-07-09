@@ -66,12 +66,15 @@ blocks:
       healthcare, housing, education, a living wage, a world not destroyed by
       climate change and aggressive wars of choice. 
     header: Social and Economic Justice.
-    htmlContent: |-
-      The question is not "if", but "how" and "when". \
-      Every Justice Democrat is fighting for:
+    htmlContent: >-
+      The question is not "if", but "how" and "when". Every Justice Democrat is
+      fighting for:
+
 
       * Access to Jobs and a Living Wage
+
       * Affordable Housing and a Quality Education
+
       * Medicare for All
     moreButtonText: All Policies
     moreButtonUrl: /platform
@@ -84,7 +87,11 @@ blocks:
     bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_3_greg_053118.jpg
     bannerText: 'XXX,XXX Volunteers'
     calloutIcon: /img/jd_site_circlefinger_1_50x50.svg
-    calloutText: ' '
+    calloutText: >-
+      Polling data demonstrates that the Democratic Party’s base has moved left,
+      and voters are ready for a progressive agenda. Though the party elites may
+      be “divided” the base is not; they are ready for unabashed progressive
+      politicians. — www.futureoftheparty.com
     header: Policies and Legislation for the People
     htmlContent: >-
       **Research shows that the Democratic establishment’s pivot to the “middle”
