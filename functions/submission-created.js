@@ -1,4 +1,4 @@
-const request = require("superagent");
+import request from "superagent";
 
 const ensureEndingSlash = url => (url.endsWith("/") ? url : `${url}/`);
 const ensureNoBeginningSlash = url =>
