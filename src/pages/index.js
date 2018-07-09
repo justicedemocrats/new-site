@@ -17,6 +17,7 @@ const renderSignUpInputs = () =>
       <input
         placeholder={name}
         className="sign-up-input"
+        name={name.toLowerCase()}
         style={{ margin: 0, width: "100%" }}
         {...{
           Name: { type: "text" },
