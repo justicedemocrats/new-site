@@ -114,20 +114,15 @@ sections:
           paid vacation time. This should be changed immediately.
         title: 'Ensure Paid Vacation Time, Sick Time, Family Leave, Childcare'
       - contents: >-
-          Xenophobia and racism are running rampid in the nation, emboldened by
+          Xenophobia and racism are running rampant in the nation, emboldened by
           the hate-filled rhetoric spilled by the nation’s 45th president across
           the news and social media. Amid this hatefulness and fear mongering,
           African Americans and Hispanics in particular, and people of color
           generally, have been targets in our nation’s continued assault against
-          their rights, liberties, existence, and humanity.  As our ancestors
-          did in generations before us, we will continue to advocate for
-          justice, equity, and equality in all manner and forms, and will
-          sponsor and vote on legislation to secure the same. Particularly at a
-          time that America is becoming a majority minority nation, we cannot
-          afford to have our population further divided and disconnected by the
-          false construct of race created a path for us to separate and distance
-          ourselves from one another rather than embracing our similarities as
-          members of the human family
+          their rights, liberties, existence, and humanity. As did generations
+          before us, we will continue to advocate and push for justice, equity,
+          and equality in all manner and forms, and will sponsor and vote on
+          legislation to secure the same.
         title: Fight For Racial Justice
       - contents: >-
           We support the Paycheck Fairness Act. We oppose Republican cuts to
