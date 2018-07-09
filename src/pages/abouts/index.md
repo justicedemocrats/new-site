@@ -91,12 +91,8 @@ sections:
           $5,000 and must report all donations and expenditures. 
 
 
-
-
           This is not a SuperPAC, but a plain old regular PAC. You can learn
           more about PACs at [**fec.gov**](https://www.fec.gov).  
-
-
 
 
           The PAC uses donation money to hire staff that recruits and trains
@@ -111,7 +107,7 @@ sections:
 
           In addition to promoting candidates, Justice Democrats PAC also
           promotes issues. For example, we worked with the National Nurses
-          United to pressure over 45 Democrats to co-sponsor Medicare-for-all in
+          United to pressure over 45 Democrats to co-sponsor Medicare for All in
           the House, getting H.R. 676 up to 121 co-sponsors — the most it has
           ever received. 
 
@@ -145,7 +141,7 @@ sections:
           fee schedule here:
           https://docs.google.com/document/u/1/d/1xDpNJw-66bBMdSVtnC_OW3fygPluJrr8tFygQrIrU5Q/edit
         question: What type of organization is Justice Democrats?
-      - answer: 'Yes, it is the federal limit of $5,000.'
+      - answer: 'Yes, it is the federal limit of $5,000 per year.'
         question: Do you have a dollar amount cap on donations from any one individual?
       - answer: >-
           Our designation as a Federal PAC does not allow us to receive
