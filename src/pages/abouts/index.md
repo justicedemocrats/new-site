@@ -2,7 +2,7 @@
 templateKey: ignore-fragment
 uniq: about-index
 title: About Justice Democrats
-bannerBackgroundImage: /img/candidates-banner.jpg
+bannerBackgroundImage: /img/jd_website_about_banner_1920x540_070918.jpg
 bannerText: Mission for Justice
 header: >-
   **Our mission is to elect a new type of Democratic majority in Congress,** one
