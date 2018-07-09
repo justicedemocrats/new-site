@@ -6,33 +6,32 @@ bannerTextImg: /img/jd_website_home_banner_textoverlay_test_1920x1080_052518.png
 boldHeader: THE DEMOCRATIC PARTY IS BROKEN.
 boldSubheader: And the corporate wing of the party is responsible.
 introContent: >-
-  **Instead of aligning with the needs of average working men and women,** the
-  Democratic Party has allowed Republicans to take over most state legislatures,
-  most governorships, Congress, and the presidency.
+  **Instead of representing the needs of everyday working men and women,** the
+  Democratic Party has been asleep at the wheel. Republicans have taken over
+  most state legislatures, governorships, Congress, and now the presidency.
 
 
-  **The solution is not unity with corporate-backed Democrats or catering to an
-  imaginary “middle.” **The solution is to challenge them and replace every
-  single one of them with people who will fight for voters, not donors.
+  **The solution is having a bold vision that fights for economic, social, and
+  racial justice for all Americans**, not the interests of big money donors.
 firstCalloutIcon: /img/jd_site_circlefinger_1_50x50.svg
 firstCalloutText: >-
-  It’s time to rebuild the Democratic Party to be a party that fights for a
-  clear progressive vision with policies for people not corporations.
+  It’s time to rebuild the Democratic Party to be a party that fights for a bold
+  vision that fights for people, not corporations.
 issuesIntro: 'POLICIES FOR VOTERS, NOT DONORS'
 primaryIssues:
-  - image: /img/jd_website_home_issuebox_600x600_1_antoinette_053118.jpg
-    text: Criminal Justice Reform
-    url: /issues/criminal-justice-reform
-  - image: /img/jd_website_home_issuebox_600x600_2_juana_053118.jpg
-    text: Medicare for All
-    url: /issues/medicare-for-all
-  - image: /img/jd_website_home_issuebox_600x600_3_david_053118.jpg
+  - image: /img/growth.svg
     text: Jobs Guarantee
     url: /issues/jobs-guarantee
+  - image: /img/rights.svg
+    text: Medicare for All
+    url: /issues/medicare-for-all
+  - image: /img/democracy.svg
+    text: Abolish ICE
+    url: /issues/abolish-ice
 jdHighlightHeader: No Corporate PACs Pledge
 jdHighlightText: >-
-  All Justice Democrats pledge something something Totate arum exerferum auda
-  soluptibus autamus quo cusaeruptam aut elento offic tem sum et.
+  All Justice Democrats pledge to reject corporate PAC money. We are accountable
+  to people, not corporations.
 jdHighlightIcon: /img/jd_site_circlefinger_1_50x50.svg
 blocks:
   - alignment: right
@@ -42,16 +41,16 @@ blocks:
     bannerText: '300,000 Supporters'
     calloutIcon: /img/jd_site_circlefinger_1_50x50.svg
     calloutText: >-
-      All Justice Democrats pledge not to take corporate or lobbyist money and
-      to work together once elected to enact the Justice Democrats platform.
-    header: 51 Justice Dems Are Running Across America
+      Justice Democrats candidates pledge to not take corporate money and to
+      work together once elected to enact the Justice Democrats platform.
+    header: 38 Justice Dems Are Running Across America
     htmlContent: >-
-      **Act locally or nationally - **Sed quiscia tionsequis sunt voloritium vel
-      et eossequiat ressit, nam velit ape volenducid est que suntiatia velliqu
-      atem poruptae vollori di teniminctur sinctest fuga. Nequia nonsecae
-      venihicae. Xerum re et reptat fugia cus il in res estiuscil idel imagnih
-      itatur aut as atur. Xerum re et reptat fugia cus il in res estiuscil idel
-      imagnih itatur aut as atur. Vollori di teniminctur fuga.
+      **Representing voters, not donors** — For too long the voices of everyday
+      Americans have been undervalued and gone unnoticed in Washington, D.C..
+      The people who are traditionally elected to represent, fall short of our
+      expectations and get caught in a vicious cycle of pay-for-play politics.
+      Justice Democrat candidates are committed stewards of their communities
+      and have a deep desire to make positive, progressive change.
     moreButtonText: All Candidates
     moreButtonUrl: /candidates
     subheader: Each candidate elected is one more vote for The People.
@@ -59,27 +58,26 @@ blocks:
     bannerButtonText: Donate
     bannerButtonUrl: /donate
     bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_2_alexbump_053118.jpg
-    bannerText: '$XXX,XXX Raised'
+    bannerText: $2.8+ Millions Raised
     calloutIcon: /img/jd_site_circlefinger_1_50x50.svg
     calloutText: >-
-      Health care, housing, education, living wage, and a world not destroyed by
-      climate change and aggressive wars of choice should be the standard.
+      In a modern, moral, wealthy society like the United States, people should
+      not be too poor to live with dignity. That means having access to
+      healthcare, housing, education, a living wage, a world not destroyed by
+      climate change and aggressive wars of choice. 
     header: Social and Economic Justice.
-    htmlContent: >-
-      The question is not "if", but "how" and "when". Every Justice Democrat is
-      fighting for:
+    htmlContent: |-
+      The question is not "if", but "how" and "when". \
+      Every Justice Democrat is fighting for:
 
-
-      * Item #1
-
-      * Item #2
-
-      * Item #3
+      * Access to Jobs and a Living Wage
+      * Affordable Housing and a Quality Education
+      * Medicare for All
     moreButtonText: All Policies
     moreButtonUrl: /platform
     subheader: >-
-      Because one can not be achieved without the other — it’s the same  ght for
-      rights.
+      Because one can not be achieved without the other — it’s the same fight
+      for rights.
   - alignment: left
     bannerButtonText: Sign Up
     bannerButtonUrl: /volunteer
@@ -89,11 +87,12 @@ blocks:
     calloutText: ' '
     header: Policies and Legislation for the People
     htmlContent: >-
-      **Justice Democrats is teaming up with other organizations to look into
-      policies and data **to something something Something short here about the
-      report. Something short here about the report.
+      **Research shows that the Democratic establishment’s pivot to the “middle”
+      has failed. **It’s time to mobilize the electorate and enact bold,
+      progressive policies that will uplift people and communities across the
+      country.
     moreButtonText: Read Report
     moreButtonUrl: /report
-    subheader: Need a subhead sentence here less than this many.
+    subheader: 'A bold, progressive vision — policies the majority of Americans want.'
 ---
 
