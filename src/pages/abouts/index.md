@@ -195,6 +195,17 @@ sections:
         question: >-
           I have an issue I’d like to see addressed in the Justice Democrats
           Platform. Can I make a suggestion?
+      - answer: >-
+          You can donate online at [**Act
+          Blue**](<https://secure.actblue.com/donate/jdpacslate >) (the donate
+          link at the top of the page will also get you there.)
+
+
+          If you are more comfortable mailing your contribution, please address
+          to:\
+
+          Justice Democrats, P. O. Box 910, Knoxville, TN, 37901
+        question: How can I support Justice Democrats with a donation?
     title: YOUR PART
 ---
 
