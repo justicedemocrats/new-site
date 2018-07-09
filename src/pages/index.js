@@ -76,6 +76,8 @@ const IndexPage = ({ data }) => {
             className="sign-up"
             name="main-signup"
             data-netlify="true"
+            netlify="true"
+            method="post"
             style={{
               backgroundColor: "rgba(255, 255, 255, .8)",
               minHeight: 60
