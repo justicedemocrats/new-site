@@ -22,4 +22,20 @@ TemplateWrapper.propTypes = {
   children: PropTypes.func
 };
 
+export const pageQuery = graphql`
+  query TemplateQuery {
+    allMarkdownRemark(
+      filter: { frontmatter: { uniq: { eq: "footer-index" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            paidForMessage
+          }
+        }
+      }
+    }
+  }
+`;
+
 export default TemplateWrapper;
