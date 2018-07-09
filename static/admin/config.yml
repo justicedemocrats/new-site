@@ -75,11 +75,11 @@ collections:
                   - {label: "Question", name: "question", widget: "string"}
                   - {label: "Answer", name: "answer", widget: "markdown"}
 
-      - file: "src/pages/splash/index.md"
-        label: "Splash"
-        name: "splash"
+      - file: "src/pages/join/index.md"
+        label: "Join"
+        name: "join"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "splash-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "join-page"}
           - {label: "Background Image", name: "bgimg", widget: "string"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Header", name: "hed", widget: "string"}

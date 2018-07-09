@@ -26,31 +26,37 @@ export default ({
   return (
     <section className="home-block">
       <div
-        className="block-banner"
+        className="block-banner page-container"
         style={{
           backgroundImage: `url(${bannerImageUrl})`,
           backgroundSize: "cover",
-          // backgroundColor: "black",
-          paddingLeft: 30,
-          paddingRight: 30,
           height: "50vh",
-          textTransform: "uppercase",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: alignItems[alignment]
+          textTransform: "uppercase"
         }}
       >
-        <div className="extra-bold-m home-header-w">
-          {bannerText.split(" ")[0]}
-        </div>
-        <div className="light-m home-header-w">{bannerText.split(" ")[1]}</div>
-        <Link
-          to={bannerButtonUrl}
-          className="orange-bg extra-bold-m button-text callout-button plain-button extra-bold-m"
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: alignItems[alignment],
+            maxWidth: 1200,
+            width: "100%"
+          }}
         >
-          {bannerButtonText}
-        </Link>
+          <div className="extra-bold-m home-header-w">
+            {bannerText.split(" ")[0]}
+          </div>
+          <div className="light-m home-header-w">
+            {bannerText.split(" ")[1]}
+          </div>
+          <Link
+            to={bannerButtonUrl}
+            className="orange-bg extra-bold-m button-text callout-button plain-button extra-bold-m"
+          >
+            {bannerButtonText}
+          </Link>
+        </div>
       </div>
 
       <div className="standard-padded-container">
@@ -86,27 +92,11 @@ export default ({
               </div>
             </div>
           </div>
+
           {calloutText && (
-            <div
-              className="container"
-              style={{
-                height: 80,
-                padding: 10,
-                borderTop: "1px dotted orange",
-                paddingTop: 20,
-                marginTop: 20
-              }}
-            >
-              <div className="block-call-out row">
-                <img
-                  className="one columns"
-                  src={calloutIcon}
-                  style={{ height: 60 }}
-                />
-                <div className="eleven columns bold-m callout-b">
-                  {calloutText}
-                </div>
-              </div>
+            <div className="callout-container">
+              <img src={calloutIcon} style={{ height: 60 }} />
+              <div className="bold-m callout-b">{calloutText}</div>
             </div>
           )}
         </div>

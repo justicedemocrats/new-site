@@ -90,7 +90,7 @@ class Candidate extends React.Component {
               {state}-
               {office == "house" ? district : officeTypeMap[office]}
             </div>
-            <div className="raceDate">
+            <div className="race-date">
               <span className="race bold-m">
                 {electionType === "general"
                   ? "General Election"

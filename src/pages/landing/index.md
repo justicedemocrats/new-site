@@ -36,7 +36,7 @@ jdHighlightIcon: /img/jd_site_circlefinger_1_50x50.svg
 blocks:
   - alignment: right
     bannerButtonText: Join Us
-    bannerButtonUrl: /splash
+    bannerButtonUrl: /join
     bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_1_cori_053118.jpg
     bannerText: '300,000 Supporters'
     calloutIcon: /img/jd_site_circlefinger_1_50x50.svg
@@ -95,4 +95,3 @@ blocks:
     moreButtonUrl: /report
     subheader: 'A bold, progressive vision — policies the majority of Americans want.'
 ---
-

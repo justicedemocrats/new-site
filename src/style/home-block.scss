@@ -44,14 +44,7 @@
 .callout-b {
   font-size: 17px !important;
   color: $jd-dark-blue;
-}
-
-.flex-child {
-  width: 15%;
-}
-
-.flex-child > input {
-  width: 100%;
+  padding-left: 20px;
 }
 
 .flex-child > input {
@@ -61,24 +54,6 @@
   &::-webkit-input-placeholder {
     color: $jd-dark-blue;
     font-weight: 700;
-  }
-}
-
-@media (max-width: 600px) {
-  .flex-child {
-    width: 90vw;
-    max-width: none;
-    margin-top: 5px !important;
-  }
-
-  .flex-child > input {
-    width: 100%;
-  }
-
-  .sign-up-button {
-    width: 90vw;
-    margin-top: 5px !important;
-    margin-bottom: 5px !important;
   }
 }
 
@@ -114,4 +89,67 @@
   padding: 40px;
   padding-top: 60px;
   max-width: 1120px;
+}
+
+.sign-up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .sign-up-el {
+    width: 20%;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 0px;
+  }
+}
+
+.sign-up-button {
+  width: 100%;
+}
+
+.sign-up-input {
+  background: none !important;
+  border: 1px solid $jd-dark-blue !important;
+
+  &::placeholder {
+    color: $jd-dark-blue;
+    font-family: $jd-sans;
+    font-size: 16px;
+  }
+}
+
+.sign-up-rows {
+  padding: 15px;
+
+  .sign-up-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .sign-up-el {
+      width: 49%;
+      margin-top: 5px;
+    }
+
+    .sign-up-button-container {
+      width: 100%;
+    }
+  }
+}
+
+.callout-container {
+  padding: 20px 10px;
+  border-top: 1px dotted orange;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    height: 45px;
+  }
 }

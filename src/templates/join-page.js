@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Content, { HTMLContent } from "../components/Content";
-import "../style/splash-page.scss";
+import "../style/join-page.scss";
 
 export const SplashPageTemplate = ({
   title,

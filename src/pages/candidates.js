@@ -12,7 +12,7 @@ const alphabeticalSort = (a, b) => {
     : a.toLowerCase() > b.toLowerCase() ? 1 : 0;
 };
 
-const sortFunctions = {
+export const sortFunctions = {
   state: candidates => sortBy(candidates, c => c.state),
   alphabetical: candidates => sortBy(candidates, c => c.lastName),
   electionDate: candidates => sortBy(candidates, c => new Date(c.electionDate)),
@@ -57,7 +57,7 @@ export class CandidatePageTemplate extends React.Component {
                 );
               })}
             </div>
-            <div className="six columns light-m">
+            <div className="six columns medium-m standard-text">
               <p> {intro} </p>
             </div>
           </div>

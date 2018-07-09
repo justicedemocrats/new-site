@@ -18,7 +18,7 @@ const links = [
   { display: "Candidates", href: "/candidates" },
   // { display: 'News', href: '/news'},
   // { display: 'Actions', href: '/actions'},
-  { display: "Store", href: "/store" },
+  { display: "Store", href: "https://shop.justicedemocrats.com" },
   { display: "Join", href: "/join" }
 ];
 
@@ -61,25 +61,6 @@ class Navbar extends React.Component {
         </div>
       );
     }
-    // var navbarContents;
-    // switch (path) { // This is clunky, but it seems to be the best way to do route-specific rendering here without swapping out the navbar entirely.
-    //   case "/splash":
-    //     navbarContents = (
-    //       <ul className="splash-navbar">
-    //         <li className="img">
-    //           <img src="/assets/jd-logo-horiz.png" />
-    //         </li>
-    //         <li className="enter-site">
-    //           <div>
-    //             <p>Enter Site</p>
-    //           </div>
-    //         </li>
-    //       </ul>
-    //     );
-    //     break;
-    //   default:
-    //     navbarContents = undefined;
-    // }
 
     return (
       <div className="navbar" style={{ position: "fixed" }}>
@@ -91,8 +72,9 @@ class Navbar extends React.Component {
                 <FacebookButton />
               </div>
               <HeaderLogo />
-              <Link
-                to="/donate"
+              <a
+                href="/donate"
+                target="_blank"
                 style={{
                   width: 150,
                   display: "block",
@@ -108,17 +90,29 @@ class Navbar extends React.Component {
                 className="orange-bg bold-m"
               >
                 <div> Donate </div>
-              </Link>
+              </a>
             </div>
             <div className="navbar-hanger">
-              {links.map(({ display, href }) => (
-                <Link
-                  className={`hanger-link bold-m ${display.toLowerCase()}`}
-                  to={href}
-                >
-                  <div> {display} </div>
-                </Link>
-              ))}
+              {links.map(
+                ({ display, href }) =>
+                  href.startsWith("https://") ? (
+                    <a
+                      className="hanger-link bold-m"
+                      href={href}
+                      target="_blank"
+                    >
+                      {" "}
+                      <div> {display} </div>{" "}
+                    </a>
+                  ) : (
+                    <Link
+                      className={`hanger-link bold-m ${display.toLowerCase()}`}
+                      to={href}
+                    >
+                      <div> {display} </div>
+                    </Link>
+                  )
+              )}
             </div>
           </div>
         </Default>
@@ -178,10 +172,9 @@ const FacebookButton = () => (
 );
 
 const DonateLink = () => (
-  <Link to="/donate" className="bold-m orange-bg">
-    {" "}
-    Donate{" "}
-  </Link>
+  <a href="/donate" target="_blank" className="bold-m orange-bg">
+    Donate
+  </a>
 );
 const HeaderLogo = () => (
   <Link to="/" style={{ height: 30 }}>

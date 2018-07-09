@@ -55,7 +55,9 @@ div.candidate {
       font-size: 2rem;
       color: $jd-light-blue;
     }
-    div.raceDate {
+    div.race-date {
+      font-size: 15px;
+
       span.race {
         font-weight: bold;
         margin-right: 0.5rem;
@@ -86,6 +88,7 @@ div.candidate {
       justify-content: flex-start;
       align-items: center;
       margin-top: 5px;
+      font-size: 15px;
 
       img {
         height: 15px;
@@ -98,4 +101,41 @@ div.candidate {
 
 .candidate-blurb {
   width: 340px;
+}
+
+.carousel-container {
+  height: 300px;
+  display: table-row;
+  border-spacing: 5px;
+}
+
+.carousel-candidate {
+  display: table-cell;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 150px;
+  height: 300px;
+  text-align: center;
+  font-size: 17px;
+
+  .name {
+    height: 90px;
+  }
+
+  .carousel-headshot {
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+  }
+
+  .banner {
+    height: 30px;
+  }
+}
+
+.full-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

@@ -3,7 +3,45 @@ import PropTypes from "prop-types";
 // import Link from "gatsby-link";
 import { HTMLContent } from "../components/Content";
 import HomeBlock from "../components/HomeBlock";
+import Responsive from "react-responsive";
+import CarouselCandidate from "../components/CarouselCandidate";
+import { sortFunctions } from "./candidates";
 require("../style/includes/_skeleton.scss");
+
+const Mobile = props => <Responsive {...props} maxWidth={767} />;
+const Default = props => <Responsive {...props} minWidth={768} />;
+
+const renderSignUpInputs = () =>
+  ["Name", "Email", "Zip", "Phone"].map((name, i) => (
+    <div key={i} className="sign-up-el">
+      <input
+        placeholder={name}
+        className="sign-up-input"
+        style={{ margin: 0, width: "100%" }}
+        {...{
+          Name: { type: "text" },
+          Email: { type: "email" },
+          Zip: { type: "text", maxLength: 5 },
+          Phone: { type: "tel" }
+        }[name]}
+      />
+    </div>
+  ));
+
+const renderSignUpButton = () => (
+  <div className="sign-up-el sign-up-button-container">
+    <input
+      type="submit"
+      className="sign-up-button dark-blue-bg extra-bold-m "
+      style={{
+        fontSize: "18px",
+        textTransform: "uppercase",
+        margin: 0
+      }}
+      value="Sign Up"
+    />
+  </div>
+);
 
 const IndexPage = ({ data }) => {
   const {
@@ -17,7 +55,10 @@ const IndexPage = ({ data }) => {
     firstCalloutIcon,
     firstCalloutText,
     issuesIntro
-  } = data.allMarkdownRemark.edges[0].node.frontmatter;
+  } = data.landingPage.edges[0].node.frontmatter;
+
+  const { candidates: { edges: candidateEdges } } = data;
+  const candidates = candidateEdges.map(edge => edge.node.frontmatter);
 
   return (
     <div style={{ paddingLeft: 0, paddingRight: 0 }}>
@@ -30,52 +71,27 @@ const IndexPage = ({ data }) => {
         }}
       >
         <img src={bannerTextImg} />
-        <div
-          className="sign-up"
-          style={{
-            backgroundColor: "rgba(255, 255, 255, .8)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-around",
-            flexWrap: "wrap",
-            minHeight: 60
-          }}
-        >
-          {["Name", "Email", "Zip", "Phone"].map((name, i) => (
-            <div
-              key={i}
-              style={{
-                marginTop: 0,
-                marginBottom: 0
-              }}
-              className="flex-child"
-            >
-              <input
-                placeholder={name}
-                style={{ margin: 0, width: "100%" }}
-                {...{
-                  Name: { type: "text" },
-                  Email: { type: "email" },
-                  Zip: { type: "text", maxLength: 5 },
-                  Phone: { type: "tel" }
-                }[name]}
-              />
-            </div>
-          ))}
-          <div>
-            <button
-              type="submit"
-              className="button button-primary sign-up-button dark-blue-bg extra-bold-m"
-              style={{
-                fontSize: "18px",
-                textTransform: "uppercase",
-                margin: 0
-              }}
-            >
-              Sign Up
-            </button>
+        <Default>
+          <div
+            className="sign-up"
+            style={{
+              backgroundColor: "rgba(255, 255, 255, .8)",
+              minHeight: 60
+            }}
+          >
+            {renderSignUpInputs()}
+            {renderSignUpButton()}
           </div>
-        </div>
+        </Default>
+        <Mobile>
+          <div
+            className="sign-up-rows"
+            style={{ backgroundColor: "rgba(255, 255, 255, .8)" }}
+          >
+            <div className="sign-up-row">{renderSignUpInputs()}</div>
+            <div className="sign-up-row">{renderSignUpButton()}</div>
+          </div>
+        </Mobile>
       </div>
 
       <div
@@ -113,28 +129,18 @@ const IndexPage = ({ data }) => {
 
         {firstCalloutText && (
           <div
-            className="container"
+            className="callout-container"
             style={{
-              height: 80,
-              padding: 10,
-              borderTop: "1px dotted orange",
-              borderBottom: "1px dotted orange",
-              paddingTop: 20,
-              marginTop: 20
+              borderBottom: "1px dotted orange"
             }}
           >
-            <div className="block-call-out row">
-              <img
-                className="one columns"
-                src={firstCalloutIcon}
-                style={{
-                  height: 60
-                }}
-              />
-              <div className="eleven columns bold-m callout-b">
-                {firstCalloutText}
-              </div>
-            </div>
+            <img
+              src={firstCalloutIcon}
+              style={{
+                height: 60
+              }}
+            />
+            <div className="bold-m callout-b">{firstCalloutText}</div>
           </div>
         )}
       </div>
@@ -187,6 +193,36 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
 
+      <div
+        style={{
+          padding: 40,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
+        <div
+          className="extra-bold-m light-blue-color"
+          style={{
+            width: 1040,
+            fontSize: "42px"
+          }}
+        >
+          <div style={{ lineHeight: "42px", width: "100%", marginBottom: 10 }}>
+            Our Candidates
+          </div>
+          <div style={{ overflowX: "scroll" }}>
+            <div style={{ display: "table", borderSpacing: 8 }}>
+              <div className="carousel-container">
+                {sortFunctions
+                  .electionDate(candidates)
+                  .map((c, idx) => <CarouselCandidate key={idx} {...c} />)}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {blocks.map((b, i) => <HomeBlock key={i} {...b} />)}
     </div>
   );
@@ -200,7 +236,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(
+    landingPage: allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "landing-page" } } }
     ) {
       edges {
@@ -234,6 +270,31 @@ export const pageQuery = graphql`
               alignment
               bannerImageUrl
             }
+          }
+        }
+      }
+    }
+
+    candidates: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "candidate-fragment" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            firstName
+            lastName
+            electionType
+            incumbent
+            district
+            state
+            electionDate
+            image
+            website
+            donationLink
+            outcome
+            office
+            district
+            blurb
           }
         }
       }

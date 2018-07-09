@@ -1,2 +1,9 @@
-@import 'vars';
-@import 'breakpoints';
+@import "vars";
+@import "breakpoints";
+
+.content {
+  h3 {
+    font-size: 28px;
+  }
+  font-size: 16px;
+}
