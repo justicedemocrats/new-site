@@ -42,7 +42,7 @@ module.exports = class HTML extends React.Component {
             key="forms"
             dangerouslySetInnerHTML={{
               __html: `
-              <form name="splash-signup" netlify netlify-honeypot="bot-field" method="post" hidden>
+              <form name="splash-signup" netlify netlify-honeypot="bot-field" method="post" action="/" hidden>
                 <input type="text" name="name" required="true" />
                 <input type="email" name="email" required="true" />
                 <input type="text" maxlength="5" minlength="5" name="zip" required="true" />
