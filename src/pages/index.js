@@ -156,7 +156,8 @@ const IndexPage = ({ data }) => {
         <div
           className="extra-bold-m light-blue-color"
           style={{
-            width: 1040,
+            maxWidth: "1040px",
+            width: "100%",
             fontSize: "42px"
           }}
         >
@@ -205,6 +206,7 @@ const IndexPage = ({ data }) => {
           className="extra-bold-m light-blue-color"
           style={{
             width: 1040,
+            width: "100%",
             fontSize: "42px"
           }}
         >
