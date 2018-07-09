@@ -58,7 +58,7 @@ blocks:
     bannerButtonText: Donate
     bannerButtonUrl: /donate
     bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_2_alexbump_053118.jpg
-    bannerText: $2.8+ Millions Raised
+    bannerText: $2.8+M Raised
     calloutIcon: /img/jd_site_circlefinger_1_50x50.svg
     calloutText: >-
       In a modern, moral, wealthy society like the United States, people should
