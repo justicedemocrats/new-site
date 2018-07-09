@@ -26,6 +26,7 @@
     "react-burger-menu": "^2.5.2",
     "react-helmet": "^5.2.0",
     "react-responsive": "^4.1.0",
+    "superagent": "^3.8.3",
     "uuid": "^3.2.1"
   },
   "keywords": [
