@@ -23,7 +23,7 @@ sections:
           childcare. By investing in our own workforce, we can lift thousands of
           American families out of poverty and get people to work doing the work
           that needs to be done.
-        title: Enact a Federal Jobs Gurantee
+        title: Enact a Federal Jobs Guarantee
       - contents: >-
           This is about justice and basic human decency. If you work hard and
           you work full time you shouldn’t live in poverty. Furthermore, we
@@ -86,9 +86,9 @@ sections:
     planks:
       - contents: >-
           The United States should catch up to every other modern nation and
-          implement a single-payer, medicare-for-all system. There’s no reason
+          implement a single payer, Medicare for All system. There’s no reason
           we can’t be #1 in the world instead of #37. It’s time to end the
-          destruction of American healthcare by rapacious, price gouging,
+          destruction of American health care by rapacious, price gouging,
           for-profit, private health insurance middlemen.
         title: Healthcare as A Right
       - contents: >-
