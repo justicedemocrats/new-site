@@ -192,7 +192,9 @@ sections:
           Justice Democrats platform is a dynamic document. We welcome
           suggestions. Email us at
           [**us@justicedemocrats.com**](mailto:us@justicedemocrats.com).
-        question: ''
+        question: >-
+          I have an issue I’d like to see addressed in the Justice Democrats
+          Platform. Can I make a suggestion?
     title: YOUR PART
 ---
 
