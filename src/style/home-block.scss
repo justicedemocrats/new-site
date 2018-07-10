@@ -138,12 +138,14 @@
 .sign-up-input {
   background: none !important;
   border: 1px solid $jd-dark-blue !important;
+  font-size: 22px;
+  height: 38px;
+  line-height: 38px;
 
   &::placeholder {
     color: $jd-dark-blue;
     font-family: $jd-sans;
     font-size: 16px;
-    line-height: 12px;
     font-weight: 700;
   }
 }
