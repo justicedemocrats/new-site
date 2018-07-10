@@ -49,7 +49,7 @@ module.exports = class HTML extends React.Component {
                 <input name="phone" type="tel" required="true" />
               </form>
 
-              <form name="main-signup" netlify netlify-honeypot="bot-field" method="post" action="/" hidden>
+              <form name="main-signup" netlify netlify-honeypot="bot-field" method="post" action="/donate" hidden>
                 <input type="text" name="name" required="true" />
                 <input type="email" name="email" required="true" />
                 <input type="text" maxlength="5" minlength="5" name="zip" required="true" />

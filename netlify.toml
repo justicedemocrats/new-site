@@ -9,7 +9,6 @@
   from = "/donate"
   to = "https://secure.actblue.com/donate/jdpacslate"
   status = 302
-  force = true
 [[redirects]]
   from = "/*"
   to = "https://jdems.us/:splat"
