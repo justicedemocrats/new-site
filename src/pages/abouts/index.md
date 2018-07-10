@@ -62,11 +62,11 @@ sections:
       - answer: >-
           All candidates are required to pledge not to take any corporate PAC or
           corporate lobbyist money. Additionally, they will be progressive
-          candidates who generally agree with the [Justice Democrats
-          platform](/issues). Please check out the detailed description of who
-          we are looking for at the top of our [candidate endorsement
-          form](https://go.justicedemocrats.com/survey/application-endorsement/).
-          Read about our candidates on our [candidates page](/candidates).
+          candidates who generally agree with the [**Justice Democrats
+          platform**](/issues). Please check out the detailed description of who
+          we are looking for at the top of our [**candidate endorsement
+          form**](https://go.justicedemocrats.com/survey/application-endorsement/).
+          Read about our candidates on our [**candidates page**](/candidates).
         question: ' Who are Justice Democrat candidates?'
       - answer: >-
           We won’t run against candidates that fully support the Justice
@@ -151,11 +151,11 @@ sections:
       - answer: 'The American people, with an average donation of less than $16.'
         question: Who are the major funders?
       - answer: >-
-          The [Federal Election
-          Commission](http://www.fec.gov/finance/disclosure/candcmte_info.shtml)
-          posts all campaign filings publicly, where you are able to [review all
-          donor
-          information](http://www.fec.gov/finance/disclosure/candcmte_info.shtml).
+          The [**Federal Election
+          Commission**](http://www.fec.gov/finance/disclosure/candcmte_info.shtml)
+          posts all campaign filings publicly, where you are able to [**review
+          all donor
+          information**](http://www.fec.gov/finance/disclosure/candcmte_info.shtml).
         question: Where can I go to see a list of your donors?
     title: FUNDING
   - items:
