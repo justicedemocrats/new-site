@@ -12,9 +12,14 @@ const alphabeticalSort = (a, b) => {
     : a.toLowerCase() > b.toLowerCase() ? 1 : 0;
 };
 
+const lastWord = string => {
+  const list = string.split(" ");
+  return list[list.length - 1];
+};
+
 export const sortFunctions = {
   state: candidates => sortBy(candidates, c => `${c.state}${c.district}`),
-  alphabetical: candidates => sortBy(candidates, c => c.lastName),
+  alphabetical: candidates => sortBy(candidates, c => lastWord(c.lastName)),
   electionDate: candidates =>
     sortBy(
       sortBy(

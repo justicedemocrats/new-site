@@ -219,11 +219,12 @@
 .highlight-container {
   background-color: $jd-dark-blue;
   max-width: 1040px;
+  width: 100%;
   color: white;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px;
+  justify-content: space-around;
+  padding: 30px;
 
   .highlight-icon {
     max-width: 150px;
@@ -236,6 +237,7 @@
 
   .highlight-contents {
     max-width: calc(100% - 180px);
+    width: calc(100% - 180px);
 
     .highlight-header {
       text-transform: uppercase;

@@ -5,6 +5,11 @@ import Banner from "../components/Banner";
 import Plank from "../components/Plank";
 import "../style/issues.scss";
 
+const lastWord = string => {
+  const list = string.split(" ");
+  return list[list.length - 1];
+};
+
 const IssuePageTemplate = ({
   html: body,
   frontmatter: {
@@ -48,6 +53,12 @@ const IssuePageTemplate = ({
 
           {sections.map(({ title, icon, intro, planks }) => (
             <div>
+              <div
+                id={lastWord(title).toLowerCase()}
+                name={lastWord(title).toLowerCase()}
+                style={{ marginTop: -100, display: "inline-block" }}
+              />
+
               <Divider />
               <div className="policy-section-title-container">
                 <div className="icon-container">

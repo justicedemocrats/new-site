@@ -177,16 +177,18 @@ const IndexPage = ({ data }) => {
             fontSize: "42px"
           }}
         >
-          <div
+          <Link
+            to="/candidates"
             style={{
               lineHeight: "42px",
               width: "100%",
               marginBottom: 10,
-              textTransform: "uppercase"
+              textTransform: "uppercase",
+              display: "block"
             }}
           >
             Our Candidates
-          </div>
+          </Link>
           <Link
             style={{ overflowX: "scroll", display: "block" }}
             to="/candidates"
@@ -213,7 +215,9 @@ const IndexPage = ({ data }) => {
             <div className="highlight-header extra-bold-m">
               {jdHighlightHeader}
             </div>
-            <div className="highlight-text medium-m">{jdHighlightText}</div>
+            <div className="highlight-text medium-m" style={{ fontSize: 15 }}>
+              {jdHighlightText}
+            </div>
           </div>
         </div>
       </div>
