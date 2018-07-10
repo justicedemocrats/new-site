@@ -85,7 +85,7 @@ blocks:
     bannerButtonText: Volunteer
     bannerButtonUrl: /volunteer
     bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_3_greg_053118.jpg
-    bannerText: 2.2+M Voters Contacted
+    bannerText: 2.2+M Contacted
     calloutIcon: /img/jd_site_reportcover_300x400_040818_lr.png
     calloutText: >-
       Polling data demonstrates that the Democratic Party’s base has moved left,
