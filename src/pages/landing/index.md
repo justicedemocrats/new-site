@@ -82,10 +82,10 @@ blocks:
       Because one can not be achieved without the other — it’s the same fight
       for rights.
   - alignment: left
-    bannerButtonText: Sign Up
+    bannerButtonText: Volunteer
     bannerButtonUrl: /volunteer
     bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_3_greg_053118.jpg
-    bannerText: 'XXX,XXX Volunteers'
+    bannerText: 2.2+M Voters Contacted
     calloutIcon: /img/jd_site_reportcover_300x400_040818_lr.png
     calloutText: >-
       Polling data demonstrates that the Democratic Party’s base has moved left,
