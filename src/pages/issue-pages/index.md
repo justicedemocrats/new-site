@@ -41,7 +41,7 @@ sections:
       - contents: >-
           Our infrastructure gets a grade of D from the Society of Civil
           Engineers. The government should invest trillions in rebuilding our
-          crumbling roads, bridges, schools, levees, airports etc. There’s no
+          crumbling roads, bridges, schools, levees, airports, etc. There’s no
           reason why we can’t have the world’s #1 infrastructure.
         title: Build the New New Deal
       - contents: >-
