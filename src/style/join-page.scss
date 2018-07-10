@@ -21,6 +21,11 @@ div.splash {
   font-family: $jd-sans;
   margin: 0 auto;
   padding: 50px;
+  padding-top: 100px;
+
+  @include breakpoint(mobile) {
+    padding-top: 50px;
+  }
 
   div.hed,
   div.subhed {
@@ -71,6 +76,28 @@ div.splash {
       font-size: 35px;
       margin-top: 10px;
       width: 100%;
+    }
+
+    @include breakpoint(mobile) {
+      .splash-input {
+        height: 50px;
+      }
+
+      input[type="submit"] {
+        height: 50px;
+      }
+    }
+  }
+
+  @include breakpoint(mobile) {
+    .content-container.five {
+      padding-left: 10px;
+      margin-left: 0px;
+      border: none;
+    }
+
+    li {
+      margin-bottom: 0px;
     }
   }
 

@@ -35,10 +35,12 @@ class Navbar extends React.Component {
       return (
         <div className="navbar" style={{ osition: "fixed" }}>
           <div className="navbar desktop">
-            {/* <div className="nav-social-container"> */}
-            {/* <TwitterButton />
+            <Default>
+              <div className="nav-social-container">
+                {/* <TwitterButton />
               <FacebookButton /> */}
-            {/* </div> */}
+              </div>
+            </Default>
             <HeaderLogo />
             <Link
               to="/"
