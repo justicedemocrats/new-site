@@ -202,7 +202,8 @@ sections:
 
 
           If you are more comfortable mailing your contribution, please address
-          to:\
+          to:
+
 
           Justice Democrats, P. O. Box 910, Knoxville, TN, 37901
         question: How can I support Justice Democrats with a donation?
