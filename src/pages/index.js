@@ -208,7 +208,10 @@ const IndexPage = ({ data }) => {
         <div className="highlight-container">
           <Default>
             <div className="highlight-icon">
-              <img src={jdHighlightIcon} />
+              <img
+                src={jdHighlightIcon}
+                style={{ width: "100%", height: "100%", width: 150 }}
+              />
             </div>
           </Default>
           <div className="highlight-contents">
