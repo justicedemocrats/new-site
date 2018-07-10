@@ -70,7 +70,7 @@ sections:
           currently bombing 7 different countries. We spend more on our military
           than the next 8 countries combined. Despite countless lives lost and
           destroyed, terrorism has only gotten worse. It’s time to end the wars
-          and the perverse monetary-incentive structure that makes politicians
+          and the perverse monetary incentive structure that makes politicians
           flippant about sending young men and women to die. Unilateral U.S.
           military force should only be used as a last resort to defend the
           nation. The current budget could be cut drastically if we used our
@@ -163,7 +163,7 @@ sections:
     title: Protect Our Rights
   - icon: /img/democracy.svg
     intro: >-
-      We cannot afford to continue partisan jockeying on these issues, there is
+      We cannot afford to continue partisan jockeying on these issues; there is
       too much at stake. Americans must be provided a better chance to succeed
       in the face of rising income inequality and continued machinations by
       corporate giants.
