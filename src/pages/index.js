@@ -145,12 +145,14 @@ const IndexPage = ({ data }) => {
               borderBottom: "1px dotted orange"
             }}
           >
-            <img
-              src={firstCalloutIcon}
-              style={{
-                height: 60
-              }}
-            />
+            <Default>
+              <img
+                src={firstCalloutIcon}
+                style={{
+                  height: 60
+                }}
+              />
+            </Default>
             <div className="bold-m callout-b">{firstCalloutText}</div>
           </div>
         )}

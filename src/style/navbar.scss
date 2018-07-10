@@ -9,15 +9,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center !important;
-  width: 100%;
+  width: 100vw;
   height: 50px;
   min-height: auto !important;
   z-index: 100000;
   font-size: 18px;
 
   .mobile {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    .header-logo {
+      max-width: 200px;
+    }
+
+    .nav-social-container {
+      width: 60px;
+    }
   }
 
   .desktop {
@@ -134,13 +142,19 @@ ul.splash-navbar {
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: relative;
-  width: 23px;
+  width: 30px;
   height: 20px;
+  color: $jd-text-gray;
+  margin-left: 10px;
+
+  button {
+    color: $jd-text-gray;
+  }
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: $jd-text-gray;
   width: 100%;
 }
 

@@ -33,4 +33,39 @@
 
 .issue-intro {
   font-size: 18px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.policy-section-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .icon-container {
+    width: 30%;
+    max-width: 150px;
+  }
+
+  .text-container {
+    max-width: calc(100% - 180px);
+  }
+}
+
+@include breakpoint(mobile) {
+  .policy-section-title-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .icon-container {
+      width: 100%;
+    }
+
+    .text-container {
+      margin-top: 20px;
+      width: 100%;
+      max-width: none;
+    }
+  }
 }

@@ -49,11 +49,11 @@ const IssuePageTemplate = ({
           {sections.map(({ title, icon, intro, planks }) => (
             <div>
               <Divider />
-              <div className="row">
-                <div className="two columns">
+              <div className="policy-section-title-container">
+                <div className="icon-container">
                   <img src={icon} style={{ maxHeight: 150, maxWidth: 150 }} />
                 </div>
-                <div className="ten columns center-contents-column">
+                <div className="text-container center-contents-column">
                   <div className="center-contents-column">
                     <div className="extra-bold-m light-blue-color font-size-25">
                       {title}

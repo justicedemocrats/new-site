@@ -34,10 +34,10 @@ class Navbar extends React.Component {
       return (
         <div className="navbar" style={{ osition: "fixed" }}>
           <div className="navbar desktop">
-            <div className="nav-social-container">
-              {/* <TwitterButton />
+            {/* <div className="nav-social-container"> */}
+            {/* <TwitterButton />
               <FacebookButton /> */}
-            </div>
+            {/* </div> */}
             <HeaderLogo />
             <Link
               to="/"
@@ -51,11 +51,12 @@ class Navbar extends React.Component {
                 height: "100%",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center"
+                justifyContent: "center",
+                marginLeft: 10
               }}
               className="orange-bg bold-m"
             >
-              <div> Enter Site </div>
+              <div style={{ textAlign: "center" }}> Enter Site </div>
             </Link>
           </div>
         </div>
@@ -177,7 +178,7 @@ const DonateLink = () => (
   </a>
 );
 const HeaderLogo = () => (
-  <Link to="/" style={{ height: 30 }}>
+  <Link to="/" style={{ height: 30 }} className="header-logo">
     <img style={{ height: 30 }} src="/assets/jd-logo-horiz.svg" />
   </Link>
 );

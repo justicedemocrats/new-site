@@ -1,7 +1,11 @@
 import React from "react";
 import Link from "gatsby-link";
 import { HTMLContent } from "../components/Content";
+import Responsive from "react-responsive";
 require("../style/home-block.scss");
+
+const Mobile = props => <Responsive {...props} maxWidth={767} />;
+const Default = props => <Responsive {...props} minWidth={768} />;
 
 export default ({
   alignment,
@@ -31,10 +35,12 @@ export default ({
           backgroundImage: `url(${bannerImageUrl})`,
           backgroundSize: "cover",
           height: "50vh",
-          textTransform: "uppercase"
+          textTransform: "uppercase",
+          justifyContent: "center"
         }}
       >
         <div
+          className="mobile-alignment-override"
           style={{
             display: "flex",
             flexDirection: "column",
@@ -95,7 +101,9 @@ export default ({
 
           {calloutText && (
             <div className="callout-container">
-              <img src={calloutIcon} style={{ height: 60 }} />
+              <Default>
+                <img src={calloutIcon} style={{ height: 60 }} />
+              </Default>
               <div className="bold-m callout-b">{calloutText}</div>
             </div>
           )}

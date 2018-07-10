@@ -18,6 +18,7 @@
   line-height: 28px;
   color: $jd-light-blue;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .callout-button {
@@ -33,6 +34,23 @@
   padding: 10px 90px 10px 90px;
 }
 
+@include breakpoint(mobile) {
+  .home-header-w {
+    font-size: 45px;
+    line-height: 40px;
+  }
+
+  .plain-button {
+    width: 50%;
+    padding: 0px;
+  }
+
+  .mobile-alignment-override {
+    align-items: center !important;
+    text-align: center;
+  }
+}
+
 .full-width-button {
   border-radius: 0px !important;
   border: none !important;
@@ -46,6 +64,12 @@
   font-size: 17px !important;
   color: $jd-dark-blue;
   padding-left: 20px;
+}
+
+@include breakpoint(mobile) {
+  .callout-b {
+    padding-left: 0px;
+  }
 }
 
 // .flex-child > input {

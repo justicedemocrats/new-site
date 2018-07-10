@@ -30,18 +30,18 @@ export default class Plank extends React.Component {
           style={{ textTransform: "uppercase" }}
         >
           {this.state.open ? (
-            <div onClick={this.close}>
+            <div onClick={this.close} style={{ width: 30 }}>
               {" "}
               <img src="/assets/small-toggle-minus.svg" />{" "}
             </div>
           ) : (
-            <div onClick={this.open}>
+            <div onClick={this.open} style={{ width: 30 }}>
               {" "}
               <img src="/assets/small-toggle-plus.svg" />{" "}
             </div>
           )}
 
-          {title}
+          <div style={{ width: "calc(100% - 30px)" }}>{title}</div>
         </div>
 
         {this.state.open && (
