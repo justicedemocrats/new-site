@@ -65,9 +65,9 @@ sections:
           candidates who generally agree with the [**Justice Democrats
           platform**](https://justicedemocrats.com/issues). Please check out the
           detailed description of who we are looking for at the top of our
-          candidate nomination form. To help us find the right candidates, we
-          need you to submit nominations of candidates in your district! Read
-          about our candidates on our [**candidates
+          [**candidate endorsement
+          form**](https://go.justicedemocrats.com/survey/application-endorsement/).
+          Read about our candidates on our [**candidates
           page**](https://justicedemocrats.com/candidates).
         question: ' Who are Justice Democrat candidates?'
       - answer: >-
