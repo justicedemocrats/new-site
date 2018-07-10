@@ -86,7 +86,7 @@ const IndexPage = ({ data }) => {
             netlify="true"
             data-netlify-honeypot="bot-field"
             method="post"
-            action="/donate"
+            action="/"
             style={{
               backgroundColor: "rgba(255, 255, 255, .8)",
               minHeight: 60
