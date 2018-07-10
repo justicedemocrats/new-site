@@ -63,12 +63,10 @@ sections:
           All candidates are required to pledge not to take any corporate PAC or
           corporate lobbyist money. Additionally, they will be progressive
           candidates who generally agree with the [**Justice Democrats
-          platform**](https://justicedemocrats.com/issues). Please check out the
-          detailed description of who we are looking for at the top of our
-          [**candidate endorsement
+          platform**](/issues). Please check out the detailed description of who
+          we are looking for at the top of our [**candidate endorsement
           form**](https://go.justicedemocrats.com/survey/application-endorsement/).
-          Read about our candidates on our [**candidates
-          page**](https://justicedemocrats.com/candidates).
+          Read about our candidates on our [**candidates page**](/candidates).
         question: ' Who are Justice Democrat candidates?'
       - answer: >-
           We won’t run against candidates that fully support the Justice
