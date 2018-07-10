@@ -29,6 +29,8 @@ export default class CarouselCandidate extends React.Component {
 
     let ed = new Date(electionDate);
     let [d, m] = [ed.getDate(), ed.getMonth()];
+    m = m + 1;
+    d = d + 1;
 
     return (
       <div className="carousel-candidate">

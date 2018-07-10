@@ -25,7 +25,7 @@ div.candidate {
       width: 100%;
       color: white;
       font-weight: bold;
-      font-size: 2rem;
+      font-size: 20px;
       height: 3rem;
       text-align: center;
     }
@@ -40,7 +40,7 @@ div.candidate {
     div.nameIncumbent {
       span.name {
         font-weight: bold;
-        font-size: 2rem;
+        font-size: 20px;
         line-height: 1;
       }
       span.incumbent {
@@ -52,7 +52,7 @@ div.candidate {
 
     div.office {
       font-weight: bold;
-      font-size: 2rem;
+      font-size: 20px;
       color: $jd-light-blue;
     }
     div.race-date {

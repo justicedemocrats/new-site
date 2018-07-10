@@ -7,9 +7,6 @@
   margin-bottom: 10px;
 }
 
-.about-header {
-}
-
 .leadership-container {
   display: flex;
   justify-content: space-between;
@@ -54,4 +51,15 @@
 
 .contact-email {
   font-weight: bold;
+}
+
+.answer {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-contents {
+  .columns {
+    margin: 0px;
+  }
 }

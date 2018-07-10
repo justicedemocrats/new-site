@@ -30,7 +30,7 @@ module.exports = class HTML extends React.Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Montserrat:300,500,700,800"
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800"
             rel="stylesheet"
           />
           {this.props.headComponents}

@@ -3,7 +3,7 @@ $jd-dark-blue: #1c6087;
 $jd-light-blue: #0096b4;
 $jd-orange: #ff8c06;
 $jd-dark-dark-blue: #051832;
-$jd-text-gray: #77787b;
+$jd-text-gray: #575a5f;
 
 // Font definitions
 $jd-sans: Montserrat, sans-serif;
@@ -49,7 +49,7 @@ $jd-sans: Montserrat, sans-serif;
 
 .light-m {
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .dark-blue-color {
@@ -78,7 +78,7 @@ $jd-sans: Montserrat, sans-serif;
 
 .standard-text {
   font-size: 15px !important;
-  line-height: 20px;
+  line-height: 22px;
   font-family: $jd-sans;
   color: $jd-text-gray;
 }

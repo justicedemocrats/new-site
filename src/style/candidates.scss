@@ -8,6 +8,11 @@
   max-width: 1120px;
 }
 
+.candidates:after {
+  content: "";
+  flex: auto;
+}
+
 .page-container {
   display: flex;
   align-items: center;

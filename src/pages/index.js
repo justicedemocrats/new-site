@@ -64,14 +64,17 @@ const IndexPage = ({ data }) => {
   return (
     <div style={{ paddingLeft: 0, paddingRight: 0 }}>
       <div
-        className="banner"
+        className="home-banner"
         style={{
-          backgroundImage: `url(${bannerBackgroundImg})`,
-          backgroundSize: "cover",
-          paddingTop: 50
+          backgroundImage: `url(${bannerBackgroundImg})`
         }}
       >
-        <img src={bannerTextImg} />
+        <div
+          className="home-banner-text-image"
+          style={{
+            backgroundImage: `url(${bannerTextImg})`
+          }}
+        />
         <Default>
           <form
             className="sign-up"
@@ -164,6 +167,47 @@ const IndexPage = ({ data }) => {
         <div
           className="extra-bold-m light-blue-color"
           style={{
+            maxWidth: 1040,
+            width: "100%",
+            fontSize: "42px"
+          }}
+        >
+          <div
+            style={{
+              lineHeight: "42px",
+              width: "100%",
+              marginBottom: 10,
+              textTransform: "uppercase"
+            }}
+          >
+            Our Candidates
+          </div>
+          <Link
+            style={{ overflowX: "scroll", display: "block" }}
+            to="/candidates"
+          >
+            <div style={{ display: "table", borderSpacing: 8 }}>
+              <div className="carousel-container">
+                {sortFunctions
+                  .electionDate(candidates)
+                  .map((c, idx) => <CarouselCandidate key={idx} {...c} />)}
+              </div>
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      <div
+        style={{
+          padding: 40,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
+        <div
+          className="extra-bold-m light-blue-color"
+          style={{
             maxWidth: "1040px",
             width: "100%",
             fontSize: "42px"
@@ -179,12 +223,11 @@ const IndexPage = ({ data }) => {
               <div
                 style={{
                   height: 300,
-                  backgroundImage: `url(${image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center"
+                  paddingTop: 10
                 }}
-                className="four columns"
+                className="four columns primary-issue-box"
               >
+                <img src={image} style={{ marginBottom: 10 }} />
                 <a
                   className="primary-issue-text"
                   style={{
@@ -199,40 +242,6 @@ const IndexPage = ({ data }) => {
               </div>
             ))}
           </div>
-        </div>
-      </div>
-
-      <div
-        style={{
-          padding: 40,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center"
-        }}
-      >
-        <div
-          className="extra-bold-m light-blue-color"
-          style={{
-            width: 1040,
-            width: "100%",
-            fontSize: "42px"
-          }}
-        >
-          <div style={{ lineHeight: "42px", width: "100%", marginBottom: 10 }}>
-            Our Candidates
-          </div>
-          <Link
-            style={{ overflowX: "scroll", display: "block" }}
-            to="/candidates"
-          >
-            <div style={{ display: "table", borderSpacing: 8 }}>
-              <div className="carousel-container">
-                {sortFunctions
-                  .electionDate(candidates)
-                  .map((c, idx) => <CarouselCandidate key={idx} {...c} />)}
-              </div>
-            </div>
-          </Link>
         </div>
       </div>
 

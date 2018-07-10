@@ -1,11 +1,17 @@
+@import "includes/includes";
+
 .banner-container {
-  height: 400px;
+  height: 550px;
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   padding-top: 75px;
   text-align: right;
+
+  .page-contents {
+    justify-content: flex-end;
+  }
 
   .banner-text {
     float: right;
@@ -22,6 +28,19 @@
 
     .banner-text-light {
       font-weight: 300;
+    }
+  }
+}
+
+@include breakpoint(mobile) {
+  .banner-container {
+    height: 400px;
+    background-position-x: left;
+    background-position-y: 50px;
+
+    .banner-text {
+      font-size: 40px;
+      line-height: 35px;
     }
   }
 }

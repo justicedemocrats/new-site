@@ -1,4 +1,5 @@
 @import "./includes/_vars";
+@import "includes/includes";
 
 .home-header-b {
   font-size: 42px;
@@ -47,15 +48,15 @@
   padding-left: 20px;
 }
 
-.flex-child > input {
-  background-color: rgba(0, 0, 0, 0) !important;
-  border: 1px solid $jd-dark-blue !important;
+// .flex-child > input {
+//   background-color: rgba(0, 0, 0, 0) !important;
+//   border: 1px solid $jd-dark-blue !important;
 
-  &::-webkit-input-placeholder {
-    color: $jd-dark-blue;
-    font-weight: 700;
-  }
-}
+//   &::-webkit-input-placeholder {
+//     color: $jd-dark-blue;
+//     font-weight: 700;
+//   }
+// }
 
 .primary-issue-text {
   background-color: $jd-light-blue;
@@ -118,6 +119,8 @@
     color: $jd-dark-blue;
     font-family: $jd-sans;
     font-size: 16px;
+    line-height: 12px;
+    font-weight: 700;
   }
 }
 
@@ -152,4 +155,37 @@
   img {
     height: 45px;
   }
+}
+
+.home-banner {
+  background-size: cover;
+  padding-top: 50;
+  height: calc(100vh - 100px);
+
+  .home-banner-text-image {
+    height: calc(100% - 60px);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@include breakpoint(mobile) {
+  .home-banner {
+    background-size: cover;
+    padding-top: 50;
+    height: calc(100vh - 100px);
+
+    .home-banner-text-image {
+      height: calc(100% - 155px);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.primary-issue-box {
+  display: flex;
+  flex-direction: column;
 }

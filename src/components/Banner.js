@@ -14,10 +14,12 @@ export default props => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
       className="banner-container"
     >
-      <div className="banner-text">
-        <div className="banner-text-bold">{first}</div>
-        <div className="banner-text-light">{rest}</div>
-        <div className="banner-text-bold">{last}</div>
+      <div className="page-contents">
+        <div className="banner-text">
+          <div className="banner-text-bold">{first}</div>
+          <div className="banner-text-light">{rest}</div>
+          <div className="banner-text-bold">{last}</div>
+        </div>
       </div>
     </div>
   );

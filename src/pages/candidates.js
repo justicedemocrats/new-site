@@ -13,11 +13,21 @@ const alphabeticalSort = (a, b) => {
 };
 
 export const sortFunctions = {
-  state: candidates => sortBy(candidates, c => c.state),
+  state: candidates => sortBy(candidates, c => `${c.state}${c.district}`),
   alphabetical: candidates => sortBy(candidates, c => c.lastName),
-  electionDate: candidates => sortBy(candidates, c => new Date(c.electionDate)),
+  electionDate: candidates =>
+    sortBy(
+      sortBy(
+        candidates.filter(c => c.outcome != "Won"),
+        c => `${c.state}${c.district}`
+      ),
+      c => new Date(c.electionDate)
+    ),
   general: candidates =>
-    sortBy(candidates, c => `${c.outcome == "Won" ? "A" : "Z"}${c.state}`)
+    sortBy(
+      candidates.filter(c => c.outcome == "Won"),
+      c => `${c.outcome == "Won" ? "A" : "Z"}${c.state}${c.district}`
+    )
 };
 
 export class CandidatePageTemplate extends React.Component {
@@ -57,7 +67,10 @@ export class CandidatePageTemplate extends React.Component {
                 );
               })}
             </div>
-            <div className="six columns medium-m standard-text">
+            <div
+              className="six columns medium-m standard-text"
+              style={{ marginTop: 10, marginBottom: 10 }}
+            >
               <p> {intro} </p>
             </div>
           </div>
@@ -65,7 +78,7 @@ export class CandidatePageTemplate extends React.Component {
             {[
               ["State/District", "state"],
               ["Alphabetical", "alphabetical"],
-              ["Upcoming Primary", "electionDate"],
+              ["Upcoming Primaries", "electionDate"],
               ["General Election", "general"]
             ].map(([label, key]) => (
               <button

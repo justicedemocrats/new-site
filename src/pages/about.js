@@ -88,7 +88,11 @@ const AboutPageTemplate = ({
                   <div className="question standard-text bold-m">
                     {question}
                   </div>
-                  <div className="answer standard-text light-m">{answer}</div>
+                  <HTMLContent
+                    className="answer standard-text light-m"
+                    content={answer}
+                    markdown={true}
+                  />
                 </div>
               ))}
             </div>
