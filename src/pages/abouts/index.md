@@ -197,7 +197,7 @@ sections:
           Platform. Can I make a suggestion?
       - answer: >-
           You can donate online at [**Act
-          Blue**](<https://secure.actblue.com/donate/jdpacslate >) (the donate
+          Blue**](<https://secure.actblue.com/donate/jdpacslate >). (The donate
           link at the top of the page will also get you there.)
 
 
