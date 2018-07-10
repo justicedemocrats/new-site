@@ -41,14 +41,14 @@ sections:
       - contents: >-
           Our infrastructure gets a grade of D from the Society of Civil
           Engineers. The government should invest trillions in rebuilding our
-          crumbling roads, bridges, schools, levees, airports etc. There’s no
+          crumbling roads, bridges, schools, levees, airports, etc. There’s no
           reason why we can’t have the world’s #1 infrastructure.
         title: Build the New New Deal
       - contents: >-
           As a result of NAFTA, CAFTA, PNTR with China and the WTO, Americans
           have lost millions of decent paying jobs. It’s time to end the race to
           the bottom and renegotiate these rigged deals that only benefit
-          elites. We should not sacrifice our sovereignty, the only people who
+          elites. We should not sacrifice our sovereignty. The only people who
           are allowed to make laws for the United States should be the American
           people, not multinational corporations.
         title: Block Bad Trade Deals
@@ -57,8 +57,8 @@ sections:
           havens. We should end this injustice, as well as chain the capital
           gains tax to the income tax, increase the estate tax, and implement
           the Buffet Rule so that no millionaire CEO pays less in taxes than his
-          or her secretary. It’s time for a tax system that benefits the
-          middle-class and the poor, and makes the top 1% and multinational
+          or her secretary. It’s time for a tax system that benefits the middle
+          class and the poor, and makes the top 1% and multinational
           corporations pay their fair share.
         title: End Tax Dodging and Loopholes
       - contents: >-
@@ -70,7 +70,7 @@ sections:
           currently bombing 7 different countries. We spend more on our military
           than the next 8 countries combined. Despite countless lives lost and
           destroyed, terrorism has only gotten worse. It’s time to end the wars
-          and the perverse monetary-incentive structure that makes politicians
+          and the perverse monetary incentive structure that makes politicians
           flippant about sending young men and women to die. Unilateral U.S.
           military force should only be used as a last resort to defend the
           nation. The current budget could be cut drastically if we used our
@@ -163,7 +163,7 @@ sections:
     title: Protect Our Rights
   - icon: /img/democracy.svg
     intro: >-
-      We cannot afford to continue partisan jockeying on these issues, there is
+      We cannot afford to continue partisan jockeying on these issues; there is
       too much at stake. Americans must be provided a better chance to succeed
       in the face of rising income inequality and continued machinations by
       corporate giants.

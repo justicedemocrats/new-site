@@ -67,7 +67,7 @@ blocks:
       climate change and aggressive wars of choice. 
     header: Social and Economic Justice.
     htmlContent: >-
-      The question is not "if", but "how" and "when". Every Justice Democrat is
+      The question is not "if," but "how," and "when." Every Justice Democrat is
       fighting for:
 
 
@@ -85,7 +85,7 @@ blocks:
     bannerButtonText: Volunteer
     bannerButtonUrl: /volunteer
     bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_3_greg_053118.jpg
-    bannerText: 2.2+M Contacted
+    bannerText: 2.2+Million Contacted
     calloutIcon: /img/jd_site_reportcover_300x400_040818_lr.png
     calloutText: >-
       Polling data demonstrates that the Democratic Party’s base has moved left,

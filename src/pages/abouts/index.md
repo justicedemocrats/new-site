@@ -15,7 +15,7 @@ leadership:
   - headshot: /img/jd_site_about_leaders_alexr_600x600.png
     name: Alexandra Rojas
     title: ''
-  - headshot: /img/jd_site_about_leaders_nasimt_600x600.png
+  - headshot: /img/jd_site_about_leaders_nasimt_600x600_2.jpg
     name: Nasim Thompson
     title: ''
   - headshot: /img/jd_site_about_leaders_corbint_600x600.png
@@ -65,9 +65,9 @@ sections:
           candidates who generally agree with the [**Justice Democrats
           platform**](https://justicedemocrats.com/issues). Please check out the
           detailed description of who we are looking for at the top of our
-          candidate nomination form. To help us find the right candidates, we
-          need you to submit nominations of candidates in your district! Read
-          about our candidates on our [**candidates
+          [**candidate endorsement
+          form**](https://go.justicedemocrats.com/survey/application-endorsement/).
+          Read about our candidates on our [**candidates
           page**](https://justicedemocrats.com/candidates).
         question: ' Who are Justice Democrat candidates?'
       - answer: >-
@@ -197,7 +197,7 @@ sections:
           Platform. Can I make a suggestion?
       - answer: >-
           You can donate online at [**Act
-          Blue**](<https://secure.actblue.com/donate/jdpacslate >) (the donate
+          Blue**](<https://secure.actblue.com/donate/jdpacslate >). (The donate
           link at the top of the page will also get you there.)
 
 
