@@ -21,13 +21,13 @@ issuesIntro: 'POLICIES FOR VOTERS, NOT DONORS'
 primaryIssues:
   - image: /img/growth.svg
     text: Jobs Guarantee
-    url: /issues/jobs-guarantee
+    url: '/issues#economy'
   - image: /img/rights.svg
     text: Medicare for All
-    url: /issues/medicare-for-all
+    url: '/issues#rights'
   - image: /img/democracy.svg
     text: Abolish ICE
-    url: /issues/abolish-ice
+    url: '/issues#democracy'
 jdHighlightHeader: No Corporate PACs Pledge
 jdHighlightText: >-
   All Justice Democrats pledge to reject corporate PAC money. We are accountable
