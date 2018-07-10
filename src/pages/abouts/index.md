@@ -15,7 +15,7 @@ leadership:
   - headshot: /img/jd_site_about_leaders_alexr_600x600.png
     name: Alexandra Rojas
     title: ''
-  - headshot: /img/jd_site_about_leaders_nasimt_600x600.png
+  - headshot: /img/jd_site_about_leaders_nasimt_600x600_2.jpg
     name: Nasim Thompson
     title: ''
   - headshot: /img/jd_site_about_leaders_corbint_600x600.png
