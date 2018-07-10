@@ -7,7 +7,7 @@ paidForMessage: >-
 copyright: 2018 Justice Democrats
 generalEmail: us@justicedemocrats.com
 pressEmail: press@justicedemocrats.com
-phone: (865)245-9567
+phone: (865) 245-9567
 address: 'Justice Democrats P.O Box 910, Knoxville, TN, 37901'
 quickLinks:
   - text: Privacy Policy
