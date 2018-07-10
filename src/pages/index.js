@@ -55,7 +55,10 @@ const IndexPage = ({ data }) => {
     introContent,
     firstCalloutIcon,
     firstCalloutText,
-    issuesIntro
+    issuesIntro,
+    jdHighlightIcon,
+    jdHighlightHeader,
+    jdHighlightText
   } = data.landingPage.edges[0].node.frontmatter;
 
   const { candidates: { edges: candidateEdges } } = data;
@@ -199,6 +202,22 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
 
+      <div className="page-container">
+        <div className="highlight-container">
+          <Default>
+            <div className="highlight-icon">
+              <img src={jdHighlightIcon} />
+            </div>
+          </Default>
+          <div className="highlight-contents">
+            <div className="highlight-header extra-bold-m">
+              {jdHighlightHeader}
+            </div>
+            <div className="highlight-text medium-m">{jdHighlightText}</div>
+          </div>
+        </div>
+      </div>
+
       <div
         style={{
           padding: 40,
@@ -280,6 +299,9 @@ export const pageQuery = graphql`
               image
               url
             }
+            jdHighlightIcon
+            jdHighlightHeader
+            jdHighlightText
             blocks {
               header
               subheader

@@ -215,3 +215,47 @@
   display: flex;
   flex-direction: column;
 }
+
+.highlight-container {
+  background-color: $jd-dark-blue;
+  max-width: 1040px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+
+  .highlight-icon {
+    max-width: 150px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .highlight-contents {
+    max-width: calc(100% - 180px);
+
+    .highlight-header {
+      text-transform: uppercase;
+      font-size: 42px;
+      line-height: 40px;
+    }
+
+    .highlight-contents {
+      line-height: 1;
+    }
+  }
+}
+
+@include breakpoint(mobile) {
+  .highlight-container {
+    text-align: center;
+
+    .highlight-contents {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}
