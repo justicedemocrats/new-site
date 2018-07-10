@@ -32,7 +32,7 @@ jdHighlightHeader: No Corporate PACs Pledge
 jdHighlightText: >-
   All Justice Democrats pledge to reject corporate PAC money. We are accountable
   to people, not corporations.
-jdHighlightIcon: /img/jd_site_circlefinger_1_50x50.svg
+jdHighlightIcon: /img/jd_site_mark_300x300_062018.svg
 blocks:
   - alignment: right
     bannerButtonText: Join Us
