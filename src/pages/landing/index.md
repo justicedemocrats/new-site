@@ -67,7 +67,7 @@ blocks:
       climate change and aggressive wars of choice. 
     header: Social and Economic Justice.
     htmlContent: >-
-      The question is not "if", but "how" and "when". Every Justice Democrat is
+      The question is not "if," but "how," and "when." Every Justice Democrat is
       fighting for:
 
 
