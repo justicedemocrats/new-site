@@ -4,7 +4,7 @@ uniq: footer-index
 paidForMessage: >-
   Paid for by Justice Democrats. Not Authorized by any Candidate or Candidate's
   Committee
-copyright: 2018 Justice Democrats
+copyright: ©2018 Justice Democrats
 generalEmail: us@justicedemocrats.com
 pressEmail: press@justicedemocrats.com
 phone: (865) 245-9567
