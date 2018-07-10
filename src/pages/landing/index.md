@@ -39,7 +39,7 @@ blocks:
     bannerButtonUrl: /join
     bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_1_cori_053118.jpg
     bannerText: '300,000 Supporters'
-    calloutIcon: /img/jd_site_circlefinger_1_50x50.svg
+    calloutIcon: /img/jd_site_circlefinger_2_50x50.svg
     calloutText: >-
       Justice Democrats candidates pledge to not take corporate money and to
       work together once elected to enact the Justice Democrats platform.
@@ -59,7 +59,7 @@ blocks:
     bannerButtonUrl: /donate
     bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_2_alexbump_053118.jpg
     bannerText: $2.8+M Raised
-    calloutIcon: /img/jd_site_circlefinger_1_50x50.svg
+    calloutIcon: /img/jd_site_circlefinger_3_50x50.svg
     calloutText: >-
       In a modern, moral, wealthy society like the United States, people should
       not be too poor to live with dignity. That means having access to
@@ -86,12 +86,12 @@ blocks:
     bannerButtonUrl: /volunteer
     bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_3_greg_053118.jpg
     bannerText: 'XXX,XXX Volunteers'
-    calloutIcon: /img/jd_site_circlefinger_1_50x50.svg
+    calloutIcon: /img/jd_site_reportcover_300x400_040818_lr.png
     calloutText: >-
       Polling data demonstrates that the Democratic Party’s base has moved left,
       and voters are ready for a progressive agenda. Though the party elites may
       be “divided” the base is not; they are ready for unabashed progressive
-      politicians. — www.futureoftheparty.com
+      politicians. — futureoftheparty.com
     header: Policies and Legislation for the People
     htmlContent: >-
       **Research shows that the Democratic establishment’s pivot to the “middle”
@@ -99,6 +99,7 @@ blocks:
       progressive policies that will uplift people and communities across the
       country.
     moreButtonText: Read Report
-    moreButtonUrl: /report
+    moreButtonUrl: 'https://www.futureoftheparty.com'
     subheader: 'A bold, progressive vision — policies the majority of Americans want.'
 ---
+
