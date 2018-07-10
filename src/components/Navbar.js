@@ -26,6 +26,7 @@ class Navbar extends React.Component {
   state = { open: false };
 
   handleMenuChange = ({ isOpen }) => this.setState({ open: isOpen });
+  closeMenu = () => this.setState({ open: false });
 
   render() {
     const { path } = this.props;
@@ -102,8 +103,7 @@ class Navbar extends React.Component {
                       href={href}
                       target="_blank"
                     >
-                      {" "}
-                      <div> {display} </div>{" "}
+                      <div> {display} </div>
                     </a>
                   ) : (
                     <Link
@@ -131,9 +131,20 @@ class Navbar extends React.Component {
               isOpen={this.state.open}
             >
               {links.map(({ display, href }) => (
-                <Link className="bold-m" to={href}>
-                  {display}
-                </Link>
+                <div onClick={this.closeMenu}>
+                  {/* <Link className="bold-m" to={href}>
+                    {display}
+                  </Link> */}
+                  {href.startsWith("https://") ? (
+                    <a className="bold-m" href={href} target="_blank">
+                      <div> {display} </div>
+                    </a>
+                  ) : (
+                    <Link className="bold-m" to={href}>
+                      <div> {display} </div>
+                    </Link>
+                  )}
+                </div>
               ))}
             </Menu>
           </div>
