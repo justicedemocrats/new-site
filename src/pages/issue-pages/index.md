@@ -48,7 +48,7 @@ sections:
           As a result of NAFTA, CAFTA, PNTR with China and the WTO, Americans
           have lost millions of decent paying jobs. It’s time to end the race to
           the bottom and renegotiate these rigged deals that only benefit
-          elites. We should not sacrifice our sovereignty, the only people who
+          elites. We should not sacrifice our sovereignty. The only people who
           are allowed to make laws for the United States should be the American
           people, not multinational corporations.
         title: Block Bad Trade Deals
