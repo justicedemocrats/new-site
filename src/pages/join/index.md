@@ -10,6 +10,6 @@ subhed: 'It’s time to take back the party for voters, not big money donors.'
 * Medicare For All
 * Jobs Guarantee + Livable Wage
 * Tuition-Free Public College
-* Clean Energy Economy
 * Criminal Justice Reform
+* Clean Energy Economy
 * Fighting Inequality in All Forms
