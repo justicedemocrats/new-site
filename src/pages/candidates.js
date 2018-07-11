@@ -28,6 +28,14 @@ export const sortFunctions = {
       ),
       c => new Date(c.electionDate)
     ),
+  carousel: candidates =>
+    sortBy(
+      sortBy(
+        sortBy(candidates, c => `${c.state}${c.district}`),
+        c => new Date(c.electionDate)
+      ),
+      c => (c.outcome == "Won" ? "A" : "Z")
+    ),
   general: candidates =>
     sortBy(
       candidates.filter(c => c.outcome == "Won"),

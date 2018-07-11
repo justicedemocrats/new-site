@@ -196,7 +196,7 @@ const IndexPage = ({ data }) => {
             <div style={{ display: "table", borderSpacing: 8 }}>
               <div className="carousel-container">
                 {sortFunctions
-                  .electionDate(candidates)
+                  .carousel(candidates)
                   .map((c, idx) => <CarouselCandidate key={idx} {...c} />)}
               </div>
             </div>
