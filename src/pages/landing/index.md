@@ -77,7 +77,7 @@ blocks:
 
       * Medicare for All
     moreButtonText: All Policies
-    moreButtonUrl: /platform
+    moreButtonUrl: /issues
     subheader: >-
       Because one can not be achieved without the other — it’s the same fight
       for rights.
