@@ -27,6 +27,25 @@ export default ({
     left: "flex-start"
   };
 
+  const linkComponent = moreButtonUrl.startsWith("https://") ? (
+    <a
+      href={moreButtonUrl}
+      target="_blank"
+      className="block-content-button button light-blue-bg button-text full-width-button"
+      style={{ marginTop: 10, display: "block" }}
+    >
+      {moreButtonText}
+    </a>
+  ) : (
+    <Link
+      to={moreButtonUrl}
+      style={{ marginTop: 10 }}
+      className="block-content-button button light-blue-bg button-text full-width-button"
+    >
+      {moreButtonText}
+    </Link>
+  );
+
   return (
     <section className="home-block">
       <div
@@ -87,13 +106,8 @@ export default ({
                   className="medium-m standard-text"
                 />
 
-                <Link
-                  to={moreButtonUrl}
-                  style={{ marginTop: 10 }}
-                  className="block-content-button button light-blue-bg button-text full-width-button"
-                >
-                  {moreButtonText}
-                </Link>
+                {linkComponent}
+
                 <div />
               </div>
             </div>
