@@ -14,7 +14,7 @@ div.container {
 }
 
 .full-height {
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
 }
 
 div.splash {

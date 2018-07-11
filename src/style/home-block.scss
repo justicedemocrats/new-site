@@ -258,6 +258,12 @@
     .highlight-contents {
       width: 100%;
       max-width: none;
+
+      .highlight-header {
+        font-size: 28px;
+        line-height: 25px;
+        margin-bottom: 15px;
+      }
     }
   }
 }
