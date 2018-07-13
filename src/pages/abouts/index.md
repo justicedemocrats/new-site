@@ -137,7 +137,7 @@ sections:
           people necessary to run a successful campaign. If you are curious
           about what Justice Democrats charges its candidates, you can view our
           fee schedule here:
-          https://docs.google.com/document/u/1/d/1xDpNJw-66bBMdSVtnC_OW3fygPluJrr8tFygQrIrU5Q/edit
+          [**http://justicedemocrats.com/services**](http://justicedemocrats.com/services)
         question: What type of organization is Justice Democrats?
       - answer: 'Yes, it is the federal limit of $5,000 per year.'
         question: Do you have a dollar amount cap on donations from any one individual?
