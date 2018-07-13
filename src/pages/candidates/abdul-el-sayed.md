@@ -10,7 +10,7 @@ electionType: primary
 office: governor
 incumbent: false
 website: 'http://abdulformichigan.com/'
-donationLink: 'https://secure.actblue.com/donate/justicedems-aes'
+donationLink: 'http://abdulformichigan.com/'
 outcome: Unknown
 image: /img/jd_site_abdulelsayed_550x600_061218.jpg
 blurb: >-
