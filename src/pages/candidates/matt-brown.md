@@ -10,7 +10,7 @@ electionType: primary
 office: governor
 incumbent: false
 website: 'https://mattbrownforgovernor.com'
-donationLink: 'https://secure.actblue.com/donate/matt-brown-for-governor-ri'
+donationLink: 'https://mattbrownforgovernor.com'
 outcome: Unknown
 image: /img/jd_site_mattbrown_550x600_061218.jpg
 blurb: >-
