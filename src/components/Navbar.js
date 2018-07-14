@@ -192,6 +192,6 @@ const DonateLink = () => (
 );
 const HeaderLogo = () => (
   <Link to="/" style={{ height: 30 }} className="header-logo">
-    <img style={{ height: 30 }} src="/assets/jd-logo-horiz.svg" />
+    <img style={{ height: 30 }} src="/assets/jd-logo-horiz.svg" alt="Justice Democrats" />
   </Link>
 );
