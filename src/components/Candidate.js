@@ -5,7 +5,8 @@ import "../style/candidate.scss";
 const defaultImage = "/assets/Fist.svg";
 const officeTypeMap = {
   governor: "GOV",
-  senate: "SN"
+  senate: "SN",
+  "lieutenant-governor": "LTGOV"
 };
 const electionTypeMap = {
   fake: "FAKE",

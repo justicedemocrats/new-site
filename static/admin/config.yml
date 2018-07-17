@@ -19,7 +19,7 @@ collections:
       - {label: "State", name: "state", widget: "string"}
       - {label: "Election Date", name: "electionDate", widget: "date"}
       - {label: "Election Type", name: "electionType", widget: "select", options: ["fake", "primary", "general"]}
-      - {label: "Office", name: "office", widget: "select", options: ["governor", "house", "senate"]}
+      - {label: "Office", name: "office", widget: "select", options: ["lieutenant-governor", "governor", "house", "senate"]}
       - {label: "Incumbent", name: "incumbent", widget: "boolean", default: false}
       - {label: "Website", name: "website", widget: "string"}
       - {label: "Donation Link", name: "donationLink", widget: "string"}

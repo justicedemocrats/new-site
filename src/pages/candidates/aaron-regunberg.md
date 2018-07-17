@@ -7,7 +7,7 @@ district: LtGov
 state: RI
 electionDate: '2018-09-12'
 electionType: primary
-office: governor
+office: lieutenant-governor
 incumbent: false
 website: 'https://www.aaronregunberg.com/'
 donationLink: 'https://www.aaronregunberg.com/'
@@ -24,4 +24,3 @@ blurb: >-
   than 1,000 people together, packed in a school cafeteria to plan their state's
   response, and since then they have built a strong network across Rhode Island.
 ---
-
