@@ -5,7 +5,7 @@ firstName: Aaron
 lastName: Regunberg
 district: LtGov
 state: RI
-electionDate: '2018-07-17'
+electionDate: '2018-09-12'
 electionType: primary
 office: governor
 incumbent: false
