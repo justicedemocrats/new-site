@@ -2,8 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import Navbar from "../components/Navbar";
+import HelpDesk from "../components/HelpDesk";
 import "./all.sass";
 import "../style/footer.scss";
+
+const baseHelpDeskPages = "/candidates /about /issues".split(" ");
+const withSlashes = baseHelpDeskPages.map(p => p + "/");
+const helpDeskPages = baseHelpDeskPages.concat(withSlashes);
 
 const TemplateWrapper = ({ data, children, location }) => {
   const {
@@ -17,7 +22,7 @@ const TemplateWrapper = ({ data, children, location }) => {
     socialIcons
   } = data.allMarkdownRemark.edges[0].node.frontmatter;
 
-  console.log(location.pathname);
+  const showWidget = helpDeskPages.includes(location.pathname);
 
   return (
     <div>
@@ -109,6 +114,7 @@ const TemplateWrapper = ({ data, children, location }) => {
           </div>
         </div>
       )}
+      {showWidget && <HelpDesk />}
     </div>
   );
 };

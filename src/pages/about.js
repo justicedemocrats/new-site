@@ -104,7 +104,6 @@ const AboutPageTemplate = ({
 };
 
 const AboutPage = props => {
-  console.log(props);
   const data = props.data.allMarkdownRemark.edges[0].node;
   return <AboutPageTemplate {...data.frontmatter} />;
 };
