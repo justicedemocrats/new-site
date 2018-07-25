@@ -54,8 +54,8 @@ sections:
           How are you different from these other Democratic groups such as Brand
           New Congress and Our Revolution?
       - answer: >-
-          The current board of Justice Democrats is Alexandra Rojas, Nasim
-          Thompson, and Saikat Chakrabarti.
+          Justice Democrats current leadership is Saikat Chakrabarti, Alexandra
+          Rojas, Nasim Thompson, and Corbin Trent.
         question: Who is running Justice Democrats? Who are the major players?
     title: GENERAL
   - items:
@@ -161,7 +161,7 @@ sections:
   - items:
       - answer: >-
           Yes! Sign up to volunteer at
-          [**now.justicedemocrats.com/act**](https://now.justicedemocrats.com/act).
+          [**justicedemocrats.com/volunteer**](https://go.justicedemocrats.com/survey/volunteer-directly-jd-campaign/).
         question: I don’t have a lot of money. Can I volunteer my time instead?
       - answer: >-
           You can visit our store at
