@@ -10,7 +10,6 @@ electionType: primary
 office: governor
 incumbent: false
 website: 'https://mattbrownforgovernor.com'
-donationLink: 'https://mattbrownforgovernor.com'
 outcome: Unknown
 image: /img/jd_site_mattbrown_550x600_061218.jpg
 blurb: >-
@@ -25,4 +24,3 @@ blurb: >-
   and of the Nobel Peace Prize-nominated organization Global Zero, which works
   to reduce and eliminate nuclear weapons.
 ---
-

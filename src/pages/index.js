@@ -31,7 +31,7 @@ const renderSignUpInputs = () =>
 
 const renderSignUpButton = () => (
   <div className="sign-up-el sign-up-button-container">
-    <input
+    <button
       type="submit"
       className="sign-up-button dark-blue-bg extra-bold-m "
       style={{
@@ -39,8 +39,9 @@ const renderSignUpButton = () => (
         textTransform: "uppercase",
         margin: 0
       }}
-      value="Sign Up"
-    />
+    >
+      Sign Up
+    </button>
   </div>
 );
 
@@ -98,13 +99,19 @@ const IndexPage = ({ data }) => {
           </form>
         </Default>
         <Mobile>
-          <div
+          <form
             className="sign-up-rows"
+            name="main-signup"
+            data-netlify="true"
+            netlify="true"
+            data-netlify-honeypot="bot-field"
+            method="post"
+            action="/donate"
             style={{ backgroundColor: "rgba(255, 255, 255, .8)" }}
           >
             <div className="sign-up-row">{renderSignUpInputs()}</div>
             <div className="sign-up-row">{renderSignUpButton()}</div>
-          </div>
+          </form>
         </Mobile>
       </div>
 
