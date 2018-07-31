@@ -28,7 +28,7 @@ socialIcons:
     url: 'https://www.instagram.com/justicedemocrats/'
   - icon: /img/jd_site_icons_social_youtube_100x100_white.svg
     type: social
-    url: 'https://www.youtube.com/channel/UCVT_q2J2djw311oGE0mTvfA'
+    url: 'https://www.youtube.com/channel/UC5KuItQubgNaAiWoZXypuiw'
   - icon: /img/jd_site_icons_contact_phone_100x100_white.svg
     type: contact
     url: 'tel:8652459567'
