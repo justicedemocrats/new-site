@@ -5,6 +5,8 @@ import { HTMLContent } from "../components/Content";
 const PrivacyPage = ({ data }) => {
   const html = data.privacyPages.edges[0].node.html;
 
+  console.log(html);
+
   return (
     <div style={{ paddingLeft: 100, paddingRight: 100, minHeight: 200 }}>
       <HTMLContent content={html} className="medium-m standard-text" />

@@ -162,10 +162,29 @@ collections:
               - {label: "Call Out Icon", name: "calloutIcon", widget: "image"}
               - {label: "Call Out Text", name: "calloutText", widget: "text"}
 
-      - file: "src/pages/privacy/index.md"
-        label: "Privacy"
-        name: "privacy"
+      - file: "src/pages/footer/index.md"
+        label: "Footer"
+        name: "footer"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "ignore-fragment"}
-          - {label: "Unique", name: "uniq", widget: "hidden", default: "privacy-papge"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Unique", name: "uniq", widget: "hidden", default: "footer-index"}
+          - {label: "Paid for Message", name: "paidForMessage", widget: "string"}
+          - {label: "Copyright", name: "copyright", widget: "string"}
+          - {label: "General Email", name: "generalEmail", widget: "string"}
+          - {label: "Press Email", name: "pressEmail", widget: "string"}
+          - {label: "Phone Number", name: "phone", widget: "string"}
+          - {label: "Address", name: "address", widget: "string"}
+          - label: "Quick Links"
+            name: "quickLinks"
+            widget: "list"
+            fields: 
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "Url", name: "url", widget: "string"}
+
+          - label: "Social Icons"
+            name: "socialIcons"
+            widget: "list"
+            fields: 
+              - {label: "Icon", name: "icon", widget: "image"}
+              - {label: "Url", name: "url", widget: "string"}
+              - {label: "Type", name: "type", widget: "select", options: ["contact", "social"]}            
