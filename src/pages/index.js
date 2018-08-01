@@ -18,6 +18,7 @@ const renderSignUpInputs = () =>
         placeholder={name}
         className="sign-up-input"
         name={name.toLowerCase()}
+        required="true"
         style={{ margin: 0, width: "100%" }}
         {...{
           Name: { type: "text" },
@@ -215,7 +216,7 @@ const IndexPage = ({ data }) => {
         <div className="highlight-container">
           <Default>
             <div className="icon">
-              <img src={jdHighlightIcon} />
+              <img src={jdHighlightIcon} style={{ maxHeight: 160 }} />
             </div>
           </Default>
 
