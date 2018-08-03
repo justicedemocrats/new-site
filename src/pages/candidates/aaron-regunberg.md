@@ -10,7 +10,7 @@ electionType: primary
 office: lieutenant-governor
 incumbent: false
 website: 'https://www.aaronregunberg.com/'
-donationLink: 'https://www.aaronregunberg.com/'
+donationLink: ''
 outcome: Unknown
 image: /img/jd_site_aaronregunberg_550x600_071718.jpg
 blurb: >-
@@ -24,3 +24,4 @@ blurb: >-
   than 1,000 people together, packed in a school cafeteria to plan their state's
   response, and since then they have built a strong network across Rhode Island.
 ---
+
