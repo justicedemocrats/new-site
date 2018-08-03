@@ -10,7 +10,7 @@ electionType: primary
 office: governor
 incumbent: false
 website: 'https://www.christineforvermont.com/'
-donationLink: 'https://www.christineforvermont.com/'
+donationLink: ''
 outcome: Unknown
 image: /img/jd_site_christinehallquist_550x600_071718.jpg
 blurb: >-
