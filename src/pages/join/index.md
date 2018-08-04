@@ -1,10 +1,12 @@
 ---
-templateKey: join-page
+templateKey: ignore-fragment
 bgimg: /img/jd_website_splash_background_1920x1080_070918_aoc2.jpg
 title: Join
 hed: 'Democrats representing people, not corporations'
+uniq: join-page
 subhed: 'It’s time to take back the party for voters, not big money donors.'
 ---
+
 ### Justice Democrats Stand for:
 
 * Medicare For All

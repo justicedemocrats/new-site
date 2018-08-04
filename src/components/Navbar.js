@@ -31,7 +31,7 @@ class Navbar extends React.Component {
   render() {
     const { path } = this.props;
 
-    if (path == "/join" || path == "/join/") {
+    if (path == "/" || path == "") {
       return (
         <div className="navbar" style={{ osition: "fixed" }}>
           <div className="navbar desktop">
@@ -43,7 +43,7 @@ class Navbar extends React.Component {
             </Default>
             <HeaderLogo />
             <Link
-              to="/"
+              to="/home"
               style={{
                 width: 150,
                 display: "block",
@@ -191,7 +191,7 @@ const DonateLink = () => (
   </a>
 );
 const HeaderLogo = () => (
-  <Link to="/" style={{ height: 30 }} className="header-logo">
+  <Link to="/home" style={{ height: 30 }} className="header-logo">
     <img style={{ height: 30 }} src="/assets/jd-logo-horiz.svg" />
   </Link>
 );
