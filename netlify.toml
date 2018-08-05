@@ -7,15 +7,6 @@
   YARN_FLAGS = "--no-ignore-optional"
 
 [[redirects]]
-  from = ""
-  to = "/join"
-  status = 302
-
-[[redirects]]
-  from = "/"
-  to = "/join"
-
-[[redirects]]
   from = "/*"
   to = "https://jdems.us/:splat"
   status = 302
