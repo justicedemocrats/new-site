@@ -19,7 +19,7 @@ const links = [
   // { display: 'News', href: '/news'},
   // { display: 'Actions', href: '/actions'},
   { display: "Store", href: "https://shop.justicedemocrats.com" },
-  { display: "Join", href: "/join" }
+  { display: "Join", href: "/" }
 ];
 
 class Navbar extends React.Component {
