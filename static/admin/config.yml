@@ -69,7 +69,7 @@ collections:
         name: "join"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "join-page"}
-          - {label: "Unique", name: "join-page", widget: "hidden", default: "join-page"}
+          - {label: "Unique", name: "uniq", widget: "hidden", default: "join-page"}
           - {label: "Background Image", name: "bgimg", widget: "string"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Header", name: "hed", widget: "string"}

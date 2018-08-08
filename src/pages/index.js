@@ -99,9 +99,9 @@ SplashPageTemplate.propTypes = {
 };
 
 const SplashPage = ({ data }) => {
+  console.log(data);
   const { allMarkdownRemark: pages } = data;
   const page = pages.edges[0].node;
-  console.log(page);
 
   return (
     <SplashPageTemplate
