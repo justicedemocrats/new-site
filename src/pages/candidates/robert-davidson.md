@@ -5,13 +5,13 @@ firstName: Robert
 lastName: Davidson
 district: '02'
 state: MI
-electionDate: '2018-08-07'
-electionType: primary
+electionDate: '2018-11-06'
+electionType: general
 office: house
 incumbent: false
 website: 'https://www.robforthesecond.com/'
 donationLink: 'https://secure.actblue.com/donate/robertmi'
-outcome: Unknown
+outcome: Won
 image: /img/jd_site_robdavidson_550x600_061218.jpg
 blurb: >-
   Dr. Rob Davidson is running in Michigan’s 2nd district and will work
