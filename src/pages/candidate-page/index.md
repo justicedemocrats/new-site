@@ -12,7 +12,7 @@ intro: >-
   concerned about their community, our country, and making sure every person has
   the same protections, rights, and opportunities.
 stats:
-  - count: '30'
+  - count: '35'
     title: Current Slate
   - count: '17'
     title: Upcoming Primaries
