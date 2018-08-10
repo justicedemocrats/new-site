@@ -11,7 +11,7 @@ office: house
 incumbent: false
 website: 'http://dorothyforcongress.com/'
 donationLink: 'https://secure.actblue.com/donate/dorothywa'
-outcome: Unknown
+outcome: Lost
 image: /img/jd_site_dorothygasque_550x600_061218.jpg
 blurb: >-
   While our representatives argue about whether or not to raise the minimum
