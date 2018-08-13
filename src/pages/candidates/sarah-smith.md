@@ -5,13 +5,13 @@ firstName: Sarah
 lastName: Smith
 district: 09
 state: WA
-electionDate: '2018-08-07'
+electionDate: '2018-11-06'
 electionType: primary
 office: house
 incumbent: false
 website: 'https://votesarahsmith.com'
 donationLink: 'https://secure.actblue.com/donate/sarahwa'
-outcome: Unknown
+outcome: Won
 image: /img/jd_site_sarahsmith_550x600_061218.jpg
 blurb: >-
   A congressperson represents their people—at least, they’re supposed to.
