@@ -6,7 +6,7 @@ lastName: Hallquist
 district: GOV
 state: VT
 electionDate: '2018-11-06'
-electionType: primary
+electionType: general
 office: governor
 incumbent: false
 website: 'https://www.christineforvermont.com/'
