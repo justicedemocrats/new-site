@@ -6,7 +6,7 @@ lastName: Bryce
 district: '01'
 state: WI
 electionDate: '2018-11-06'
-electionType: primary
+electionType: general
 office: house
 incumbent: false
 website: 'https://www.randybryceforcongress.com/'
