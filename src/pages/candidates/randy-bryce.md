@@ -5,13 +5,13 @@ firstName: Randy
 lastName: Bryce
 district: '01'
 state: WI
-electionDate: '2018-08-14'
+electionDate: '2018-11-06'
 electionType: primary
 office: house
 incumbent: false
 website: 'https://www.randybryceforcongress.com/'
 donationLink: 'https://secure.actblue.com/donate/randybryce-jd#'
-outcome: Unknown
+outcome: Won
 image: /img/jd_site_randybryce_550x600_061218.jpg
 blurb: >-
   Randy Bryce is a U.S. Army veteran, cancer survivor, and union iron worker. He
