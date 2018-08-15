@@ -10,7 +10,7 @@ electionType: primary
 office: governor
 incumbent: false
 website: 'https://cynthiafornewyork.com/'
-donationLink: ''
+donationLink: 'https://secure.actblue.com/donate/cynthiany?refcode=site-topnav'
 outcome: Unknown
 image: /img/jd_site_cynthianixon_550x600_071718.jpg
 blurb: >-
