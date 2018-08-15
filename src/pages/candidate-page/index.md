@@ -14,9 +14,9 @@ intro: >-
 stats:
   - count: '36'
     title: Current Slate
-  - count: '16'
+  - count: '13'
     title: Upcoming Primaries
-  - count: '20'
+  - count: '23'
     title: Running in General
   - count: '3'
     title: Currently Seated
