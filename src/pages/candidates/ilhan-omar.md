@@ -6,7 +6,7 @@ lastName: Omar
 district: '05'
 state: MN
 electionDate: '2018-11-06'
-electionType: primary
+electionType: general
 office: house
 incumbent: false
 website: 'https://www.ilhanomar.com'
