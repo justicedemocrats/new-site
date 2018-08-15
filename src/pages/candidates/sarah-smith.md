@@ -6,7 +6,7 @@ lastName: Smith
 district: 09
 state: WA
 electionDate: '2018-11-06'
-electionType: primary
+electionType: general
 office: house
 incumbent: false
 website: 'https://votesarahsmith.com'
