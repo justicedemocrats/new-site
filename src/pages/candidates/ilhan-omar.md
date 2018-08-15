@@ -5,13 +5,13 @@ firstName: Ilhan
 lastName: Omar
 district: '05'
 state: MN
-electionDate: '2018-08-14'
+electionDate: '2018-11-06'
 electionType: primary
 office: house
 incumbent: false
 website: 'https://www.ilhanomar.com'
 donationLink: 'https://secure.actblue.com/donate/ilhanjd'
-outcome: Unknown
+outcome: Won
 image: /img/jd_site_ilhanomar_550x600_071718.jpg
 blurb: >-
   Born in Somalia, Ilhan and her family fled the country's civil war when she
