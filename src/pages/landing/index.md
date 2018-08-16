@@ -36,7 +36,7 @@ jdHighlightIcon: /img/jd_site_mark_300x300_062018.svg
 blocks:
   - alignment: right
     bannerButtonText: Join Us
-    bannerButtonUrl: /join
+    bannerButtonUrl: /
     bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_1_cori_053118.jpg
     bannerText: '300,000 Supporters'
     calloutIcon: /img/jd_site_circlefinger_2_50x50.svg
@@ -102,4 +102,3 @@ blocks:
     moreButtonUrl: 'https://www.futureoftheparty.com'
     subheader: 'A bold, progressive vision — policies the majority of Americans want.'
 ---
-
