@@ -10,7 +10,8 @@ electionType: primary
 office: lieutenant-governor
 incumbent: false
 website: 'https://www.aaronregunberg.com/'
-donationLink: ''
+donationLink: >-
+  https://secure.actblue.com/donate/regunbergwebsite?refcode=DonateLink&amount=50.00
 outcome: Unknown
 image: /img/jd_site_aaronregunberg_550x600_071718.jpg
 blurb: >-

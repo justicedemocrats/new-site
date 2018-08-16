@@ -10,6 +10,7 @@ electionType: primary
 office: governor
 incumbent: false
 website: 'https://mattbrownforgovernor.com'
+donationLink: 'https://secure.actblue.com/donate/matt-brown-for-governor-ri'
 outcome: Unknown
 image: /img/jd_site_mattbrown_550x600_061218.jpg
 blurb: >-
@@ -24,3 +25,4 @@ blurb: >-
   and of the Nobel Peace Prize-nominated organization Global Zero, which works
   to reduce and eliminate nuclear weapons.
 ---
+
