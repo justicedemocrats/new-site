@@ -2513,9 +2513,16 @@ exports.handler = (event, content, callback) => {
     password: process.env.AK_PASSWORD
   });
 
-  api.post("/action").send(_extends({
+  console.log("Function running...");
+
+  const body = _extends({
     page: "signup-justice-democrats"
-  }, JSON.parse(event.body))).then(resp => {
+  }, JSON.parse(event.body));
+
+  console.log(`Sending body: ${JSON.stringify(body)}`);
+
+  api.post("/action").send(body).then(resp => {
+    console.log(`Got resp: ${JSON.stringify(resp.body)}`);
     return callback(null, {
       statusCode: 200,
       body: "OK"
