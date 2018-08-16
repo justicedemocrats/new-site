@@ -4,6 +4,7 @@
   "version": "1.1.3",
   "author": "Austin Green",
   "dependencies": {
+    "axios": "^0.18.0",
     "bulma": "^0.6.0",
     "dangerously-set-inner-html": "^2.0.1",
     "gatsby": "^1.9.213",
@@ -27,10 +28,11 @@
     "react-helmet": "^5.2.0",
     "react-responsive": "^4.1.0",
     "showdown": "^1.8.6",
-    "superagent": "^3.8.3",
     "uuid": "^3.2.1"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -39,12 +41,10 @@
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "build-functions": "netlify-lambda build ./functions",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.7.4",
-    "superagent": "^3.8.3"
+    "prettier": "^1.7.4"
   }
 }
