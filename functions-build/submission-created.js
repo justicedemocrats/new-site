@@ -1270,14 +1270,14 @@ const processUrl = url => {
 
 exports.handler = (() => {
   var _ref = _asyncToGenerator(function* (event, context) {
-    console.log("Function running...");
+    console.error("Function running...");
 
     try {
       const body = _extends({
         page: "signup-justice-democrats"
       }, JSON.parse(event.body));
 
-      console.info(`Sending body: ${JSON.stringify(body)}`);
+      console.error(`Sending body: ${JSON.stringify(body)}`);
 
       const resp = yield _axios2.default.post(processUrl("/action"), body, {
         auth: {
@@ -1286,7 +1286,7 @@ exports.handler = (() => {
         }
       });
 
-      console.info(`Got resp: ${JSON.stringify(resp.body)}`);
+      console.error(`Got resp: ${JSON.stringify(resp.body)}`);
       return {
         statusCode: 200,
         body: "OK"
