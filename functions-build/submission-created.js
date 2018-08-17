@@ -1265,7 +1265,7 @@ const ensureNoBeginningRest = url => url.replace("/rest/v1/", "");
 const ensureSlashes = url => ensureEndingSlash(ensureNoBeginningSlash(ensureNoBeginningRest(url)));
 
 const processUrl = url => {
-  return `${process.env.AK_BASE}${ensureSlashes(url)}`;
+  return `${process.env.AK_BASE}/${ensureSlashes(url)}`;
 };
 
 exports.handler = (() => {
@@ -1279,7 +1279,7 @@ exports.handler = (() => {
 
       console.log(`Sending body: ${JSON.stringify(body)}`);
 
-      const resp = yield api.post(processUrl("/action"), body, {
+      const resp = yield _axios2.default.post(processUrl("/action"), body, {
         auth: {
           username: process.env.AK_USERNAME,
           password: process.env.AK_PASSWORD
@@ -1292,6 +1292,8 @@ exports.handler = (() => {
         body: "OK"
       };
     } catch (ex) {
+      console.error(ex);
+
       return {
         statusCode: 500,
         body: "ERROR"

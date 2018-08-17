@@ -9,7 +9,7 @@ const ensureSlashes = url =>
   ensureEndingSlash(ensureNoBeginningSlash(ensureNoBeginningRest(url)));
 
 const processUrl = url => {
-  return `${process.env.AK_BASE}${ensureSlashes(url)}`;
+  return `${process.env.AK_BASE}/${ensureSlashes(url)}`;
 };
 
 exports.handler = async (event, context) => {
@@ -25,7 +25,7 @@ exports.handler = async (event, context) => {
 
     console.log(`Sending body: ${JSON.stringify(body)}`);
 
-    const resp = await api.post(processUrl("/action"), body, {
+    const resp = await request.post(processUrl("/action"), body, {
       auth: {
         username: process.env.AK_USERNAME,
         password: process.env.AK_PASSWORD
@@ -38,6 +38,8 @@ exports.handler = async (event, context) => {
       body: "OK"
     };
   } catch (ex) {
+    console.error(ex);
+
     return {
       statusCode: 500,
       body: "ERROR"
