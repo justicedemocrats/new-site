@@ -8,14 +8,14 @@ const ensureNoBeginningRest = url => url.replace("/rest/v1/", "");
 const ensureSlashes = url =>
   ensureEndingSlash(ensureNoBeginningSlash(ensureNoBeginningRest(url)));
 
-const processUrl = url => {
-  return `${process.env.AK_BASE}/${ensureSlashes(url)}`;
-};
-
 exports.handler = async (event, context) => {
-  console.error("Function running...");
+  console.log("Function running...");
 
   try {
+    const processUrl = url => {
+      return `${process.env.AK_BASE}/${ensureSlashes(url)}`;
+    };
+
     const body = Object.assign(
       {
         page: "signup-justice-democrats"
@@ -23,7 +23,7 @@ exports.handler = async (event, context) => {
       JSON.parse(event.body)
     );
 
-    console.error(`Sending body: ${JSON.stringify(body)}`);
+    console.log(`Sending body: ${JSON.stringify(body)}`);
 
     const resp = await request.post(processUrl("/action"), body, {
       auth: {
@@ -32,12 +32,13 @@ exports.handler = async (event, context) => {
       }
     });
 
-    console.error(`Got resp: ${JSON.stringify(resp.body)}`);
+    console.log(`Got resp: ${JSON.stringify(resp.body)}`);
     return {
       statusCode: 200,
       body: "OK"
     };
   } catch (ex) {
+    console.log("Got error");
     console.error(ex);
 
     return {
