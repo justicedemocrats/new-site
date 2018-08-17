@@ -1277,7 +1277,7 @@ exports.handler = (() => {
         page: "signup-justice-democrats"
       }, JSON.parse(event.body));
 
-      console.log(`Sending body: ${JSON.stringify(body)}`);
+      console.info(`Sending body: ${JSON.stringify(body)}`);
 
       const resp = yield _axios2.default.post(processUrl("/action"), body, {
         auth: {
@@ -1286,7 +1286,7 @@ exports.handler = (() => {
         }
       });
 
-      console.log(`Got resp: ${JSON.stringify(resp.body)}`);
+      console.info(`Got resp: ${JSON.stringify(resp.body)}`);
       return {
         statusCode: 200,
         body: "OK"
