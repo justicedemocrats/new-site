@@ -13,7 +13,7 @@ const processUrl = url => {
 };
 
 exports.handler = async (event, context) => {
-  console.log("Function running...");
+  console.error("Function running...");
 
   try {
     const body = Object.assign(
@@ -23,7 +23,7 @@ exports.handler = async (event, context) => {
       JSON.parse(event.body)
     );
 
-    console.info(`Sending body: ${JSON.stringify(body)}`);
+    console.error(`Sending body: ${JSON.stringify(body)}`);
 
     const resp = await request.post(processUrl("/action"), body, {
       auth: {
@@ -32,7 +32,7 @@ exports.handler = async (event, context) => {
       }
     });
 
-    console.info(`Got resp: ${JSON.stringify(resp.body)}`);
+    console.error(`Got resp: ${JSON.stringify(resp.body)}`);
     return {
       statusCode: 200,
       body: "OK"
