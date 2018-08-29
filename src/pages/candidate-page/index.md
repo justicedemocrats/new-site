@@ -12,11 +12,11 @@ intro: >-
   concerned about their community, our country, and making sure every person has
   the same protections, rights, and opportunities.
 stats:
-  - count: '36'
+  - count: '31'
     title: Current Slate
-  - count: '13'
+  - count: '6'
     title: Upcoming Primaries
-  - count: '23'
+  - count: '25'
     title: Running in General
   - count: '3'
     title: Currently Seated
