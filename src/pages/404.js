@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Component } from "react";
 
-const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
-)
+export default class NotFound extends Component {
+  componentDidMount() {
+    window.location.href = `https://jdems.us${window.location.pathname}`;
+  }
 
-export default NotFoundPage
+  render() {
+    return <div> NOT FOUND </div>;
+  }
+}
