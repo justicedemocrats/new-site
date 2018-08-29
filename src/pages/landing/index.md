@@ -43,7 +43,7 @@ blocks:
     calloutText: >-
       Justice Democrats candidates pledge to not take corporate money and to
       work together once elected to enact the Justice Democrats platform.
-    header: 36 Justice Dems Are Running Across America
+    header: 31 Justice Dems Are Running Across America
     htmlContent: >-
       **Representing voters, not donors** — For too long the voices of everyday
       Americans have been undervalued and gone unnoticed in Washington, D.C..
@@ -102,3 +102,4 @@ blocks:
     moreButtonUrl: 'https://www.futureoftheparty.com'
     subheader: 'A bold, progressive vision — policies the majority of Americans want.'
 ---
+
