@@ -11,7 +11,7 @@ office: house
 incumbent: false
 website: 'https://juanamatias.com/'
 donationLink: 'https://secure.actblue.com/donate/jdjuana'
-outcome: Unknown
+outcome: Lost
 image: /img/jd_site_juanamatias_550x600_061218.jpg
 blurb: >-
   Juana Matias, an immigrant and one of the first Latinas to serve in her state
