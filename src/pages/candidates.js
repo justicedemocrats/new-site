@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import Content, { HTMLContent } from "../components/Content";
+import Content, { HTMLContent } from "../components/Content";
 import Candidate from "../components/Candidate";
 import Banner from "../components/Banner";
 import "../style/candidates.scss";
@@ -54,10 +54,9 @@ export class CandidatePageTemplate extends React.Component {
       bannerText,
       candidates,
       stats,
-      intro
+      intro,
+      priorCandidatesIntro
     } = this.props;
-
-    console.log(this.state);
 
     return (
       <div>
@@ -87,6 +86,7 @@ export class CandidatePageTemplate extends React.Component {
               <p> {intro} </p>
             </div>
           </div>
+
           <div className="sort-options">
             {[
               ["State/District", "state"],
@@ -110,11 +110,24 @@ export class CandidatePageTemplate extends React.Component {
               Donate to All
             </a>
           </div>
+
           <div className="candidates">
             {sortFunctions[this.state.sortFunction](candidates).map(
               (props, i) => <Candidate key={i} {...props} />
             )}
           </div>
+          {/* <div className="page-container row">
+            <div className="six columns" style={{ textTransform: "uppercase" }}>
+              Prior 2018 Primaries
+            </div>
+            <div className="six columns">
+              <HTMLContent
+                content={priorCandidatesIntro || ""}
+                markdown={true}
+                className="medium-m standard-text"
+              />
+            </div>
+          </div> */}
         </div>
       </div>
     );
@@ -127,7 +140,10 @@ CandidatePageTemplate.propTypes = {
 
 const CandidatePage = ({ data }) => {
   const { candidates: { edges } } = data;
-  const candidates = edges.map(edge => edge.node.frontmatter);
+  const baseCandidates = edges.map(edge => edge.node.frontmatter);
+  const candidates = baseCandidates.filter(c => c.outcome !== "Lost");
+  const pastCandidates = baseCandidates.filter(c => c.outcome === "Lost");
+  console.log(pastCandidates);
   const {
     bannerBackgroundImage,
     bannerText,
@@ -138,6 +154,7 @@ const CandidatePage = ({ data }) => {
   return (
     <CandidatePageTemplate
       candidates={candidates}
+      pastCandidates={pastCandidates}
       bannerBackgroundImage={bannerBackgroundImage}
       bannerText={bannerText}
       intro={intro}
