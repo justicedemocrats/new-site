@@ -5,13 +5,13 @@ firstName: Ayanna
 lastName: Pressley
 district: '07'
 state: MA
-electionDate: '2018-09-04'
-electionType: primary
+electionDate: '2018-11-06'
+electionType: general
 office: house
 incumbent: false
 website: 'https://ayannapressley.com/'
 donationLink: 'https://secure.actblue.com/donate/ayannajd'
-outcome: Unknown
+outcome: Won
 image: /img/jd_site_ayannapressley_550x600_061218.jpg
 blurb: >-
   Ayanna Pressley is a progressive member of the Boston City Council who is
