@@ -53,6 +53,7 @@ export class CandidatePageTemplate extends React.Component {
       bannerBackgroundImage,
       bannerText,
       candidates,
+      pastCandidates,
       stats,
       intro,
       priorCandidatesIntro
@@ -116,18 +117,31 @@ export class CandidatePageTemplate extends React.Component {
               (props, i) => <Candidate key={i} {...props} />
             )}
           </div>
-          {/* <div className="page-container row">
-            <div className="six columns" style={{ textTransform: "uppercase" }}>
+        </div>
+        <div className="divider" />
+        <div className="page-container">
+          <div className="row">
+            <div
+              className="four columns extra-bold-m light-blue-color"
+              style={{
+                textTransform: "uppercase",
+                fontSize: "42px",
+                lineHeight: 1
+              }}
+            >
               Prior 2018 Primaries
             </div>
-            <div className="six columns">
+            <div className="eight columns">
               <HTMLContent
                 content={priorCandidatesIntro || ""}
                 markdown={true}
                 className="medium-m standard-text"
               />
             </div>
-          </div> */}
+          </div>
+        </div>
+        <div className="candidates">
+          {pastCandidates.map((props, i) => <Candidate key={i} {...props} />)}
         </div>
       </div>
     );
@@ -143,11 +157,11 @@ const CandidatePage = ({ data }) => {
   const baseCandidates = edges.map(edge => edge.node.frontmatter);
   const candidates = baseCandidates.filter(c => c.outcome !== "Lost");
   const pastCandidates = baseCandidates.filter(c => c.outcome === "Lost");
-  console.log(pastCandidates);
   const {
     bannerBackgroundImage,
     bannerText,
     intro,
+    priorCandidatesIntro,
     stats
   } = data.page.edges[0].node.frontmatter;
 
@@ -158,6 +172,7 @@ const CandidatePage = ({ data }) => {
       bannerBackgroundImage={bannerBackgroundImage}
       bannerText={bannerText}
       intro={intro}
+      priorCandidatesIntro={priorCandidatesIntro}
       stats={stats}
     />
   );
@@ -205,6 +220,7 @@ export const pageQuery = graphql`
             bannerBackgroundImage
             bannerText
             intro
+            priorCandidatesIntro
             stats {
               count
               title
