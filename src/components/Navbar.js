@@ -12,7 +12,7 @@ const Mobile = props => <Responsive {...props} maxWidth={767} />;
 const Default = props => <Responsive {...props} minWidth={768} />;
 
 const links = [
-  { display: "Home", href: "/" },
+  { display: "Home", href: "/home" },
   { display: "About", href: "/about" },
   { display: "Policies", href: "/issues" },
   { display: "Candidates", href: "/candidates" },
