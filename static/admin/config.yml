@@ -124,7 +124,7 @@ collections:
               widget: "hidden",
               default: "join-page",
             }
-          - { label: "Background Image", name: "bgimg", widget: "string" }
+          - { label: "Background Image", name: "bgimg", widget: "image" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Header", name: "hed", widget: "string" }
           - { label: "Sub Header", name: "subhed", widget: "string" }
