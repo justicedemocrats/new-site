@@ -160,6 +160,17 @@ sections:
           including over 10,000 homicides. The time to act is now to address
           this public health crisis.
         title: Enact Common-Sense Gun Regulation
+      - contents: >-
+          Since 2013, with the U.S. Supreme Court’s disastrous Shelby County v.
+          Holder decision, states across the country have been actively working
+          to reverse the hard-fought protections for voting rights secured
+          during the Civil Rights Movement. Fair and equal access to the ballot
+          is essential to our ability to uphold and protect our nation’s
+          democracy. We believe every American citizen is entitled to vote, and
+          we will work to secure voting rights, challenge ultra-partisan
+          gerrymandering, and put an end to affronts to our democratic
+          representation.
+        title: Voting Rights
     title: Protect Our Rights
   - icon: /img/democracy.svg
     intro: >-
