@@ -120,7 +120,7 @@ export class CandidatePageTemplate extends React.Component {
         </div>
         <div className="divider" />
         <div className="page-container">
-          <div className="row">
+          <div className="row candidate-intro-section">
             <div
               className="four columns extra-bold-m light-blue-color"
               style={{
