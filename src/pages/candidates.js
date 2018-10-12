@@ -142,7 +142,9 @@ export class CandidatePageTemplate extends React.Component {
         </div>
         <div className="page-container">
           <div className="candidates">
-            {pastCandidates.map((props, i) => <Candidate key={i} {...props} />)}
+            {sortFunctions
+              .state(pastCandidates)
+              .map((props, i) => <Candidate key={i} {...props} />)}
           </div>
         </div>
       </div>
