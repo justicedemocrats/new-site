@@ -16,7 +16,7 @@ introContent: >-
 firstCalloutIcon: /img/jd_site_circlefinger_1_50x50.svg
 firstCalloutText: >-
   It’s time to rebuild the Democratic Party to be a party that fights for a bold
-  vision that fights for people, not corporations.
+  vision — one that fights for people, not corporations.
 issuesIntro: 'POLICIES FOR VOTERS, NOT DONORS'
 primaryIssues:
   - image: /img/growth.svg
