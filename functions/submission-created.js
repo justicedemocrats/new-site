@@ -32,7 +32,7 @@ exports.handler = async (event, context) => {
       }
     });
 
-    console.log(`Got resp: ${JSON.stringify(resp.body)}`);
+    console.log(resp.body);
     return {
       statusCode: 200,
       body: "OK"
