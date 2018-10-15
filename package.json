@@ -7,6 +7,7 @@
     "axios": "^0.18.0",
     "bulma": "^0.6.0",
     "dangerously-set-inner-html": "^2.0.1",
+    "dotenv": "^6.1.0",
     "gatsby": "^1.9.213",
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-netlify": "^1.0.19",
@@ -22,6 +23,7 @@
     "lodash-webpack-plugin": "^0.11.4",
     "lodash.sortby": "^4.7.0",
     "mdify": "^1.0.10",
+    "moment": "^2.22.2",
     "netlify-cms": "^1.7.0",
     "papaparse": "^4.6.1",
     "prop-types": "^15.6.0",
@@ -33,9 +35,7 @@
     "superagent": "^4.0.0-beta.5",
     "uuid": "^3.2.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -43,9 +43,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "build-functions": "netlify-lambda build ./functions",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format":
+      "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\""
   },
   "devDependencies": {
     "prettier": "^1.7.4"
