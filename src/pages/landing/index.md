@@ -49,13 +49,7 @@ blocks:
       Justice Democrats candidates pledge to not take corporate money and to
       work together once elected to enact the Justice Democrats platform.
     header: 26 Justice Dems Are Running Across America
-    htmlContent: >-
-      **Representing voters, not donors** — For too long the voices of everyday
-      Americans have been undervalued and gone unnoticed in Washington, D.C..
-      The people who are traditionally elected to represent, fall short of our
-      expectations and get caught in a vicious cycle of pay-for-play politics.
-      Justice Democrat candidates are committed stewards of their communities
-      and have a deep desire to make positive, progressive change.
+    htmlContent: ''
     moreButtonText: All Candidates
     moreButtonUrl: /candidates
     subheader: Each candidate elected is one more vote for The People.
@@ -70,22 +64,13 @@ blocks:
       not be too poor to live with dignity. That means having access to
       healthcare, housing, education, a living wage, a world not destroyed by
       climate change and aggressive wars of choice. 
-    header: Social and Economic Justice.
-    htmlContent: >-
-      The question is not "if," but "how," and "when." Every Justice Democrat is
-      fighting for:
-
-
-      * Access to Jobs and a Living Wage
-
-      * Affordable Housing and a Quality Education
-
-      * Medicare for All
+    header: Racial and Economic Justice.
+    htmlContent: ''
     moreButtonText: All Policies
     moreButtonUrl: /issues
     subheader: >-
-      Because one can not be achieved without the other — it’s the same fight
-      for rights.
+      Because one can not be achieved without the other — we're fighting for
+      each other.
   - alignment: left
     bannerButtonText: Volunteer
     bannerButtonUrl: /volunteer
@@ -96,15 +81,11 @@ blocks:
       Polling data demonstrates that the Democratic Party’s base has moved left,
       and voters are ready for a progressive agenda. Though the party elites may
       be “divided” the base is not; they are ready for unabashed progressive
-      politicians. — futureoftheparty.com
-    header: Policies and Legislation for the People
-    htmlContent: >-
-      **Research shows that the Democratic establishment’s pivot to the “middle”
-      has failed. **It’s time to mobilize the electorate and enact bold,
-      progressive policies that will uplift people and communities across the
-      country.
-    moreButtonText: Read Report
+      politicians. — www.futureoftheparty.com
+    header: A Platform for America
+    htmlContent: ''
+    moreButtonText: Read The Report
     moreButtonUrl: 'https://www.futureoftheparty.com'
-    subheader: 'A bold, progressive vision — policies the majority of Americans want.'
+    subheader: 'A bold, progressive vision — policies to transform America.'
 ---
 
