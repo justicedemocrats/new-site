@@ -22,7 +22,7 @@ firstCalloutIcon: /img/jd_site_circlefinger_1_50x50.svg
 firstCalloutText: >-
   It’s time to transform the Democratic Party into a party that fights for all
   working people in this country.
-issuesIntro: 'POLICIES FOR VOTERS, NOT DONORS'
+issuesIntro: 'A PARTY FOR VOTERS, NOT DONORS'
 primaryIssues:
   - image: /img/growth.svg
     text: Jobs Guarantee
