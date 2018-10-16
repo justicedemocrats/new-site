@@ -65,7 +65,10 @@ blocks:
       healthcare, housing, education, a living wage, a world not destroyed by
       climate change and aggressive wars of choice. 
     header: Racial and Economic Justice.
-    htmlContent: ''
+    htmlContent: |-
+      * Medicare For All
+      * Criminal Justice Reform
+      * A Jobs Guarantee
     moreButtonText: All Policies
     moreButtonUrl: /issues
     subheader: >-
@@ -83,7 +86,10 @@ blocks:
       be “divided” the base is not; they are ready for unabashed progressive
       politicians. — www.futureoftheparty.com
     header: A Platform for America
-    htmlContent: ''
+    htmlContent: >-
+      The Democratic Party needs to fight FOR something. Progressive policies
+      like Medicare For All, free public college, and marijuana legalization and
+      are popular with voters. It's time to fight for them.
     moreButtonText: Read The Report
     moreButtonUrl: 'https://www.futureoftheparty.com'
     subheader: 'A bold, progressive vision — policies to transform America.'
