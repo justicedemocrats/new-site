@@ -7,7 +7,7 @@ boldHeader: THE DEMOCRATIC PARTY NEEDS TO FIGHT BACK.
 boldSubheader: But the corporate-backed wing of the party is getting in the way.
 introContent: >-
   **We need a Democratic Party that fights for its voters, not just its
-  corporate donors. **That's why we helped elect Alexandria Ocasio-Cortez to
+  corporate donors.** That's why we helped elect Alexandria Ocasio-Cortez to
   Congress. We need leadership in the Democratic Party that will represent and
   fight for our communities.
 
