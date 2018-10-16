@@ -4,7 +4,7 @@ title: Justice Democrats
 bannerBackgroundImg: /img/jd_website_home_banner_background_test_1920x1080_052518.jpg
 bannerTextImg: /img/jd_website_home_banner_textoverlay_test_1920x1080_052518.png
 boldHeader: THE DEMOCRATIC PARTY NEEDS TO FIGHT BACK.
-boldSubheader: But the corporate wing of the party
+boldSubheader: But the corporate-backed wing of the party is getting in the way.
 introContent: >-
   **We need a Democratic Party that fights for its voters, not just its
   corporate donors. **That's why we helped elect Alexandria Ocasio-Cortez to
