@@ -13,7 +13,7 @@ introContent: >-
 
 
   **In the era of Donald Trump and his billionaire cabinet, we will fight for an
-  America that belongs to all its people. **We are unafraid of taking on
+  America that belongs to all its people.** We are unafraid of taking on
   out-of-touch incumbents in primary challenges because we don't need to just
   elect more Democrats, we need to elect better Democrats. It's time to usher in
   a new generation of Democrats who have a bold vision to transform our economy
