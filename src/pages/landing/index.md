@@ -50,8 +50,8 @@ blocks:
       work together once elected to enact the Justice Democrats platform.
     header: 26 Justice Dems Are Running Across America
     htmlContent: >-
-      Our candidates pledge to not take corporate money and to work together
-      once elected to enact the Justice Democrats platform.
+      Our candidates are committed to represent and fight for their communities
+      -- and they will not take a dime of corporate money.
     moreButtonText: All Candidates
     moreButtonUrl: /candidates
     subheader: Each candidate elected is one more vote for The People.
