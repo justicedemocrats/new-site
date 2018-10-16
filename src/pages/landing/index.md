@@ -88,8 +88,8 @@ blocks:
     header: A Platform for America
     htmlContent: >-
       The Democratic Party needs to fight FOR something. Progressive policies
-      like Medicare For All, free public college, and marijuana legalization and
-      are popular with voters. It's time to fight for them.
+      like Medicare For All, free public college, and marijuana legalization are
+      popular with voters. It's time to fight for them.
     moreButtonText: Read The Report
     moreButtonUrl: 'https://www.futureoftheparty.com'
     subheader: 'A bold, progressive vision — policies to transform America.'
