@@ -9,14 +9,15 @@ introContent: >-
   **We need a Democratic Party that fights for its voters, not just its
   corporate donors.** That's why we helped elect Alexandria Ocasio-Cortez to
   Congress. We need leadership in the Democratic Party that will represent and
-  fight for our communities.
+  fight for our communities. 
 
 
   **In the era of Donald Trump and his billionaire cabinet, we will fight for an
   America that belongs to all its people. **We are unafraid of taking on
-  out-of-touch incumbents in primary challenges. It's time to usher in a new
-  generation of Democrats who have a bold vision to transform our economy and
-  democracy.
+  out-of-touch incumbents in primary challenges because we don't need to just
+  elect more Democrats, we need to elect better Democrats. It's time to usher in
+  a new generation of Democrats who have a bold vision to transform our economy
+  and democracy.
 firstCalloutIcon: /img/jd_site_circlefinger_1_50x50.svg
 firstCalloutText: >-
   It’s time to transform the Democratic Party into a party that fights for all
