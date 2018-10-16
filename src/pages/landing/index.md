@@ -3,20 +3,24 @@ templateKey: landing-page
 title: Justice Democrats
 bannerBackgroundImg: /img/jd_website_home_banner_background_test_1920x1080_052518.jpg
 bannerTextImg: /img/jd_website_home_banner_textoverlay_test_1920x1080_052518.png
-boldHeader: THE DEMOCRATIC PARTY IS BROKEN.
-boldSubheader: And the corporate wing of the party is responsible.
+boldHeader: THE DEMOCRATIC PARTY NEEDS TO FIGHT BACK.
+boldSubheader: But the corporate wing of the party
 introContent: >-
-  **Instead of representing the needs of everyday working men and women,** the
-  Democratic Party has been asleep at the wheel. Republicans have taken over
-  most state legislatures, governorships, Congress, and now the presidency.
+  **We need a Democratic Party that fights for its voters, not just its
+  corporate donors. **That's why we helped elect Alexandria Ocasio-Cortez to
+  Congress. We need leadership in the Democratic Party that will represent and
+  fight for our communities.
 
 
-  **The solution is having a bold vision that fights for economic, social, and
-  racial justice for all Americans**, not the interests of big money donors.
+  **In the era of Donald Trump and his billionaire cabinet, we will fight for an
+  America that belongs to all its people. **We are unafraid of taking on
+  out-of-touch incumbents in primary challenges. It's time to usher in a new
+  generation of Democrats who have a bold vision to transform our economy and
+  democracy.
 firstCalloutIcon: /img/jd_site_circlefinger_1_50x50.svg
 firstCalloutText: >-
-  It’s time to rebuild the Democratic Party to be a party that fights for a bold
-  vision — one that fights for people, not corporations.
+  It’s time to transform the Democratic Party into a party that fights for all
+  working people in this country.
 issuesIntro: 'POLICIES FOR VOTERS, NOT DONORS'
 primaryIssues:
   - image: /img/growth.svg
