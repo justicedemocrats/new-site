@@ -3,21 +3,26 @@ templateKey: landing-page
 title: Justice Democrats
 bannerBackgroundImg: /img/jd_website_home_banner_background_test_1920x1080_052518.jpg
 bannerTextImg: /img/jd_website_home_banner_textoverlay_test_1920x1080_052518.png
-boldHeader: THE DEMOCRATIC PARTY IS BROKEN.
-boldSubheader: And the corporate wing of the party is responsible.
+boldHeader: THE DEMOCRATIC PARTY NEEDS TO FIGHT BACK.
+boldSubheader: But the corporate-backed wing of the party is getting in the way.
 introContent: >-
-  **Instead of representing the needs of everyday working men and women,** the
-  Democratic Party has been asleep at the wheel. Republicans have taken over
-  most state legislatures, governorships, Congress, and now the presidency.
+  **We need a Democratic Party that fights for its voters, not just its
+  corporate donors.** That's why we helped elect Alexandria Ocasio-Cortez to
+  Congress. We need leadership in the Democratic Party that will represent and
+  fight for our communities. 
 
 
-  **The solution is having a bold vision that fights for economic, social, and
-  racial justice for all Americans**, not the interests of big money donors.
+  **In the era of Donald Trump and his billionaire cabinet, we will fight for an
+  America that belongs to all its people.** We are unafraid of taking on
+  out-of-touch incumbents in primary challenges because we don't need to just
+  elect more Democrats, we need to elect better Democrats. It's time to usher in
+  a new generation of Democrats who have a bold vision to transform our economy
+  and democracy.
 firstCalloutIcon: /img/jd_site_circlefinger_1_50x50.svg
 firstCalloutText: >-
-  It’s time to rebuild the Democratic Party to be a party that fights for a bold
-  vision that fights for people, not corporations.
-issuesIntro: 'POLICIES FOR VOTERS, NOT DONORS'
+  It’s time to transform the Democratic Party into a party that fights for all
+  working people in this country.
+issuesIntro: 'A PARTY FOR VOTERS, NOT DONORS'
 primaryIssues:
   - image: /img/growth.svg
     text: Jobs Guarantee
@@ -45,12 +50,8 @@ blocks:
       work together once elected to enact the Justice Democrats platform.
     header: 26 Justice Dems Are Running Across America
     htmlContent: >-
-      **Representing voters, not donors** — For too long the voices of everyday
-      Americans have been undervalued and gone unnoticed in Washington, D.C..
-      The people who are traditionally elected to represent, fall short of our
-      expectations and get caught in a vicious cycle of pay-for-play politics.
-      Justice Democrat candidates are committed stewards of their communities
-      and have a deep desire to make positive, progressive change.
+      Our candidates are committed to represent and fight for their communities
+      -- and they will not take a dime of corporate money.
     moreButtonText: All Candidates
     moreButtonUrl: /candidates
     subheader: Each candidate elected is one more vote for The People.
@@ -65,22 +66,16 @@ blocks:
       not be too poor to live with dignity. That means having access to
       healthcare, housing, education, a living wage, a world not destroyed by
       climate change and aggressive wars of choice. 
-    header: Social and Economic Justice.
-    htmlContent: >-
-      The question is not "if," but "how," and "when." Every Justice Democrat is
-      fighting for:
-
-
-      * Access to Jobs and a Living Wage
-
-      * Affordable Housing and a Quality Education
-
-      * Medicare for All
+    header: Racial and Economic Justice.
+    htmlContent: |-
+      * Medicare For All
+      * Criminal Justice Reform
+      * A Jobs Guarantee
     moreButtonText: All Policies
     moreButtonUrl: /issues
     subheader: >-
-      Because one can not be achieved without the other — it’s the same fight
-      for rights.
+      Because one can not be achieved without the other — we're fighting for
+      each other.
   - alignment: left
     bannerButtonText: Volunteer
     bannerButtonUrl: /volunteer
@@ -91,15 +86,14 @@ blocks:
       Polling data demonstrates that the Democratic Party’s base has moved left,
       and voters are ready for a progressive agenda. Though the party elites may
       be “divided” the base is not; they are ready for unabashed progressive
-      politicians. — futureoftheparty.com
-    header: Policies and Legislation for the People
+      politicians. — www.futureoftheparty.com
+    header: A Platform for America
     htmlContent: >-
-      **Research shows that the Democratic establishment’s pivot to the “middle”
-      has failed. **It’s time to mobilize the electorate and enact bold,
-      progressive policies that will uplift people and communities across the
-      country.
-    moreButtonText: Read Report
+      The Democratic Party needs to fight FOR something. Progressive policies
+      like Medicare For All, free public college, and marijuana legalization are
+      popular with voters. It's time to fight for them.
+    moreButtonText: Read The Report
     moreButtonUrl: 'https://www.futureoftheparty.com'
-    subheader: 'A bold, progressive vision — policies the majority of Americans want.'
+    subheader: 'A bold, progressive vision — policies to transform America.'
 ---
 
