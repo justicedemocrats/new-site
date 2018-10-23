@@ -172,7 +172,7 @@ const TwitterButton = () => (
     href="https://twitter.com/justicedems"
     target="_blank"
   >
-    <img src="/assets/twitter.svg" />
+    <img src="/assets/twitter.svg" alt="twitter" />
   </a>
 );
 const FacebookButton = () => (
@@ -181,7 +181,7 @@ const FacebookButton = () => (
     href="https://www.facebook.com/justicedemocrats/"
     target="_blank"
   >
-    <img src="/assets/facebook.svg" />
+    <img src="/assets/facebook.svg" alt="facebook" />
   </a>
 );
 
