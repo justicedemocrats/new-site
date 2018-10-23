@@ -7,11 +7,10 @@ district: SN
 state: AZ
 electionDate: '2018-08-28'
 electionType: primary
-office: house
+office: senate
 incumbent: false
 website: 'https://www.deedra2018.com/'
-donationLink: 'https://secure.actblue.com/donate/deedra'
-outcome: Unknown
+outcome: Lost
 image: /img/jd_site_deedraabboud_550x600_061218.jpg
 blurb: >-
   As a socially conscious immigration and estate planning attorney, Deedra

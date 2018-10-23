@@ -5,13 +5,13 @@ firstName: Raúl
 lastName: Grijalva
 district: '03'
 state: AZ
-electionDate: '2018-08-28'
-electionType: primary
+electionDate: '2018-11-06'
+electionType: general
 office: house
 incumbent: true
 website: 'http://www.standwithraul.com/'
 donationLink: 'https://secure.actblue.com/donate/raulgrijalva-jd'
-outcome: Unknown
+outcome: Won
 image: /img/jd_site_raulgrijalva_550x600_061218.jpg
 blurb: >-
   Raúl Grijalva of Arizona’s 3rd Congressional District has served in Congress

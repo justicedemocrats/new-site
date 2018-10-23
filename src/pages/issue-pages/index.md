@@ -3,9 +3,9 @@ templateKey: ignore-fragment
 uniq: issue-index
 title: Justice Democrats | Platform
 bannerBackgroundImage: /img/jd_website_policies_banner_1920x540_061418.jpg
-bannerText: Policies for Justice
+bannerText: A Platform for Justice
 header: 'OF, BY, AND FOR THE PEOPLE'
-subheader: The ideas the Democratic Party was supposed to represent all along.
+subheader: A Platform Democrats Can Fight For
 sections:
   - icon: /img/growth.svg
     intro: >-
@@ -77,7 +77,7 @@ sections:
           department of defense for what it was intended — defending us, instead
           of waging interventionist wars.
         title: End Unnecessary Wars and Nation Building
-    title: Jump Start Our Economy
+    title: Transform Our Economy
   - icon: /img/rights.svg
     intro: >-
       The growing disparities in income and wealth among our nation’s citizenry
@@ -160,6 +160,17 @@ sections:
           including over 10,000 homicides. The time to act is now to address
           this public health crisis.
         title: Enact Common-Sense Gun Regulation
+      - contents: >-
+          Since 2013, with the U.S. Supreme Court’s disastrous Shelby County v.
+          Holder decision, states across the country have been actively working
+          to reverse the hard-fought protections for voting rights secured
+          during the Civil Rights Movement. Fair and equal access to the ballot
+          is essential to our ability to uphold and protect our nation’s
+          democracy. We believe every American citizen is entitled to vote, and
+          we will work to secure voting rights, challenge ultra-partisan
+          gerrymandering, and put an end to affronts to our democratic
+          representation.
+        title: Voting Rights
     title: Protect Our Rights
   - icon: /img/democracy.svg
     intro: >-
@@ -229,15 +240,21 @@ sections:
           our allies by holding them accountable, we strengthen them.
         title: No Longer Sell Arms to Human Rights Violators
       - contents: >-
-          The goal is legalization, taxation, and regulation. Prohibition only
-          makes drug cartels more powerful, increases crime, and makes drugs
-          more dangerous due to lack of enforced safety standards. What you put
-          in your body is your own business, and your right. A free society
-          should allow individuals to make their own choices about their bodies.
-          While most users are recreational and moderate, rehabilitation and
-          treatment should be provided for people struggling with addiction.
-          Additionally, those serving time for non-violent drug offenses should
-          be pardoned.
+          The racist War on Drugs has torn families apart all across our
+          country. Politicians in both parties created a system of mass
+          incarceration while divesting resources from the most vulnerable
+          communities. Legalizing marijuana is a racial and economic justice
+          issue. Black Americans are four times more likely than whites to be
+          arrested for marijuana possession despite similar usage rates.
+          Billions of taxpayer dollars are spent to uphold a racist system. 
+
+
+          We must legalize marijuana and ensure that the records of those who
+          were incarcerated for marijuana-related charges are expunged. As we
+          legalize marijuana, we must also follow the models set in
+          Massachusetts and Oakland that make sure that profits, investment, and
+          business opportunities are going toward communities unfairly targeted
+          by the racist war on drugs.
         title: End the Failed War on Drugs
       - contents: >-
           Humans are fallible, we’ll never get the right answer 100% of the
@@ -292,5 +309,3 @@ sections:
     title: Defend Our Democracy
 ---
 **Opinion polls in the United States demonstrate that these policy positions are overwhelmingly popular.** Indeed, throughout the industrialized world these ideas are considered moderate. This is a movement about freedom and justice. And it’s a movement of, by, and for working people. If the Democrats refuse to embrace this platform, they’ll continue to lose, either to Republicans or to us.
-
-**The future of the Democratic party is the Justice wing, not the establishment wing.**

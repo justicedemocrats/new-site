@@ -5,7 +5,8 @@ import "../style/candidate.scss";
 const defaultImage = "/assets/Fist.svg";
 const officeTypeMap = {
   governor: "GOV",
-  senate: "SN"
+  senate: "SN",
+  "lieutenant-governor": "LTGOV"
 };
 const electionTypeMap = {
   fake: "FAKE",
@@ -118,9 +119,11 @@ class Candidate extends React.Component {
               <a href={website} target="_blank">
                 <img src="/assets/candidate-home.svg" />
               </a>
-              <a href={donationLink} target="_blank">
-                <img src="/assets/candidate-donate.svg" />
-              </a>
+              {donationLink && (
+                <a href={donationLink} target="_blank">
+                  <img src="/assets/candidate-donate.svg" />
+                </a>
+              )}
             </div>
             <div className="read-more" onClick={this.toggleExpanded}>
               {this.state.expanded ? (

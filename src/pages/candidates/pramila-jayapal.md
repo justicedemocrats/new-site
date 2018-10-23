@@ -5,13 +5,13 @@ firstName: Pramila
 lastName: Jayapal
 district: '07'
 state: WA
-electionDate: '2018-08-07'
-electionType: primary
+electionDate: '2018-11-06'
+electionType: general
 office: house
 incumbent: true
 website: 'https://www.pramilaforcongress.com/'
 donationLink: 'https://secure.actblue.com/donate/pramjay-jd#'
-outcome: Unknown
+outcome: Won
 image: /img/jd_site_pramilajayapal_550x600_061218.jpg
 blurb: >-
   Congresswoman Pramila Jayapal represents Washington’s 7th District and is

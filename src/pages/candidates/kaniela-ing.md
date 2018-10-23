@@ -10,8 +10,7 @@ electionType: primary
 office: house
 incumbent: false
 website: 'http://www.kanielaing.com/'
-donationLink: 'https://secure.actblue.com/donate/kanielahi'
-outcome: Unknown
+outcome: Lost
 image: /img/jd_site_kanielaing_550x600_061218.jpg
 blurb: >-
   Kaniela is a Native Hawaiian and Progressive State Representative with a

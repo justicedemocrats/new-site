@@ -2,10 +2,7 @@
   publish = "public"
   command = "npm run build"
   functions = "./functions-build"
+
 [build.environment]
   YARN_VERSION = "1.3.2"
   YARN_FLAGS = "--no-ignore-optional"
-[[redirects]]
-  from = "/*"
-  to = "https://jdems.us/:splat"
-  status = 302

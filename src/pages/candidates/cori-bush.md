@@ -10,9 +10,8 @@ electionType: primary
 office: house
 incumbent: false
 website: 'https://votecoribush.com'
-donationLink: 'https://secure.actblue.com/donate/corib'
-outcome: Unknown
-image: /img/jd_site_coribush_550x600_061218.jpg
+outcome: Lost
+image: /img/jd_site_coribush_550x600_071318.jpg
 blurb: >-
   The people of Missouri's 1st district need a representative who understands
   their struggles and will fight for real solutions. Cori Bush is a former

@@ -10,8 +10,7 @@ electionType: primary
 office: house
 incumbent: false
 website: 'https://www.fayrouzsaad.com/'
-donationLink: 'https://secure.actblue.com/donate/jdsaad'
-outcome: Unknown
+outcome: Lost
 image: /img/jd_site_fayrouzsaad_550x600_061218.jpg
 blurb: >-
   Fayrouz Saad was born and raised in Michigan and has spent her career serving

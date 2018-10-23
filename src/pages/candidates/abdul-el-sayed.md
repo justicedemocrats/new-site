@@ -10,8 +10,7 @@ electionType: primary
 office: governor
 incumbent: false
 website: 'http://abdulformichigan.com/'
-donationLink: 'http://abdulformichigan.com/'
-outcome: Unknown
+outcome: Lost
 image: /img/jd_site_abdulelsayed_550x600_061218.jpg
 blurb: >-
   Dr. Abdul El-Sayed is running for governor to make state government work for

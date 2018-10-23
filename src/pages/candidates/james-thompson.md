@@ -5,13 +5,13 @@ firstName: James
 lastName: Thompson
 district: '04'
 state: KS
-electionDate: '2018-08-07'
-electionType: primary
+electionDate: '2018-11-06'
+electionType: general
 office: house
 incumbent: false
 website: 'http://www.votejamesthompson.com/'
 donationLink: 'https://secure.actblue.com/donate/jamesks'
-outcome: Unknown
+outcome: Won
 image: /img/jd_site_jamesthompson_550x600_061218.jpg
 blurb: >-
   James is a civil rights lawyer who pulled himself out of poverty and

@@ -11,21 +11,51 @@ collections:
     folder: "src/pages/candidates"
     create: true
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "candidate-fragment"}
-      - {label: "First Name", name: "firstName", widget: "string"}
-      - {label: "Last Name", name: "lastName", widget: "string"}
-      - {label: "District", name: "district", widget: "string"}
-      - {label: "State", name: "state", widget: "string"}
-      - {label: "Election Date", name: "electionDate", widget: "date"}
-      - {label: "Election Type", name: "electionType", widget: "select", options: ["fake", "primary", "general"]}
-      - {label: "Office", name: "office", widget: "select", options: ["governor", "house", "senate"]}
-      - {label: "Incumbent", name: "incumbent", widget: "boolean", default: false}
-      - {label: "Website", name: "website", widget: "string"}
-      - {label: "Donation Link", name: "donationLink", widget: "string"}
-      - {label: "Outcome", name: "outcome", widget: "select", options: ["Won", "Lost", "Unknown"]}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Blurb", name: "blurb", widget: "text"}
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "candidate-fragment",
+        }
+      - { label: "First Name", name: "firstName", widget: "string" }
+      - { label: "Last Name", name: "lastName", widget: "string" }
+      - { label: "District", name: "district", widget: "string" }
+      - { label: "State", name: "state", widget: "string" }
+      - { label: "Election Date", name: "electionDate", widget: "date" }
+      - {
+          label: "Election Type",
+          name: "electionType",
+          widget: "select",
+          options: ["fake", "primary", "general"],
+        }
+      - {
+          label: "Office",
+          name: "office",
+          widget: "select",
+          options: ["lieutenant-governor", "governor", "house", "senate"],
+        }
+      - {
+          label: "Incumbent",
+          name: "incumbent",
+          widget: "boolean",
+          default: false,
+        }
+      - { label: "Website", name: "website", widget: "string" }
+      - {
+          label: "Donation Link",
+          name: "donationLink",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Outcome",
+          name: "outcome",
+          widget: "select",
+          options: ["Won", "Lost", "Unknown"],
+        }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Blurb", name: "blurb", widget: "text" }
 
   - name: "pages"
     label: "Pages"
@@ -34,157 +64,295 @@ collections:
         label: "About"
         name: "about"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "ignore-fragment"}
-          - {label: "Unique", name: "uniq", widget: "hidden", default: "about-index"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Banner Background Image", name: "bannerBackgroundImage", widget: "image"}
-          - {label: "Banner Text", name: "bannerText", widget: "string"}
-          - {label: "Header", name: "header", widget: "markdown"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "ignore-fragment",
+            }
+          - {
+              label: "Unique",
+              name: "uniq",
+              widget: "hidden",
+              default: "about-index",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Banner Background Image",
+              name: "bannerBackgroundImage",
+              widget: "image",
+            }
+          - { label: "Banner Text", name: "bannerText", widget: "string" }
+          - { label: "Header", name: "header", widget: "markdown" }
           - label: "Leadership"
             name: "leadership"
             widget: "list"
             fields:
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Headshot", name: "headshot", widget: "image"}
-          
-          - {label: "General Email", name: "generalEmail", widget: "string"}
-          - {label: "Press Email", name: "pressEmail", widget: "string"}
-          - {label: "Phone Number", name: "phone", widget: "string"}
-          - {label: "Mailing Address", name: "address", widget: "string"}
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Headshot", name: "headshot", widget: "image" }
+
+          - { label: "General Email", name: "generalEmail", widget: "string" }
+          - { label: "Press Email", name: "pressEmail", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Mailing Address", name: "address", widget: "string" }
           - label: "FAQ Sections"
             name: "sections"
             widget: "list"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
+              - { label: "Title", name: "title", widget: "string" }
               - label: "Items"
                 name: "items"
                 widget: "list"
                 fields:
-                  - {label: "Question", name: "question", widget: "string"}
-                  - {label: "Answer", name: "answer", widget: "markdown"}
+                  - { label: "Question", name: "question", widget: "string" }
+                  - { label: "Answer", name: "answer", widget: "markdown" }
 
       - file: "src/pages/join/index.md"
         label: "Join"
         name: "join"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "join-page"}
-          - {label: "Background Image", name: "bgimg", widget: "string"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Header", name: "hed", widget: "string"}
-          - {label: "Sub Header", name: "subhed", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "join-page",
+            }
+          - {
+              label: "Unique",
+              name: "uniq",
+              widget: "hidden",
+              default: "join-page",
+            }
+          - { label: "Background Image", name: "bgimg", widget: "image" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Header", name: "hed", widget: "string" }
+          - { label: "Sub Header", name: "subhed", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
       - file: "src/pages/candidate-page/index.md"
         label: "Candidate"
         name: "candidate"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "ignore-fragment"}
-          - {label: "Unique ID", name: "uniq", widget: "hidden", default: "candidate-index"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Banner Background Image", name: "bannerBackgroundImage", widget: "image"}
-          - {label: "Banner Text", name: "bannerText", widget: "string"}
-          - {label: "Intro", name: "intro", widget: "text"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "ignore-fragment",
+            }
+          - {
+              label: "Unique ID",
+              name: "uniq",
+              widget: "hidden",
+              default: "candidate-index",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Banner Background Image",
+              name: "bannerBackgroundImage",
+              widget: "image",
+            }
+          - { label: "Banner Text", name: "bannerText", widget: "string" }
+          - {
+              label: "Prior Candidates Intro",
+              name: "priorCandidatesIntro",
+              widget: "markdown",
+            }
+          - { label: "Intro", name: "intro", widget: "text" }
           - label: "Stats"
             name: "stats"
             widget: "list"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Count", name: "count", widget: "string"}
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Count", name: "count", widget: "string" }
 
       - file: "src/pages/issue-pages/index.md"
         label: "Issues"
         name: "issues"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "ignore-fragment"}
-          - {label: "Unique ID", name: "uniq", widget: "hidden", default: "issue-index"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Banner Background Image", name: "bannerBackgroundImage", widget: "image"}
-          - {label: "Banner Text", name: "bannerText", widget: "string"}
-          - {label: "Header", name: "header", widget: "string"}
-          - {label: "Sub Header", name: "subheader", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "ignore-fragment",
+            }
+          - {
+              label: "Unique ID",
+              name: "uniq",
+              widget: "hidden",
+              default: "issue-index",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Banner Background Image",
+              name: "bannerBackgroundImage",
+              widget: "image",
+            }
+          - { label: "Banner Text", name: "bannerText", widget: "string" }
+          - { label: "Header", name: "header", widget: "string" }
+          - { label: "Sub Header", name: "subheader", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
           - label: "Sections"
             name: "sections"
             widget: "list"
-            fields: 
-              - {label: "Title", name: "title", widget: "string" }
-              - {label: "Icon", name: "icon", widget: "image" }
-              - {label: "Intro", name: "intro", widget: "text" }
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "image" }
+              - { label: "Intro", name: "intro", widget: "text" }
               - label: "Planks"
                 name: "planks"
                 widget: "list"
                 fields:
-                - {label: "Title", name: "title", widget: "string"}
-                - {label: "Contents", name: "contents", widget: "markdown"}
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Contents", name: "contents", widget: "markdown" }
 
       - file: "src/pages/landing/index.md"
         label: "Landing"
         name: "landing"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "landing-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Banner Background Image", name: "bannerBackgroundImg", widget: "image"}
-          - {label: "Banner Text Image", name: "bannerTextImg", widget: "image"}
-          - {label: "Bold Header", name: "boldHeader", widget: "string"}
-          - {label: "Bold Subheader", name: "boldSubheader", widget: "string"}
-          - {label: "Intro Content", name: "introContent", widget: "markdown"}
-          - {label: "First Call Out Icon", name: "firstCalloutIcon", widget: "image"}
-          - {label: "First Call Out Text", name: "firstCalloutText", widget: "text"}
-          - {label: "Issues Introduction", name: "issuesIntro", widget: "string"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "landing-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Banner Background Image",
+              name: "bannerBackgroundImg",
+              widget: "image",
+            }
+          - {
+              label: "Banner Text Image",
+              name: "bannerTextImg",
+              widget: "image",
+            }
+          - { label: "Bold Header", name: "boldHeader", widget: "string" }
+          - { label: "Bold Subheader", name: "boldSubheader", widget: "string" }
+          - { label: "Intro Content", name: "introContent", widget: "markdown" }
+          - {
+              label: "First Call Out Icon",
+              name: "firstCalloutIcon",
+              widget: "image",
+            }
+          - {
+              label: "First Call Out Text",
+              name: "firstCalloutText",
+              widget: "text",
+            }
+          - {
+              label: "Issues Introduction",
+              name: "issuesIntro",
+              widget: "string",
+            }
 
           - label: "Primary Issues"
             name: "primaryIssues"
             widget: "list"
             fields:
-              - {label: "Text", name: "text", widget: "string"}
-              - {label: "Image", name: "image", widget: "image"}
-              - {label: "Url", name: "url", widget: "string"}
-          
-          - {label: "JD Highlight Header", name: "jdHighlightHeader", widget: "string"}
-          - {label: "JD Highlight Text", name: "jdHighlightText", widget: "text"}
-          - {label: "JD Highlight Icon", name: "jdHighlightIcon", widget: "image"}
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Url", name: "url", widget: "string" }
+
+          - {
+              label: "JD Highlight Header",
+              name: "jdHighlightHeader",
+              widget: "string",
+            }
+          - {
+              label: "JD Highlight Text",
+              name: "jdHighlightText",
+              widget: "text",
+            }
+          - {
+              label: "JD Highlight Icon",
+              name: "jdHighlightIcon",
+              widget: "image",
+            }
 
           - label: "Blocks"
             name: "blocks"
             widget: list
             fields:
-              - {label: "Banner Image", name: "bannerImageUrl", widget: "image"}
-              - {label: "Banner Text", name: "bannerText", widget: "string"}
-              - {label: "Banner Button Text", name: "bannerButtonText", widget: "string"}
-              - {label: "Banner Button Url", name: "bannerButtonUrl", widget: "string"}
-              - {label: "Alignment", name: "alignment", widget: "string"}
-              - {label: "Content Header", name: "header", widget: "string"}
-              - {label: "Content Sub-Header", name: "subheader", widget: "string"}
-              - {label: "Content", name: "htmlContent", widget: "markdown"}
-              - {label: "More Button Text", name: "moreButtonText", widget: "string"}
-              - {label: "More Button Url", name: "moreButtonUrl", widget: "string"}
-              - {label: "Call Out Icon", name: "calloutIcon", widget: "image"}
-              - {label: "Call Out Text", name: "calloutText", widget: "text"}
+              - {
+                  label: "Banner Image",
+                  name: "bannerImageUrl",
+                  widget: "image",
+                }
+              - { label: "Banner Text", name: "bannerText", widget: "string" }
+              - {
+                  label: "Banner Button Text",
+                  name: "bannerButtonText",
+                  widget: "string",
+                }
+              - {
+                  label: "Banner Button Url",
+                  name: "bannerButtonUrl",
+                  widget: "string",
+                }
+              - { label: "Alignment", name: "alignment", widget: "string" }
+              - { label: "Content Header", name: "header", widget: "string" }
+              - {
+                  label: "Content Sub-Header",
+                  name: "subheader",
+                  widget: "string",
+                }
+              - { label: "Content", name: "htmlContent", widget: "markdown" }
+              - {
+                  label: "More Button Text",
+                  name: "moreButtonText",
+                  widget: "string",
+                }
+              - {
+                  label: "More Button Url",
+                  name: "moreButtonUrl",
+                  widget: "string",
+                }
+              - { label: "Call Out Icon", name: "calloutIcon", widget: "image" }
+              - { label: "Call Out Text", name: "calloutText", widget: "text" }
 
       - file: "src/pages/footer/index.md"
         label: "Footer"
         name: "footer"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "ignore-fragment"}
-          - {label: "Unique", name: "uniq", widget: "hidden", default: "footer-index"}
-          - {label: "Paid for Message", name: "paidForMessage", widget: "string"}
-          - {label: "Copyright", name: "copyright", widget: "string"}
-          - {label: "General Email", name: "generalEmail", widget: "string"}
-          - {label: "Press Email", name: "pressEmail", widget: "string"}
-          - {label: "Phone Number", name: "phone", widget: "string"}
-          - {label: "Address", name: "address", widget: "string"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "ignore-fragment",
+            }
+          - {
+              label: "Unique",
+              name: "uniq",
+              widget: "hidden",
+              default: "footer-index",
+            }
+          - {
+              label: "Paid for Message",
+              name: "paidForMessage",
+              widget: "string",
+            }
+          - { label: "Copyright", name: "copyright", widget: "string" }
+          - { label: "General Email", name: "generalEmail", widget: "string" }
+          - { label: "Press Email", name: "pressEmail", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Address", name: "address", widget: "string" }
           - label: "Quick Links"
             name: "quickLinks"
             widget: "list"
-            fields: 
-              - {label: "Text", name: "text", widget: "string"}
-              - {label: "Url", name: "url", widget: "string"}
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Url", name: "url", widget: "string" }
 
           - label: "Social Icons"
             name: "socialIcons"
             widget: "list"
-            fields: 
-              - {label: "Icon", name: "icon", widget: "image"}
-              - {label: "Url", name: "url", widget: "string"}
-              - {label: "Type", name: "type", widget: "select", options: ["contact", "social"]}            
+            fields:
+              - { label: "Icon", name: "icon", widget: "image" }
+              - { label: "Url", name: "url", widget: "string" }
+              - {
+                  label: "Type",
+                  name: "type",
+                  widget: "select",
+                  options: ["contact", "social"],
+                }

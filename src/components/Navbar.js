@@ -12,14 +12,14 @@ const Mobile = props => <Responsive {...props} maxWidth={767} />;
 const Default = props => <Responsive {...props} minWidth={768} />;
 
 const links = [
-  { display: "Home", href: "/" },
+  { display: "Home", href: "/home" },
   { display: "About", href: "/about" },
   { display: "Policies", href: "/issues" },
   { display: "Candidates", href: "/candidates" },
   // { display: 'News', href: '/news'},
   // { display: 'Actions', href: '/actions'},
   { display: "Store", href: "https://shop.justicedemocrats.com" },
-  { display: "Join", href: "/join" }
+  { display: "Join", href: "/" }
 ];
 
 class Navbar extends React.Component {
@@ -31,7 +31,7 @@ class Navbar extends React.Component {
   render() {
     const { path } = this.props;
 
-    if (path == "/join" || path == "/join/") {
+    if (path == "/" || path == "") {
       return (
         <div className="navbar" style={{ osition: "fixed" }}>
           <div className="navbar desktop">
@@ -43,7 +43,7 @@ class Navbar extends React.Component {
             </Default>
             <HeaderLogo />
             <Link
-              to="/"
+              to="/home"
               style={{
                 width: 150,
                 display: "block",
@@ -172,7 +172,7 @@ const TwitterButton = () => (
     href="https://twitter.com/justicedems"
     target="_blank"
   >
-    <img src="/assets/twitter.svg" />
+    <img src="/assets/twitter.svg" alt="twitter" />
   </a>
 );
 const FacebookButton = () => (
@@ -181,7 +181,7 @@ const FacebookButton = () => (
     href="https://www.facebook.com/justicedemocrats/"
     target="_blank"
   >
-    <img src="/assets/facebook.svg" />
+    <img src="/assets/facebook.svg" alt="facebook" />
   </a>
 );
 
@@ -191,7 +191,7 @@ const DonateLink = () => (
   </a>
 );
 const HeaderLogo = () => (
-  <Link to="/" style={{ height: 30 }} className="header-logo">
+  <Link to="/home" style={{ height: 30 }} className="header-logo">
     <img style={{ height: 30 }} src="/assets/jd-logo-horiz.svg" alt="Justice Democrats" />
   </Link>
 );

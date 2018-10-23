@@ -17,8 +17,6 @@ const TemplateWrapper = ({ data, children, location }) => {
     socialIcons
   } = data.allMarkdownRemark.edges[0].node.frontmatter;
 
-  console.log(location.pathname);
-
   return (
     <div>
       <Helmet title="Justice Democrats" />

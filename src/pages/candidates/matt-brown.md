@@ -10,8 +10,7 @@ electionType: primary
 office: governor
 incumbent: false
 website: 'https://mattbrownforgovernor.com'
-donationLink: 'https://mattbrownforgovernor.com'
-outcome: Unknown
+outcome: Lost
 image: /img/jd_site_mattbrown_550x600_061218.jpg
 blurb: >-
   Matt Brown is running for Governor of Rhode Island to roll back the current
@@ -20,7 +19,7 @@ blurb: >-
   giveaways at the expense of local citizens, and to build a sustainable local
   renewable energy economy that would make Rhode Island the first state in the
   country to not only produce all of its energy from renewable resources, but
-  also to export surplus renewable energy to other states.  Brown is the former
+  also to export surplus renewable energy to other states. Brown is the former
   Secretary of State of Rhode Island and co-founder of City Year Rhode Island
   and of the Nobel Peace Prize-nominated organization Global Zero, which works
   to reduce and eliminate nuclear weapons.

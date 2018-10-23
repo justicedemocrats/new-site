@@ -10,8 +10,7 @@ electionType: primary
 office: house
 incumbent: false
 website: 'http://www.michaelhepburn.com/'
-donationLink: 'https://secure.actblue.com/donate/jdmichael'
-outcome: Unknown
+outcome: Lost
 image: /img/jd_site_michaelahepburn_550x600_061218.jpg
 blurb: >-
   Michael is a former University of Miami Business School Senior Academic
@@ -19,6 +18,6 @@ blurb: >-
   who grew up in Florida's 27th district, lives and works in the district and
   who served as a City of Miami Parks & Recreation Board member, Miami Police
   Citizen-On-Patrol, Co-Founder of the Allapattah Neighborhood Association, and
-  as a mentor to our youth.
+  as a mentor to our youth
 ---
 

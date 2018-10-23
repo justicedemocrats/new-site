@@ -4,7 +4,8 @@ import "../style/candidate.scss";
 
 const officeTypeMap = {
   governor: "GOV",
-  senate: "SN"
+  senate: "SN",
+  "lieutenant-governor": "LTGOV"
 };
 
 const electionTypeMap = {

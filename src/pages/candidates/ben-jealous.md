@@ -10,7 +10,7 @@ electionType: general
 office: governor
 incumbent: false
 website: 'https://benjealous.com/'
-donationLink: 'https://benjealous.com/'
+donationLink: 'https://secure.actblue.com/donate/bj_home?refcode=OHQG2'
 outcome: Won
 image: /img/jd_site_benjealous_550x600_061218.jpg
 blurb: >-

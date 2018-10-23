@@ -9,9 +9,8 @@ electionDate: '2018-08-28'
 electionType: primary
 office: house
 incumbent: false
-website: 'https://www.matiellaforcongress.com/ '
-donationLink: 'https://secure.actblue.com/donate/maryaz'
-outcome: Unknown
+website: 'https://www.matiellaforcongress.com/'
+outcome: Lost
 image: /img/jd_site_marymatiela_550x600_061218.jpg
 blurb: >-
   After serving as CFO of the US Forest Service, and Assistant CFO of Housing

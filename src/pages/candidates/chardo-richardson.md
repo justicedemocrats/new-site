@@ -10,8 +10,7 @@ electionType: primary
 office: house
 incumbent: false
 website: 'https://chardo2018.com'
-donationLink: 'https://secure.actblue.com/donate/chardor'
-outcome: Unknown
+outcome: Lost
 image: /img/jd_site_chardorichardson_550x600_061218.jpg
 blurb: >-
   I have fought bullies all my life, and the biggest bullies in the world are

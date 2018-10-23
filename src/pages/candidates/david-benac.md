@@ -10,8 +10,7 @@ electionType: primary
 office: house
 incumbent: false
 website: 'https://benacforcongress.com/'
-donationLink: 'https://secure.actblue.com/donate/davidmi'
-outcome: Unknown
+outcome: Lost
 image: /img/jd_site_davidbenac_550x600_061218.jpg
 blurb: >-
   David is an educator, union representative, and community organizer
