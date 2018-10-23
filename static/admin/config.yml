@@ -166,6 +166,33 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Count", name: "count", widget: "string" }
 
+      - file: "src/pages/nominate/index.md"
+        label: "Nominations Page"
+        name: "nominate"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "ignore-fragment",
+            }
+          - {
+              label: "Unique ID",
+              name: "uniq",
+              widget: "hidden",
+              default: "nominate-index",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Banner Background Image",
+              name: "bannerBackgroundImage",
+              widget: "image",
+            }
+          - { label: "Banner Text", name: "bannerText", widget: "string" }
+          - { label: "Header", name: "header", widget: "string" }
+          - { label: "Sub Header", name: "subheader", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
       - file: "src/pages/issue-pages/index.md"
         label: "Issues"
         name: "issues"
