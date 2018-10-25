@@ -167,7 +167,7 @@ collections:
               - { label: "Count", name: "count", widget: "string" }
 
       - file: "src/pages/nominate/index.md"
-        label: "Nominations Page"
+        label: "Nominate"
         name: "nominate"
         fields:
           - {
@@ -192,29 +192,29 @@ collections:
           - { label: "Header", name: "header", widget: "string" }
           - { label: "Sub Header", name: "subheader", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Form Stages"
-        name: "formStages"
-        widget: "list"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - label: "Questions"
-            name: "questions"
+          - label: "Form Stages"
+            name: "stages"
             widget: "list"
             fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "Name", name: "name", widget: "string" }
-              - label: "Question Type"
-                name: "type"
-                widget: "select"
-                options:
-                  ["input", "textarea", "email", "tel", "state", "district"]
-              - label: "Question Width"
-                name: "width"
-                widget: "select"
-                options: ["full", "half", "quarter"]
-              - label: "Max Length"
-                name: "max_length"
-                widget: "number"
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Questions"
+                name: "questions"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Name", name: "name", widget: "string" }
+                  - label: "Question Type"
+                    name: "type"
+                    widget: "select"
+                    options:
+                      ["input", "textarea", "email", "tel", "state", "district"]
+                  - label: "Question Width"
+                    name: "width"
+                    widget: "select"
+                    options: ["full", "half", "quarter"]
+                  - label: "Max Length"
+                    name: "max_length"
+                    widget: "number"
 
       - file: "src/pages/issue-pages/index.md"
         label: "Issues"
