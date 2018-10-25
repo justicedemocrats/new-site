@@ -169,7 +169,6 @@ collections:
       - file: "src/pages/nominate-pages/index.md"
         label: "Nominate"
         name: "nominate"
-        create: true
         fields:
           - {
               label: "Template Key",
