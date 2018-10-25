@@ -172,7 +172,7 @@ const TwitterButton = () => (
     href="https://twitter.com/justicedems"
     target="_blank"
   >
-    <img src="/assets/twitter.svg" />
+    <img src="/assets/twitter.svg" alt="twitter" />
   </a>
 );
 const FacebookButton = () => (
@@ -181,7 +181,7 @@ const FacebookButton = () => (
     href="https://www.facebook.com/justicedemocrats/"
     target="_blank"
   >
-    <img src="/assets/facebook.svg" />
+    <img src="/assets/facebook.svg" alt="facebook" />
   </a>
 );
 
@@ -192,6 +192,6 @@ const DonateLink = () => (
 );
 const HeaderLogo = () => (
   <Link to="/home" style={{ height: 30 }} className="header-logo">
-    <img style={{ height: 30 }} src="/assets/jd-logo-horiz.svg" />
+    <img style={{ height: 30 }} src="/assets/jd-logo-horiz.svg" alt="Justice Democrats" />
   </Link>
 );

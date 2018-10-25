@@ -197,6 +197,12 @@ collections:
             widget: "list"
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Display Conditions",
+                  name: "display",
+                  widget: "select",
+                  options: ["district", "candidate", "both"],
+                }
               - label: "Questions"
                 name: "questions"
                 widget: "list"
