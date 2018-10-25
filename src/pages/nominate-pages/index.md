@@ -7,7 +7,8 @@ bannerText: A Platform for Justice
 header: 'OF, BY, AND FOR THE PEOPLE'
 subheader: A Platform Democrats Can Fight For
 stages:
-  - questions:
+  - display: both
+    questions:
       - label: 'First Name [required]'
         name: Nominator First Name
         type: input
@@ -29,7 +30,8 @@ stages:
         type: district
         width: half
     title: 'Nominator (you) info:'
-  - questions:
+  - display: candidate
+    questions:
       - label: 'First Name [required]'
         name: Nominee Name
         type: input
