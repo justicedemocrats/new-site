@@ -76,6 +76,16 @@ export const pageQuery = graphql`
             subheader
             bannerBackgroundImage
             bannerText
+            stages {
+              title
+              questions {
+                label
+                name
+                type
+                width
+                max_length
+              }
+            }
           }
         }
       }
