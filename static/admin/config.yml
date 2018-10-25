@@ -166,9 +166,10 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Count", name: "count", widget: "string" }
 
-      - file: "src/pages/nominate/index.md"
+      - file: "src/pages/nominate-pages/index.md"
         label: "Nominate"
         name: "nominate"
+        create: true
         fields:
           - {
               label: "Template Key",
