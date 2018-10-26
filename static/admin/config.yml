@@ -192,6 +192,7 @@ collections:
           - { label: "Header", name: "header", widget: "string" }
           - { label: "Sub Header", name: "subheader", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Thank You Content", name: "thankYou", widget: "markdown" }
           - label: "Form Stages"
             name: "stages"
             widget: "list"
