@@ -203,6 +203,7 @@ collections:
                   widget: "select",
                   options: ["district", "candidate", "both"],
                 }
+              - { label: "Preface", name: "preface", widget: "markdown" }
               - label: "Questions"
                 name: "questions"
                 widget: "list"
@@ -427,3 +428,49 @@ collections:
                   widget: "select",
                   options: ["contact", "social"],
                 }
+
+  - name: "modules"
+    label: "Nomination Modules"
+    folder: "src/pages/modules"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "ignore-fragment",
+        }
+      - label: "Questions"
+        name: "questions"
+        widget: "list"
+        fields:
+          - { label: "Label", name: "label", widget: "string" }
+          - { label: "Name", name: "name", widget: "string" }
+          - label: "Question Type"
+            name: "type"
+            widget: "select"
+            options:
+              [
+                "input",
+                "textarea",
+                "email",
+                "tel",
+                "state",
+                "district",
+                "dropdown",
+                "radio",
+                "checkbox",
+              ]
+          - label: "Question Width"
+            name: "width"
+            widget: "select"
+            options: ["full", "half", "quarter"]
+          - label: "Max Length"
+            name: "max_length"
+            widget: "number"
+          - label: "Options (if dropdown or radio)"
+            name: "options"
+            widget: "list"
+            fields:
+              - { label: "Option", widget: "string", name: "option" }
