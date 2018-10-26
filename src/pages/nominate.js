@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { HTMLContent } from "../components/Content";
 import Banner from "../components/Banner";
-import Plank from "../components/Plank";
+import FormStageManager from "../components/FormStageManager";
 import "../style/issues.scss";
 
 const lastWord = string => {
@@ -12,7 +12,7 @@ const lastWord = string => {
 
 const NominatePageTemplate = ({
   html: body,
-  frontmatter: { title, header, subheader, bannerBackgroundImage, bannerText }
+  frontmatter: { header, subheader, bannerBackgroundImage, bannerText, stages }
 }) => {
   return (
     <div>
@@ -43,6 +43,7 @@ const NominatePageTemplate = ({
               />
             </div>
           </div>
+          <FormStageManager stages={stages} />
         </div>
       </div>
     </div>
@@ -83,7 +84,6 @@ export const pageQuery = graphql`
                 name
                 type
                 width
-                max_length
               }
             }
           }
