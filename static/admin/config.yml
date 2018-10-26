@@ -213,7 +213,17 @@ collections:
                     name: "type"
                     widget: "select"
                     options:
-                      ["input", "textarea", "email", "tel", "state", "district"]
+                      [
+                        "input",
+                        "textarea",
+                        "email",
+                        "tel",
+                        "state",
+                        "district",
+                        "dropdown",
+                        "radio",
+                        "checkbox",
+                      ]
                   - label: "Question Width"
                     name: "width"
                     widget: "select"
@@ -221,6 +231,11 @@ collections:
                   - label: "Max Length"
                     name: "max_length"
                     widget: "number"
+                  - label: "Options (if dropdown or radio)"
+                    name: "options"
+                    widget: "list"
+                    fields:
+                      - { label: "Option", widget: "string", name: "option" }
 
       - file: "src/pages/issue-pages/index.md"
         label: "Issues"
