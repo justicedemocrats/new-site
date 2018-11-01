@@ -53,26 +53,48 @@ stages:
         name: Nominator Email
         type: email
         width: full
-      - label: State
-        name: State
-        type: state
+      - label: Zipcode
+        name: Nominator Zip
+        type: input
         width: half
-      - label: District
-        name: District
+      - label: District that you're Nominating
+        name: Nominee District
         type: district
         width: half
-    title: 'Nominator (you) info:'
+    title: Tell Us About Yourself
   - display: candidate
     questions:
       - label: 'First Name [required]'
-        name: Nominee Name
+        name: Nominee First Name
         type: input
         width: half
-      - label: 'Contact Info [required]'
-        name: Contact Info
+      - label: 'Last Name [required]'
+        name: Nominee Last Name
+        type: input
+        width: half
+      - label: Phone Number
+        name: Nominee Phone Number
+        type: tel
+        width: full
+      - label: Email
+        name: Nominee Email
+        type: input
+        width: half
+    title: Tell Us About The Person You're Nominating
+  - display: candidate
+    questions:
+      - label: What is your nominee's occupation?
+        name: Nominee Occupation
         type: input
         width: full
-    title: 'Candidate (not you) info:'
+      - label: How are they involved in their community?
+        name: Nominee Community Involvement
+        type: textarea
+        width: full
+      - label: Any other info you'd like to add?
+        name: Nominee other occupation info
+        type: textarea
+    title: We would like to know how the nominee is spending their time.
 ---
 
 **Opinion polls in the United States demonstrate that these policy positions are overwhelmingly popular.** Indeed, throughout the industrialized world these ideas are considered moderate. This is a movement about freedom and justice. And it’s a movement of, by, and for working people. If the Democrats refuse to embrace this platform, they’ll continue to lose, either to Republicans or to us.
