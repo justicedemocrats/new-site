@@ -54,6 +54,7 @@ stages:
         type: email
         width: full
       - label: Zipcode
+        max_length: '5'
         name: Nominator Zip
         type: input
         width: half
@@ -62,6 +63,14 @@ stages:
         type: district
         width: half
     title: Tell Us About Yourself
+  - display: both
+    questions:
+      - label: 'Why does your district/state need a Justice Democrat? '
+        max_length: '2000'
+        name: Why does your district/state need a Justice Democrat?
+        type: textarea
+        width: full
+    title: Why does your district/state need a Justice Democrat?
   - display: candidate
     questions:
       - label: 'First Name [required]'
@@ -109,14 +118,6 @@ stages:
         name: Nominee other occupation info
         type: textarea
     title: Tell Us How Your Nominee Is Spending Their Time
-  - display: both
-    questions:
-      - label: 'Why does your district/state need a Justice Democrat? '
-        max_length: '2000'
-        name: Why does your district/state need a Justice Democrat?
-        type: textarea
-        width: full
-    title: Why does your district/state need a Justice Democrat?
   - display: candidate
     questions:
       - label: >-
