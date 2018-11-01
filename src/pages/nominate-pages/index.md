@@ -80,6 +80,20 @@ stages:
         name: Nominee Email
         type: input
         width: half
+      - label: Facebook
+        name: Nominee Facebook
+        type: input
+        width: half
+      - label: Twitter
+        name: Nominee Twitter
+        type: input
+        width: half
+      - label: Instagram
+        name: Nominee Instagram
+        type: input
+      - label: Any Other Webpage or Video Links
+        name: Nominee webpage or video links
+        type: textarea
     title: Tell Us About The Person You're Nominating
   - display: candidate
     questions:
@@ -94,7 +108,65 @@ stages:
       - label: Any other info you'd like to add?
         name: Nominee other occupation info
         type: textarea
-    title: We would like to know how the nominee is spending their time.
+    title: Tell Us How Your Nominee Is Spending Their Time
+  - display: both
+    questions:
+      - label: 'Why does your district/state need a Justice Democrat? '
+        max_length: '2000'
+        name: Why does your district/state need a Justice Democrat?
+        type: textarea
+        width: full
+    title: Why does your district/state need a Justice Democrat?
+  - display: candidate
+    questions:
+      - label: >-
+          Why would this nominee make a great Justice Democrat for your
+          district?
+        max_length: '200'
+        name: >-
+          Why would this nominee make a great Justice Democrat for your
+          district?
+        type: textarea
+        width: full
+    title: Why would this nominee make a great Justice Democrat for your district?
+  - display: district
+    questions:
+      - label: What are you looking for in a nominee?
+        max_length: '200'
+        name: What are you looking for in a nominee?
+        type: textarea
+        width: full
+    title: What are you looking for in a nominee?
+  - display: both
+    questions:
+      - label: What will you do to help Justice Democrats win?
+        max_length: '2000'
+        name: What will you do to help Justice Democrats win?
+        type: textarea
+    title: What will you do to help Justice Democrats win?
+  - display: both
+    questions:
+      - label: Phone Number
+        name: Nominator Phone
+        type: tel
+        width: half
+      - label: Facebook
+        name: Nominator Facebook
+        type: input
+        width: half
+      - label: Twitter
+        name: Nominator Twitter
+        type: input
+        width: half
+      - label: Linkedin
+        name: Nominator Linkedin
+        type: input
+        width: half
+      - label: Do you want to add any co-signers (Name & Email)
+        name: co-signers
+        type: textarea
+        width: half
+    title: Tell Us A Little More About Yourself
 ---
 
 **Opinion polls in the United States demonstrate that these policy positions are overwhelmingly popular.** Indeed, throughout the industrialized world these ideas are considered moderate. This is a movement about freedom and justice. And it’s a movement of, by, and for working people. If the Democrats refuse to embrace this platform, they’ll continue to lose, either to Republicans or to us.
