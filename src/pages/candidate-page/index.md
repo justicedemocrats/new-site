@@ -17,11 +17,11 @@ intro: >-
   the same protections, rights, and opportunities.
 stats:
   - count: '7'
-    title: 2018 General Wins
+    title: To Be Seated
   - count: '26'
-    title: 2018 General Election
+    title: 'Ran in General '
   - count: '78'
-    title: 2018 Primaries
+    title: Ran in Primaries
   - count: '2020'
     title: Next Election
 ---
