@@ -11,7 +11,7 @@ office: house
 incumbent: false
 website: 'https://votesarahsmith.com'
 donationLink: 'https://secure.actblue.com/donate/sarahwa'
-outcome: Won
+outcome: Lost
 image: /img/jd_site_sarahsmith_550x600_061218.jpg
 blurb: >-
   A congressperson represents their people—at least, they’re supposed to.
