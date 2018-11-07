@@ -10,7 +10,7 @@ electionType: general
 office: house
 incumbent: false
 website: 'https://lorieburchforcongress.com/ '
-donationLink: 'https://secure.actblue.com/donate/jdlorie'
+donationLink: ''
 outcome: Lost
 image: /img/jd_site_lorieburch_550x600_061218.jpg
 blurb: >-
