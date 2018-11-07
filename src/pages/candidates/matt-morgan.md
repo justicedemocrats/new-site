@@ -11,7 +11,7 @@ office: house
 incumbent: false
 website: 'https://mattmorganformichigan.com/'
 donationLink: 'https://secure.actblue.com/donate/mattmi'
-outcome: Won
+outcome: Lost
 image: /img/jd_site_mattmorgan_550x600_061218.jpg
 blurb: >-
   Matt Morgan is a retired Marine Corps officer and post-9/11 combat veteran. He
