@@ -11,7 +11,7 @@ office: house
 incumbent: false
 website: 'https://www.electschoolcraft.com/'
 donationLink: 'https://secure.actblue.com/donate/schoolcraftjd'
-outcome: Won
+outcome: Lost
 image: /img/jd_site_jamieschoolcraft_550x600_071718.jpg
 blurb: >-
   Jamie grew up in Missouri's 7th district, his grandparents were Southern
