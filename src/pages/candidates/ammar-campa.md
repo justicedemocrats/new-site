@@ -10,7 +10,7 @@ electionType: general
 office: house
 incumbent: false
 website: 'https://www.campacampaign.com/'
-donationLink: 'https://secure.actblue.com/donate/ammarca'
+donationLink: ''
 outcome: Lost
 image: /img/jd_site_ammarcampa-najarr_550x600_061218.jpg
 blurb: >-
