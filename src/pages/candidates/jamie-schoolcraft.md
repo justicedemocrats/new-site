@@ -10,7 +10,7 @@ electionType: general
 office: house
 incumbent: false
 website: 'https://www.electschoolcraft.com/'
-donationLink: 'https://secure.actblue.com/donate/schoolcraftjd'
+donationLink: ''
 outcome: Lost
 image: /img/jd_site_jamieschoolcraft_550x600_071718.jpg
 blurb: >-
