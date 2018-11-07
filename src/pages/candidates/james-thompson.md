@@ -10,7 +10,7 @@ electionType: general
 office: house
 incumbent: false
 website: 'http://www.votejamesthompson.com/'
-donationLink: 'https://secure.actblue.com/donate/jamesks'
+donationLink: ''
 outcome: Lost
 image: /img/jd_site_jamesthompson_550x600_061218.jpg
 blurb: >-
