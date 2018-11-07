@@ -19,7 +19,7 @@ stats:
   - count: '7'
     title: To Be Seated
   - count: '26'
-    title: 'Ran in General '
+    title: Ran in General
   - count: '78'
     title: Ran in Primaries
   - count: '2020'
