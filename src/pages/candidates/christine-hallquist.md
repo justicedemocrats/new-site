@@ -10,7 +10,7 @@ electionType: general
 office: governor
 incumbent: false
 website: 'https://www.christineforvermont.com/'
-donationLink: 'https://secure.actblue.com/donate/vcontribute11'
+donationLink: ''
 outcome: Lost
 image: /img/jd_site_christinehallquist_550x600_071718.jpg
 blurb: >-
