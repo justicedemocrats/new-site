@@ -10,7 +10,7 @@ electionType: general
 office: house
 incumbent: false
 website: 'https://votesarahsmith.com'
-donationLink: 'https://secure.actblue.com/donate/sarahwa'
+donationLink: ''
 outcome: Lost
 image: /img/jd_site_sarahsmith_550x600_061218.jpg
 blurb: >-
