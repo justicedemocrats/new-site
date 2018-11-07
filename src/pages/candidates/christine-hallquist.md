@@ -11,7 +11,7 @@ office: governor
 incumbent: false
 website: 'https://www.christineforvermont.com/'
 donationLink: 'https://secure.actblue.com/donate/vcontribute11'
-outcome: Won
+outcome: Lost
 image: /img/jd_site_christinehallquist_550x600_071718.jpg
 blurb: >-
   Christine has spent the last 12 years as CEO of Vermont's largest locally
