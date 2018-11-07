@@ -10,7 +10,7 @@ electionType: general
 office: house
 incumbent: false
 website: 'https://www.audreyforcongress.com/'
-donationLink: 'https://secure.actblue.com/donate/audrey'
+donationLink: ''
 outcome: Lost
 image: /img/jd_site_audreydenney_550x600_061218.jpg
 blurb: >-
