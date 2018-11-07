@@ -11,7 +11,7 @@ office: house
 incumbent: false
 website: 'https://bell2018.com'
 donationLink: 'https://secure.actblue.com/donate/adrienneb'
-outcome: Won
+outcome: Lost
 image: /img/jd_site_adriennebell_550x600_061218.jpg
 blurb: >
   Texas has one of the most robust economies in the country -- even the world.
