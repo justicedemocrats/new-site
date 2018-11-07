@@ -11,7 +11,7 @@ office: house
 incumbent: false
 website: 'https://www.campacampaign.com/'
 donationLink: 'https://secure.actblue.com/donate/ammarca'
-outcome: Won
+outcome: Lost
 image: /img/jd_site_ammarcampa-najarr_550x600_061218.jpg
 blurb: >-
   Ammar Campa-Najjar is an entrepreneur and former federal official who was born
