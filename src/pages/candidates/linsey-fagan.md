@@ -10,8 +10,8 @@ electionType: general
 office: house
 incumbent: false
 website: 'https://www.linseyfagan.com/'
-donationLink: 'https://secure.actblue.com/donate/jdfagan#'
-outcome: Won
+donationLink: ''
+outcome: Lost
 image: /img/jd_site_linseyfagan_550x600_061218.jpg
 blurb: >-
   It’s time for genuine leadership that puts the lives and livelihoods of

@@ -10,8 +10,8 @@ electionType: general
 office: house
 incumbent: false
 website: 'http://www.votejamesthompson.com/'
-donationLink: 'https://secure.actblue.com/donate/jamesks'
-outcome: Won
+donationLink: ''
+outcome: Lost
 image: /img/jd_site_jamesthompson_550x600_061218.jpg
 blurb: >-
   James is a civil rights lawyer who pulled himself out of poverty and

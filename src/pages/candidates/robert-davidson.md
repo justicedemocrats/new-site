@@ -10,8 +10,8 @@ electionType: general
 office: house
 incumbent: false
 website: 'https://www.robforthesecond.com/'
-donationLink: 'https://secure.actblue.com/donate/robertmi'
-outcome: Won
+donationLink: ''
+outcome: Lost
 image: /img/jd_site_robdavidson_550x600_061218.jpg
 blurb: >-
   Dr. Rob Davidson is running in Michigan’s 2nd district and will work
