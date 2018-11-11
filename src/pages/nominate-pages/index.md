@@ -9,51 +9,16 @@ subheader: A Platform Democrats Can Fight For
 thankYou: Thank you
 stages:
   - display: both
-    preface: >-
-      We are searching for bold, compelling working-class leaders to run for
-      Congress as Justice Democrats in 2020. Is the next Alexandria
-      Ocasio-Cortez, Rashida Tlaib, or Ayanna Pressley in your district? Help us
-      find them by nominating a candidate or by nominating a district where you
-      want to help find a great candidate.
-
-
-      **What we’re looking for:**
-
-
-      * Bold leaders who will represent and mobilize their communities to fight
-      for the Justice Democrats platform, from Medicare for All to the Green New
-      Deal to ending mass incarceration and deportations. 
-
-      * Grassroots campaigners who will run on Big Organizing over Big Money --
-      inspiring volunteers across the district, and rejecting all corporate PAC
-      and lobbyist donations.
-
-      * Movement builders who know that to truly transform our country and the
-      Democratic Party, it's not just about winning one race. We're ushering in
-      a new generation of leaders who'll fight side-by-side with each other and
-      with our movements.
-
-
-      **Let us know more about yourself, your district, and why you are so
-      excited about Justice Democrats!** We’ll need some information to stay in
-      touch throughout the process, please fill out the form as best you can.
-      Let’s take the first step together!
-    title: Introduction
-  - display: both
     questions:
-      - label: 'First Name [required]'
-        name: Nominator First Name
+      - label: Your Full Name
+        name: Nominator Name
         type: input
         width: half
-      - label: 'Last Name [required]'
-        name: Nominator Last Name
-        type: input
-        width: half
-      - label: Email
+      - label: Your Email
         name: Nominator Email
         type: email
         width: full
-      - label: Zipcode
+      - label: Your Zipcode
         max_length: '5'
         name: Nominator Zip
         type: input
@@ -67,41 +32,37 @@ stages:
     questions:
       - label: 'Why does your district/state need a Justice Democrat? '
         max_length: '2000'
-        name: Why does your district/state need a Justice Democrat?
+        name: Why District
         type: textarea
         width: full
     title: Why does your district/state need a Justice Democrat?
   - display: candidate
     questions:
-      - label: 'First Name [required]'
-        name: Nominee First Name
+      - label: Nominee Full Name
+        name: Nominee Name
         type: input
         width: half
-      - label: 'Last Name [required]'
-        name: Nominee Last Name
-        type: input
-        width: half
-      - label: Phone Number
-        name: Nominee Phone Number
+      - label: Nominee Phone Number
+        name: Nominee Phone
         type: tel
         width: full
-      - label: Email
+      - label: Nominee Email
         name: Nominee Email
         type: input
         width: half
-      - label: Facebook
+      - label: Nominee Facebook
         name: Nominee Facebook
         type: input
         width: half
-      - label: Twitter
+      - label: Nominee Twitter
         name: Nominee Twitter
         type: input
         width: half
-      - label: Instagram
+      - label: Nominee Instagram
         name: Nominee Instagram
         type: input
       - label: Any Other Webpage or Video Links
-        name: Nominee webpage or video links
+        name: Nominee Other Links
         type: textarea
     title: Tell Us About The Person You're Nominating
   - display: candidate
@@ -115,7 +76,7 @@ stages:
         type: textarea
         width: full
       - label: Any other info you'd like to add?
-        name: Nominee other occupation info
+        name: Nominee Other Occupation Info
         type: textarea
     title: Tell Us How Your Nominee Is Spending Their Time
   - display: candidate
@@ -124,9 +85,7 @@ stages:
           Why would this nominee make a great Justice Democrat for your
           district?
         max_length: '200'
-        name: >-
-          Why would this nominee make a great Justice Democrat for your
-          district?
+        name: Why Nominee
         type: textarea
         width: full
     title: Why would this nominee make a great Justice Democrat for your district?
@@ -134,7 +93,7 @@ stages:
     questions:
       - label: What are you looking for in a nominee?
         max_length: '200'
-        name: What are you looking for in a nominee?
+        name: Desired Candidate Qualities
         type: textarea
         width: full
     title: What are you looking for in a nominee?
@@ -142,7 +101,7 @@ stages:
     questions:
       - label: What will you do to help Justice Democrats win?
         max_length: '2000'
-        name: What will you do to help Justice Democrats win?
+        name: Nominator Pledge
         type: textarea
     title: What will you do to help Justice Democrats win?
   - display: both
@@ -169,5 +128,12 @@ stages:
         width: half
     title: Tell Us A Little More About Yourself
 ---
+We are searching for bold, compelling working-class leaders to run for Congress as Justice Democrats in 2020. Is the next Alexandria Ocasio-Cortez, Rashida Tlaib, or Ayanna Pressley in your district? Help us find them by nominating a candidate or by nominating a district where you want to help find a great candidate.
 
-**Opinion polls in the United States demonstrate that these policy positions are overwhelmingly popular.** Indeed, throughout the industrialized world these ideas are considered moderate. This is a movement about freedom and justice. And it’s a movement of, by, and for working people. If the Democrats refuse to embrace this platform, they’ll continue to lose, either to Republicans or to us.
+**What we’re looking for:**
+
+* Bold leaders who will represent and mobilize their communities to fight for the Justice Democrats platform, from Medicare for All to the Green New Deal to ending mass incarceration and deportations. 
+* Grassroots campaigners who will run on Big Organizing over Big Money -- inspiring volunteers across the district, and rejecting all corporate PAC and lobbyist donations.
+* Movement builders who know that to truly transform our country and the Democratic Party, it's not just about winning one race. We're ushering in a new generation of leaders who'll fight side-by-side with each other and with our movements.
+
+**Let us know more about yourself, your district, and why you are so excited about Justice Democrats!** We’ll need some information to stay in touch throughout the process, please fill out the form as best you can. Let’s take the first step together!
