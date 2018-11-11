@@ -9,7 +9,7 @@ questions:
     width: quarter
   - label: Race/Ethnicity
     max_length: '40'
-    name: Race/Ethnicity
+    name: Ethnicity
     options: []
     type: textarea
     width: full
@@ -31,76 +31,68 @@ questions:
   - label: Veteran Status
     name: Does the nominee claim veteran status?
     type: checkbox
-  - label: Disability
-    name: Does the nominee consider themselves a person with disabilities?
+    width: half
+  - label: Does the nominee consider themselves a person with disabilities?
+    name: Disability
     type: checkbox
-  - label: Nominee cell phone
-    name: Nominee cell phone
+    width: half
+  - label: Nominee Phone
+    name: Nominee Phone
     type: tel
     width: half
-  - label: Nominee email
-    name: Nominee email
+  - label: Nominee Email
+    name: Nominee Email
     type: email
-    width: half
-  - label: Nominee facebook
-    max_length: '20'
-    name: Nominee facebook
-    type: textarea
-    width: full
-  - label: Nominee twitter
-    max_length: '20'
-    name: Nominee twitter
-    type: textarea
     width: half
   - label: Links to videos of the nominee
     max_length: '200'
-    name: Links to videos of the nominee
+    name: Videos
     type: textarea
     width: full
-  - label: References
-    max_length: '500'
-    name: >-
+  - label: >-
       3 references who have worked with the nominee or know them well (names,
       emails, phone numbers, and how they know the nominee))
+    max_length: '500'
+    name: References
     type: textarea
     width: full
-  - label: Bio
-    max_length: '3000'
-    name: >-
+  - label: >-
       What has the nominee been doing in the last decade that prepares them to
       run for, and hold, public office?
+    max_length: '3000'
+    name: Recent Bio
     type: textarea
     width: full
-  - label: Running for Office
-    max_length: '2000'
-    name: >-
+  - label: >-
       How do you think the nominee will deal with the personal and financial
       challenges of running for office for nearly a year? Why is this a good
       time in their life to run for office?
+    max_length: '2000'
+    name: Ability to Run
     type: textarea
     width: full
-  - label: Fundraising
-    max_length: '2000'
-    name: >-
+  - label: >-
       Does the nominee have experience fundraising? (it’s ok if they don’t!) And
       how might the nominee go about fundraising for their campaign?
+    max_length: '2000'
+    name: Fundraising Experience
     type: textarea
     width: full
-  - label: Running the campaign
-    max_length: '2000'
-    name: >-
+  - label: >-
       Who might help run the campaign? (close advisors, groups or organizations,
       etc)
-    type: textarea
-    width: full
-  - label: One Story
     max_length: '2000'
-    name: Tell one story about the nominee that you think explains their values
+    name: Team
     type: textarea
     width: full
-  - label: Nominator Relationship
+  - label: Tell one story about the nominee that you think explains their values.
+    max_length: '2000'
+    name: Story
+    type: textarea
+    width: full
+  - label: 'As the nominator, what is your relationship with the nominee?'
     max_length: '1000'
-    name: 'As the nominator, what is your relationship with the nominee?'
+    name: Relationship to Nominee
     type: textarea
     width: full
 ---
