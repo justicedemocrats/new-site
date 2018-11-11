@@ -2,25 +2,25 @@
 title: Communications and Messaging
 templateKey: ignore-fragment
 questions:
-  - label: Winning Message
-    max_length: '3000'
-    name: >-
+  - label: >-
       What do you think is a winning message for a campaign in your district?
       Explain why this messaging will be effective.
+    max_length: '3000'
+    name: Messaging
     type: textarea
     width: full
-  - label: Three Policies
-    max_length: '3000'
-    name: >-
+  - label: >-
       What are three policies that are essential for a nominee to highlight in
-      their district? Why?
+      this district? Why?
+    max_length: '3000'
+    name: Core Policies
     type: textarea
     width: full
-  - label: Earned Media
-    max_length: '3000'
-    name: >-
+  - label: >-
       What would be the best strategy for this nominee to get media coverage?
       Why would a local or national reporter want to cover the campaign?
+    max_length: '3000'
+    name: Media Strategy
     type: textarea
     width: full
 ---
