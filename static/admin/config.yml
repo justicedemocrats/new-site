@@ -384,9 +384,9 @@ collections:
               - { label: "Call Out Icon", name: "calloutIcon", widget: "image" }
               - { label: "Call Out Text", name: "calloutText", widget: "text" }
 
-      - file: "src/pages/footer/index.md"
-        label: "Footer"
-        name: "footer"
+      - file: "src/pages/meta/index.md"
+        label: "Meta"
+        name: "meta"
         fields:
           - {
               label: "Template Key",
@@ -398,7 +398,7 @@ collections:
               label: "Unique",
               name: "uniq",
               widget: "hidden",
-              default: "footer-index",
+              default: "meta-index",
             }
           - {
               label: "Paid for Message",
@@ -429,6 +429,15 @@ collections:
                   widget: "select",
                   options: ["contact", "social"],
                 }
+          - {
+              label: "CTA Modal Enabled",
+              name: "ctaEnabled",
+              widget: "boolean",
+            }
+          - { label: "CTA Modal name", name: "ctaName", widget: "string" }
+          - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+          - { label: "CTA Body", name: "ctaBody", widget: "markdown" }
+          - { label: "CTA Url", name: "ctaUrl", widget: "string" }
 
   - name: "modules"
     label: "Nomination Modules"
