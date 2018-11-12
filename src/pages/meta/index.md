@@ -35,5 +35,17 @@ socialIcons:
   - icon: /img/jd_site_icons_contact_email_100x100_white.svg
     type: contact
     url: 'mailto:us@justicedemocrats.com'
+ctaEnabled: true
+ctaName: cta-modal-name
+ctaTitle: CTA Title
+ctaBody: |-
+  CTA Body! 
+
+  We need to do:
+
+  1. X
+  2. Y
+  3. Z
+ctaUrl: 'https://go.justicedemocrats.com/sign/cuomo-mailer/?source=link0909'
 ---
 
