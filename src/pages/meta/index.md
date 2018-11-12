@@ -1,6 +1,6 @@
 ---
 templateKey: ignore-fragment
-uniq: footer-index
+uniq: meta-index
 paidForMessage: >-
   Paid for by Justice Democrats. Not Authorized by any Candidate or Candidate's
   Committee
