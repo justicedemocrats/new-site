@@ -436,6 +436,7 @@ collections:
             }
           - { label: "CTA Modal name", name: "ctaName", widget: "string" }
           - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+          - { label: "CTA Image", name: "ctaImage", widget: "markdown" }
           - { label: "CTA Body", name: "ctaBody", widget: "markdown" }
           - { label: "CTA Url", name: "ctaUrl", widget: "string" }
 
