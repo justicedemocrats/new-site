@@ -10,8 +10,8 @@ electionType: general
 office: governor
 incumbent: false
 website: 'https://benjealous.com/'
-donationLink: 'https://secure.actblue.com/donate/bj_home?refcode=OHQG2'
-outcome: Won
+donationLink: ''
+outcome: Lost
 image: /img/jd_site_benjealous_550x600_061218.jpg
 blurb: >-
   Ben Jealous is a civil rights leader, community organizer, investor in

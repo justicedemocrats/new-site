@@ -16,13 +16,13 @@ intro: >-
   concerned about their community, our country, and making sure every person has
   the same protections, rights, and opportunities.
 stats:
+  - count: '7'
+    title: To Be Seated
   - count: '26'
-    title: Current Slate
-  - count: '0'
-    title: Upcoming Primaries
-  - count: '26'
-    title: Running in General
-  - count: '3'
-    title: Currently Seated
+    title: Ran in General
+  - count: '78'
+    title: Ran in Primaries
+  - count: '2020'
+    title: Next Election
 ---
 
