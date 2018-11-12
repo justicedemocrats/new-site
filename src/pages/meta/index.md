@@ -38,6 +38,7 @@ socialIcons:
 ctaEnabled: true
 ctaName: cta-modal-name
 ctaTitle: CTA Title
+ctaImage: /img/editor-2018-09-09.jpg
 ctaBody: |-
   CTA Body! 
 
@@ -46,6 +47,7 @@ ctaBody: |-
   1. X
   2. Y
   3. Z
+ctaText: Join Us
 ctaUrl: 'https://go.justicedemocrats.com/sign/cuomo-mailer/?source=link0909'
 ---
 
