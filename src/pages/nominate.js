@@ -10,45 +10,61 @@ const lastWord = string => {
   return list[list.length - 1];
 };
 
-const NominatePageTemplate = ({
-  html: body,
-  frontmatter: { header, subheader, bannerBackgroundImage, bannerText, stages }
-}) => {
-  return (
-    <div>
-      <Banner backgroundImage={bannerBackgroundImage} text={bannerText} />
-      <div className="page-container">
-        <div className="page-contents">
-          <div className="row">
-            <div className="six columns">
-              <div className="light-blue-color">
-                <div
-                  className="extra-bold-m"
-                  style={{ fontSize: 42, lineHeight: "42px" }}
-                >
-                  {header}
-                </div>
-                <div
-                  className="medium-m font-size-25"
-                  style={{ marginTop: 10 }}
-                >
-                  {subheader}
+class NominatePageTemplate extends React.Component {
+  state = {
+    nominating: false
+  };
+
+  render() {
+    const {
+      html: body,
+      frontmatter: {
+        header,
+        subheader,
+        bannerBackgroundImage,
+        bannerText,
+        stages
+      }
+    } = this.props;
+
+    const { nominating } = this.state;
+
+    return (
+      <div>
+        <Banner backgroundImage={bannerBackgroundImage} text={bannerText} />
+        <div className="page-container">
+          <div className="page-contents">
+            <div className="row">
+              <div className="six columns">
+                <div className="light-blue-color">
+                  <div
+                    className="extra-bold-m"
+                    style={{ fontSize: 42, lineHeight: "42px" }}
+                  >
+                    {header}
+                  </div>
+                  <div
+                    className="medium-m font-size-25"
+                    style={{ marginTop: 10 }}
+                  >
+                    {subheader}
+                  </div>
                 </div>
               </div>
+              <div className="six columns">
+                <HTMLContent
+                  content={body}
+                  className="medium-m issues-contents standard-text"
+                />
+              </div>
             </div>
-            <div className="six columns">
-              <HTMLContent
-                content={body}
-                className="medium-m issues-contents standard-text"
-              />
-            </div>
+            {nominating && <FormStageManager stages={stages} />}
           </div>
-          <FormStageManager stages={stages} />
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 const NominatePage = props => {
   console.log(props);
