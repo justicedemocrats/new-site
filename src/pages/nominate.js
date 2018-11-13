@@ -15,6 +15,9 @@ class NominatePageTemplate extends React.Component {
     nominating: false
   };
 
+  startNomination = () => this.setState({ nominating: true });
+  endNomination = () => this.setState({ nominating: false });
+
   render() {
     const {
       html: body,
@@ -23,7 +26,9 @@ class NominatePageTemplate extends React.Component {
         subheader,
         bannerBackgroundImage,
         bannerText,
-        stages
+        stages,
+        lookingForBullets,
+        formIntro
       }
     } = this.props;
 
@@ -58,7 +63,40 @@ class NominatePageTemplate extends React.Component {
                 />
               </div>
             </div>
-            {nominating && <FormStageManager stages={stages} />}
+            <Divider />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center"
+              }}
+            >
+              <div className="extra-bold-m"> What We're Looking For: </div>
+              <div style={{ display: "flex" }}>
+                {lookingForBullets.map(lf => (
+                  <div>
+                    <div> {lf.header} </div>
+                    <HTMLContent
+                      content={lf.body}
+                      markdown={true}
+                      className="medium-m"
+                    />
+                  </div>
+                ))}
+              </div>
+              <HTMLContent
+                content={formIntro}
+                markdown={true}
+                className="medium-m"
+              />
+            </div>
+            <button onClick={this.startNomination}>Let's Get Started</button>
+            {nominating && (
+              <FormStageManager
+                stages={stages}
+                endNomination={this.endNomination}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -93,6 +131,11 @@ export const pageQuery = graphql`
             subheader
             bannerBackgroundImage
             bannerText
+            lookingForBullets {
+              header
+              body
+            }
+            formIntro
             stages {
               title
               display
