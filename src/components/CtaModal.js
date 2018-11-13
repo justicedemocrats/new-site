@@ -14,11 +14,11 @@ export default class CtaModal extends React.Component {
 
   componentDidMount() {
     const { ctaName, ctaEnabled } = this.props;
-    // if (ctaEnabled) {
-    if (true) {
+    if (ctaEnabled) {
+      // if (true) {
       const visited = store.get(ctaName);
-      // if (!visited) {
-      if (true) {
+      if (!visited) {
+        // if (true) {
         setTimeout(() => this.setState({ display: true }), DELAY);
         store.set(ctaName, new Date().toISOString());
       }
@@ -35,14 +35,14 @@ export default class CtaModal extends React.Component {
         href={ctaUrl}
         target="_blank"
         className="block-content-button button light-blue-bg button-text full-width-button"
-        style={{ marginTop: 10, display: "block" }}
+        style={{ marginTop: 10, display: "block", marginBottom: 0 }}
       >
         {ctaText}
       </a>
     ) : (
       <Link
         to={ctaUrl}
-        style={{ marginTop: 10 }}
+        style={{ marginTop: 10, marginBottom: 0 }}
         className="block-content-button button light-blue-bg button-text full-width-button"
       >
         {ctaText}
@@ -53,26 +53,34 @@ export default class CtaModal extends React.Component {
       <Modal isOpen={display} style={customStyles} onRequestClose={this.close}>
         <div className="page-container">
           <div className="page-contents">
-            <div
-              className="extra-bold-m dark-blue-color"
-              style={{ fontSize: 42, paddingBottom: 20 }}
-            >
-              {ctaTitle}
+            <div className="six columns" style={{ margin: 0 }}>
+              <img src={ctaImage} />
             </div>
-            <div className="row">
-              <div className="six columns">
-                <div className="light-blue-color">
-                  <img src={ctaImage} />
-                </div>
+            <div
+              className="six columns"
+              style={{
+                flexDirection: "column",
+                justifyContent: "space-between",
+                height: "100%",
+                marginBottom: 0,
+                marginTop: 0
+              }}
+            >
+              <div
+                className="extra-bold-m dark-blue-color"
+                style={{ fontSize: 42, paddingBottom: 20 }}
+              >
+                {ctaTitle}
               </div>
-              <div className="six columns">
+              <div style={{ marginBottom: 0 }}>
                 <HTMLContent
                   content={ctaBody}
+                  markdown={true}
                   className="medium-m issues-contents standard-text"
                 />
               </div>
+              {linkComponent}
             </div>
-            {linkComponent}
           </div>
         </div>
       </Modal>
