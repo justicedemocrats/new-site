@@ -4,45 +4,83 @@ export default class Question extends React.Component {
   state = {};
 
   render() {
-    const { label, type, name, width } = this.props.question;
+    const { setData, question, value } = this.props;
+    const { label, type, name, width } = question;
+    console.log(question);
     return (
       <div className={getWidthClass(width)} style={{ flexDirection: "column" }}>
         <label>{label}</label>
-        {this.renderInput(type, name)}
+        {this.renderInput(type, name, value, setData)}
       </div>
     );
   }
 
-  renderInput(type, name) {
+  renderInput(type, name, value, setData) {
     let result;
 
     switch (type) {
       case "input":
         result = (
-          <input required={true} type="text" name={name} style={inputStyle} />
+          <input
+            required={true}
+            type="text"
+            name={name}
+            value={value}
+            style={inputStyle}
+            onChange={setData}
+          />
         );
         break;
       case "textarea":
-        result = <textarea required={true} name={name} style={inputStyle} />;
+        result = (
+          <textarea
+            required={true}
+            value={value}
+            name={name}
+            style={inputStyle}
+            onChange={setData}
+          />
+        );
         break;
       case "email":
         result = (
-          <input required={true} type="email" name={name} style={inputStyle} />
+          <input
+            required={true}
+            type="email"
+            value={value}
+            name={name}
+            style={inputStyle}
+            onChange={setData}
+          />
         );
         break;
       case "tel":
         result = (
-          <input required={true} type="tel" name={name} style={inputStyle} />
+          <input
+            required={true}
+            type="tel"
+            value={value}
+            name={name}
+            style={inputStyle}
+            onChange={setData}
+          />
         );
         break;
       case "district":
         result = (
-          <input required={true} type="text" name={name} style={inputStyle} />
+          <input
+            required={true}
+            type="text"
+            name={name}
+            value={value}
+            style={inputStyle}
+            onChange={setData}
+          />
         );
         break;
       case "state":
         result = (
-          <select required={true}>
+          <select required={true} onChange={setData} value={value}>
             {states.map(s => <option>{s} </option>)}
           </select>
         );

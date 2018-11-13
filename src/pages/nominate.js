@@ -79,6 +79,7 @@ export const pageQuery = graphql`
             bannerText
             stages {
               title
+              display
               questions {
                 label
                 name

@@ -103,6 +103,7 @@ stages:
         max_length: '2000'
         name: Nominator Pledge
         type: textarea
+        width: full
     title: What will you do to help Justice Democrats win?
   - display: both
     questions:

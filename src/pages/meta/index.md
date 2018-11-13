@@ -35,8 +35,8 @@ socialIcons:
   - icon: /img/jd_site_icons_contact_email_100x100_white.svg
     type: contact
     url: 'mailto:us@justicedemocrats.com'
-ctaEnabled: true
-ctaName: cta-modal-name
+ctaEnabled: false
+ctaName: cta-modal-pelosi-petition
 ctaTitle: CTA Title
 ctaImage: /img/editor-2018-09-09.jpg
 ctaBody: |-
