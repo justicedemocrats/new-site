@@ -10,8 +10,8 @@ electionType: general
 office: house
 incumbent: false
 website: 'https://www.votesanjaypatel.com/'
-donationLink: 'https://secure.actblue.com/donate/sanjayjd'
-outcome: Won
+donationLink: ''
+outcome: Lost
 image: /img/jd_site_sanjaypatel_550x600_061218.jpg
 blurb: >-
   Sanjay is a first-generation immigrant and former small business owner who is

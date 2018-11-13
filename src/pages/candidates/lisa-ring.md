@@ -10,8 +10,8 @@ electionType: general
 office: house
 incumbent: false
 website: 'https://www.lisaringforcongress.com/'
-donationLink: 'https://secure.actblue.com/donate/lisajd'
-outcome: Won
+donationLink: ''
+outcome: Lost
 image: /img/jd_site_lisaring_550x600_061218.jpg
 blurb: >-
   Lisa Ring is running to represent Georgia's 1st District in Washington D.C. As

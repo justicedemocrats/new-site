@@ -10,8 +10,8 @@ electionType: general
 office: house
 incumbent: false
 website: 'https://www.stephanyroseforcongress.com'
-donationLink: 'https://secure.actblue.com/donate/stephanyco'
-outcome: Won
+donationLink: ''
+outcome: Lost
 image: /img/jd_site_stephanyrosespaulding_550x600_061218.jpg
 blurb: >-
   Dr. Stephany Rose Spaulding is a professor, pastor, and lifelong social

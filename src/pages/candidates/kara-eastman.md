@@ -10,8 +10,8 @@ electionType: general
 office: house
 incumbent: false
 website: 'http://eastmanforcongress.com/'
-donationLink: 'https://secure.actblue.com/donate/jd-karaeastman'
-outcome: Won
+donationLink: ''
+outcome: Lost
 image: /img/jd_site_karaeastman_550x600_061218.jpg
 blurb: >-
   Kara Eastman is a longtime community leader running for Congress in Nebraska’s

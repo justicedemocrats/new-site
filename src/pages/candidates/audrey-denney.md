@@ -10,8 +10,8 @@ electionType: general
 office: house
 incumbent: false
 website: 'https://www.audreyforcongress.com/'
-donationLink: 'https://secure.actblue.com/donate/audrey'
-outcome: Won
+donationLink: ''
+outcome: Lost
 image: /img/jd_site_audreydenney_550x600_061218.jpg
 blurb: >-
   Audrey Denney has never found a place she loves more than the North State. She
