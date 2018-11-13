@@ -15,11 +15,13 @@ export default class MapPage extends React.Component {
         super(props);
         this.state = {
             selectedState: null,
+            selectedCD: null,
+            popupLngLat: null,
             hoveredState: null,
             hoveredStateMarker: null,
-            stateCDs: [],
+            // stateCDs: [],
             hoveredCD: null,
-            hoveredCDMarker: null,
+            hoveredCDMarker: null
         };
     }
 
@@ -53,7 +55,10 @@ export default class MapPage extends React.Component {
             const stateProp =  e.features[0].properties;
 
             // Set data to highlight State
-            if (this.state.selectedState == stateProp.STATEFP) {
+            if (this.state.selectedState 
+                && this.state.selectedState == stateProp.STATEFP
+                && (!this.state.selectedCD || this.state.selectedCD.CD116FP !== stateProp.CD116FP)) {
+
                 const relatedFeatures = map.querySourceFeatures('congressional-districts', {
                     sourceLayer: 'cd-0ayx0b',
                     filter: ['all',
@@ -62,25 +67,29 @@ export default class MapPage extends React.Component {
                             ]
                 });
     
-                // const bounds = e.features && this.getBounds(e.features[0].geometry)
-                // console.log("BOUNDS :: ", bounds, bounds.getNorth(), bounds.getEast(), bounds.getWest());
                 this.setState({ hoveredCD: relatedFeatures, hoveredCDMarker: [e.lngLat.lng, e.lngLat.lat]});
             } else {
                 this.setState({ hoveredCD: null, hoveredCDMarker: null });
             }
         })
 
+        map.on('click', 'cd-fill', e => {
+            const cdProps =  e.features[0].properties;
+
+            if (this.state.selectedState && cdProps.STATEFP === this.state.selectedState) {
+                this.setState({ selectedCD: cdProps, popupLngLat: [e.lngLat.lng, e.lngLat.lat], hoveredCDMarker: null });
+            }
+        });
+
         // Select a state to focus
         map.on('click', 'states-fill', e => {
             const stateProp =  e.features[0].properties;
-            this.setState({ selectedState: stateProp.STATE, hoveredStateMarker: null, hoveredState: null });
-            
-            // GEt all vectors for the state
-            const stateCDs = stateProp.STATE ? map.querySourceFeatures('congressional-districts', {
-                sourceLayer: 'cd-0ayx0b',
-                filter: ['==', 'STATEFP', `${stateProp.STATE}`]
-            }) : null;
 
+            // Clear any popups...
+            this.state.selectedState != stateProp.STATE && this.setState({ popupLngLat: null });
+
+            this.setState({ selectedState: stateProp.STATE, hoveredStateMarker: null, hoveredState: null });
+        
             // Show all districts in the state
             map.setPaintProperty('cd-line', 'line-opacity', ['case', 
                 ['==', ['get', 'STATEFP'], `${stateProp.STATE}`], 1,
@@ -94,7 +103,7 @@ export default class MapPage extends React.Component {
            const bounds = this.getBounds(e.features[0].geometry);
             if(map.getZoom() <= 5) {
                 map.fitBounds(bounds, { padding: 100, animate: false });
-            }
+            }            
         });
 
     } 
@@ -161,30 +170,20 @@ export default class MapPage extends React.Component {
                             'visibility': 'visible'
                         }}
                     ></Layer>
-                    <Layer
-                        type='fill'
-                        id='cd-fill'
-                        sourceId={'congressional-districts'}
-                        sourceLayer={'cd-0ayx0b'}
-                        before={'waterway-label'}
-                        paint={{
-                            'fill-opacity': 0
-                        }}
+                    <Layer type='fill' id='cd-fill' sourceId={'congressional-districts'}
+                           sourceLayer={'cd-0ayx0b'} before={'waterway-label'}
+                           paint={{ 'fill-opacity': 0 }}
                     ></Layer>
 
                     {/* States */}
-                    <Source
-                        id="states"
+                    <Source id="states"
                         tileJsonSource={{
                             "type": "vector", 
                             "url": "mapbox://rcscastillo.25eloeq2"
                         }} />
                     <Layer
-                        type='fill'
-                        id='states-fill'
-                        sourceId={'states'}
-                        sourceLayer={'gz_2010_us_040_00_5m-81sosm'}
-                        before={'waterway-label'}
+                        type='fill' id='states-fill' sourceId={'states'}
+                        before={'waterway-label'} sourceLayer={'gz_2010_us_040_00_5m-81sosm'}
                         paint={{
                             'fill-color': 'green',
                             'fill-opacity': 0.1
@@ -193,9 +192,7 @@ export default class MapPage extends React.Component {
 
                     {/* Hover */}
                     <Layer
-                        type='fill'
-                        id='states-hover-layer'
-                        before={'cd-line'}
+                        type='fill' id='states-hover-layer' before={'cd-line'}
                         paint={{
                             'fill-color': '#FAFAFA',
                             'fill-opacity': 1
@@ -205,9 +202,7 @@ export default class MapPage extends React.Component {
                     </Layer>
 
                     <Layer
-                        type='fill'
-                        id='cd-hover-layer'
-                        before={'cd-line'}
+                        type='fill' id='cd-hover-layer' before={'cd-line'}
                         paint={{
                             'fill-color': '#FAFAFA',
                             'fill-opacity': 1
@@ -216,10 +211,14 @@ export default class MapPage extends React.Component {
                         {this.state.hoveredCD && this.state.hoveredCD.map(cd => <Feature coordinates={cd.geometry.coordinates}/>)}
                     </Layer>
 
+                    { this.state.selectedCD &&  this.state.popupLngLat && 
+                        <Popup coordinates={this.state.popupLngLat} className={'mb-mkr-popup'}>
+                            <h1>Selected CD</h1>
+                        </Popup>
+                    }
                     { this.state.hoveredStateMarker &&
                         <Marker
-                            coordinates={this.state.hoveredStateMarker}
-                            anchor="bottom"
+                            coordinates={this.state.hoveredStateMarker} anchor="bottom"
                             className={'mb-mkr-hovered-state'}>
                             <div style={{backgroundColor: 'white', padding: 10}}> hoveredStateMarker</div>
                         </Marker>
@@ -227,18 +226,13 @@ export default class MapPage extends React.Component {
 
                     { this.state.hoveredCDMarker &&
                         <Marker
-                            coordinates={this.state.hoveredCDMarker}
-                            anchor="bottom"
+                            coordinates={this.state.hoveredCDMarker} anchor="bottom"
                             className={'mb-mkr-hovered-state'}>
                             <div style={{backgroundColor: 'white', padding: 10}}> hoveredCDMarker</div>
                         </Marker>
                     }
 
-                    { this.state.selectedCD && 
-                        <Popup>
-                            Selected CD
-                        </Popup>
-                    }
+                   
                 </Map>
             </section>
             <section className='activity-area'>
