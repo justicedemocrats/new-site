@@ -16,8 +16,11 @@ export default class MapPage extends React.Component {
         this.state = {
             selectedState: null,
             hoveredState: null,
+            hoveredStateMarker: null,
             stateCDs: [],
-            hoveredCD: null
+            hoveredCD: null,
+            hoveredCDMarker: null,
+            
         };
     }
 
@@ -29,12 +32,19 @@ export default class MapPage extends React.Component {
         map.on('mousemove', 'states-fill', e => {
             const stateProp =  e.features[0].properties;
 
-            // Set data to highlight State
-            const relatedFeatures = this.state.selectedState !== stateProp.STATE ? map.querySourceFeatures('states', {
-                sourceLayer: 'gz_2010_us_040_00_5m-81sosm',
-                filter: ['==', 'STATE', stateProp.STATE]
-            }) : null;
-            this.setState({ hoveredState: relatedFeatures });
+            // Set data to highlight State that is not chosen...
+            if(this.state.selectedState !== stateProp.STATE) {
+                const relatedFeatures = stateProp.STATE ? map.querySourceFeatures('states', {
+                    sourceLayer: 'gz_2010_us_040_00_5m-81sosm',
+                    filter: ['==', 'STATE', stateProp.STATE]
+                }) : null;
+
+                const bounds = this.getBounds(e.features[0].geometry);
+                const hoveredStateMarker = e.lngLat; //[(bounds.getEast() + bounds.getWest())/2.0, bounds.getNorth()];
+                this.setState({hoveredState: relatedFeatures, hoveredStateMarker: [e.lngLat.lng, e.lngLat.lat]});
+            } else {
+                this.setState({ hoveredStateMarker: null });
+            }
         });
 
         map.on('mousemove', 'cd-fill', e => {
@@ -48,13 +58,16 @@ export default class MapPage extends React.Component {
                             ['==', 'STATEFP', stateProp.STATEFP]
                         ]
             }) : null;
+
+            // const bounds = e.features && this.getBounds(e.features[0].geometry)
+            // console.log("BOUNDS :: ", bounds, bounds.getNorth(), bounds.getEast(), bounds.getWest());
             this.setState({ hoveredCD: relatedFeatures });
         })
 
         // Select a state to focus
         map.on('click', 'states-fill', e => {
             const stateProp =  e.features[0].properties;
-            this.setState({ selectedState: stateProp.STATE });
+            this.setState({ selectedState: stateProp.STATE, hoveredStateMarker: null, hoveredState: null });
             
             // GEt all vectors for the state
             const stateCDs = stateProp.STATE ? map.querySourceFeatures('congressional-districts', {
@@ -197,12 +210,14 @@ export default class MapPage extends React.Component {
                         {this.state.hoveredCD && this.state.hoveredCD.map(cd => <Feature coordinates={cd.geometry.coordinates}/>)}
                     </Layer>
 
-
-                    <Marker
-                        coordinates={[-95.7129, 37.0902]}
-                        anchor="bottom">
-                        <div style={{backgroundColor: 'white', padding: 20}}> Hello world How are you?</div>
-                    </Marker>
+                    { this.state.hoveredStateMarker &&
+                        <Marker
+                            coordinates={this.state.hoveredStateMarker}
+                            anchor="bottom"
+                            className={'mb-mkr-hovered-state'}>
+                            <div style={{backgroundColor: 'white', padding: 10}}> hoveredStateMarker</div>
+                        </Marker>
+                    }
                 </Map>
             </section>
             <section className='activity-area'>
