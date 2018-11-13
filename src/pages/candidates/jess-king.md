@@ -10,8 +10,8 @@ electionType: general
 office: house
 incumbent: false
 website: 'https://jesskingforcongress.com/'
-donationLink: 'https://secure.actblue.com/donate/jesspa'
-outcome: Won
+donationLink: ''
+outcome: Lost
 image: /img/jd_site_jessking_550x600_061218.jpg
 blurb: >-
   Born and raised in Lancaster County, Pennsylvania, Jess King is a working mom

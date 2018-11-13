@@ -1,6 +1,6 @@
 ---
 templateKey: ignore-fragment
-uniq: footer-index
+uniq: meta-index
 paidForMessage: >-
   Paid for by Justice Democrats. Not Authorized by any Candidate or Candidate's
   Committee
@@ -35,5 +35,19 @@ socialIcons:
   - icon: /img/jd_site_icons_contact_email_100x100_white.svg
     type: contact
     url: 'mailto:us@justicedemocrats.com'
+ctaEnabled: true
+ctaName: cta-modal-name
+ctaTitle: CTA Title
+ctaImage: /img/editor-2018-09-09.jpg
+ctaBody: |-
+  CTA Body! 
+
+  We need to do:
+
+  1. X
+  2. Y
+  3. Z
+ctaText: Join Us
+ctaUrl: 'https://go.justicedemocrats.com/sign/cuomo-mailer/?source=link0909'
 ---
 

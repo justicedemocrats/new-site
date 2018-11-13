@@ -10,8 +10,8 @@ electionType: general
 office: house
 incumbent: false
 website: 'https://www.randybryceforcongress.com/'
-donationLink: 'https://secure.actblue.com/donate/randybryce-jd#'
-outcome: Won
+donationLink: ''
+outcome: Lost
 image: /img/jd_site_randybryce_550x600_061218.jpg
 blurb: >-
   Randy Bryce is a U.S. Army veteran, cancer survivor, and union iron worker. He
