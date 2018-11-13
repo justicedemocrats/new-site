@@ -1,7 +1,7 @@
 import React from 'react';
 import MapboxGL from 'mapbox-gl';
-import ReactMapboxGl, { LngLatBounds, ScaleControl, Marker, ZoomControl, Layer, 
-                        Feature, Source, GeoJSONLayer } from 'react-mapbox-gl';
+import ReactMapboxGl, { Marker, ZoomControl, Layer, 
+                        Feature, Source, Popup } from 'react-mapbox-gl';
 import "../style/map.scss";
 
 
@@ -20,7 +20,6 @@ export default class MapPage extends React.Component {
             stateCDs: [],
             hoveredCD: null,
             hoveredCDMarker: null,
-            
         };
     }
 
@@ -41,7 +40,10 @@ export default class MapPage extends React.Component {
 
                 const bounds = this.getBounds(e.features[0].geometry);
                 const hoveredStateMarker = e.lngLat; //[(bounds.getEast() + bounds.getWest())/2.0, bounds.getNorth()];
-                this.setState({hoveredState: relatedFeatures, hoveredStateMarker: [e.lngLat.lng, e.lngLat.lat]});
+                this.setState({
+                    hoveredState: relatedFeatures, 
+                    hoveredStateMarker: [e.lngLat.lng, e.lngLat.lat]}
+                );
             } else {
                 this.setState({ hoveredStateMarker: null });
             }
@@ -51,17 +53,21 @@ export default class MapPage extends React.Component {
             const stateProp =  e.features[0].properties;
 
             // Set data to highlight State
-            const relatedFeatures = this.state.selectedState == stateProp.STATEFP ? map.querySourceFeatures('congressional-districts', {
-                sourceLayer: 'cd-0ayx0b',
-                filter: ['all',
-                            ['==', 'CD116FP', stateProp.CD116FP],
-                            ['==', 'STATEFP', stateProp.STATEFP]
-                        ]
-            }) : null;
-
-            // const bounds = e.features && this.getBounds(e.features[0].geometry)
-            // console.log("BOUNDS :: ", bounds, bounds.getNorth(), bounds.getEast(), bounds.getWest());
-            this.setState({ hoveredCD: relatedFeatures });
+            if (this.state.selectedState == stateProp.STATEFP) {
+                const relatedFeatures = map.querySourceFeatures('congressional-districts', {
+                    sourceLayer: 'cd-0ayx0b',
+                    filter: ['all',
+                                ['==', 'CD116FP', stateProp.CD116FP],
+                                ['==', 'STATEFP', stateProp.STATEFP]
+                            ]
+                });
+    
+                // const bounds = e.features && this.getBounds(e.features[0].geometry)
+                // console.log("BOUNDS :: ", bounds, bounds.getNorth(), bounds.getEast(), bounds.getWest());
+                this.setState({ hoveredCD: relatedFeatures, hoveredCDMarker: [e.lngLat.lng, e.lngLat.lat]});
+            } else {
+                this.setState({ hoveredCD: null, hoveredCDMarker: null });
+            }
         })
 
         // Select a state to focus
@@ -217,6 +223,21 @@ export default class MapPage extends React.Component {
                             className={'mb-mkr-hovered-state'}>
                             <div style={{backgroundColor: 'white', padding: 10}}> hoveredStateMarker</div>
                         </Marker>
+                    }
+
+                    { this.state.hoveredCDMarker &&
+                        <Marker
+                            coordinates={this.state.hoveredCDMarker}
+                            anchor="bottom"
+                            className={'mb-mkr-hovered-state'}>
+                            <div style={{backgroundColor: 'white', padding: 10}}> hoveredCDMarker</div>
+                        </Marker>
+                    }
+
+                    { this.state.selectedCD && 
+                        <Popup>
+                            Selected CD
+                        </Popup>
                     }
                 </Map>
             </section>
