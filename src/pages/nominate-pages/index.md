@@ -4,8 +4,8 @@ uniq: nominate-index
 title: Justice Democrats | Nominate
 bannerBackgroundImage: /img/jd_website_policies_banner_1920x540_061418.jpg
 bannerText: A Platform for Justice
-header: 'OF, BY, AND FOR THE PEOPLE'
-subheader: A Platform Democrats Can Fight For
+header: We are searching
+subheader: 'for bold, compelling leaders to run for Congress as Justice Democrats in 2020.'
 thankYou: Thank you
 lookingForBullets:
   - header: Bold Leaders
@@ -152,12 +152,6 @@ stages:
         width: half
     title: Tell Us A Little More About Yourself
 ---
-We are searching for bold, compelling working-class leaders to run for Congress as Justice Democrats in 2020. Is the next Alexandria Ocasio-Cortez, Rashida Tlaib, or Ayanna Pressley in your district? Help us find them by nominating a candidate or by nominating a district where you want to help find a great candidate.
+Is the next Alexandria Ocasio-Cortez,
 
-**What we’re looking for:**
-
-* Bold leaders who will represent and mobilize their communities to fight for the Justice Democrats platform, from Medicare for All to the Green New Deal to ending mass incarceration and deportations. 
-* Grassroots campaigners who will run on Big Organizing over Big Money -- inspiring volunteers across the district, and rejecting all corporate PAC and lobbyist donations.
-* Movement builders who know that to truly transform our country and the Democratic Party, it's not just about winning one race. We're ushering in a new generation of leaders who'll fight side-by-side with each other and with our movements.
-
-**Let us know more about yourself, your district, and why you are so excited about Justice Democrats!** We’ll need some information to stay in touch throughout the process, please fill out the form as best you can. Let’s take the first step together!
+the next Rashida Tlaib, the next Ayanna Pressley in your district? Help us find them by nominating a candidate or by nominating a district where you want to help find a great candidate.
