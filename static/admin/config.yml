@@ -193,6 +193,13 @@ collections:
           - { label: "Sub Header", name: "subheader", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
           - { label: "Thank You Content", name: "thankYou", widget: "markdown" }
+          - label: "Looking For Bullets"
+            name: "lookingForBullets"
+            widget: "list"
+            fields:
+              - { label: "Header", name: "header", widget: "string" }
+              - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Form Intro", name: "formIntro", widget: "markdown" }
           - label: "Form Stages"
             name: "stages"
             widget: "list"

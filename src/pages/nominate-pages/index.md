@@ -7,6 +7,29 @@ bannerText: A Platform for Justice
 header: 'OF, BY, AND FOR THE PEOPLE'
 subheader: A Platform Democrats Can Fight For
 thankYou: Thank you
+lookingForBullets:
+  - header: Bold Leaders
+    body: >-
+      who will represent and mobilize their communities to fight for the Justice
+      Democrats platform, from Medicare for All to the Green New Deal and ending
+      mass incarceration.
+  - header: Grassroots Campaigners
+    body: >-
+      who will run on Big Organizing over Big Money — inspiring volunteers
+      across the district, and rejecting all corporate PAC and lobbyist
+      donations.
+  - header: Movement Builders
+    body: >-
+      who will work with Justice Democrats across the country to build the
+      Democratic party into a progressive force that truly represents all
+      Americans.
+formIntro: >-
+  **Let us know more about yourself, your district, and why you are so excited
+  about Justice Democrats!**
+
+
+  We’ll need some information to stay in touch throughout the process, please
+  fill out the form as best you can.
 stages:
   - display: both
     questions:
