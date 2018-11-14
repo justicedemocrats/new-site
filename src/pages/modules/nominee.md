@@ -11,7 +11,7 @@ preface: >-
   leaders with a clear vision and a strong moral compass. But campaigns are
   tough, and it is important that our candidates are prepared for the battles
   ahead. Please use this form to tell us more about your candidate, their
-  background, their cirles, their beliefs. And don't sugarcoat it! 
+  background, their cirles, and their beliefs. 
 
 
   Please note: there is no prize for speed here! Take your time and think
