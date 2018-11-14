@@ -46,9 +46,13 @@ stages:
         name: Nominator Zip
         type: input
         width: half
+      - label: State
+        name: State
+        type: input
+        width: half
       - label: District that you're Nominating
         name: District
-        type: district
+        type: input
         width: half
     title: Tell Us About Yourself
   - display: both
