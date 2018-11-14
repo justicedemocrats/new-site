@@ -49,11 +49,11 @@ stages:
       - label: State
         name: State
         type: input
-        width: half
+        width: full
       - label: District that you're Nominating
         name: District
         type: input
-        width: half
+        width: full
     title: Tell Us About Yourself
   - display: both
     questions:
