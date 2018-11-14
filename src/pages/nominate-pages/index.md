@@ -47,7 +47,7 @@ stages:
         type: input
         width: half
       - label: District that you're Nominating
-        name: Nominee District
+        name: District
         type: district
         width: half
     title: Tell Us About Yourself
