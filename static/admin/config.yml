@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: master
+  publish_mode: editorial_workflow
 
 media_folder: static/img
 public_folder: /img
@@ -193,6 +194,14 @@ collections:
           - { label: "Sub Header", name: "subheader", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
           - { label: "Thank You Content", name: "thankYou", widget: "markdown" }
+          - { label: "Redirect", name: "redirect" }
+          - label: "Looking For Bullets"
+            name: "lookingForBullets"
+            widget: "list"
+            fields:
+              - { label: "Header", name: "header", widget: "string" }
+              - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Form Intro", name: "formIntro", widget: "markdown" }
           - label: "Form Stages"
             name: "stages"
             widget: "list"
@@ -450,12 +459,15 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Reference", name: "reference", widget: "string" }
       - {
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "ignore-fragment",
+          default: "module-page",
         }
+      - { label: "Preface", name: "preface", widget: "markdown" }
+      - { label: "Redirect", name: "redirect", widget: "string" }
       - label: "Questions"
         name: "questions"
         widget: "list"

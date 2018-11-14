@@ -6,7 +6,6 @@ export default class Question extends React.Component {
   render() {
     const { setData, question, value } = this.props;
     const { label, type, name, width } = question;
-    console.log(question);
     return (
       <div className={getWidthClass(width)} style={{ flexDirection: "column" }}>
         <label>{label}</label>
@@ -81,10 +80,24 @@ export default class Question extends React.Component {
       case "state":
         result = (
           <select required={true} onChange={setData} value={value}>
-            {states.map(s => <option>{s} </option>)}
+            {states.map(s => (
+              <option>{s} </option>
+            ))}
           </select>
         );
         break;
+      case "checkbox":
+        result = (
+          <div>
+            <input
+              type="checkbox"
+              name={name}
+              value={value}
+              style={inputStyle}
+              onChange={setData}
+            />
+          </div>
+        );
     }
 
     return result;
