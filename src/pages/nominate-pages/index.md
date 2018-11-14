@@ -108,9 +108,7 @@ stages:
     title: Tell Us How Your Nominee Is Spending Their Time
   - display: candidate
     questions:
-      - label: >-
-          Why would this nominee make a great Justice Democrat for your
-          district?
+      - label: ' '
         max_length: '200'
         name: Why Nominee
         type: textarea
