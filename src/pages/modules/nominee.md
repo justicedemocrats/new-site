@@ -1,8 +1,23 @@
 ---
 title: Nominee
-reference: F2M1
+reference: F2M3
 templateKey: ignore-fragment
-preface: Nominee module preface
+preface: >-
+  ## Tell us more about your candidate
+
+
+  Justice Democrats redefine who can run for office. We want working class
+  heroes, people who understand first hand the struggles of their communities,
+  leaders with a clear vision and a strong moral compass. But campaigns are
+  tough, and it is important that our candidates are prepared for the battles
+  ahead. Please use this form to tell us more about your candidate, their
+  background, their cirles, and their beliefs. 
+
+
+  Please note: there is no prize for speed here! Take your time and think
+  through each question. We recommend writing your answers out in a separate
+  document and getting plenty of feedback from others before submitting to
+  Justice Democrats.
 redirect: 'https://secure.actblue.com/donate/jd-nomination'
 questions:
   - label: Age
