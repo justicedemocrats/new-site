@@ -194,6 +194,7 @@ collections:
           - { label: "Sub Header", name: "subheader", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
           - { label: "Thank You Content", name: "thankYou", widget: "markdown" }
+          - { label: "Redirect", name: "redirect" }
           - label: "Looking For Bullets"
             name: "lookingForBullets"
             widget: "list"
@@ -465,6 +466,8 @@ collections:
           widget: "hidden",
           default: "ignore-fragment",
         }
+      - { label: "Preface", name: "preface", widget: "markdown" }
+      - { label: "Redirect", name: "redirect", widget: "string" }
       - label: "Questions"
         name: "questions"
         widget: "list"
