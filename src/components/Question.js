@@ -80,10 +80,24 @@ export default class Question extends React.Component {
       case "state":
         result = (
           <select required={true} onChange={setData} value={value}>
-            {states.map(s => <option>{s} </option>)}
+            {states.map(s => (
+              <option>{s} </option>
+            ))}
           </select>
         );
         break;
+      case "checkbox":
+        result = (
+          <div>
+            <input
+              type="checkbox"
+              name={name}
+              value={value}
+              style={inputStyle}
+              onChange={setData}
+            />
+          </div>
+        );
     }
 
     return result;
