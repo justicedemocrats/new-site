@@ -29,8 +29,8 @@ questions:
     name: Religious Affiliation
     type: textarea
     width: full
-  - label: Veteran Status
-    name: Does the nominee claim veteran status?
+  - label: Does the nominee claim veteran status?
+    name: Veteran Status
     type: checkbox
     width: half
   - label: Does the nominee consider themselves a person with disabilities?
