@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../components/Banner";
+import { HTMLContent } from "../components/Content";
 import Question from "../components/Question";
 import request from "superagent";
 import "../style/issues.scss";
@@ -50,13 +51,21 @@ class ModulePageTemplate extends React.Component {
     if (this.state.badUrl) return this.renderBadUrl();
     if (this.state.error) return this.renderError();
 
-    const { bannerBackgroundImage, title, questions } = this.props;
+    const { bannerBackgroundImage, title, questions, preface } = this.props;
 
     return (
       <div>
         <Banner backgroundImage={bannerBackgroundImage} text={title} />
         <div className="page-container">
           <div className="page-contents" style={{ textAlign: "center" }}>
+            <HTMLContent
+              content={preface}
+              markdown={true}
+              className="medium-m"
+            />
+
+            <Divider />
+
             {!this.state.success ? (
               <div>
                 <div style={{ textAlign: "left" }}>
@@ -141,6 +150,7 @@ const ModulePage = props => {
   } = props.data.nominate.edges[0].node.frontmatter;
 
   Object.assign(attrs, { bannerBackgroundImage, bannerText });
+  console.log(props);
 
   return <ModulePageTemplate {...attrs} />;
 };
@@ -154,6 +164,7 @@ export const pageQuery = graphql`
         title
         reference
         redirect
+        preface
         questions {
           label
           name
@@ -177,3 +188,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+const Divider = () => <div className="divider" />;
