@@ -6,7 +6,6 @@ export default class Question extends React.Component {
   render() {
     const { setData, question, value } = this.props;
     const { label, type, name, width } = question;
-    console.log(question);
     return (
       <div className={getWidthClass(width)} style={{ flexDirection: "column" }}>
         <label>{label}</label>

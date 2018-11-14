@@ -105,7 +105,6 @@ class NominatePageTemplate extends React.Component {
 }
 
 const NominatePage = props => {
-  console.log(props);
   const data = props.data.allMarkdownRemark.edges[0].node;
 
   return <NominatePageTemplate {...data} />;

@@ -461,7 +461,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "ignore-fragment",
+          default: "module-page",
         }
       - label: "Questions"
         name: "questions"

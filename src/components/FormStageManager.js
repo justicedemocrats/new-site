@@ -46,7 +46,7 @@ export default class FormStageManager extends React.Component {
 
   submit = () => {
     request
-      .post(ENDPOINT + this.props.mode)
+      .post(ENDPOINT + this.state.mode)
       .send(this.state.data)
       .end((error, res) => {
         if (error) this.setState({ error });
@@ -65,7 +65,6 @@ export default class FormStageManager extends React.Component {
       s => s.display == mode || s.display == "both"
     );
     const { title, questions } = stages[stage];
-    console.log(stages[stage]);
 
     const rows = batchByWidth(questions);
 
