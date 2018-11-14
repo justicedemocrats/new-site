@@ -47,7 +47,7 @@ stages:
         type: input
         width: half
       - label: District that you're Nominating
-        name: Nominee District
+        name: District
         type: district
         width: half
     title: Tell Us About Yourself
@@ -142,8 +142,8 @@ stages:
         name: Nominator Twitter
         type: input
         width: half
-      - label: Linkedin
-        name: Nominator Linkedin
+      - label: LinkedIn
+        name: Nominator LinkedIn
         type: input
         width: half
       - label: Do you want to add any co-signers (Name & Email)
