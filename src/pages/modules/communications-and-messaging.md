@@ -1,6 +1,7 @@
 ---
 title: Communications and Messaging
 templateKey: module-page
+reference: F2M3
 questions:
   - label: >-
       What do you think is a winning message for a campaign in your district?

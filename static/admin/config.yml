@@ -457,6 +457,7 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Reference", name: "reference", widget: "string" }
       - {
           label: "Template Key",
           name: "templateKey",
