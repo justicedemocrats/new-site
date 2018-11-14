@@ -3,7 +3,7 @@ title: Field and Outreach
 reference: F2M2
 templateKey: ignore-fragment
 preface: >-
-  ## Tell us how you going to win voters
+  ## Tell us how you are going to win voters
 
 
   Justice Democrats win their elections with hard work and dedication, knocking
