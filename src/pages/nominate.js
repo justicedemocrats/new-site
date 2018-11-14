@@ -25,6 +25,7 @@ class NominatePageTemplate extends React.Component {
         header,
         subheader,
         bannerBackgroundImage,
+        redirect,
         bannerText,
         stages,
         lookingForBullets,
@@ -94,6 +95,7 @@ class NominatePageTemplate extends React.Component {
             {nominating && (
               <FormStageManager
                 stages={stages}
+                redirect={redirect}
                 endNomination={this.endNomination}
               />
             )}
@@ -130,6 +132,7 @@ export const pageQuery = graphql`
             subheader
             bannerBackgroundImage
             bannerText
+            redirect
             lookingForBullets {
               header
               body

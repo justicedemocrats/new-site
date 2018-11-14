@@ -5,6 +5,7 @@ import request from "superagent";
 import "../style/issues.scss";
 
 const ENDPOINT = "http://192.168.1.162:8080/nominate/";
+const REDIRECT_DELAY = 500;
 
 class ModulePageTemplate extends React.Component {
   state = {
@@ -15,6 +16,7 @@ class ModulePageTemplate extends React.Component {
   };
 
   componentWillMount() {
+    console.log(window.location.hash);
     if (window.location.hash === "") {
       this.state.badUrl = true;
     }
@@ -35,8 +37,12 @@ class ModulePageTemplate extends React.Component {
       .post(ENDPOINT + this.props.reference)
       .send(this.state.data)
       .end((error, res) => {
-        // if (error) this.setState({ error });
+        if (error) this.setState({ error });
         this.setState({ success: true });
+
+        setTimeout(() => {
+          window.location.href = this.props.redirect;
+        }, REDIRECT_DELAY);
       });
   };
 
@@ -147,6 +153,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         reference
+        redirect
         questions {
           label
           name

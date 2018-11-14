@@ -6,6 +6,7 @@ import request from "superagent";
 // const ENDPOINT = "https://api.justicedemocrats.com/nominate/";
 // const ENDPOINT = "http://localhost:8080/nominate/";
 const ENDPOINT = "http://192.168.1.162:8080/nominate/";
+const REDIRECT_DELAY = 500;
 
 const customStyles = {
   content: {
@@ -54,6 +55,10 @@ export default class FormStageManager extends React.Component {
       .end((error, res) => {
         if (error) this.setState({ error });
         this.setState({ success: true });
+
+        setTimeout(() => {
+          window.location.href = this.props.redirect;
+        }, REDIRECT_DELAY);
       });
   };
 
@@ -68,9 +73,6 @@ export default class FormStageManager extends React.Component {
       s => s.display == mode || s.display == "both"
     );
     const { title, questions } = stages[stage];
-
-    console.log(stages[stage]);
-    console.log(this.state.data);
 
     const rows = batchByWidth(questions);
 
