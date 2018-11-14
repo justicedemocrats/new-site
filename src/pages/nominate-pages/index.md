@@ -142,8 +142,8 @@ stages:
         name: Nominator Twitter
         type: input
         width: half
-      - label: Linkedin
-        name: Nominator Linkedin
+      - label: LinkedIn
+        name: Nominator LinkedIn
         type: input
         width: half
       - label: Do you want to add any co-signers (Name & Email)
