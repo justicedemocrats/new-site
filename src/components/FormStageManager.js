@@ -3,7 +3,9 @@ import Modal from "react-modal";
 import Question from "./Question";
 import request from "superagent";
 
-const ENDPOINT = "https://api.justicedemocrats.com/nominate/";
+// const ENDPOINT = "https://api.justicedemocrats.com/nominate/";
+// const ENDPOINT = "http://localhost:8080/nominate/";
+const ENDPOINT = "http://192.168.1.162:8080/nominate/";
 
 const customStyles = {
   content: {
@@ -45,6 +47,7 @@ export default class FormStageManager extends React.Component {
   };
 
   submit = () => {
+    console.log(this.state.data);
     request
       .post(ENDPOINT + this.state.mode)
       .send(this.state.data)
@@ -65,6 +68,9 @@ export default class FormStageManager extends React.Component {
       s => s.display == mode || s.display == "both"
     );
     const { title, questions } = stages[stage];
+
+    console.log(stages[stage]);
+    console.log(this.state.data);
 
     const rows = batchByWidth(questions);
 
@@ -95,6 +101,7 @@ export default class FormStageManager extends React.Component {
                       question={q}
                       setData={this.setData(q.name)}
                       value={this.state.data[q.name]}
+                      key={q.name}
                     />
                   ))}
                 </div>
@@ -150,7 +157,10 @@ function batchByWidth(questions) {
   let currentRow = [];
 
   questions.forEach(q => {
-    if (q.width === "full") {
+    if (q.width === "full" || !q.width) {
+      if (currentRow.length > 0) {
+        rows.push(currentRow);
+      }
       currentRow = [];
       rows.push([q]);
     }

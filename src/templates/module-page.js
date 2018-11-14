@@ -4,7 +4,7 @@ import Question from "../components/Question";
 import request from "superagent";
 import "../style/issues.scss";
 
-const ENDPOINT = "https://api.justicedemocrats.com/module/";
+const ENDPOINT = "http://192.168.1.162:8080/nominate/";
 
 class ModulePageTemplate extends React.Component {
   state = {
