@@ -3,7 +3,7 @@ title: Communications and Messaging
 reference: F2M1
 templateKey: ignore-fragment
 preface: >-
-  ## How will you speak to your community?
+  ## Tell us how will you speak to your community
 
 
   Our movement is founded on a bold vision of justice. Successful candidates are
