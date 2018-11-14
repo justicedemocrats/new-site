@@ -2,9 +2,13 @@ import React from 'react';
 import MapboxGL from 'mapbox-gl';
 import ReactMapboxGl, { Marker, ZoomControl, Layer, 
                         Feature, Source, Popup } from 'react-mapbox-gl';
+import MapCDHover from '../components/MapCDHover';
+import MapStateHover from '../components/MapStateHover';
+import MapPopup from '../components/MapPopup';
+import MapCDHoverCandidate from '../components/MapCDHoverCandidate';
+import MapPopupCandidate from '../components/MapPopupCandidate';
+
 import "../style/map.scss";
-
-
 const Map = ReactMapboxGl({
     accessToken: "pk.eyJ1IjoicmNzY2FzdGlsbG8iLCJhIjoiY2pseDZ2bmp0MDcwYzNwcGp1bjBqNHo4aSJ9.3bD8gQrMAIEqV6yyS-__vg"
   });
@@ -19,7 +23,6 @@ export default class MapPage extends React.Component {
             popupLngLat: null,
             hoveredState: null,
             hoveredStateMarker: null,
-            // stateCDs: [],
             hoveredCD: null,
             hoveredCDMarker: null
         };
@@ -107,6 +110,9 @@ export default class MapPage extends React.Component {
         });
 
     } 
+    onPopupClose(e) {
+        this.setState({selectedCD: null, popupLngLat: null })
+    }
 
     getBounds(geom) {
          // Zoom in to State
@@ -134,7 +140,6 @@ export default class MapPage extends React.Component {
         <div className='map-container'>
             <section className='map-area'>
                 <Map
-                    
                     style="mapbox://styles/rcscastillo/cjo93ejwe010e2spp07lyalev"
                     containerStyle={{
                         height: "100%",
@@ -213,22 +218,37 @@ export default class MapPage extends React.Component {
 
                     { this.state.selectedCD &&  this.state.popupLngLat && 
                         <Popup coordinates={this.state.popupLngLat} className={'mb-mkr-popup'}>
-                            <h1>Selected CD</h1>
+                            {
+                                this.state.selectedCD.isIncumbent || true
+                                ? <MapPopupCandidate name={'NY-14'} 
+                                    candidate_name={'Alexandria Ocasio-Cortez'}  
+                                    image={'/img/jd_site_alexandriaocasiocortez_550x600_061218.jpg'}
+                                    description={`New York’s 14th Congressional District urgently needs access to more reliable jobs, increased access to family support services like parental leave and free childcare. She will fight for universal access to quality education from pre-K until college regardless of income and enrollment status because your ZIP code should never determine your quality of life.`}
+                                    onClose={this.onPopupClose.bind(this)} />
+                                : <MapPopup name={'NY-14'} onClose={this.onPopupClose.bind(this)}/>
+                            }
                         </Popup>
                     }
                     { this.state.hoveredStateMarker &&
                         <Marker
                             coordinates={this.state.hoveredStateMarker} anchor="bottom"
                             className={'mb-mkr-hovered-state'}>
-                            <div style={{backgroundColor: 'white', padding: 10}}> hoveredStateMarker</div>
+                            <MapStateHover name={'New York'} />
                         </Marker>
                     }
 
-                    { this.state.hoveredCDMarker &&
+                    { this.state.hoveredCD && 
+                      this.state.hoveredCDMarker &&
                         <Marker
                             coordinates={this.state.hoveredCDMarker} anchor="bottom"
                             className={'mb-mkr-hovered-state'}>
-                            <div style={{backgroundColor: 'white', padding: 10}}> hoveredCDMarker</div>
+                            {this.state.hoveredCD.isIncumbent || true
+                                ? <MapCDHoverCandidate name={'NY-14'} 
+                                    candidate_name={'Alexandria Ocasio-Cortez'}  
+                                    image={'/img/jd_site_alexandriaocasiocortez_550x600_061218.jpg'}
+                                     />
+                                : 
+                                <MapCDHover name={'NY-14'} />}
                         </Marker>
                     }
 
