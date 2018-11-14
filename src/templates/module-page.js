@@ -32,7 +32,7 @@ class ModulePageTemplate extends React.Component {
   submit = () => {
     console.log(this.state.data);
     request
-      .post(ENDPOINT + this.props.title.toLowerCase().replace(/ /g, "-"))
+      .post(ENDPOINT + this.props.reference)
       .send(this.state.data)
       .end((error, res) => {
         // if (error) this.setState({ error });
@@ -146,6 +146,7 @@ export const pageQuery = graphql`
     module: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        reference
         questions {
           label
           name
