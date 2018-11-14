@@ -2,6 +2,8 @@
 title: Field and Outreach
 templateKey: module-page
 reference: F2M2
+preface: Field and outreach preface
+redirect: "https://secure.actblue.com/donate/jd-nomination"
 questions:
   - label: >-
       What specific field and outreach activities would you expect a winning

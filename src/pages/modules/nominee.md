@@ -2,6 +2,8 @@
 title: Nominee
 templateKey: module-page
 reference: F2M1
+preface: Nominee module preface
+redirect: "https://secure.actblue.com/donate/jd-nomination"
 questions:
   - label: Age
     max_length: "3"
