@@ -137,10 +137,48 @@ body.ReactModal__Body--open {
                         color: $jd-orange;
                     }
                 }
+                
 
             }
         }
         
     }
+
+    @media only screen and (max-width: 767px) {
+        div.ReactModal__Content {
+            top: 60px !important;
+            transform: translateX(-50%) !important;
+            margin: 0 !important;
+            width: calc(100% - 20px);
+            padding: 0px !important;
+
+            left: 50% !important;
+            div.modal-content {
+                margin: 0;
+                div.modal-counter {
+                }
+        
+                div.modal-action {
+                    padding: 5px;
+                    flex-direction: column;
+    
+                    button {
+                        flex-basis: 100%;
+    
+                        border: none;
+                        border-top: 1px solid white;
+    
+                        &:first-child {
+                            border-bottom:1px solid white;
+                            border-top: 0;
+                        }
+                    }
+    
+                    
+                }
+            }
+        }  
+    }
     
 }
+
