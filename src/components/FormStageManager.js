@@ -2,6 +2,7 @@ import React from "react";
 import Modal from "react-modal";
 import Question from "./Question";
 import request from "superagent";
+import '../style/form-stage-manager.scss';
 
 // const ENDPOINT = "https://api.justicedemocrats.com/nominate/";
 // const ENDPOINT = "http://localhost:8080/nominate/";
@@ -10,12 +11,17 @@ const REDIRECT_DELAY = 500;
 
 const customStyles = {
   content: {
-    top: "50%",
+    top: "130px",
     left: "50%",
     right: "auto",
     bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)"
+    margin: "0 50px",
+    transform: "translateX(-50%)",
+    borderRadius: 0,
+    border: 'none',
+    borderTop: "2px solid",
+    boxShadow: '0 2px 2px rgba(0,0,0,0.1)',
+    padding: 0
   }
 };
 
@@ -92,34 +98,36 @@ export default class FormStageManager extends React.Component {
             </p>
           </div>
         ) : (
-          <div>
-            <h1> {title} </h1>
-
-            <form>
-              {rows.map(r => (
-                <div className="row">
-                  {r.map(q => (
-                    <Question
-                      question={q}
-                      setData={this.setData(q.name)}
-                      value={this.state.data[q.name]}
-                      key={q.name}
-                    />
-                  ))}
-                </div>
-              ))}
-            </form>
-
-            <div
-              className="button-row"
-              style={{ display: "flex", justifyContent: "space-between" }}
-            >
+          <div className='modal-content'>
+            <div className='modal-counter'>
+              {stages.map((item,index) => (
+                <div className={`counter-item ${index <= stage ? 'counter-done': ''}`}></div>
+              ))} 
+            </div> 
+            <div className='modal-activity'>
+              <h1> {title} </h1>
+              <form>
+                {rows.map(r => (
+                  <div className="row">
+                    {r.map(q => (
+                      <Question
+                        question={q}
+                        setData={this.setData(q.name)}
+                        value={this.state.data[q.name]}
+                        key={q.name}
+                      />
+                    ))}
+                  </div>
+                ))}
+              </form>
+            </div>
+            <div className='modal-action button-row'>
               {stage !== 0 && <button onClick={this.prevStage}> Back </button>}
               {stage < stages.length - 1 && (
                 <button onClick={this.nextStage}> Next </button>
               )}
               {stage === stages.length - 1 && (
-                <button onClick={this.submit}> Submit </button>
+                <button onClick={this.submit} className='submit'> Submit </button>
               )}
             </div>
           </div>
@@ -130,24 +138,26 @@ export default class FormStageManager extends React.Component {
 
   renderPreStage() {
     const buttonStyle = {
-      width: "40%",
-      height: 100
     };
 
     return (
       <Modal isOpen={true} style={customStyles}>
-        <h1>
-          We're accepting nominations for specific candidates, but we're also
-          accepting nominations for districts, even if you don't have a
-          candidate in mind.
-        </h1>
-        <div style={{ display: "flex", justifyContent: "space-around" }}>
-          <button style={buttonStyle} onClick={this.setMode("district")}>
-            I don't have a candidate yet
-          </button>
-          <button style={buttonStyle} onClick={this.setMode("candidate")}>
-            I have a candidate
-          </button>
+        <div className={'modal-content'}>
+          <div className='modal-activity'>
+            <h1>Nominate a Candidate</h1>
+            <p>We're accepting nominations for specific candidates, but we're also
+              accepting nominations for districts, even if you don't have a
+              candidate in mind.
+            </p>
+          </div>
+          <div className='modal-action' >
+            <button style={buttonStyle} onClick={this.setMode("district")}>
+              I don't have a candidate yet
+            </button>
+            <button style={buttonStyle} onClick={this.setMode("candidate")}>
+              I have a candidate
+            </button>
+          </div>
         </div>
       </Modal>
     );
