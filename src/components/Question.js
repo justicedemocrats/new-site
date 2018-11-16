@@ -4,18 +4,26 @@ export default class Question extends React.Component {
   state = {};
 
   render() {
-    const { setData, question, value } = this.props;
-    const { label, type, name, width } = question;
+    const { setData, question, value, error } = this.props;
+    const { label, type, name, width, required } = question;
     return (
       <div className={getWidthClass(width)} style={{ flexDirection: "column" }}>
-        <label>{label}</label>
-        {this.renderInput(type, name, value, setData)}
+        <label>
+          {label}
+          {required && "*"}
+        </label>
+        {error && <label style={{ color: "#d5176e" }}> {error} </label>}
+        {this.renderInput(type, name, value, error, setData)}
       </div>
     );
   }
 
-  renderInput(type, name, value, setData) {
+  renderInput(type, name, value, error, setData) {
     let result;
+    const inputStyle = Object.assign({}, baseInputStyle);
+    if (error) {
+      inputStyle.border = "1px solid #d5176e";
+    }
 
     switch (type) {
       case "input":
@@ -122,7 +130,7 @@ function getWidthClass(width) {
   return result;
 }
 
-const inputStyle = {
+const baseInputStyle = {
   width: "100%"
 };
 

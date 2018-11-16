@@ -38,8 +38,6 @@ class NominatePageTemplate extends React.Component {
       }
     } = this.props;
 
-    console.log(candidates);
-
     const { nominating } = this.state;
 
     return (
@@ -191,8 +189,6 @@ const NominatePage = props => {
   const candidates = props.data.candidates.edges
     .map(edge => edge.node.frontmatter)
     .filter(c => c.outcome === "Won");
-
-  console.log(props.data.candidates);
 
   return <NominatePageTemplate {...data} candidates={candidates} />;
 };

@@ -1,7 +1,8 @@
 import React from "react";
 import Modal from "react-modal";
-import Question from "./Question";
 import request from "superagent";
+import Question from "./Question";
+import validate from "../lib/validate";
 import "../style/form-stage-manager.scss";
 
 // const ENDPOINT = "https://api.justicedemocrats.com/nominate/";
@@ -28,20 +29,32 @@ export default class FormStageManager extends React.Component {
   state = {
     stage: 0,
     data: {},
+    errors: {},
     error: undefined,
     success: false,
     mode: undefined
   };
 
-  prevStage = () =>
+  prevStage = () => {
     this.setState({
       stage: this.state.stage - 1
     });
+  };
 
-  nextStage = () =>
-    this.setState({
-      stage: this.state.stage + 1
-    });
+  nextStage = () => {
+    const questions = this.currentQuestions().map(q =>
+      Object.assign({}, q, { value: this.state.data[q.name] })
+    );
+
+    const errors = validate(questions);
+    if (!errors) {
+      this.setState({
+        stage: this.state.stage + 1
+      });
+    } else {
+      this.setState({ errors });
+    }
+  };
 
   setMode = mode => () => this.setState({ mode });
   setData = attribute => ev => {
@@ -54,17 +67,35 @@ export default class FormStageManager extends React.Component {
 
   submit = () => {
     console.log(this.state.data);
-    request
-      .post(ENDPOINT + this.state.mode)
-      .send(this.state.data)
-      .end((error, res) => {
-        if (error) this.setState({ error });
-        this.setState({ success: true });
 
-        setTimeout(() => {
-          window.location.href = this.props.redirect;
-        }, REDIRECT_DELAY);
-      });
+    const questions = this.currentQuestions().map(q =>
+      Object.assign({}, q, { value: this.state.data[q.name] })
+    );
+
+    const errors = validate(questions);
+    if (!errors) {
+      request
+        .post(ENDPOINT + this.state.mode)
+        .send(this.state.data)
+        .end((error, res) => {
+          if (error) this.setState({ error });
+          this.setState({ success: true });
+
+          setTimeout(() => {
+            window.location.href = this.props.redirect;
+          }, REDIRECT_DELAY);
+        });
+    } else {
+      this.setState({ errors });
+    }
+  };
+
+  currentQuestions = () => {
+    const stages = this.props.stages.filter(
+      s => s.display == this.state.mode || s.display == "both"
+    );
+
+    return stages[this.state.stage].questions;
   };
 
   render() {
@@ -119,6 +150,7 @@ export default class FormStageManager extends React.Component {
                     {r.map(q => (
                       <Question
                         question={q}
+                        error={this.state.errors[q.name]}
                         setData={this.setData(q.name)}
                         value={this.state.data[q.name]}
                         key={q.name}
