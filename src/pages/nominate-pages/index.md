@@ -83,7 +83,9 @@ stages:
       Make your case using specific facts about the failures of the incumbent or
       unmet needs of the constituents.
     questions:
-      - label: 'Why does your district need a Justice Democrat? '
+      - label: >-
+          Make your case using specific facts about the failures of the
+          incumbent or unmet needs of the constituents. 
         max_length: '2000'
         name: Why District
         required: true
@@ -156,7 +158,10 @@ stages:
       nominee and characteristics about your district that show them to be a
       good match to represent the district
     questions:
-      - label: ' '
+      - label: >-
+          Make a case drawing direct connections between characteristics about
+          your nominee and characteristics about your district that show them to
+          be a good match to represent the district 
         max_length: '200'
         name: Why Nominee
         required: true
