@@ -72,11 +72,10 @@ class Candidate extends React.Component {
             }}
           >
             {outcome == "Won" ? (
-              <div className="office bold-m orange-bg">WON</div>
+              <div className="office bold-m dark-blue-bg">WON</div>
             ) : (
               <div className="office bold-m">
-                {state}-
-                {office == "house" ? district : officeTypeMap[office]}
+                {state}-{office == "house" ? district : officeTypeMap[office]}
               </div>
             )}
           </div>
@@ -89,10 +88,10 @@ class Candidate extends React.Component {
               <span className="incumbent">{incumbent && "(Incumbent)"}</span>
             </div>
             <div className="office bold-m">
-              {state}-
-              {office == "house" ? district : officeTypeMap[office]}
+              {state}-{office == "house" ? district : officeTypeMap[office]}
             </div>
-            <div className="race-date">
+
+            {/* <div className="race-date">
               <span className="race bold-m">
                 {electionType === "general"
                   ? "General Election"
@@ -114,7 +113,7 @@ class Candidate extends React.Component {
                 </span>
               )}
             </div>
-
+ */}
             <div className="links-container">
               <a href={website} target="_blank">
                 <img src="/assets/candidate-home.svg" />

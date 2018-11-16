@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Link from "gatsby-link";
 import { HTMLContent } from "../components/Content";
 import Banner from "../components/Banner";
+import Candidate from "../components/Candidate";
 import FormStageManager from "../components/FormStageManager";
 import "../style/issues.scss";
 
@@ -20,6 +22,7 @@ class NominatePageTemplate extends React.Component {
 
   render() {
     const {
+      candidates,
       html: body,
       frontmatter: {
         header,
@@ -29,9 +32,13 @@ class NominatePageTemplate extends React.Component {
         bannerText,
         stages,
         lookingForBullets,
-        formIntro
+        formIntro,
+        incumbentsIntro,
+        incumbentsStatement
       }
     } = this.props;
+
+    console.log(candidates);
 
     const { nominating } = this.state;
 
@@ -141,6 +148,38 @@ class NominatePageTemplate extends React.Component {
               />
             )}
           </div>
+          <Divider />
+
+          <div
+            className="extra-bold-m subheader-size dark-blue-color"
+            style={{ marginBottom: 20, fontSize: 42 }}
+          >
+            {incumbentsIntro}
+          </div>
+          <div
+            style={{
+              textAlign: "left",
+              display: "flex",
+              justifyContent: "space-between"
+            }}
+          >
+            <div className="bold-m" style={{ width: "45%", fontSize: 16 }}>
+              {incumbentsStatement}
+            </div>
+
+            <Link
+              to="/candidates"
+              className="block-content-button button dark-blue-bg button-text full-width-button"
+              style={{ width: "45%" }}
+            >
+              Go To 2018 Slate
+            </Link>
+          </div>
+          <div className="candidates">
+            {candidates.map((props, i) => (
+              <Candidate key={i} {...props} />
+            ))}
+          </div>
         </div>
       </div>
     );
@@ -148,9 +187,14 @@ class NominatePageTemplate extends React.Component {
 }
 
 const NominatePage = props => {
-  const data = props.data.allMarkdownRemark.edges[0].node;
+  const data = props.data.nominate.edges[0].node;
+  const candidates = props.data.candidates.edges
+    .map(edge => edge.node.frontmatter)
+    .filter(c => c.outcome === "Won");
 
-  return <NominatePageTemplate {...data} />;
+  console.log(props.data.candidates);
+
+  return <NominatePageTemplate {...data} candidates={candidates} />;
 };
 
 NominatePage.propTypes = {
@@ -161,7 +205,7 @@ export default NominatePage;
 
 export const pageQuery = graphql`
   query NominateQuery {
-    allMarkdownRemark(
+    nominate: allMarkdownRemark(
       filter: { frontmatter: { uniq: { eq: "nominate-index" } } }
     ) {
       edges {
@@ -174,6 +218,8 @@ export const pageQuery = graphql`
             bannerBackgroundImage
             bannerText
             redirect
+            incumbentsIntro
+            incumbentsStatement
             lookingForBullets {
               icon
               header
@@ -190,6 +236,31 @@ export const pageQuery = graphql`
                 width
               }
             }
+          }
+        }
+      }
+    }
+
+    candidates: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "candidate-fragment" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            firstName
+            lastName
+            electionType
+            incumbent
+            district
+            state
+            electionDate
+            image
+            website
+            donationLink
+            outcome
+            office
+            district
+            blurb
           }
         }
       }

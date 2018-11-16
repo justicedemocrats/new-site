@@ -7,11 +7,11 @@ bannerText: Candidates For Justice
 header: Need 2Words
 subheader: >-
   We are searching for bold,  compelling leaders to run as Justice Democrats in
-  2020. 
+  2020.
 thankYou: Thank you
-redirect: 'https://secure.actblue.com/donate/jdpacslate'
-incumentsIntro: Justice Democrats in the House
-incumentsStatement: >-
+redirect: "https://secure.actblue.com/donate/jdpacslate"
+incumbentsIntro: Justice Democrats in the House
+incumbentsStatement: >-
   2019 Congress kicks off with 7 Justice Democrats pushing for change in the
   U.S. House of Representatives.
 lookingForBullets:
@@ -57,7 +57,7 @@ stages:
         type: email
         width: full
       - label: Your Zipcode
-        max_length: '5'
+        max_length: "5"
         name: Nominator Zip
         type: input
         width: half
@@ -72,8 +72,8 @@ stages:
     title: Tell Us About Yourself
   - display: both
     questions:
-      - label: 'Why does your district/state need a Justice Democrat? '
-        max_length: '2000'
+      - label: "Why does your district/state need a Justice Democrat? "
+        max_length: "2000"
         name: Why District
         type: textarea
         width: full
@@ -128,8 +128,8 @@ stages:
     title: Tell Us How Your Nominee Is Spending Their Time
   - display: candidate
     questions:
-      - label: ' '
-        max_length: '200'
+      - label: " "
+        max_length: "200"
         name: Why Nominee
         type: textarea
         width: full
@@ -137,7 +137,7 @@ stages:
   - display: district
     questions:
       - label: What are you looking for in a nominee?
-        max_length: '200'
+        max_length: "200"
         name: Desired Candidate Qualities
         type: textarea
         width: full
@@ -145,7 +145,7 @@ stages:
   - display: both
     questions:
       - label: What will you do to help Justice Democrats win?
-        max_length: '2000'
+        max_length: "2000"
         name: Nominator Pledge
         type: textarea
         width: full
@@ -174,6 +174,7 @@ stages:
         width: half
     title: Tell Us A Little More About Yourself
 ---
-**Is the next Alexandria Ocasio-Cortez, the next Rashida Tlaib, the next Ayanna Pressley in your district?** 
 
-Help us find them by nominating a candidate or by nominating a district where you want to help find a great candidate.
+**Is the next Alexandria Ocasio-Cortez, the next Rashida Tlaib, the next Ayanna Pressley in your district?**
+
+Help us find them by nominating a candidate or by nominating a district where you want to help find a great candidate.
