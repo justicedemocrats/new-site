@@ -80,12 +80,10 @@ stages:
     title: Tell Us About Yourself
   - display: both
     preface: >-
-      Make your case using specific facts about the failures of the incumbent or
-      unmet needs of the constituents.
+      Make your case using specific facts about the failures of the incumbent
+      and unmet needs of the district's constituents.
     questions:
-      - label: >-
-          Make your case using specific facts about the failures of the
-          incumbent or unmet needs of the constituents. 
+      - label: ''
         max_length: '2000'
         name: Why District
         required: true
@@ -93,7 +91,9 @@ stages:
         width: full
     title: Why does your district need a Justice Democrat?
   - display: candidate
-    preface: 'Note: The links matter a lot. Thanks for including as many as you can.'
+    preface: >-
+      The links we ask for below matter a lot. Thanks for including as many as
+      you can.
     questions:
       - label: Nominee First Name
         name: Nominee First Name
@@ -134,9 +134,9 @@ stages:
   - display: candidate
     preface: >-
       There are no disqualifiers, but we're particularly interested in: working
-      class backgrounds, people of color, women who show evidence of leadership
-      (not  through titles, but through action/results), uninhibited fight for
-      what's right
+      class backgrounds, people of color, and women who show evidence of
+      leadership (not  through titles, but through action/results) and an
+      uninhibited fight for what's right
     questions:
       - label: What is your nominee's occupation?
         name: Nominee Occupation
@@ -155,13 +155,10 @@ stages:
   - display: candidate
     preface: >-
       Make a case drawing direct connections between characteristics about your
-      nominee and characteristics about your district that show them to be a
-      good match to represent the district
+      nominee and characteristics about the district that show them to be a good
+      fit and match.
     questions:
-      - label: >-
-          Make a case drawing direct connections between characteristics about
-          your nominee and characteristics about your district that show them to
-          be a good match to represent the district 
+      - label: ''
         max_length: '200'
         name: Why Nominee
         required: true
@@ -186,10 +183,7 @@ stages:
       with organizations and community leaders in the district, and more. Share
       with us all the ways you could be a resource for this nominee.
     questions:
-      - label: >-
-          Candidates need help knocking on doors, phone/text banking, connecting
-          with organizations and community leaders in the district, and more.
-          Share with us all the ways you could be a resource for this nominee. 
+      - label: ''
         max_length: '2000'
         name: Nominator Pledge
         required: true
