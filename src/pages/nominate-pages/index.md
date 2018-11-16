@@ -2,10 +2,12 @@
 templateKey: ignore-fragment
 uniq: nominate-index
 title: Justice Democrats | Nominate
-bannerBackgroundImage: /img/jd_website_policies_banner_1920x540_061418.jpg
-bannerText: Find the next Justice Democrats
-header: We are searching
-subheader: 'for bold, compelling leaders to run for Congress as Justice Democrats in 2020.'
+bannerBackgroundImage: /img/jd_site_nominate_banner_1920x540_111518_temp.png
+bannerText: Candidates For Justice
+header: Need 2Words
+subheader: >-
+  We are searching for bold,  compelling leaders to run as Justice Democrats in
+  2020. 
 thankYou: Thank you
 redirect: 'https://secure.actblue.com/donate/jdpacslate'
 lookingForBullets:
@@ -14,16 +16,19 @@ lookingForBullets:
       who will represent and mobilize their communities to fight for the Justice
       Democrats platform, from Medicare for All to the Green New Deal and ending
       mass incarceration.
+    icon: /img/jd_site_nominate_icon_boldleaders_500x300.png
   - header: Grassroots Campaigners
     body: >-
       who will run on Big Organizing over Big Money — inspiring volunteers
       across the district, and rejecting all corporate PAC and lobbyist
       donations.
+    icon: /img/jd_site_nominate_icon_grassroots_500x300.png
   - header: Movement Builders
     body: >-
       who will work with Justice Democrats across the country to build the
       Democratic party into a progressive force that truly represents all
       Americans.
+    icon: /img/jd_site_noninate_icon_movementbuilders_500x300.png
 formIntro: >-
   **Let us know more about yourself, your district, and why you are so excited
   about Justice Democrats!**
@@ -165,4 +170,6 @@ stages:
         width: half
     title: Tell Us A Little More About Yourself
 ---
-Is the next Alexandria Ocasio-Cortez, the next Rashida Tlaib, the next Ayanna Pressley in your district? Help us find them by nominating a candidate that you know, or by nominating a district where you want to help find a great candidate!
+**Is the next Alexandria Ocasio-Cortez, the next Rashida Tlaib, the next Ayanna Pressley in your district?** 
+
+Help us find them by nominating a candidate or by nominating a district where you want to help find a great candidate.
