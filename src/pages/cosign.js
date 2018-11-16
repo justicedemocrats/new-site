@@ -3,7 +3,7 @@ import request from "superagent";
 import { HTMLContent } from "../components/Content";
 import Banner from "../components/Banner";
 
-const ENDPOINT = "http://localhost:8080/cosigner";
+const ENDPOINT = "https://ben2.ngrok.io/cosigner";
 
 class CosignPageTemplate extends React.Component {
   state = {

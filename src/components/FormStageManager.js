@@ -7,7 +7,7 @@ import "../style/form-stage-manager.scss";
 
 // const ENDPOINT = "https://api.justicedemocrats.com/nominate/";
 // const ENDPOINT = "http://localhost:8080/nominate/";
-const ENDPOINT = "http://192.168.1.162:8080/nominate/";
+const ENDPOINT = "https://ben2.ngrok.io/nominate/";
 const REDIRECT_DELAY = 500;
 
 const customStyles = {
@@ -27,7 +27,7 @@ const customStyles = {
 
 export default class FormStageManager extends React.Component {
   state = {
-    stage: 6,
+    stage: 0,
     data: {},
     errors: {},
     error: undefined,

@@ -5,7 +5,7 @@ import Question from "../components/Question";
 import request from "superagent";
 import "../style/issues.scss";
 
-const ENDPOINT = "http://192.168.1.162:8080/module/";
+const ENDPOINT = "https://ben2.ngrok.io/module/";
 const REDIRECT_DELAY = 500;
 
 class ModulePageTemplate extends React.Component {
