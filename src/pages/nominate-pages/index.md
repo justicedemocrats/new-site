@@ -3,9 +3,11 @@ templateKey: ignore-fragment
 uniq: nominate-index
 title: Justice Democrats | Nominate
 bannerBackgroundImage: /img/jd_website_policies_banner_1920x540_061418.jpg
-bannerText: Find the next Justice Democrats
-header: We are searching
-subheader: 'for bold, compelling leaders to run for Congress as Justice Democrats in 2020.'
+bannerText: Candidates For Justice
+header: Need Headline
+subheader: >-
+  We are searching for bold,  compelling leaders to run as Justice Democrats in
+  2020. 
 thankYou: Thank you
 redirect: 'https://secure.actblue.com/donate/jdpacslate'
 lookingForBullets:
@@ -165,4 +167,6 @@ stages:
         width: half
     title: Tell Us A Little More About Yourself
 ---
-Is the next Alexandria Ocasio-Cortez, the next Rashida Tlaib, the next Ayanna Pressley in your district? Help us find them by nominating a candidate that you know, or by nominating a district where you want to help find a great candidate!
+**Is the next Alexandria Ocasio-Cortez, the next Rashida Tlaib, the next Ayanna Pressley in your district?** 
+
+Help us find them by nominating a candidate or by nominating a district where you want to help find a great candidate.
