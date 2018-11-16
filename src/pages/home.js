@@ -34,7 +34,7 @@ const renderSignUpButton = () => (
   <div className="sign-up-el sign-up-button-container">
     <button
       type="submit"
-      className="sign-up-button dark-blue-bg extra-bold-m "
+      className="sign-up-button orange-bg extra-bold-m "
       style={{
         fontSize: "18px",
         textTransform: "uppercase",
@@ -82,11 +82,12 @@ const IndexPage = ({ data }) => {
             method="post"
             action="/donate"
             style={{
-              backgroundColor: "rgba(255, 255, 255, .8)",
+              backgroundColor: "rgba(0,118,156, .75)",
               minHeight: 60,
               position: "absolute",
               bottom: 0,
-              marginBottom: -3
+              marginBottom: -2,
+              width: "100%"
             }}
           >
             <input type="hidden" name="form-name" value="main-signup" />
@@ -122,12 +123,7 @@ const IndexPage = ({ data }) => {
         <div className="block-contents row">
           <div className="six columns" style={{ color: "blue" }}>
             <div className="block-contents-left-chunk">
-              <div
-                className="home-header-b extra-bold-m"
-                style={{ textTransform: "uppercase" }}
-              >
-                {boldHeader}
-              </div>
+              <div className="home-header-b extra-bold-m">{boldHeader}</div>
               <div
                 className="home-subheader-b medium-m "
                 style={{ marginTop: 10 }}
@@ -220,7 +216,7 @@ const IndexPage = ({ data }) => {
         }}
       >
         <div
-          className="extra-bold-m light-blue-color"
+          className="extra-bold-m dark-blue-color"
           style={{
             maxWidth: "1040px",
             width: "100%",

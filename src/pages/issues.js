@@ -28,7 +28,7 @@ const IssuePageTemplate = ({
         <div className="page-contents">
           <div className="row">
             <div className="six columns">
-              <div className="light-blue-color">
+              <div className="dark-blue-color">
                 <div
                   className="extra-bold-m"
                   style={{ fontSize: 42, lineHeight: "42px" }}
@@ -66,7 +66,7 @@ const IssuePageTemplate = ({
                 </div>
                 <div className="text-container center-contents-column">
                   <div className="center-contents-column">
-                    <div className="extra-bold-m light-blue-color font-size-25">
+                    <div className="extra-bold-m dark-blue-color font-size-25">
                       {title}
                     </div>
                     <div className="medium-m issue-intro"> {intro} </div>

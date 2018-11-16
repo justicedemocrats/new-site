@@ -31,7 +31,7 @@ export default ({
     <a
       href={moreButtonUrl}
       target="_blank"
-      className="block-content-button button light-blue-bg button-text full-width-button"
+      className="block-content-button button orange-bg button-text full-width-button"
       style={{ marginTop: 10, display: "block" }}
     >
       {moreButtonText}
@@ -40,7 +40,7 @@ export default ({
     <Link
       to={moreButtonUrl}
       style={{ marginTop: 10 }}
-      className="block-content-button button light-blue-bg button-text full-width-button"
+      className="block-content-button button orange-bg button-text full-width-button"
     >
       {moreButtonText}
     </Link>
@@ -90,12 +90,7 @@ export default ({
           <div className="block-contents row">
             <div className="six columns" style={{ color: "blue" }}>
               <div className="block-contents-left-chunk">
-                <div
-                  className="home-header-b extra-bold-m"
-                  style={{ textTransform: "uppercase" }}
-                >
-                  {header}
-                </div>
+                <div className="home-header-b extra-bold-m">{header}</div>
                 <div className="home-subheader-b medium-m">{subheader}</div>
               </div>
             </div>

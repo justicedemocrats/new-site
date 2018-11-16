@@ -91,7 +91,7 @@ class Navbar extends React.Component {
                   alignItems: "center",
                   justifyContent: "center"
                 }}
-                className="orange-bg bold-m"
+                className="light-blue-bg bold-m"
               >
                 <div> Donate </div>
               </a>
@@ -181,7 +181,7 @@ const FacebookButton = () => (
 );
 
 const DonateLink = () => (
-  <a href="/donate" target="_blank" className="bold-m orange-bg">
+  <a href="/donate" target="_blank" className="bold-m light-blue-bg">
     Donate
   </a>
 );

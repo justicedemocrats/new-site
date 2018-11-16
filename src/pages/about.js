@@ -23,12 +23,12 @@ const AboutPageTemplate = ({
           <HTMLContent
             content={header}
             markdown={true}
-            className="about-header light-blue-color medium-m subheader-size"
+            className="about-header dark-blue-color medium-m subheader-size"
           />
           <div style={{ paddingBottom: 5 }} />
           <Divider />
           <div className="extra-bold-m about-section-title">
-            <span className="light-blue-color"> Justice Democrats </span>
+            <span className="dark-blue-color"> Justice Democrats </span>
             <span className="orange-color"> Leadership </span>
           </div>
 
@@ -38,7 +38,7 @@ const AboutPageTemplate = ({
                 <img src={headshot} />
                 <div className="leader-info">
                   <div className="leader-name extra-bold-m">{name}</div>
-                  <div className="leader-title bold-m light-blue-color">
+                  <div className="leader-title bold-m dark-blue-color">
                     {title}
                   </div>
                 </div>
@@ -48,13 +48,13 @@ const AboutPageTemplate = ({
 
           <Divider />
           <div className="extra-bold-m about-section-title">
-            <span className="light-blue-color"> Justice Democrats </span>
+            <span className="dark-blue-color"> Justice Democrats </span>
             <span className="orange-color"> Contacts </span>
           </div>
           <div className="contact-contents standard-text row">
             <div className="six columns">
               <div>
-                <div className="contact-section-title extra-bold-m light-blue-color">
+                <div className="contact-section-title extra-bold-m dark-blue-color">
                   GENERAL
                 </div>
                 <div className="contact-email">{generalEmail}</div>
@@ -64,7 +64,7 @@ const AboutPageTemplate = ({
             </div>
             <div className="six columns">
               <div>
-                <div className="contact-section-title extra-bold-m light-blue-color">
+                <div className="contact-section-title extra-bold-m dark-blue-color">
                   PRESS
                 </div>
                 <div className="contact-email">{pressEmail}</div>
@@ -74,13 +74,13 @@ const AboutPageTemplate = ({
 
           <Divider />
           <div className="extra-bold-m about-section-title">
-            <span className="light-blue-color"> Justice Democrats </span>
+            <span className="dark-blue-color"> Justice Democrats </span>
             <span className="orange-color"> FAQs </span>
           </div>
 
           {sections.map(({ title, items }) => (
             <div>
-              <div className="faq-section-title light-blue-color extra-bold-m">
+              <div className="faq-section-title dark-blue-color extra-bold-m">
                 {title}
               </div>
               {items.map(({ question, answer }) => (

@@ -42,7 +42,7 @@ class NominatePageTemplate extends React.Component {
           <div className="page-contents">
             <div className="row">
               <div className="six columns">
-                <div className="light-blue-color">
+                <div className="dark-blue-color">
                   <div
                     className="extra-bold-m"
                     style={{ fontSize: 42, lineHeight: "42px" }}
@@ -89,9 +89,11 @@ class NominatePageTemplate extends React.Component {
                   <div style={{ width: "30%", minWidth: 150 }}>
                     <div
                       className="extra-bold-m caps"
-                      style={{ textAlign: "center" }}
+                      style={{ textAlign: "center", fontSize: 25 }}
                     >
-                      {lf.header}
+                      {lf.header.split(" ")[0]}
+                      <br />
+                      {lf.header.split(" ")[1]}
                     </div>
                     <HTMLContent
                       content={lf.body}

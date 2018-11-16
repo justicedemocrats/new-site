@@ -4,7 +4,7 @@
 .home-header-b {
   font-size: 42px;
   line-height: 42px;
-  color: $jd-light-blue;
+  color: $jd-dark-blue;
 }
 
 .home-header-w {
@@ -16,7 +16,7 @@
 .home-subheader-b {
   font-size: 28px;
   line-height: 28px;
-  color: $jd-light-blue;
+  color: $jd-dark-blue;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -137,13 +137,15 @@
 
 .sign-up-input {
   background: none !important;
-  border: 1px solid $jd-dark-blue !important;
+  border: 1px solid white !important;
+  color: white;
   font-size: 22px;
   height: 38px;
   line-height: 38px;
+  border-radius: 0px;
 
   &::placeholder {
-    color: $jd-dark-blue;
+    color: white;
     font-family: $jd-sans;
     font-size: 16px;
     font-weight: 700;
@@ -185,7 +187,7 @@
 
 .home-banner {
   padding-top: 50;
-  height: calc(100vw * 0.56);
+  height: calc(100vw * 0.56 + 60px);
   position: relative;
 
   .home-banner-text-image {

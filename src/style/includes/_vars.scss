@@ -59,6 +59,10 @@ $jd-sans: Montserrat, sans-serif;
 
 .dark-blue-color {
   color: $jd-dark-blue;
+
+  strong {
+    color: $jd-dark-blue;
+  }
 }
 
 .light-blue-color {

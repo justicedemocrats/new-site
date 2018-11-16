@@ -26,7 +26,7 @@ export default class Plank extends React.Component {
     return (
       <div className="plank" onClick={this.state.open ? this.close : this.open}>
         <div
-          className="extra-bold-m light-blue-color plank-title"
+          className="extra-bold-m dark-blue-color plank-title"
           style={{ textTransform: "uppercase" }}
         >
           {this.state.open ? (
