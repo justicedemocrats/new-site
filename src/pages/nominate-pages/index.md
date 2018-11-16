@@ -67,12 +67,12 @@ stages:
       - label: State
         name: State
         required: true
-        type: input
+        type: state
         width: full
       - label: Congressional District
         name: District
         required: true
-        type: input
+        type: district
         width: full
     title: Tell Us About Yourself
   - display: both
