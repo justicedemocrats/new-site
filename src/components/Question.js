@@ -21,21 +21,21 @@ export default class Question extends React.Component {
   };
 
   render() {
-    const { setData, question, value, error } = this.props;
+    const { setData, question, value, error, otherData } = this.props;
     const { label, type, name, width, required } = question;
     return (
       <div className={getWidthClass(width)} style={{ flexDirection: "column" }}>
-        <label>
+        <label style={{ fontSize: 14 }}>
           {label}
           {required && "*"}
         </label>
         {error && <label style={{ color: "#d5176e" }}> {error} </label>}
-        {this.renderInput(type, name, value, error, setData)}
+        {this.renderInput(type, name, value, error, setData, otherData)}
       </div>
     );
   }
 
-  renderInput(type, name, value, error, setData) {
+  renderInput(type, name, value, error, setData, otherData) {
     let result;
     const inputStyle = Object.assign({}, baseInputStyle);
     if (error) {
@@ -92,20 +92,28 @@ export default class Question extends React.Component {
         break;
       case "district":
         result = (
-          <input
+          <select
             required={true}
-            type="text"
-            name={name}
-            value={value}
-            style={inputStyle}
             onChange={setData}
-          />
+            value={value}
+            disabled={typeof otherData.State !== "string"}
+          >
+            {states[otherData.State] == "00" && (
+              <option value="00"> AL </option>
+            )}
+            {typeof stages[otherData.State] == "string" &&
+              new Array(parseInt(otherData.State))
+                .fill(null)
+                .map((_, idx) => (
+                  <option value={otherData.State}> {otherData.State} </option>
+                ))}
+          </select>
         );
         break;
       case "state":
         result = (
           <select required={true} onChange={setData} value={value}>
-            {states.map(s => (
+            {Object.keys(states).map(s => (
               <option>{s} </option>
             ))}
           </select>
@@ -231,59 +239,59 @@ function getWidthClass(width) {
 }
 
 const baseInputStyle = {
-  width: "100%"
+  width: "100%",
+  fontSize: 14
 };
 
-const states = [
-  "AL",
-  "AK",
-  "AZ",
-  "AR",
-  "CA",
-  "CO",
-  "CT",
-  "DE",
-  "DC",
-  "FL",
-  "GA",
-  "HI",
-  "ID",
-  "IL",
-  "IN",
-  "IA",
-  "KS",
-  "KY",
-  "LA",
-  "ME",
-  "MD",
-  "MA",
-  "MI",
-  "MN",
-  "MS",
-  "MO",
-  "MT",
-  "NE",
-  "NV",
-  "NH",
-  "NJ",
-  "NM",
-  "NY",
-  "NC",
-  "ND",
-  "OH",
-  "OK",
-  "OR",
-  "PA",
-  "RI",
-  "SC",
-  "SD",
-  "TN",
-  "TX",
-  "UT",
-  "VT",
-  "VA",
-  "WA",
-  "WV",
-  "WI",
-  "WY"
-];
+const states = {
+  AK: "00",
+  AL: "07",
+  AR: "04",
+  AZ: "09",
+  CA: "53",
+  CO: "07",
+  CT: "05",
+  DE: "00",
+  FL: "27",
+  GA: "14",
+  HI: "02",
+  IA: "04",
+  ID: "02",
+  IL: "18",
+  IN: "09",
+  KS: "04",
+  KY: "06",
+  LA: "06",
+  MA: "09",
+  MD: "08",
+  ME: "02",
+  MI: "14",
+  MN: "08",
+  MO: "08",
+  MS: "04",
+  MT: "00",
+  NC: "13",
+  ND: "00",
+  NE: "03",
+  NH: "02",
+  NJ: "12",
+  NM: "03",
+  NV: "04",
+  NY: "27",
+  OH: "16",
+  OK: "05",
+  OR: "05",
+  PA: "18",
+  RI: "02",
+  SC: "07",
+  SD: "00",
+  TN: "09",
+  TX: "36",
+  UT: "04",
+  VA: "11",
+  VT: "00",
+  WA: "10",
+  WI: "08",
+  WV: "03",
+  WY: "00"
+};

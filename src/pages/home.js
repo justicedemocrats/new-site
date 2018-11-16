@@ -123,7 +123,14 @@ const IndexPage = ({ data }) => {
         <div className="block-contents row">
           <div className="six columns" style={{ color: "blue" }}>
             <div className="block-contents-left-chunk">
-              <div className="home-header-b extra-bold-m">{boldHeader}</div>
+              <div className="home-header-b extra-bold-m">
+                {boldHeader
+                  .split(".")
+                  .filter(section => section != "")
+                  .map((section, idx) =>
+                    idx > 0 ? [<br />, section + "."] : [section + "."]
+                  )}
+              </div>
               <div
                 className="home-subheader-b medium-m "
                 style={{ marginTop: 10 }}

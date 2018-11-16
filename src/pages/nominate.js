@@ -129,7 +129,7 @@ class NominatePageTemplate extends React.Component {
                 onClick={this.startNomination}
                 className="get-started-button extra-bold-m"
               >
-                Let's Take the First Step Together
+                Start Nominating Now
               </button>
               <HTMLContent
                 content={formIntro}

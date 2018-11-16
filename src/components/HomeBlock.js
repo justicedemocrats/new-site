@@ -46,6 +46,11 @@ export default ({
     </Link>
   );
 
+  const bannerTextWords = bannerText.split(" ");
+  const midwayPoint = Math.ceil(bannerTextWords.length / 2);
+  const beggingBannerText = bannerTextWords.slice(0, midwayPoint).join(" ");
+  const endBannerText = bannerTextWords.slice(midwayPoint).join(" ");
+
   return (
     <section className="home-block">
       <div
@@ -70,12 +75,8 @@ export default ({
             width: "100%"
           }}
         >
-          <div className="extra-bold-m home-header-w">
-            {bannerText.split(" ")[0]}
-          </div>
-          <div className="light-m home-header-w">
-            {bannerText.split(" ")[1]}
-          </div>
+          <div className="extra-bold-m home-header-w">{beggingBannerText}</div>
+          <div className="light-m home-header-w">{endBannerText}</div>
           <Link
             to={bannerButtonUrl}
             className="orange-bg extra-bold-m button-text callout-button plain-button extra-bold-m"

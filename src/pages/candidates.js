@@ -9,7 +9,9 @@ import sortBy from "lodash.sortby";
 const alphabeticalSort = (a, b) => {
   return a.toLowerCase() < b.toLowerCase()
     ? 1
-    : a.toLowerCase() > b.toLowerCase() ? 1 : 0;
+    : a.toLowerCase() > b.toLowerCase()
+    ? 1
+    : 0;
 };
 
 const lastWord = string => {
@@ -114,7 +116,9 @@ export class CandidatePageTemplate extends React.Component {
 
           <div className="candidates">
             {sortFunctions[this.state.sortFunction](candidates).map(
-              (props, i) => <Candidate key={i} {...props} />
+              (props, i) => (
+                <Candidate key={i} {...props} hideDonate={true} />
+              )
             )}
           </div>
         </div>
@@ -142,9 +146,9 @@ export class CandidatePageTemplate extends React.Component {
         </div>
         <div className="page-container">
           <div className="candidates">
-            {sortFunctions
-              .state(pastCandidates)
-              .map((props, i) => <Candidate key={i} {...props} />)}
+            {sortFunctions.state(pastCandidates).map((props, i) => (
+              <Candidate key={i} {...props} hideDonate={true} />
+            ))}
           </div>
         </div>
       </div>
@@ -157,7 +161,9 @@ CandidatePageTemplate.propTypes = {
 };
 
 const CandidatePage = ({ data }) => {
-  const { candidates: { edges } } = data;
+  const {
+    candidates: { edges }
+  } = data;
   const baseCandidates = edges.map(edge => edge.node.frontmatter);
   const candidates = baseCandidates.filter(c => c.outcome !== "Lost");
   const pastCandidates = baseCandidates.filter(c => c.outcome === "Lost");

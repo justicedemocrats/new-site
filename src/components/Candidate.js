@@ -38,8 +38,11 @@ class Candidate extends React.Component {
       donationLink,
       outcome,
       office,
-      incumbent
+      incumbent,
+      hideDonate
     } = this.props;
+
+    console.log(hideDonate);
 
     let ed = new Date(electionDate);
     let [d, m] = [ed.getDate(), ed.getMonth()];
@@ -71,7 +74,7 @@ class Candidate extends React.Component {
               backgroundSize: "cover"
             }}
           >
-            {outcome == "Won" ? (
+            {false ? (
               <div className="office bold-m dark-blue-bg">WON</div>
             ) : (
               <div className="office bold-m">
@@ -115,10 +118,12 @@ class Candidate extends React.Component {
             </div>
  */}
             <div className="links-container">
-              <a href={website} target="_blank">
-                <img src="/assets/candidate-home.svg" />
-              </a>
-              {donationLink && (
+              {!hideDonate && (
+                <a href={website} target="_blank">
+                  <img src="/assets/candidate-home.svg" />
+                </a>
+              )}
+              {donationLink && !hideDonate && (
                 <a href={donationLink} target="_blank">
                   <img src="/assets/candidate-donate.svg" />
                 </a>

@@ -60,7 +60,7 @@ class ModulePageTemplate extends React.Component {
             <HTMLContent
               content={preface}
               markdown={true}
-              className="medium-m"
+              className="medium-m font-size-16"
             />
 
             <Divider />

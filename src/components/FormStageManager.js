@@ -156,6 +156,7 @@ export default class FormStageManager extends React.Component {
                         setData={this.setData(q.name)}
                         value={this.state.data[q.name]}
                         key={q.name}
+                        otherData={this.state.data}
                       />
                     ))}
                   </div>
@@ -191,16 +192,16 @@ export default class FormStageManager extends React.Component {
       >
         <div className={"modal-content"}>
           <div className="modal-activity">
-            <h1>Nominate a Candidate</h1>
+            <h1>Submit a Nomination</h1>
             <p className="font-size-16">
-              We're accepting nominations for specific candidates, but we're
-              also accepting nominations for districts, even if you don't have a
-              candidate in mind.
+              We're accepting nominations for specific people, but we're also
+              accepting nominations for districts, even if you have a nominee in
+              mind.
             </p>
           </div>
           <div className="modal-action">
             <button style={buttonStyle} onClick={this.setMode("district")}>
-              I don't have a candidate yet
+              Nominate a District
             </button>
             <button style={buttonStyle} onClick={this.setMode("candidate")}>
               I have a candidate
