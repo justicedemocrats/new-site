@@ -34,8 +34,13 @@ formIntro: >-
 stages:
   - display: both
     questions:
-      - label: Your Full Name
-        name: Nominator Name
+      - label: Your First Name
+        name: Nominator First Name
+        type: input
+        width: half
+      - label: Your Last Name
+        name: Nominator Last Name
+        required: true
         type: input
         width: half
       - label: Your Email
@@ -66,8 +71,13 @@ stages:
     title: Why does your district/state need a Justice Democrat?
   - display: candidate
     questions:
-      - label: Nominee Full Name
-        name: Nominee Name
+      - label: Nominee First Name
+        name: Nominee First Name
+        type: input
+        width: half
+      - label: Nominee Last Name
+        name: Nominee Last Name
+        required: true
         type: input
         width: half
       - label: Nominee Phone Number

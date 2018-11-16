@@ -97,7 +97,7 @@ const CosignPage = props => {
 export default CosignPage;
 
 export const pageQuery = graphql`
-  query NominateQuery {
+  query CosignQuery {
     allMarkdownRemark(
       filter: { frontmatter: { uniq: { eq: "nominate-index" } } }
     ) {

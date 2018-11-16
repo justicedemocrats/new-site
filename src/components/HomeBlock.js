@@ -55,7 +55,8 @@ export default ({
           backgroundSize: "cover",
           height: "50vh",
           textTransform: "uppercase",
-          justifyContent: "center"
+          justifyContent: "center",
+          backgroundPositionX: "right"
         }}
       >
         <div

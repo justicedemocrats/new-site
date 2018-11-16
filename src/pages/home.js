@@ -145,7 +145,7 @@ const IndexPage = ({ data }) => {
           <div
             className="callout-container"
             style={{
-              borderBottom: "1px dotted orange"
+              borderBottom: "2px dotted #d5176e"
             }}
           >
             <Default>

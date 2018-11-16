@@ -2,7 +2,23 @@
 title: Field and Outreach
 templateKey: module-page
 reference: F2M2
-preface: Field and outreach preface
+preface: >-
+  ## Tell us how you are going to win votes
+
+
+  Justice Democrats win their elections with hard work and dedication, knocking
+  on doors, making phone calls, reaching out to communities across their
+  district. We are a part of a larger movement, replacing big money with big
+  organizing. Tell us how you are thinking about running your field and outreach
+  programs. Do your research and be as detailed as possible. Use these questions
+  below as a starting block, talk to others on your team and in your community,
+  and learn about voters in your district. This is the start of something big!
+
+
+  Please note: there is no prize for speed here! Take your time and think
+  through each question. We recommend writing your answers out in a separate
+  document and getting plenty of feedback from others before submitting to
+  Justice Democrats.
 redirect: "https://secure.actblue.com/donate/jd-nomination"
 questions:
   - label: >-
