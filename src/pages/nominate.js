@@ -227,6 +227,7 @@ export const pageQuery = graphql`
             formIntro
             stages {
               title
+              preface
               display
               questions {
                 label

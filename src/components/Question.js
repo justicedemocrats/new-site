@@ -94,6 +94,7 @@ export default class Question extends React.Component {
         result = (
           <div className="center-contents-column">
             <select
+              style={{ fontSize: 14 }}
               required={true}
               onChange={setData}
               value={value}
@@ -115,7 +116,11 @@ export default class Question extends React.Component {
                     )
                   )}
             </select>
-            <a target="_blank" href="https://callyourrep.co/">
+            <a
+              target="_blank"
+              href="https://callyourrep.co/"
+              style={{ fontSize: 14 }}
+            >
               Don't know your district?
             </a>
           </div>
@@ -123,7 +128,12 @@ export default class Question extends React.Component {
         break;
       case "state":
         result = (
-          <select required={true} onChange={setData} value={value}>
+          <select
+            required={true}
+            onChange={setData}
+            value={value}
+            style={{ fontSize: 14 }}
+          >
             <option value="" />
             {Object.keys(states).map(s => (
               <option>{s} </option>

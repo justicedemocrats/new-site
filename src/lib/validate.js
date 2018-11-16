@@ -22,6 +22,20 @@ const one = ({ name, value, type, required }) => {
     if (non_numbers.test(value)) {
       return `${name} must not have any letters`;
     }
+
+    if (value && value.replace(/^[0-9]/g, "").length == 10) {
+      return `${name} should have 10 digits`;
+    }
+  }
+
+  if (type === "zip" || name.toLowerCase().includes("zip")) {
+    if (non_numbers.test(value)) {
+      return `${name} must not have any letters`;
+    }
+
+    if (value && value.replace(/[^0-9]/g, "").length != 5) {
+      return `${name} should have 5 digits`;
+    }
   }
 
   if (type == "district") {

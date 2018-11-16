@@ -13,8 +13,8 @@ thankYou: |-
 
   You will receive an email shortly with further instructions.
 redirect: "https://secure.actblue.com/donate/jdpacslate"
-incumentsIntro: Justice Democrats in the House
-incumentsStatement: >-
+incumbentsIntro: Justice Democrats in the House
+incumbentsStatement: >-
   2019 Congress kicks off with 7 Justice Democrats pushing for change in the
   U.S. House of Representatives.
 lookingForBullets:
