@@ -7,7 +7,7 @@ bannerText: Platform for Justice
 header: 'OF, BY, AND FOR THE PEOPLE'
 subheader: A Platform Democrats Can Fight For
 sections:
-  - icon: /img/growth.svg
+  - icon: /img/jd_site_policy_icon_1_growth_nov18_rev.svg
     intro: >-
       We need a bold economic vision that will both reclaim lost capital and put
       money back in the pockets of hard-working Americans, and create millions
@@ -78,7 +78,7 @@ sections:
           of waging interventionist wars.
         title: End Unnecessary Wars and Nation Building
     title: Transform Our Economy
-  - icon: /img/rights.svg
+  - icon: /img/jd_site_policy_icon_2_rights_nov18_rev.svg
     intro: >-
       The growing disparities in income and wealth among our nation’s citizenry
       have long-term impacts on our population — for wealth accumulation, debt
@@ -172,7 +172,7 @@ sections:
           representation.
         title: Voting Rights
     title: Protect Our Rights
-  - icon: /img/democracy.svg
+  - icon: /img/jd_site_policy_icon_3_democracy_nov18.svg
     intro: >-
       We cannot afford to continue partisan jockeying on these issues; there is
       too much at stake. Americans must be provided a better chance to succeed
