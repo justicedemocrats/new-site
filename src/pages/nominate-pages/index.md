@@ -17,8 +17,8 @@ thankYou: >-
   If you do not see the email from us, please make sure to check your spam
   folder.
 redirect: "https://secure.actblue.com/donate/justicedemocrats"
-incumentsIntro: Justice Democrats in the House
-incumentsStatement: >-
+incumbentsIntro: Justice Democrats in the House
+incumbentsStatement: >-
   2019 Congress kicks off with 7 Justice Democrats pushing for change in the
   U.S. House of Representatives.
 lookingForBullets:
