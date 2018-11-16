@@ -46,7 +46,10 @@ formIntro: >-
 
 
   We’ll need some information to stay in touch throughout the process, please
-  fill out the form as best you can.
+  fill out the form as best you can. If you have any questions about the
+  process, please consult [our
+  guide](https://docs.google.com/document/d/10rxLBisP6kE8bWM-47_y-G7frgLPYU66BuMI9LmZgm0/edit?usp=sharing)
+  to the process.
 stages:
   - display: both
     questions:
