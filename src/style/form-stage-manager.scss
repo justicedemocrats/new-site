@@ -1,184 +1,191 @@
 @import "includes/includes";
 
+.get-started-button {
+  background-color: $jd-orange;
+  color: white;
+  border-radius: 0px;
+
+  &:hover {
+    color: white;
+  }
+}
+
 body.ReactModal__Body--open {
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
 .ReactModal__Overlay--after-open {
-    font-family: $jd-sans;
-    div.modal-counter {
-        display: flex;
-        flex-direction: row;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        background-color: whitesmoke;
+  font-family: $jd-sans;
+  div.modal-counter {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: whitesmoke;
 
-        div.counter-item {
-            flex-grow: 1;
-            flex-basis: 0;
-            height: 20px;
-            position: relative;
+    div.counter-item {
+      flex-grow: 1;
+      flex-basis: 0;
+      height: 20px;
+      position: relative;
 
-            &:after {
-                content: '';
-                width: 100%;
-                height: 2px;
-                background-color: $jd-text-gray;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            &:first-child:after {
-                width: 50%;
-                left: 50%;
-            }
-            &:last-child:after {
-                width: 50%;
-                right: 50%;
-            }
-            &:before {
-                width: 10px;
-                height: 10px;
-                position: relative;
-                background-color: $jd-text-gray;
-                content: '';
-                position: absolute;
-                border-radius: 10px;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
+      &:after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $jd-text-gray;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:first-child:after {
+        width: 50%;
+        left: 50%;
+      }
+      &:last-child:after {
+        width: 50%;
+        right: 50%;
+      }
+      &:before {
+        width: 10px;
+        height: 10px;
+        position: relative;
+        background-color: $jd-text-gray;
+        content: "";
+        position: absolute;
+        border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
-            &.counter-done {
-                &:before, &:after {
-                    background-color: $jd-orange;
-                }
-            }
+      &.counter-done {
+        &:before,
+        &:after {
+          background-color: $jd-orange;
         }
+      }
     }
-    div.modal-content {
-        max-height: calc(100vh - 150px);
-        div.modal-activity {
-            padding: 0 20px;
+  }
+  div.modal-content {
+    max-height: calc(100vh - 150px);
+    div.modal-activity {
+      padding: 0 20px;
 
-            h1 {
-                font-size: 24px;
-                text-transform: uppercase;
-                font-weight: 600;
-                color: $jd-dark-blue;
-                position: relative;
-                display: inline-block;
-                &:after {
-                    content: '';
-                    position: absolute;
-                    height: 2px;
-                    width: 100%;
-                    background-color: $jd-orange;
-                    bottom: 0;
-                    left: 0;
-                }
-            }
+      h1 {
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $jd-dark-blue;
+        position: relative;
+        display: inline-block;
+        &:after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          background-color: $jd-orange;
+          bottom: 0;
+          left: 0;
+        }
+      }
 
-            form {
-                label {
-                    margin-bottom: 0px;
-                    margin-top: 10px;
-                    font-size: 14px;
-                    font-weight: 400;
-                }
-                textarea, input[type='email'],input[type='tel'],
-                input[type='number'], input[type='text']{
-                    border-radius: 0;
-                    transition: border-top-width 0.2s;
-                    &:focus {
-                        border-color: lightgray;
-                        border-top: 3px solid $jd-light-blue;
-                    }
-                }
-            }
+      form {
+        label {
+          margin-bottom: 0px;
+          margin-top: 10px;
+          font-size: 14px;
+          font-weight: 400;
+        }
+        textarea,
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="text"] {
+          border-radius: 0;
+          transition: border-top-width 0.2s;
+          &:focus {
+            border-color: lightgray;
+            border-top: 3px solid $jd-light-blue;
+          }
+        }
+      }
+    }
+
+    div.modal-action {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 30px;
+
+      button {
+        flex-grow: 1;
+        flex-basis: 0;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+
+        border: 0;
+        background-color: $jd-dark-blue;
+        color: white;
+
+        border-left: 1px solid white;
+
+        &:first-child {
+          border-right: 1px solid white;
+          border-left: 0;
+        }
+
+        transition: background-color 0.2s;
+        &:hover {
+          background-color: $jd-light-blue;
+        }
+
+        &.submit {
+          background-color: $jd-orange;
+
+          &:hover {
+            background-color: whitesmoke;
+            color: $jd-orange;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    div.ReactModal__Content {
+      top: 60px !important;
+      transform: translateX(-50%) !important;
+      margin: 0 !important;
+      width: calc(100% - 20px);
+      padding: 0px !important;
+
+      left: 50% !important;
+      div.modal-content {
+        margin: 0;
+        div.modal-counter {
         }
 
         div.modal-action {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            margin-top: 30px;
+          padding: 5px;
+          flex-direction: column;
 
-            button {
-                flex-grow: 1;
-                flex-basis: 0;
-                border-radius: 0;
-                padding: 0;
-                margin: 0;
+          button {
+            flex-basis: 100%;
 
-                border: 0;
-                background-color: $jd-dark-blue;
-                color: white;
+            border: none;
+            border-top: 1px solid white;
 
-                border-left: 1px solid white;
-
-                &:first-child {
-                    border-right:1px solid white;
-                    border-left: 0;
-                }
-
-                transition: background-color .2s;
-                &:hover {
-                    background-color: $jd-light-blue;
-                }
-
-                &.submit {
-                    background-color: $jd-orange;
-
-                    &:hover {
-                        background-color: whitesmoke;
-                        color: $jd-orange;
-                    }
-                }
-                
-
+            &:first-child {
+              border-bottom: 1px solid white;
+              border-top: 0;
             }
+          }
         }
-        
+      }
     }
-
-    @media only screen and (max-width: 767px) {
-        div.ReactModal__Content {
-            top: 60px !important;
-            transform: translateX(-50%) !important;
-            margin: 0 !important;
-            width: calc(100% - 20px);
-            padding: 0px !important;
-
-            left: 50% !important;
-            div.modal-content {
-                margin: 0;
-                div.modal-counter {
-                }
-        
-                div.modal-action {
-                    padding: 5px;
-                    flex-direction: column;
-    
-                    button {
-                        flex-basis: 100%;
-    
-                        border: none;
-                        border-top: 1px solid white;
-    
-                        &:first-child {
-                            border-bottom:1px solid white;
-                            border-top: 0;
-                        }
-                    }
-    
-                    
-                }
-            }
-        }  
-    }
-    
+  }
 }
-

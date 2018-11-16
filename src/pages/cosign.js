@@ -1,8 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { HTMLContent } from "../components/Content";
 import Banner from "../components/Banner";
-import FormStageManager from "../components/FormStageManager";
 import "../style/issues.scss";
 
 const lastWord = string => {
@@ -10,30 +8,14 @@ const lastWord = string => {
   return list[list.length - 1];
 };
 
-class NominatePageTemplate extends React.Component {
-  state = {
-    nominating: false
-  };
-
+class CosignPageTemplate extends React.Component {
   startNomination = () => this.setState({ nominating: true });
   endNomination = () => this.setState({ nominating: false });
 
   render() {
     const {
-      html: body,
-      frontmatter: {
-        header,
-        subheader,
-        bannerBackgroundImage,
-        redirect,
-        bannerText,
-        stages,
-        lookingForBullets,
-        formIntro
-      }
+      frontmatter: { bannerBackgroundImage, redirect, bannerText }
     } = this.props;
-
-    const { nominating } = this.state;
 
     return (
       <div>
@@ -72,49 +54,26 @@ class NominatePageTemplate extends React.Component {
                 alignItems: "center"
               }}
             >
-              <div
-                className="extra-bold-m subheader-size dark-blue-color"
-                style={{ marginBottom: 20, fontSize: 42 }}
-              >
-                What We're Looking For:
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexWrap: "wrap"
-                }}
-              >
+              <div className="extra-bold-m"> What We're Looking For: </div>
+              <div style={{ display: "flex" }}>
                 {lookingForBullets.map(lf => (
-                  <div style={{ width: "30%", minWidth: 150 }}>
-                    <div
-                      className="extra-bold-m caps"
-                      style={{ textAlign: "center" }}
-                    >
-                      {lf.header}
-                    </div>
+                  <div>
+                    <div> {lf.header} </div>
                     <HTMLContent
                       content={lf.body}
                       markdown={true}
-                      className="medium-m text-align-justify"
+                      className="medium-m"
                     />
                   </div>
                 ))}
               </div>
-              <button
-                style={{ marginTop: 30, marginBottom: 30 }}
-                onClick={this.startNomination}
-                className="get-started-button extra-bold-m"
-              >
-                Let's Take the First Step Together
-              </button>
               <HTMLContent
                 content={formIntro}
                 markdown={true}
                 className="medium-m"
               />
             </div>
-
+            <button onClick={this.startNomination}>Let's Get Started</button>
             {nominating && (
               <FormStageManager
                 stages={stages}
@@ -129,17 +88,13 @@ class NominatePageTemplate extends React.Component {
   }
 }
 
-const NominatePage = props => {
+const CosignPage = props => {
   const data = props.data.allMarkdownRemark.edges[0].node;
 
-  return <NominatePageTemplate {...data} />;
+  return <CosignPageTemplate {...data} />;
 };
 
-NominatePage.propTypes = {
-  data: PropTypes.object.isRequired
-};
-
-export default NominatePage;
+export default CosignPage;
 
 export const pageQuery = graphql`
   query NominateQuery {
@@ -156,21 +111,6 @@ export const pageQuery = graphql`
             bannerBackgroundImage
             bannerText
             redirect
-            lookingForBullets {
-              header
-              body
-            }
-            formIntro
-            stages {
-              title
-              display
-              questions {
-                label
-                name
-                type
-                width
-              }
-            }
           }
         }
       }

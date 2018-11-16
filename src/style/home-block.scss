@@ -172,7 +172,7 @@
 
 .callout-container {
   padding: 20px 10px;
-  border-top: 1px dotted orange;
+  border-top: 1px dotted $jd-orange;
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -184,7 +184,6 @@
 }
 
 .home-banner {
-  background-size: cover;
   padding-top: 50;
   height: calc(100vh - 100px);
 

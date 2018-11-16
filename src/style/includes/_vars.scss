@@ -1,9 +1,14 @@
 // Color definitions
-$jd-dark-blue: #1c6087;
-$jd-light-blue: #0096b4;
-$jd-orange: #ff8c06;
+// $jd-dark-blue: #1c6087;
+// $jd-light-blue: #0096b4;
+// $jd-orange: #ff8c06;
 $jd-dark-dark-blue: #051832;
 $jd-text-gray: #575a5f;
+
+// New colors 11/15
+$jd-dark-blue: #00769c;
+$jd-orange: #d5176e;
+$jd-light-blue: #6fccdd;
 
 // Font definitions
 $jd-sans: Montserrat, sans-serif;
@@ -101,4 +106,8 @@ $jd-sans: Montserrat, sans-serif;
   justify-content: center;
   flex-direction: column;
   height: 100%;
+}
+
+.text-align-center {
+  text-align: center;
 }

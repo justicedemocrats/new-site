@@ -57,28 +57,20 @@ const IndexPage = ({ data }) => {
     introContent,
     firstCalloutIcon,
     firstCalloutText,
-    issuesIntro,
-    jdHighlightIcon,
-    jdHighlightHeader,
-    jdHighlightText
+    issuesIntro
   } = data.landingPage.edges[0].node.frontmatter;
 
-  const { candidates: { edges: candidateEdges } } = data;
+  const {
+    candidates: { edges: candidateEdges }
+  } = data;
   const candidates = candidateEdges.map(edge => edge.node.frontmatter);
 
   return (
     <div style={{ paddingLeft: 0, paddingRight: 0 }}>
-      <div
-        className="home-banner"
-        style={{
-          backgroundImage: `url(${bannerBackgroundImg})`
-        }}
-      >
-        <div
-          className="home-banner-text-image"
-          style={{
-            backgroundImage: `url(${bannerTextImg})`
-          }}
+      <div className="home-banner">
+        <img
+          src={bannerBackgroundImg}
+          style={{ width: "100%", height: "100%" }}
         />
         <Default>
           <form
@@ -203,31 +195,12 @@ const IndexPage = ({ data }) => {
           >
             <div style={{ display: "table", borderSpacing: 8 }}>
               <div className="carousel-container">
-                {sortFunctions
-                  .carousel(candidates)
-                  .map((c, idx) => <CarouselCandidate key={idx} {...c} />)}
+                {sortFunctions.carousel(candidates).map((c, idx) => (
+                  <CarouselCandidate key={idx} {...c} />
+                ))}
               </div>
             </div>
           </Link>
-        </div>
-      </div>
-
-      <div className="page-container">
-        <div className="highlight-container">
-          <Default>
-            <div className="icon">
-              <img src={jdHighlightIcon} style={{ maxHeight: 160 }} />
-            </div>
-          </Default>
-
-          <div className="highlight-contents">
-            <div className="highlight-header extra-bold-m">
-              {jdHighlightHeader}
-            </div>
-            <div className="highlight-text medium-m" style={{ fontSize: 15 }}>
-              {jdHighlightText}
-            </div>
-          </div>
         </div>
       </div>
 
@@ -279,7 +252,9 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
 
-      {blocks.map((b, i) => <HomeBlock key={i} {...b} />)}
+      {blocks.map((b, i) => (
+        <HomeBlock key={i} {...b} />
+      ))}
     </div>
   );
 };
