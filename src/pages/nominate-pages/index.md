@@ -34,8 +34,8 @@ lookingForBullets:
       Americans.
     icon: /img/jd_site_noninate_icon_movementbuilders_500x300.png
 formIntro: >-
-  **Let us know more about yourself, your district, and why you are so excited
-  about Justice Democrats!**
+  **Fill out the nomination form to tell us about your nominee, the district,
+  yourself, and why you are so excited about Justice Democrats.**
 
 
   We’ll need some information to stay in touch throughout the process, please
