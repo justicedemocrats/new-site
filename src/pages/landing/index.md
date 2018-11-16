@@ -37,15 +37,15 @@ jdHighlightIcon: /img/products-grid1.jpg
 blocks:
   - alignment: left
     bannerButtonText: Nominate
-    bannerButtonUrl: /
+    bannerButtonUrl: /nominate
     bannerImageUrl: /img/jd_site_home_calloutbanner_1_aoc_1920x540_111518.jpg
     bannerText: The Next Ocasio-Cortez
     calloutIcon: ''
     calloutText: ''
     header: 'Elect a new generation of diverse, working class Democrats'
     htmlContent: "**We recruited, trained and helped Alexandria pull off one of the biggest upsets in American history.** But the top of the Democratic Party is still disproportionately wealthier, whiter, and more male than the base. \r\n\n**Now it’s time for more leaders in the Democratic Party who don’t just represent the corporate donors, but the voters of the Democratic Party:** women, people of color, young people, and working class people of all backgrounds and help build our multiracial populist movement."
-    moreButtonText: ''
-    moreButtonUrl: ''
+    moreButtonText: See our 2018 Slate
+    moreButtonUrl: /candidates
     subheader: >-
       We need a caucus of mission- driven members of Congress who vote together
       and help build the movement.
