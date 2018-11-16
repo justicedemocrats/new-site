@@ -10,6 +10,10 @@ subheader: >-
   2020. 
 thankYou: Thank you
 redirect: 'https://secure.actblue.com/donate/jdpacslate'
+incumentsIntro: Justice Democrats in the House
+incumentsStatement: >-
+  2019 Congress kicks off with 7 Justice Democrats pushing for change in the
+  U.S. House of Representatives.
 lookingForBullets:
   - header: Bold Leaders
     body: >-
