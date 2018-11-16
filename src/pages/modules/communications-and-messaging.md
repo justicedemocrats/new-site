@@ -1,7 +1,7 @@
 ---
 title: Communications and Messaging
 templateKey: module-page
-reference: F2M3
+reference: F2M1
 preface: >-
   Our movement is founded on a bold vision of justice. Successful candidates are
   able to articulate their message, weaving together that larger vision with
