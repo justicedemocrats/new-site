@@ -185,7 +185,8 @@
 
 .home-banner {
   padding-top: 50;
-  height: calc(100vh - 100px);
+  height: calc(100vw * 0.56);
+  position: relative;
 
   .home-banner-text-image {
     height: calc(100% - 60px);
@@ -199,7 +200,7 @@
   .home-banner {
     background-size: cover;
     padding-top: 50;
-    height: calc(100vh - 100px);
+    height: calc(100vw * 0.56 + 170px);
 
     .home-banner-text-image {
       height: calc(100% - 155px);

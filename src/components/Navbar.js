@@ -14,8 +14,8 @@ const Default = props => <Responsive {...props} minWidth={768} />;
 const links = [
   { display: "Home", href: "/home" },
   { display: "About", href: "/about" },
-  { display: "Policies", href: "/issues" },
-  { display: "Candidates", href: "/candidates" },
+  { display: "Platform", href: "/issues" },
+  { display: "Nominate", href: "/nominate" },
   // { display: 'News', href: '/news'},
   // { display: 'Actions', href: '/actions'},
   { display: "Store", href: "https://shop.justicedemocrats.com" },
@@ -97,24 +97,19 @@ class Navbar extends React.Component {
               </a>
             </div>
             <div className="navbar-hanger">
-              {links.map(
-                ({ display, href }) =>
-                  href.startsWith("https://") ? (
-                    <a
-                      className="hanger-link bold-m"
-                      href={href}
-                      target="_blank"
-                    >
-                      <div> {display} </div>
-                    </a>
-                  ) : (
-                    <Link
-                      className={`hanger-link bold-m ${display.toLowerCase()}`}
-                      to={href}
-                    >
-                      <div> {display} </div>
-                    </Link>
-                  )
+              {links.map(({ display, href }) =>
+                href.startsWith("https://") ? (
+                  <a className="hanger-link bold-m" href={href} target="_blank">
+                    <div> {display} </div>
+                  </a>
+                ) : (
+                  <Link
+                    className={`hanger-link bold-m ${display.toLowerCase()}`}
+                    to={href}
+                  >
+                    <div> {display} </div>
+                  </Link>
+                )
               )}
             </div>
           </div>
@@ -192,6 +187,10 @@ const DonateLink = () => (
 );
 const HeaderLogo = () => (
   <Link to="/home" style={{ height: 30 }} className="header-logo">
-    <img style={{ height: 30 }} src="/assets/jd-logo-horiz.svg" alt="Justice Democrats" />
+    <img
+      style={{ height: 30 }}
+      src="/assets/jd-logo-horiz.svg"
+      alt="Justice Democrats"
+    />
   </Link>
 );

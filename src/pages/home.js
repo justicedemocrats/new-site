@@ -70,7 +70,7 @@ const IndexPage = ({ data }) => {
       <div className="home-banner">
         <img
           src={bannerBackgroundImg}
-          style={{ width: "100%", height: "100%" }}
+          style={{ width: "100%", position: "absolute" }}
         />
         <Default>
           <form
@@ -83,7 +83,10 @@ const IndexPage = ({ data }) => {
             action="/donate"
             style={{
               backgroundColor: "rgba(255, 255, 255, .8)",
-              minHeight: 60
+              minHeight: 60,
+              position: "absolute",
+              bottom: 0,
+              marginBottom: -3
             }}
           >
             <input type="hidden" name="form-name" value="main-signup" />
@@ -100,7 +103,11 @@ const IndexPage = ({ data }) => {
             data-netlify-honeypot="bot-field"
             method="post"
             action="/donate"
-            style={{ backgroundColor: "rgba(255, 255, 255, .8)" }}
+            style={{
+              backgroundColor: "rgba(255, 255, 255, .8)",
+              position: "absolute",
+              bottom: 0
+            }}
           >
             <div className="sign-up-row">{renderSignUpInputs()}</div>
             <div className="sign-up-row">{renderSignUpButton()}</div>
@@ -161,7 +168,7 @@ const IndexPage = ({ data }) => {
         )}
       </div>
 
-      <div
+      {/* <div
         style={{
           padding: 40,
           display: "flex",
@@ -203,7 +210,7 @@ const IndexPage = ({ data }) => {
           </Link>
         </div>
       </div>
-
+ */}
       <div
         style={{
           padding: 40,
@@ -226,7 +233,7 @@ const IndexPage = ({ data }) => {
             className="primary-issues-container row"
             style={{ marginTop: 30 }}
           >
-            {primaryIssues.map(({ text, image, url }) => (
+            {primaryIssues.map(({ text, image, url, color }) => (
               <div
                 style={{
                   height: 300,
@@ -240,7 +247,12 @@ const IndexPage = ({ data }) => {
                   style={{
                     textDecoration: "none",
                     bottom: 0,
-                    marginTop: "auto"
+                    marginTop: "auto",
+                    backgroundColor: {
+                      pink: "#d5176e",
+                      aqua: "#6fccdd",
+                      blue: "#00769c"
+                    }[color]
                   }}
                   href={url}
                 >
@@ -286,6 +298,7 @@ export const pageQuery = graphql`
               text
               image
               url
+              color
             }
             jdHighlightIcon
             jdHighlightHeader

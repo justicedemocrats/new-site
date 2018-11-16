@@ -199,6 +199,7 @@ collections:
             name: "lookingForBullets"
             widget: "list"
             fields:
+              - { label: "Icon", name: "icon", widget: "image" }
               - { label: "Header", name: "header", widget: "string" }
               - { label: "Body", name: "body", widget: "markdown" }
           - { label: "Form Intro", name: "formIntro", widget: "markdown" }
@@ -338,6 +339,12 @@ collections:
               - { label: "Text", name: "text", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Url", name: "url", widget: "string" }
+              - {
+                  label: "Color",
+                  name: "color",
+                  widget: "select",
+                  options: ["pink", "aqua", "blue"],
+                }
 
           - {
               label: "JD Highlight Header",
