@@ -19,13 +19,16 @@ firstCalloutText: >-
   in the Democratic Party that will represent and fight for our communities.
 issuesIntro: 'A Party for Voters, Not Donors'
 primaryIssues:
-  - image: /img/jd_site_policy_icon_2_rights_nov18_rev.svg
+  - color: pink
+    image: /img/jd_site_policy_icon_2_rights_nov18_rev.svg
     text: Medicare for All
     url: '/issues#economy'
-  - image: /img/jd_site_policy_icon_1_growth_nov18_rev.svg
+  - color: aqua
+    image: /img/jd_site_policy_icon_1_growth_nov18_rev.svg
     text: Green New Deal
     url: '/issues#rights'
-  - image: /img/jd_site_policy_icon_3_democracy_nov18.svg
+  - color: blue
+    image: /img/jd_site_policy_icon_3_democracy_nov18.svg
     text: Racial Justice
     url: '/issues#democracy'
 jdHighlightHeader: THIS SECTION GOES AWAY
