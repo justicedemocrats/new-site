@@ -106,6 +106,27 @@ export default class Question extends React.Component {
             />
           </div>
         );
+        break;
+      case "cosigners":
+        result = (
+          <div>
+            {value.length == 0 && (
+              <div className="row">
+                <input type="text" name="name" value={value[0].name} />
+                <input type="email" name="email" value={value[0].email} />
+                <input
+                  type="text"
+                  maxLength="5"
+                  name="zip"
+                  value={value[0].zip}
+                />
+              </div>
+            )}
+            {value.length < 3 && (
+              <button className="button"> &#65291; Add Cosigner </button>
+            )}
+          </div>
+        );
     }
 
     return result;

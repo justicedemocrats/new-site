@@ -46,7 +46,8 @@ export default class FormStageManager extends React.Component {
       Object.assign({}, q, { value: this.state.data[q.name] })
     );
 
-    const errors = validate(questions);
+    // const errors = validate(questions);
+    const errors = undefined;
     if (!errors) {
       this.setState({
         stage: this.state.stage + 1
