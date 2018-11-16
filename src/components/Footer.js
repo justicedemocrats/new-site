@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export default class Footer extends React.Component {
   render() {
@@ -10,12 +10,12 @@ export default class Footer extends React.Component {
       socialIcons,
       paidForMessage,
       copyright,
-      phone
-    } = this.props;
+      phone,
+    } = this.props
 
     return (
       <div>
-        <div className="my-footer dark-blue-bg row" style={{ color: "white" }}>
+        <div className="my-footer dark-blue-bg row" style={{ color: 'white' }}>
           <div className="footer-section six columns">
             <div className="footer-section-title extra-bold-m">Contact Us</div>
             <div className="footer-section-contents medium-m standard-text contact">
@@ -64,7 +64,7 @@ export default class Footer extends React.Component {
 
             <div className="social-icons">
               {socialIcons
-                .filter(({ type }) => type == "social")
+                .filter(({ type }) => type == 'social')
                 .map(({ icon, url }) => (
                   <a href={url} target="_blank">
                     <img src={icon} />
@@ -74,7 +74,7 @@ export default class Footer extends React.Component {
               <div className="icon-divider" />
 
               {socialIcons
-                .filter(({ type }) => type == "contact")
+                .filter(({ type }) => type == 'contact')
                 .map(({ icon, url }) => (
                   <a href={url} target="_blank">
                     <img src={icon} />
@@ -90,6 +90,6 @@ export default class Footer extends React.Component {
           <div className="light-m dark-blue-color copyright">{copyright}</div>
         </div>
       </div>
-    );
+    )
   }
 }

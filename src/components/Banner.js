@@ -1,12 +1,12 @@
-import React from "react";
-import "../style/banner.scss";
+import React from 'react'
+import '../style/banner.scss'
 
 export default props => {
-  const { backgroundImage, text } = props;
-  const words = text.split(" ");
-  const first = words[0];
-  const last = words[words.length - 1];
-  const rest = words.slice(1, words.length - 1).join(" ");
+  const { backgroundImage, text } = props
+  const words = text.split(' ')
+  const first = words[0]
+  const last = words[words.length - 1]
+  const rest = words.slice(1, words.length - 1).join(' ')
 
   return (
     <div
@@ -21,5 +21,5 @@ export default props => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

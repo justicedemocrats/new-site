@@ -1,19 +1,19 @@
-import React from "react";
-import "../style/candidate.scss";
+import React from 'react'
+import '../style/candidate.scss'
 
 const officeTypeMap = {
-  governor: "GOV",
-  senate: "SN",
-  "lieutenant-governor": "LTGOV"
-};
+  governor: 'GOV',
+  senate: 'SN',
+  'lieutenant-governor': 'LTGOV',
+}
 
 const electionTypeMap = {
-  fake: "FAKE",
-  primary: "Primary"
-};
+  fake: 'FAKE',
+  primary: 'Primary',
+}
 
 export default class CarouselCandidate extends React.Component {
-  state = { expanded: false };
+  state = { expanded: false }
 
   render() {
     const {
@@ -24,28 +24,28 @@ export default class CarouselCandidate extends React.Component {
       electionDate,
       image,
       office,
-      electionType
-    } = this.props;
+      electionType,
+    } = this.props
 
-    let ed = new Date(electionDate);
-    let [d, m] = [ed.getDate(), ed.getMonth()];
-    m = m + 1;
-    d = d + 1;
+    let ed = new Date(electionDate)
+    let [d, m] = [ed.getDate(), ed.getMonth()]
+    m = m + 1
+    d = d + 1
 
     return (
       <div className="carousel-candidate">
         <div
           className="carousel-headshot"
           style={{
-            backgroundImage: `url(${(image || defaultImage).trim('"')})`
+            backgroundImage: `url(${(image || defaultImage).trim('"')})`,
           }}
         />
 
         <div
           className="district bold-m dark-blue-bg banner full-center"
-          style={{ color: "white" }}
+          style={{ color: 'white' }}
         >
-          {state}-{office == "house" ? district : officeTypeMap[office]}
+          {state}-{office == 'house' ? district : officeTypeMap[office]}
         </div>
 
         <div className="full-center name">
@@ -56,11 +56,11 @@ export default class CarouselCandidate extends React.Component {
 
         <div
           className="rate-date dark-blue-bg banner full-center"
-          style={{ color: "white" }}
+          style={{ color: 'white' }}
         >
           {m}/{d}
         </div>
       </div>
-    );
+    )
   }
 }

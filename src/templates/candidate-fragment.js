@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 
-export const CandidateFragmentTemplate = () => <div />;
+export const CandidateFragmentTemplate = () => <div />
 
 const CandidateFragment = () => {
-  return <div />;
-};
+  return <div />
+}
 
-export default CandidateFragment;
+export default CandidateFragment

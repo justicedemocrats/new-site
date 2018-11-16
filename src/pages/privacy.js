@@ -1,20 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { HTMLContent } from "../components/Content";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { HTMLContent } from '../components/Content'
 
 const PrivacyPage = ({ data }) => {
-  const html = data.privacyPages.edges[0].node.html;
+  const html = data.privacyPages.edges[0].node.html
 
-  console.log(html);
+  console.log(html)
 
   return (
     <div style={{ paddingLeft: 100, paddingRight: 100, minHeight: 200 }}>
       <HTMLContent content={html} className="medium-m standard-text" />
     </div>
-  );
-};
+  )
+}
 
-export default PrivacyPage;
+export default PrivacyPage
 
 export const pageQuery = graphql`
   query PageQuery {
@@ -28,4 +28,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

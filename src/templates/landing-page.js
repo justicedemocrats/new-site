@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Content, { HTMLContent } from "../components/Content";
+import React from 'react'
+import PropTypes from 'prop-types'
+import Content, { HTMLContent } from '../components/Content'
 
 export const LandingPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content;
+  const PageContent = contentComponent || Content
 
   return (
     <section className="section section--gradient">
@@ -20,11 +20,11 @@ export const LandingPageTemplate = ({ title, content, contentComponent }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 const LandingPage = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
 
   return (
     <LandingPageTemplate
@@ -32,10 +32,10 @@ const LandingPage = ({ data }) => {
       title={post.frontmatter.title}
       content={post.html}
     />
-  );
-};
+  )
+}
 
-export default LandingPage;
+export default LandingPage
 
 export const pageQuery = graphql`
   query LandingPage($id: String!) {
@@ -46,4 +46,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

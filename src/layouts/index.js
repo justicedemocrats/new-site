@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import "./all.sass";
-import "../style/footer.scss";
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
+import './all.sass'
+import '../style/footer.scss'
 
 const TemplateWrapper = ({ data, children, location }) => {
-  const content = data.allMarkdownRemark.edges[0].node.frontmatter;
+  const content = data.allMarkdownRemark.edges[0].node.frontmatter
 
   return (
     <div>
@@ -16,12 +16,12 @@ const TemplateWrapper = ({ data, children, location }) => {
       <div>{children()}</div>
       <Footer {...content} />
     </div>
-  );
-};
+  )
+}
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func
-};
+  children: PropTypes.func,
+}
 
 export const pageQuery = graphql`
   query TemplateQuery {
@@ -49,6 +49,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
 
-export default TemplateWrapper;
+export default TemplateWrapper
