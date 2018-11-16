@@ -342,7 +342,7 @@ collections:
               - {
                   label: "Color",
                   name: "color",
-                  widget: "dropdown",
+                  widget: "select",
                   options: ["pink", "aqua", "blue"],
                 }
 
