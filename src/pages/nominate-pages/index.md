@@ -8,7 +8,10 @@ header: Need 2Words
 subheader: >-
   We are searching for bold,  compelling leaders to run as Justice Democrats in
   2020. 
-thankYou: Thank you
+thankYou: |-
+  # Your Submission Has Been Received
+
+  You will receive an email shortly with further instructions.
 redirect: 'https://secure.actblue.com/donate/jdpacslate'
 incumentsIntro: Justice Democrats in the House
 incumentsStatement: >-
