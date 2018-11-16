@@ -86,10 +86,26 @@ class NominatePageTemplate extends React.Component {
                 }}
               >
                 {lookingForBullets.map(lf => (
-                  <div style={{ width: "30%", minWidth: 150 }}>
+                  <div
+                    style={{
+                      width: "30%",
+                      minWidth: 150,
+                      alignItems: "center"
+                    }}
+                    className="center-contents-column"
+                  >
+                    <img
+                      src={lf.icon}
+                      style={{ width: "50%", marginBottom: 10 }}
+                    />
                     <div
                       className="extra-bold-m caps"
-                      style={{ textAlign: "center", fontSize: 25 }}
+                      style={{
+                        textAlign: "center",
+                        fontSize: 25,
+                        lineHeight: "25px",
+                        marginBottom: 6
+                      }}
                     >
                       {lf.header.split(" ")[0]}
                       <br />
@@ -98,13 +114,13 @@ class NominatePageTemplate extends React.Component {
                     <HTMLContent
                       content={lf.body}
                       markdown={true}
-                      className="medium-m text-align-justify"
+                      className="medium-m text-align-center font-size-16"
                     />
                   </div>
                 ))}
               </div>
               <button
-                style={{ marginTop: 30, marginBottom: 30 }}
+                style={{ marginTop: 30, marginBottom: 30, fontSize: 19 }}
                 onClick={this.startNomination}
                 className="get-started-button extra-bold-m"
               >
@@ -113,7 +129,7 @@ class NominatePageTemplate extends React.Component {
               <HTMLContent
                 content={formIntro}
                 markdown={true}
-                className="medium-m"
+                className="medium-m font-size-20 text-align-center"
               />
             </div>
 
@@ -159,6 +175,7 @@ export const pageQuery = graphql`
             bannerText
             redirect
             lookingForBullets {
+              icon
               header
               body
             }

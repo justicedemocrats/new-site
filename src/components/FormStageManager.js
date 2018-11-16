@@ -15,7 +15,6 @@ const customStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
-    margin: "0 50px",
     transform: "translateX(-50%)",
     borderRadius: 0,
     border: "none",
@@ -159,7 +158,7 @@ export default class FormStageManager extends React.Component {
         <div className={"modal-content"}>
           <div className="modal-activity">
             <h1>Nominate a Candidate</h1>
-            <p>
+            <p className="font-size-16">
               We're accepting nominations for specific candidates, but we're
               also accepting nominations for districts, even if you don't have a
               candidate in mind.
