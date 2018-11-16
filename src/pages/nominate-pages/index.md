@@ -175,10 +175,10 @@ stages:
     title: Tell Us A Little More About Yourself
   - display: candidate
     questions:
-      - label: Co-Signers
-        name: >-
+      - label: >-
           Please add anyone here who also supports this nomination! They will
           get a separate email as well.
+        name: Co-Signers
         type: cosigners
     title: Co-Signers
 ---
