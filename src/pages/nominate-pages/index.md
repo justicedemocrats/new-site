@@ -2,9 +2,9 @@
 templateKey: ignore-fragment
 uniq: nominate-index
 title: Justice Democrats | Nominate
-bannerBackgroundImage: /img/jd_website_policies_banner_1920x540_061418.jpg
+bannerBackgroundImage: /img/jd_site_nominate_banner_1920x540_111518_temp.png
 bannerText: Candidates For Justice
-header: Need Headline
+header: Need 2Words
 subheader: >-
   We are searching for bold,  compelling leaders to run as Justice Democrats in
   2020. 
