@@ -245,6 +245,7 @@ collections:
                         "dropdown",
                         "radio",
                         "checkbox",
+                        "cosigners",
                       ]
                   - label: "Question Width"
                     name: "width"

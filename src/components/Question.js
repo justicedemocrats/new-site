@@ -3,6 +3,23 @@ import React from "react";
 export default class Question extends React.Component {
   state = {};
 
+  editCosigner = (idx, attr) => ev => {
+    const cosigner = Object.assign(
+      {},
+      (this.props.value && this.props.value[idx]) || {}
+    );
+    cosigner[attr] = ev.target.value;
+    const new_cosigners = (this.props.value || []).slice(0);
+    new_cosigners[idx] = cosigner;
+    this.props.setData({ target: { value: new_cosigners } });
+  };
+
+  addCosigner = () => {
+    const value = (this.props.value || []).slice(0);
+    value.push({});
+    this.props.setData({ target: { value: value } });
+  };
+
   render() {
     const { setData, question, value, error } = this.props;
     const { label, type, name, width, required } = question;
@@ -110,20 +127,82 @@ export default class Question extends React.Component {
       case "cosigners":
         result = (
           <div>
-            {value.length == 0 && (
-              <div className="row">
-                <input type="text" name="name" value={value[0].name} />
-                <input type="email" name="email" value={value[0].email} />
-                <input
-                  type="text"
-                  maxLength="5"
-                  name="zip"
-                  value={value[0].zip}
-                />
+            {!value && (
+              <div style={{ display: "flex" }}>
+                <div>
+                  <label> Name </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={value && value[0].name}
+                    onChange={this.editCosigner(0, "name")}
+                  />
+                </div>
+                <div>
+                  <label> Email </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={value && value[0].email}
+                    onChange={this.editCosigner(0, "email")}
+                  />
+                </div>
+                <div>
+                  <label> Zip </label>
+                  <input
+                    type="text"
+                    maxLength="5"
+                    name="zip"
+                    value={value && value[0].zip}
+                    onChange={this.editCosigner(0, "zip")}
+                  />
+                </div>
               </div>
             )}
-            {value.length < 3 && (
-              <button className="button"> &#65291; Add Cosigner </button>
+
+            {value &&
+              value.map((v, idx) => (
+                <div style={{ display: "flex" }}>
+                  <div>
+                    <label> Name </label>
+                    <input
+                      key={`${idx}-name`}
+                      type="text"
+                      name="name"
+                      value={value && value[idx].name}
+                      onChange={this.editCosigner(idx, "name")}
+                    />
+                  </div>
+
+                  <div>
+                    <label> Email </label>
+                    <input
+                      key={`${idx}-email`}
+                      type="email"
+                      name="email"
+                      value={value && value[idx].email}
+                      onChange={this.editCosigner(idx, "email")}
+                    />
+                  </div>
+
+                  <div>
+                    <label> Zip </label>
+                    <input
+                      type="text"
+                      key={`${idx}-zip`}
+                      maxLength="5"
+                      name="zip"
+                      value={value && value[idx].zip}
+                      onChange={this.editCosigner(idx, "zip")}
+                    />
+                  </div>
+                </div>
+              ))}
+
+            {value && value.length < 3 && (
+              <button className="button" onClick={this.addCosigner}>
+                &#65291; Add Cosigner
+              </button>
             )}
           </div>
         );

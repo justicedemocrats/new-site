@@ -173,6 +173,14 @@ stages:
         type: textarea
         width: half
     title: Tell Us A Little More About Yourself
+  - display: candidate
+    questions:
+      - label: Co-Signers
+        name: >-
+          Please add anyone here who also supports this nomination! They will
+          get a separate email as well.
+        type: cosigners
+    title: Co-Signers
 ---
 
 **Is the next Alexandria Ocasio-Cortez, the next Rashida Tlaib, the next Ayanna Pressley in your district?**

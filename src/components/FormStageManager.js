@@ -27,7 +27,7 @@ const customStyles = {
 
 export default class FormStageManager extends React.Component {
   state = {
-    stage: 0,
+    stage: 6,
     data: {},
     errors: {},
     error: undefined,
@@ -60,6 +60,7 @@ export default class FormStageManager extends React.Component {
   setMode = mode => () => this.setState({ mode });
   setData = attribute => ev => {
     const value = ev.target.value;
+    console.log({ attribute, value });
     this.setState(prevState => {
       const data = Object.assign({}, prevState.data, { [attribute]: value });
       return Object.assign(prevState, { data });
