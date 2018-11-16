@@ -195,6 +195,16 @@ collections:
           - { label: "Body", name: "body", widget: "markdown" }
           - { label: "Thank You Content", name: "thankYou", widget: "markdown" }
           - { label: "Redirect", name: "redirect" }
+          - {
+              label: "Incumbents Intro",
+              name: "incumentsIntro",
+              widget: "string",
+            }
+          - {
+              label: "Incumbents Statement",
+              name: "incumentsStatement",
+              widget: "string",
+            }
           - label: "Looking For Bullets"
             name: "lookingForBullets"
             widget: "list"
