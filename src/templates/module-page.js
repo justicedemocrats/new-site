@@ -80,7 +80,7 @@ class ModulePageTemplate extends React.Component {
                 <button onClick={this.submit}> Submit </button>
               </div>
             ) : (
-              <div>
+              <div className="medium-m font-size-20">
                 <h1> Thanks for your submission! </h1>
                 <p> We'll be in touch soon with next steps. </p>
               </div>

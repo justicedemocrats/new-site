@@ -34,7 +34,8 @@ class NominatePageTemplate extends React.Component {
         lookingForBullets,
         formIntro,
         incumbentsIntro,
-        incumbentsStatement
+        incumbentsStatement,
+        thankYou
       }
     } = this.props;
 
@@ -79,7 +80,7 @@ class NominatePageTemplate extends React.Component {
             >
               <div
                 className="extra-bold-m subheader-size dark-blue-color"
-                style={{ marginBottom: 20, fontSize: 42 }}
+                style={{ marginBottom: 20, fontSize: 42, marginTop: 20 }}
               >
                 What We're Looking For:
               </div>
@@ -143,6 +144,7 @@ class NominatePageTemplate extends React.Component {
                 stages={stages}
                 redirect={redirect}
                 endNomination={this.endNomination}
+                thankYou={thankYou}
               />
             )}
           </div>
@@ -214,6 +216,7 @@ export const pageQuery = graphql`
             bannerBackgroundImage
             bannerText
             redirect
+            thankYou
             incumbentsIntro
             incumbentsStatement
             lookingForBullets {

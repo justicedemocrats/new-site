@@ -22,26 +22,24 @@ const lastWord = string => {
 export const sortFunctions = {
   state: candidates => sortBy(candidates, c => `${c.state}${c.district}`),
   alphabetical: candidates => sortBy(candidates, c => lastWord(c.lastName)),
-  electionDate: candidates =>
+  primaryWinners: candidates =>
     sortBy(
       sortBy(
-        candidates.filter(c => c.outcome != "Won"),
+        candidates.filter(c => c.electionType == "general"),
         c => `${c.state}${c.district}`
       ),
       c => new Date(c.electionDate)
     ),
-  carousel: candidates =>
+  generalWinners: candidates =>
     sortBy(
       sortBy(
-        sortBy(candidates, c => `${c.state}${c.district}`),
+        sortBy(
+          candidates.filter(c => c.outcome == "Won"),
+          c => `${c.state}${c.district}`
+        ),
         c => new Date(c.electionDate)
       ),
       c => (c.outcome == "Won" ? "A" : "Z")
-    ),
-  general: candidates =>
-    sortBy(
-      candidates.filter(c => c.outcome == "Won"),
-      c => `${c.outcome == "Won" ? "A" : "Z"}${c.state}${c.district}`
     )
 };
 
@@ -55,7 +53,6 @@ export class CandidatePageTemplate extends React.Component {
       bannerBackgroundImage,
       bannerText,
       candidates,
-      pastCandidates,
       stats,
       intro,
       priorCandidatesIntro
@@ -94,8 +91,8 @@ export class CandidatePageTemplate extends React.Component {
             {[
               ["State/District", "state"],
               ["Alphabetical", "alphabetical"],
-              ["Upcoming Primaries", "electionDate"],
-              ["General Election", "general"]
+              ["Primary Winners", "primaryWinners"],
+              ["General Election", "generalWinners"]
             ].map(([label, key]) => (
               <button
                 onClick={this.currySetSort(key)}
@@ -107,20 +104,20 @@ export class CandidatePageTemplate extends React.Component {
             ))}
             <a
               className="sort-button orange-bg extra-bold-m orange-border button"
-              href="https://secure.actblue.com/donate/jd-candidates?refcode=candidatepage"
+              href="https://secure.actblue.com/donate/justicedemocrats?refcode=candidatesection"
               target="_blank"
             >
               Donate to All
             </a>
           </div>
 
-          <div className="candidates">
+          {/* <div className="candidates">
             {sortFunctions[this.state.sortFunction](candidates).map(
               (props, i) => (
                 <Candidate key={i} {...props} hideDonate={true} />
               )
             )}
-          </div>
+          </div> */}
         </div>
         <div className="divider" />
         <div className="page-container">
@@ -146,9 +143,11 @@ export class CandidatePageTemplate extends React.Component {
         </div>
         <div className="page-container">
           <div className="candidates">
-            {sortFunctions.state(pastCandidates).map((props, i) => (
-              <Candidate key={i} {...props} hideDonate={true} />
-            ))}
+            {sortFunctions[this.state.sortFunction](candidates).map(
+              (props, i) => (
+                <Candidate key={i} {...props} hideDonate={true} />
+              )
+            )}
           </div>
         </div>
       </div>
@@ -165,8 +164,7 @@ const CandidatePage = ({ data }) => {
     candidates: { edges }
   } = data;
   const baseCandidates = edges.map(edge => edge.node.frontmatter);
-  const candidates = baseCandidates.filter(c => c.outcome !== "Lost");
-  const pastCandidates = baseCandidates.filter(c => c.outcome === "Lost");
+  const candidates = baseCandidates;
   const {
     bannerBackgroundImage,
     bannerText,
@@ -178,7 +176,6 @@ const CandidatePage = ({ data }) => {
   return (
     <CandidatePageTemplate
       candidates={candidates}
-      pastCandidates={pastCandidates}
       bannerBackgroundImage={bannerBackgroundImage}
       bannerText={bannerText}
       intro={intro}

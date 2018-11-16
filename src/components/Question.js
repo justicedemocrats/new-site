@@ -25,7 +25,7 @@ export default class Question extends React.Component {
     const { label, type, name, width, required } = question;
     return (
       <div className={getWidthClass(width)} style={{ flexDirection: "column" }}>
-        <label style={{ fontSize: 14 }}>
+        <label style={{ fontSize: 14 }} className="medium-m">
           {label}
           {required && "*"}
         </label>
@@ -92,27 +92,35 @@ export default class Question extends React.Component {
         break;
       case "district":
         result = (
-          <select
-            required={true}
-            onChange={setData}
-            value={value}
-            disabled={typeof otherData.State !== "string"}
-          >
-            {states[otherData.State] == "00" && (
-              <option value="00"> AL </option>
-            )}
-            {typeof stages[otherData.State] == "string" &&
-              new Array(parseInt(otherData.State))
-                .fill(null)
-                .map((_, idx) => (
-                  <option value={otherData.State}> {otherData.State} </option>
-                ))}
-          </select>
+          <div className="center-contents-column">
+            <select
+              required={true}
+              onChange={setData}
+              value={value}
+              disabled={typeof otherData.State !== "string"}
+            >
+              {states[otherData.State] == "00" && (
+                <option value="00"> AL </option>
+              )}
+              {typeof states[otherData.State] == "string" &&
+                new Array(parseInt(states[otherData.State]))
+                  .fill(null)
+                  .map((_, idx) => (
+                    <option value={`${idx}`.padStart(2, "0")}>
+                      {`${idx}`.padStart(2, "0")}
+                    </option>
+                  ))}
+            </select>
+            <a target="_blank" href="https://callyourrep.co/">
+              Don't know your district?
+            </a>
+          </div>
         );
         break;
       case "state":
         result = (
           <select required={true} onChange={setData} value={value}>
+            <option value="" />
             {Object.keys(states).map(s => (
               <option>{s} </option>
             ))}

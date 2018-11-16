@@ -2,7 +2,7 @@ const email_regex = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
 const non_numbers = /.*[A-Za-z].*/;
 
 const one = ({ name, value, type, required }) => {
-  // if (!required) return undefined;
+  if (!required && (value == "" || value == null)) return undefined;
 
   if (
     ["input", "textarea", "email", "tel", "state", "dropdown"].includes(type)

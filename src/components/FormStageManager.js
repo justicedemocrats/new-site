@@ -4,11 +4,12 @@ import request from "superagent";
 import Question from "./Question";
 import validate from "../lib/validate";
 import "../style/form-stage-manager.scss";
+import { HTMLContent } from "./Content";
 
 // const ENDPOINT = "https://api.justicedemocrats.com/nominate/";
 // const ENDPOINT = "http://localhost:8080/nominate/";
 const ENDPOINT = "https://ben2.ngrok.io/nominate/";
-const REDIRECT_DELAY = 500;
+const REDIRECT_DELAY = 3000;
 
 const customStyles = {
   content: {
@@ -46,8 +47,8 @@ export default class FormStageManager extends React.Component {
       Object.assign({}, q, { value: this.state.data[q.name] })
     );
 
-    // const errors = validate(questions);
-    const errors = undefined;
+    const errors = validate(questions);
+    // const errors = undefined;
     if (!errors) {
       this.setState({
         stage: this.state.stage + 1
@@ -102,6 +103,7 @@ export default class FormStageManager extends React.Component {
 
   render() {
     const { stage, error, success, mode } = this.state;
+    const { thankYou } = this.props;
 
     if (mode === undefined) {
       return this.renderPreStage();
@@ -122,8 +124,11 @@ export default class FormStageManager extends React.Component {
       >
         {success ? (
           <div>
-            <h1> Your Submission Has Been Received </h1>
-            <p> You will receive an email shortly with further instructions </p>
+            <HTMLContent
+              content={thankYou}
+              markdown={true}
+              className="medium-m font-size-20"
+            />
           </div>
         ) : error ? (
           <div>

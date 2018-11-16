@@ -31,7 +31,7 @@ export default ({
     <a
       href={moreButtonUrl}
       target="_blank"
-      className="block-content-button button orange-bg button-text full-width-button"
+      className="block-content-button button orange-bg button-text full-width-button medium-m"
       style={{ marginTop: 10, display: "block" }}
     >
       {moreButtonText}
@@ -40,7 +40,7 @@ export default ({
     <Link
       to={moreButtonUrl}
       style={{ marginTop: 10 }}
-      className="block-content-button button orange-bg button-text full-width-button"
+      className="block-content-button button orange-bg button-text full-width-button medium-m"
     >
       {moreButtonText}
     </Link>
