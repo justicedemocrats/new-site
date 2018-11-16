@@ -34,8 +34,8 @@ lookingForBullets:
       Americans.
     icon: /img/jd_site_noninate_icon_movementbuilders_500x300.png
 formIntro: >-
-  **Let us know more about yourself, your district, and why you are so excited
-  about Justice Democrats!**
+  **Fill out the nomination form to tell us about your nominee, the district,
+  yourself, and why you are so excited about Justice Democrats.**
 
 
   We’ll need some information to stay in touch throughout the process, please
@@ -45,6 +45,7 @@ stages:
     questions:
       - label: Your First Name
         name: Nominator First Name
+        required: true
         type: input
         width: half
       - label: Your Last Name
@@ -54,34 +55,40 @@ stages:
         width: half
       - label: Your Email
         name: Nominator Email
+        required: true
         type: email
         width: full
       - label: Your Zipcode
         max_length: "5"
         name: Nominator Zip
+        required: true
         type: input
         width: half
       - label: State
         name: State
-        type: input
+        required: true
+        type: state
         width: full
-      - label: District that you're Nominating
+      - label: Congressional District
         name: District
-        type: input
+        required: true
+        type: district
         width: full
     title: Tell Us About Yourself
   - display: both
     questions:
-      - label: "Why does your district/state need a Justice Democrat? "
+      - label: "Why does your district need a Justice Democrat? "
         max_length: "2000"
         name: Why District
+        required: true
         type: textarea
         width: full
-    title: Why does your district/state need a Justice Democrat?
+    title: Why does your district need a Justice Democrat?
   - display: candidate
     questions:
       - label: Nominee First Name
         name: Nominee First Name
+        required: true
         type: input
         width: half
       - label: Nominee Last Name
@@ -108,18 +115,23 @@ stages:
       - label: Nominee Instagram
         name: Nominee Instagram
         type: input
-      - label: Any Other Webpage or Video Links
+        width: half
+      - label: "At least one link to a webpage, video, or social media site"
         name: Nominee Other Links
+        required: true
         type: textarea
+        width: full
     title: Tell Us About The Person You're Nominating
   - display: candidate
     questions:
       - label: What is your nominee's occupation?
         name: Nominee Occupation
+        required: true
         type: input
         width: full
       - label: How are they involved in their community?
         name: Nominee Community Involvement
+        required: true
         type: textarea
         width: full
       - label: Any other info you'd like to add?
@@ -131,14 +143,16 @@ stages:
       - label: " "
         max_length: "200"
         name: Why Nominee
+        required: true
         type: textarea
         width: full
     title: Why would this nominee make a great Justice Democrat for your district?
   - display: district
     questions:
       - label: What are you looking for in a nominee?
-        max_length: "200"
+        max_length: "2000"
         name: Desired Candidate Qualities
+        required: true
         type: textarea
         width: full
     title: What are you looking for in a nominee?
@@ -147,6 +161,7 @@ stages:
       - label: What will you do to help Justice Democrats win?
         max_length: "2000"
         name: Nominator Pledge
+        required: true
         type: textarea
         width: full
     title: What will you do to help Justice Democrats win?
@@ -154,6 +169,7 @@ stages:
     questions:
       - label: Phone Number
         name: Nominator Phone
+        required: true
         type: tel
         width: half
       - label: Facebook
