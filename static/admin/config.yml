@@ -199,6 +199,7 @@ collections:
             name: "lookingForBullets"
             widget: "list"
             fields:
+              - { label: "Icon", name: "icon", widget: "image" }
               - { label: "Header", name: "header", widget: "string" }
               - { label: "Body", name: "body", widget: "markdown" }
           - { label: "Form Intro", name: "formIntro", widget: "markdown" }
