@@ -2,8 +2,8 @@
 templateKey: ignore-fragment
 uniq: candidate-index
 title: Justice Democrats | Candidates
-bannerBackgroundImage: /img/candidates-banner.jpg
-bannerText: Candidates For Justice
+bannerBackgroundImage: /img/jd_site_2018slate_banner_1920x540_111518_temp.png
+bannerText: 2018-Slate For Justice
 priorCandidatesIntro: >-
   **We thank all the candidates** for running on a platform including Medicare
   for All, Money Out of Politics, Livable Wage, Green Energy, and Equality and
