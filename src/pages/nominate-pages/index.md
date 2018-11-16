@@ -176,8 +176,15 @@ stages:
         width: full
     title: What are you looking for in a nominee?
   - display: both
+    preface: >-
+      Candidates need help knocking on doors, phone/text banking, connecting
+      with organizations and community leaders in the district, and more. Share
+      with us all the ways you could be a resource for this nominee.
     questions:
-      - label: What will you do to help Justice Democrats win?
+      - label: >-
+          Candidates need help knocking on doors, phone/text banking, connecting
+          with organizations and community leaders in the district, and more.
+          Share with us all the ways you could be a resource for this nominee. 
         max_length: '2000'
         name: Nominator Pledge
         required: true
