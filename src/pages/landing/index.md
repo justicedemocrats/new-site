@@ -7,7 +7,7 @@ boldHeader: "It’s #OurTime. Join us."
 boldSubheader: >-
   The Democratic Party needs to fight back. But the corporate wing of the party
   keeps getting in the way.
-introContent: "**In the era of Donald Trump and his billionaire cabinet, we will fight for an America that belongs to all its people. **We are unafraid of taking on out-of-touch incumbents in primary challenges because we don’t need to just elect more Democrats, we need to elect better Democrats. \r\n\n**It’s time to usher in a new generation of Democrats** who have a bold vision to transform our economy and democracy."
+introContent: "**In the era of Donald Trump and his billionaire cabinet, we will fight for an America that belongs to all its people.** We are unafraid of taking on out-of-touch incumbents in primary challenges because we don’t need to just elect more Democrats, we need to elect better Democrats. \r\n\n**It’s time to usher in a new generation of Democrats** who have a bold vision to transform our economy and democracy."
 firstCalloutIcon: /img/jd_site_home_icon_4jds_mini_350x200.png
 firstCalloutText: >-
   We need a Democratic Party that fights for its voters, not just its corporate
