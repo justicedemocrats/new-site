@@ -17,7 +17,6 @@ class ModulePageTemplate extends React.Component {
   };
 
   componentWillMount() {
-    console.log(window.location.hash);
     if (window.location.hash === "") {
       this.state.badUrl = true;
     }
