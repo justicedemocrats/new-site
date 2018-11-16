@@ -8,10 +8,17 @@ header: Need 2Words
 subheader: >-
   We are searching for bold,  compelling leaders to run as Justice Democrats in
   2020.
-thankYou: Thank you
-redirect: "https://secure.actblue.com/donate/jdpacslate"
-incumbentsIntro: Justice Democrats in the House
-incumbentsStatement: >-
+thankYou: >-
+  # Thank you! Your Submission Has Been Received
+
+
+  You will receive an email shortly that explains next steps in the nomination
+  process, as well as invites you to our next national Justice Democrats call.
+  If you do not see the email from us, please make sure to check your spam
+  folder.
+redirect: "https://secure.actblue.com/donate/justicedemocrats"
+incumentsIntro: Justice Democrats in the House
+incumentsStatement: >-
   2019 Congress kicks off with 7 Justice Democrats pushing for change in the
   U.S. House of Representatives.
 lookingForBullets:
@@ -39,7 +46,10 @@ formIntro: >-
 
 
   We’ll need some information to stay in touch throughout the process, please
-  fill out the form as best you can.
+  fill out the form as best you can. If you have any questions about the
+  process, please consult [our
+  guide](https://docs.google.com/document/d/10rxLBisP6kE8bWM-47_y-G7frgLPYU66BuMI9LmZgm0/edit?usp=sharing)
+  to the process.
 stages:
   - display: both
     questions:
