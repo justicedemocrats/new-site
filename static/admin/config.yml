@@ -197,12 +197,12 @@ collections:
           - { label: "Redirect", name: "redirect" }
           - {
               label: "Incumbents Intro",
-              name: "incumentsIntro",
+              name: "incumbentsIntro",
               widget: "string",
             }
           - {
               label: "Incumbents Statement",
-              name: "incumentsStatement",
+              name: "incumbentsStatement",
               widget: "string",
             }
           - label: "Looking For Bullets"

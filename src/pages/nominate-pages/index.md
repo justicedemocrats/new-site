@@ -8,17 +8,13 @@ header: Need 2Words
 subheader: >-
   We are searching for bold,  compelling leaders to run as Justice Democrats in
   2020.
-thankYou: >-
-  # Thank you! Your Submission Has Been Received
+thankYou: |-
+  # Your Submission Has Been Received
 
-
-  You will receive an email shortly that explains next steps in the nomination
-  process, as well as invites you to our next national Justice Democrats call.
-  If you do not see the email from us, please make sure to check your spam
-  folder.
-redirect: "https://secure.actblue.com/donate/justicedemocrats"
-incumbentsIntro: Justice Democrats in the House
-incumbentsStatement: >-
+  You will receive an email shortly with further instructions.
+redirect: "https://secure.actblue.com/donate/jdpacslate"
+incumentsIntro: Justice Democrats in the House
+incumentsStatement: >-
   2019 Congress kicks off with 7 Justice Democrats pushing for change in the
   U.S. House of Representatives.
 lookingForBullets:
@@ -86,8 +82,13 @@ stages:
         width: full
     title: Tell Us About Yourself
   - display: both
+    preface: >-
+      Make your case using specific facts about the failures of the incumbent or
+      unmet needs of the constituents.
     questions:
-      - label: "Why does your district need a Justice Democrat? "
+      - label: >-
+          Make your case using specific facts about the failures of the
+          incumbent or unmet needs of the constituents.
         max_length: "2000"
         name: Why District
         required: true
@@ -95,6 +96,7 @@ stages:
         width: full
     title: Why does your district need a Justice Democrat?
   - display: candidate
+    preface: "Note: The links matter a lot. Thanks for including as many as you can."
     questions:
       - label: Nominee First Name
         name: Nominee First Name
@@ -133,6 +135,11 @@ stages:
         width: full
     title: Tell Us About The Person You're Nominating
   - display: candidate
+    preface: >-
+      There are no disqualifiers, but we're particularly interested in: working
+      class backgrounds, people of color, women who show evidence of leadership
+      (not  through titles, but through action/results), uninhibited fight for
+      what's right
     questions:
       - label: What is your nominee's occupation?
         name: Nominee Occupation
@@ -149,8 +156,15 @@ stages:
         type: textarea
     title: Tell Us How Your Nominee Is Spending Their Time
   - display: candidate
+    preface: >-
+      Make a case drawing direct connections between characteristics about your
+      nominee and characteristics about your district that show them to be a
+      good match to represent the district
     questions:
-      - label: " "
+      - label: >-
+          Make a case drawing direct connections between characteristics about
+          your nominee and characteristics about your district that show them to
+          be a good match to represent the district
         max_length: "200"
         name: Why Nominee
         required: true
@@ -158,6 +172,9 @@ stages:
         width: full
     title: Why would this nominee make a great Justice Democrat for your district?
   - display: district
+    preface: >-
+      Specify the unique set of characteristics you think a candidate should
+      have - or not have - to be successful in this district
     questions:
       - label: What are you looking for in a nominee?
         max_length: "2000"
@@ -167,8 +184,15 @@ stages:
         width: full
     title: What are you looking for in a nominee?
   - display: both
+    preface: >-
+      Candidates need help knocking on doors, phone/text banking, connecting
+      with organizations and community leaders in the district, and more. Share
+      with us all the ways you could be a resource for this nominee.
     questions:
-      - label: What will you do to help Justice Democrats win?
+      - label: >-
+          Candidates need help knocking on doors, phone/text banking, connecting
+          with organizations and community leaders in the district, and more.
+          Share with us all the ways you could be a resource for this nominee.
         max_length: "2000"
         name: Nominator Pledge
         required: true
