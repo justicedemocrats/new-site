@@ -2,8 +2,8 @@
 templateKey: ignore-fragment
 uniq: issue-index
 title: Justice Democrats | Platform
-bannerBackgroundImage: /img/jd_website_policies_banner_1920x540_061418.jpg
-bannerText: A Platform for Justice
+bannerBackgroundImage: /img/jd_site_platform_banner_1920x540_111518_temp.png
+bannerText: Platform for Justice
 header: 'OF, BY, AND FOR THE PEOPLE'
 subheader: A Platform Democrats Can Fight For
 sections:
