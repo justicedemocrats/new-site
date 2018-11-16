@@ -339,6 +339,12 @@ collections:
               - { label: "Text", name: "text", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Url", name: "url", widget: "string" }
+              - {
+                  label: "Color",
+                  name: "color",
+                  widget: "dropdown",
+                  options: ["pink", "aqua", "blue"],
+                }
 
           - {
               label: "JD Highlight Header",
