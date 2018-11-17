@@ -44,8 +44,11 @@ formIntro: >-
   yourself, and why you are so excited about Justice Democrats.**
 
 
-  We’ll need some information to stay in touch throughout the process, please
-  fill out the form as best you can.
+  There are some questions we ask in this form which may take some time to
+  answer. You can preview the questions
+  [here](https://docs.google.com/document/d/1_EUuelRKCEycShqrguNZ3XO42y22F1qQ-ywFZ6RT0uU/edit?usp=sharing)
+  and prepare your answers offline before submitting the form. Please be as
+  complete as possible!
 stages:
   - display: both
     questions:
