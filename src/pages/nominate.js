@@ -64,10 +64,19 @@ class NominatePageTemplate extends React.Component {
                 </div>
               </div>
               <div className="six columns">
-                <HTMLContent
-                  content={body}
-                  className="medium-m issues-contents standard-text"
-                />
+                <div>
+                  <HTMLContent
+                    content={body}
+                    className="medium-m issues-contents standard-text"
+                  />
+                  <button
+                    style={{ marginTop: 15, marginBottom: 15, fontSize: 19 }}
+                    onClick={this.startNomination}
+                    className="get-started-button extra-bold-m"
+                  >
+                    Start Nominating Now
+                  </button>
+                </div>
               </div>
             </div>
             <Divider />
@@ -151,8 +160,13 @@ class NominatePageTemplate extends React.Component {
           <Divider />
 
           <div
-            className="extra-bold-m subheader-size dark-blue-color"
-            style={{ marginBottom: 20, fontSize: 42 }}
+            className="extra-bold-m dark-blue-color"
+            style={{
+              marginBottom: 20,
+              marginTop: 10,
+              fontSize: 42,
+              textAlign: "left"
+            }}
           >
             {incumbentsIntro}
           </div>

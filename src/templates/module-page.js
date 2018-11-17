@@ -6,7 +6,7 @@ import request from "superagent";
 import "../style/issues.scss";
 
 const ENDPOINT = "https://ben2.ngrok.io/module/";
-const REDIRECT_DELAY = 500;
+const REDIRECT_DELAY = 3000;
 
 class ModulePageTemplate extends React.Component {
   state = {
@@ -74,12 +74,16 @@ class ModulePageTemplate extends React.Component {
 
             {!this.state.success ? (
               <div>
-                <div style={{ textAlign: "left" }}>
+                <div
+                  style={{ textAlign: "left" }}
+                  className="center-contents-column"
+                >
                   {questions.map(q => (
                     <Question
                       question={q}
                       setData={this.setData(q.name)}
                       value={this.state.data[q.name]}
+                      ignoreWidth={true}
                     />
                   ))}
                 </div>

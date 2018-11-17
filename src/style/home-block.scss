@@ -216,6 +216,10 @@
 .primary-issue-box {
   display: flex;
   flex-direction: column;
+
+  img {
+    height: 80%;
+  }
 }
 
 .highlight-container {

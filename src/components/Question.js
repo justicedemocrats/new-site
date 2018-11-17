@@ -24,7 +24,10 @@ export default class Question extends React.Component {
     const { setData, question, value, error, otherData } = this.props;
     const { label, type, name, width, required } = question;
     return (
-      <div className={getWidthClass(width)} style={{ flexDirection: "column" }}>
+      <div
+        className={!this.props.ignoreWidth && getWidthClass(width)}
+        style={{ flexDirection: "column" }}
+      >
         <label style={{ fontSize: 14 }} className="medium-m">
           {label}
           {required && "*"}
@@ -98,12 +101,11 @@ export default class Question extends React.Component {
               required={true}
               onChange={setData}
               value={value}
-              disabled={typeof otherData.State !== "string"}
             >
               {states[otherData.State] == "00" && (
                 <option value="00"> AL </option>
               )}
-              {typeof states[otherData.State] == "string" &&
+              {typeof states[otherData.State] == "string" ? (
                 new Array(parseInt(states[otherData.State]) + 1)
                   .fill(null)
                   .map((_, idx) =>
@@ -114,7 +116,10 @@ export default class Question extends React.Component {
                         {`${idx}`.padStart(2, "0")}
                       </option>
                     )
-                  )}
+                  )
+              ) : (
+                <option value=""> (please select a state) </option>
+              )}
             </select>
             <a
               target="_blank"
