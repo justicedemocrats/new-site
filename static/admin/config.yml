@@ -213,6 +213,11 @@ collections:
               - { label: "Header", name: "header", widget: "string" }
               - { label: "Body", name: "body", widget: "markdown" }
           - { label: "Form Intro", name: "formIntro", widget: "markdown" }
+          - {
+              label: "Stage 0 Explanation",
+              name: "stage0Explanation",
+              widget: "markdown",
+            }
           - label: "Form Stages"
             name: "stages"
             widget: "list"
