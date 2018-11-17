@@ -1,6 +1,5 @@
 import React from "react";
 import Modal from "react-modal";
-import request from "superagent";
 import Question from "./Question";
 import validate from "../lib/validate";
 import "../style/form-stage-manager.scss";
@@ -77,7 +76,7 @@ export default class FormStageManager extends React.Component {
 
     const errors = validate(questions);
     if (!errors) {
-      request
+      window.request
         .post(ENDPOINT + this.state.mode)
         .send(this.state.data)
         .end((error, res) => {

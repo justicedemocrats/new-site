@@ -2,7 +2,6 @@ import React from "react";
 import Banner from "../components/Banner";
 import { HTMLContent } from "../components/Content";
 import Question from "../components/Question";
-import request from "superagent";
 import "../style/issues.scss";
 
 const ENDPOINT = "https://api.justicedemocrats.com/module/";
@@ -16,7 +15,7 @@ class ModulePageTemplate extends React.Component {
     success: false
   };
 
-  componentWillMount() {
+  componentDidMount() {
     if (window.location.hash === "") {
       this.state.badUrl = true;
     }
@@ -25,6 +24,7 @@ class ModulePageTemplate extends React.Component {
       .toLowerCase()
       .replace(" ", "-")
       .replace("_", "-");
+    this.forceUpdate();
     console.log(this.state.data);
   }
 
@@ -38,7 +38,7 @@ class ModulePageTemplate extends React.Component {
 
   submit = () => {
     console.log(this.state.data);
-    request
+    window.request
       .post(ENDPOINT + this.props.reference)
       .send(this.state.data)
       .end((error, res) => {
