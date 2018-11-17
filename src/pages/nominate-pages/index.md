@@ -4,7 +4,7 @@ uniq: nominate-index
 title: Justice Democrats | Nominate
 bannerBackgroundImage: /img/jd_site_nominate_banner_1920x540_111518_temp.png
 bannerText: Candidates For Justice
-header: 'It''s #OurTime'
+header: 'It’s #OurTime'
 subheader: >-
   We are recruiting diverse working class leaders to run as Justice Democrats
   for Congress for 2020.
