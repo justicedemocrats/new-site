@@ -7,7 +7,15 @@ boldHeader: "It’s #OurTime. Join us."
 boldSubheader: >-
   The Democratic Party needs to fight back. But the corporate wing of the party
   keeps getting in the way.
-introContent: "**In the era of Donald Trump and his billionaire cabinet, we will fight for an America that belongs to all its people.** We are unafraid of taking on out-of-touch incumbents in primary challenges because we don’t need to just elect more Democrats, we need to elect better Democrats. \r\n\n**It’s time to usher in a new generation of Democrats** who have a bold vision to transform our economy and democracy."
+introContent: >-
+  **In the era of Donald Trump and his billionaire cabinet, we will fight for an
+  America that belongs to all its people.** We are unafraid of taking on
+  out-of-touch incumbents in primary challenges because we don’t need to just
+  elect more Democrats, we need to elect better Democrats. 
+
+
+  **It’s time to usher in a new generation of diverse working-class Democrats**
+  who have a bold vision to transform our economy and democracy.
 firstCalloutIcon: /img/jd_site_home_icon_4jds_mini_350x200.png
 firstCalloutText: >-
   We need a Democratic Party that fights for its voters, not just its corporate
@@ -42,18 +50,27 @@ blocks:
     bannerText: The Next Ocasio-Cortez
     calloutIcon: ""
     calloutText: ""
-    header: "Elect a new generation of diverse, working class Democrats"
-    htmlContent: "**We recruited, trained and helped Alexandria pull off one of the biggest upsets in American history.** But the top of the Democratic Party is still disproportionately wealthier, whiter, and more male than the base. \r\n\n**Now it’s time for more leaders in the Democratic Party who don’t just represent the corporate donors, but the voters of the Democratic Party:** women, people of color, young people, and working class people of all backgrounds and help build our multiracial populist movement."
+    header: "Elect a new generation of diverse, working-class Democrats"
+    htmlContent: >-
+      **We recruited, trained, and helped Alexandria pull off one of the biggest
+      upsets in American history.** But the top of the Democratic Party is still
+      disproportionately wealthier, whiter, and more male than the base. 
+
+
+      **Now it’s time for more leaders in the Democratic Party who don’t just
+      represent the corporate donors, but the voters of the Democratic Party:**
+      women, people of color, young people, and working-class people of all
+      backgrounds and help build our multiracial populist movement.
     moreButtonText: See our 2018 Slate
     moreButtonUrl: /candidates
     subheader: >-
-      We need a caucus of mission- driven members of Congress who vote together
+      We need a caucus of mission-driven members of Congress who vote together
       and help build the movement.
   - alignment: left
     bannerButtonText: Join Us
     bannerButtonUrl: /join
     bannerImageUrl: /img/jd_site_home_calloutbanner_2_support_1920x540_111518.jpg
-    bannerText: "XXX,XXX+ Supporters"
+    bannerText: "350,000+ Supporters"
     calloutIcon: /img/jd_site_home_icon_4jds_mini_350x200.png
     calloutText: >-
       Polling data demonstrates that the Democratic Party’s base has moved left,
