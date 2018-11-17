@@ -65,8 +65,8 @@ sections:
           candidates who generally agree with the [**Justice Democrats
           platform**](http://www.justicedemocrats.com/issues). Please check out
           the detailed description of who we are looking for at the top of our
-          [**nomination page**](http://www.justicedemocrats.com/nominate). Read
-          about our candidates on our [**candidates page**](/candidates).
+          [**nomination page**](justicedemocrats.com/nominate). Read about our
+          candidates on our [**candidates page**](/candidates).
         question: ' Who are Justice Democrat candidates?'
       - answer: >-
           We won’t run against candidates that fully support the Justice
