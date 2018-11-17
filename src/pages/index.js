@@ -1,17 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Content, { HTMLContent } from '../components/Content'
-import '../style/join-page.scss'
+import React from "react";
+import PropTypes from "prop-types";
+import Content, { HTMLContent } from "../components/Content";
+import "../style/join-page.scss";
 
 export const SplashPageTemplate = ({
   title,
-  hed,
+  headerImage,
   subhed,
   content,
   bgimg,
-  contentComponent,
+  contentComponent
 }) => {
-  const PageContent = contentComponent || Content
+  const PageContent = contentComponent || Content;
+  console.log(15);
+  console.log(headerImage);
 
   return (
     <div
@@ -20,7 +22,12 @@ export const SplashPageTemplate = ({
     >
       <div className="splash">
         <div className="row">
-          <div className="hed six columns">{hed}</div>
+          <div className="hed six columns">
+            <img
+              src={headerImage}
+              style={{ width: "100%", height: "auto", objectFit: "contain" }}
+            />
+          </div>
         </div>
         <div className="row">
           <div
@@ -86,8 +93,8 @@ export const SplashPageTemplate = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 SplashPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
@@ -95,31 +102,31 @@ SplashPageTemplate.propTypes = {
   subhed: PropTypes.string.isRequired,
   bgimg: PropTypes.string.isRequired,
   content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
+  contentComponent: PropTypes.func
+};
 
 const SplashPage = ({ data }) => {
-  console.log(data)
-  const { allMarkdownRemark: pages } = data
-  const page = pages.edges[0].node
+  console.log(data);
+  const { allMarkdownRemark: pages } = data;
+  const page = pages.edges[0].node;
 
   return (
     <SplashPageTemplate
       contentComponent={HTMLContent}
       title={page.frontmatter.title}
-      hed={page.frontmatter.hed}
+      headerImage={page.frontmatter.headerImage}
       subhed={page.frontmatter.subhed}
       content={page.html}
       bgimg={page.frontmatter.bgimg}
     />
-  )
-}
+  );
+};
 
 SplashPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
+  data: PropTypes.object.isRequired
+};
 
-export default SplashPage
+export default SplashPage;
 
 export const splashPageQuery = graphql`
   query SplashPage {
@@ -129,7 +136,7 @@ export const splashPageQuery = graphql`
           html
           frontmatter {
             title
-            hed
+            headerImage
             subhed
             bgimg
           }
@@ -137,4 +144,4 @@ export const splashPageQuery = graphql`
       }
     }
   }
-`
+`;
