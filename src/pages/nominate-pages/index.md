@@ -4,11 +4,7 @@ uniq: nominate-index
 title: Justice Democrats | Nominate
 bannerBackgroundImage: /img/jd_site_nominate_banner_1920x540_111518_temp.png
 bannerText: Candidates For Justice
-<<<<<<< HEAD
 header: "It’s #OurTime"
-=======
-header: 'It’s #OurTime'
->>>>>>> origin/cms/nominate
 subheader: >-
   We are recruiting diverse working class leaders to run as Justice Democrats
   for Congress for 2020.
@@ -19,11 +15,7 @@ thankYou: >-
   You will receive an email shortly with next steps in the nomination process
   and an invitation to our national Justice Democrats calls. If you don't see it
   right away, please check your spam folder.
-<<<<<<< HEAD
 redirect: "https://secure.actblue.com/donate/justicedemocrats"
-=======
-redirect: 'https://secure.actblue.com/donate/justicedemocrats'
->>>>>>> origin/cms/nominate
 incumbentsIntro: Justice Democrats in the House
 incumbentsStatement: >-
   2019 Congress kicks off with 7 Justice Democrats pushing for change in the
@@ -128,8 +120,8 @@ stages:
       Make your case using specific facts about the failures of the incumbent
       and unmet needs of the district's constituents.
     questions:
-      - label: ''
-        max_length: '2000'
+      - label: ""
+        max_length: "2000"
         name: Why District
         required: true
         type: textarea
@@ -170,7 +162,7 @@ stages:
         name: Nominee Instagram
         type: input
         width: half
-      - label: 'At least one link to a webpage, video, or social media site'
+      - label: "At least one link to a webpage, video, or social media site"
         name: Nominee Other Links
         required: false
         type: textarea
@@ -184,19 +176,19 @@ stages:
       uninhibited fighter for justice.
     questions:
       - label: What is your nominee's occupation?
-        max_length: '200'
+        max_length: "200"
         name: Nominee Occupation
         required: true
         type: input
         width: full
       - label: How are they involved in their community?
-        max_length: '1000'
+        max_length: "1000"
         name: Nominee Community Involvement
         required: true
         type: textarea
         width: full
       - label: Any other info you'd like to add?
-        max_length: '2000'
+        max_length: "2000"
         name: Nominee Other Occupation Info
         type: textarea
     title: Tell Us How Your Nominee Is Spending Their Time
@@ -206,8 +198,8 @@ stages:
       nominee and characteristics of the district that show how they are a great
       fit.
     questions:
-      - label: ''
-        max_length: '2000'
+      - label: ""
+        max_length: "2000"
         name: Why Nominee
         required: true
         type: textarea
@@ -219,7 +211,7 @@ stages:
       have - or not have - to be successful in this district.
     questions:
       - label: What are you looking for in a nominee?
-        max_length: '2000'
+        max_length: "2000"
         name: Desired Candidate Qualities
         required: true
         type: textarea
@@ -231,8 +223,8 @@ stages:
       with organizations and community leaders in the district, and more. Share
       with us all the ways you could be a resource for this nominee.
     questions:
-      - label: ''
-        max_length: '2000'
+      - label: ""
+        max_length: "2000"
         name: Nominator Pledge
         required: true
         type: textarea

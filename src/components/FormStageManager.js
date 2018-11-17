@@ -204,12 +204,11 @@ export default class FormStageManager extends React.Component {
       >
         <div className={"modal-content"}>
           <div className="modal-activity">
-            <h1>Submit a Nomination</h1>
-            <p className="font-size-16">
-              We're accepting nominations for specific people, but we're also
-              accepting nominations for districts, even if you have a nominee in
-              mind.
-            </p>
+            <HTMLContent
+              content={this.props.stage0Explanation}
+              markdown={true}
+              className="medium-m font-size-16"
+            />
           </div>
           <div className="modal-action">
             <button style={buttonStyle} onClick={this.setMode("district")}>

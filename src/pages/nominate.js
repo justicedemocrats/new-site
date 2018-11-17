@@ -35,7 +35,8 @@ class NominatePageTemplate extends React.Component {
         formIntro,
         incumbentsIntro,
         incumbentsStatement,
-        thankYou
+        thankYou,
+        stage0Explanation
       }
     } = this.props;
 
@@ -154,6 +155,7 @@ class NominatePageTemplate extends React.Component {
                 redirect={redirect}
                 endNomination={this.endNomination}
                 thankYou={thankYou}
+                stage0Explanation={stage0Explanation}
               />
             )}
           </div>
@@ -239,6 +241,7 @@ export const pageQuery = graphql`
               body
             }
             formIntro
+            stage0Explanation
             stages {
               title
               preface
