@@ -47,7 +47,7 @@ blocks:
     moreButtonText: See our 2018 Slate
     moreButtonUrl: /candidates
     subheader: >-
-      We need a caucus of mission- driven members of Congress who vote together
+      We need a caucus of mission-driven members of Congress who vote together
       and help build the movement.
   - alignment: left
     bannerButtonText: Join Us
