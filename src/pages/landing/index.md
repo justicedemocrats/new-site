@@ -1,99 +1,88 @@
 ---
 templateKey: landing-page
 title: Justice Democrats
-bannerBackgroundImg: /img/jd_website_home_banner_background_test_1920x1080_052518.jpg
-bannerTextImg: /img/jd_website_home_banner_textoverlay_test_1920x1080_052518.png
-boldHeader: THE DEMOCRATIC PARTY NEEDS TO FIGHT BACK.
-boldSubheader: But the corporate-backed wing of the party is getting in the way.
+bannerBackgroundImg: /img/jd_site_home_cr2020_background_1920x1980_test.jpg
+bannerTextImg: /img/jd_site_home_cr2020_background_1920x1980_test.jpg
+boldHeader: "It’s #OurTime. Join us."
+boldSubheader: >-
+  The Democratic Party needs to fight back. But the corporate wing of the party
+  keeps getting in the way.
 introContent: >-
-  **We need a Democratic Party that fights for its voters, not just its
-  corporate donors.** That's why we helped elect Alexandria Ocasio-Cortez to
-  Congress. We need leadership in the Democratic Party that will represent and
-  fight for our communities. 
-
-
   **In the era of Donald Trump and his billionaire cabinet, we will fight for an
   America that belongs to all its people.** We are unafraid of taking on
-  out-of-touch incumbents in primary challenges because we don't need to just
-  elect more Democrats, we need to elect better Democrats. It's time to usher in
-  a new generation of Democrats who have a bold vision to transform our economy
-  and democracy.
-firstCalloutIcon: /img/jd_site_circlefinger_1_50x50.svg
+  out-of-touch incumbents in primary challenges because we don’t need to just
+  elect more Democrats, we need to elect better Democrats. 
+
+
+  **It’s time to usher in a new generation of diverse working-class Democrats**
+  who have a bold vision to transform our economy and democracy.
+firstCalloutIcon: /img/jd_site_home_icon_4jds_mini_350x200.png
 firstCalloutText: >-
-  It’s time to transform the Democratic Party into a party that fights for all
-  working people in this country.
-issuesIntro: 'A PARTY FOR VOTERS, NOT DONORS'
+  We need a Democratic Party that fights for its voters, not just its corporate
+  donors. 
+
+  That’s why we helped elect Alexandria Ocasio-Cortez to Congress. We need
+  leadership 
+
+  in the Democratic Party that will represent and fight for our communities.
+issuesIntro: "A Party for Voters, Not Donors"
 primaryIssues:
-  - image: /img/growth.svg
-    text: Jobs Guarantee
-    url: '/issues#economy'
-  - image: /img/rights.svg
+  - color: pink
+    image: /img/jd_site_policy_icon_2_rights_nov18_rev.svg
     text: Medicare for All
-    url: '/issues#rights'
-  - image: /img/democracy.svg
-    text: Abolish ICE
-    url: '/issues#democracy'
-jdHighlightHeader: No Corporate PACs Pledge
-jdHighlightText: >-
-  All Justice Democrats pledge to reject corporate PAC money. We are accountable
-  to people, not corporations.
-jdHighlightIcon: /img/jd_site_mark_300x300_062018.svg
+    url: "/issues#rights"
+  - color: aqua
+    image: /img/jd_site_policy_icon_1_growth_nov18_rev.svg
+    text: Green New Deal
+    url: "/issues#economy"
+  - color: blue
+    image: /img/jd_site_policy_icon_3_democracy_nov18.svg
+    text: Racial Justice
+    url: "/issues#democracy"
+jdHighlightHeader: THIS SECTION GOES AWAY
+jdHighlightText: THIS SECTION GOES AWAY
+jdHighlightIcon: /img/products-grid1.jpg
 blocks:
-  - alignment: right
+  - alignment: left
+    bannerButtonText: Nominate
+    bannerButtonUrl: /nominate
+    bannerImageUrl: /img/jd_site_home_calloutbanner_1_aoc_1920x540_111518.jpg
+    bannerText: The Next Ocasio-Cortez
+    calloutIcon: ""
+    calloutText: ""
+    header: "Elect a new generation of diverse, working-class Democrats"
+    htmlContent: >-
+      **We recruited and helped Alexandria pull off one of the biggest upsets in
+      American history.** But the top of the Democratic Party is still
+      disproportionately wealthier, whiter, and more male than the base. 
+
+
+      **Now it’s time for more leaders in the Democratic Party who don’t just
+      represent corporate donors, but the voters of the Democratic Party:**
+      women, people of color, young people, and working-class people of all
+      backgrounds to help build our progressive movement.
+    moreButtonText: See our 2018 Slate
+    moreButtonUrl: /candidates
+    subheader: >-
+      We need a caucus of mission-driven members of Congress who vote together
+      and help build the movement.
+  - alignment: left
     bannerButtonText: Join Us
     bannerButtonUrl: /
-    bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_1_cori_053118.jpg
-    bannerText: '300,000 Supporters'
-    calloutIcon: /img/jd_site_circlefinger_2_50x50.svg
+    bannerImageUrl: /img/jd_site_home_calloutbanner_2_support_1920x540_111518.jpg
+    bannerText: "350,000+ Supporters"
+    calloutIcon: /img/jd_site_home_icon_4jds_mini_350x200.png
     calloutText: >-
-      Justice Democrats candidates pledge to not take corporate money and to
-      work together once elected to enact the Justice Democrats platform.
-    header: 26 Justice Dems Are Running Across America
-    htmlContent: >-
-      Our candidates are committed to represent and fight for their communities
-      -- and they will not take a dime of corporate money.
-    moreButtonText: All Candidates
-    moreButtonUrl: /candidates
-    subheader: Each candidate elected is one more vote for The People.
-  - alignment: center
-    bannerButtonText: Donate
-    bannerButtonUrl: /donate
-    bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_2_alexbump_053118.jpg
-    bannerText: $2.8+M Raised
-    calloutIcon: /img/jd_site_circlefinger_3_50x50.svg
-    calloutText: >-
-      In a modern, moral, wealthy society like the United States, people should
-      not be too poor to live with dignity. That means having access to
-      healthcare, housing, education, a living wage, a world not destroyed by
-      climate change and aggressive wars of choice. 
-    header: Racial and Economic Justice.
-    htmlContent: |-
-      * Medicare For All
-      * Criminal Justice Reform
-      * A Jobs Guarantee
-    moreButtonText: All Policies
-    moreButtonUrl: /issues
-    subheader: >-
-      Because one can not be achieved without the other — we're fighting for
-      each other.
-  - alignment: left
-    bannerButtonText: Volunteer
-    bannerButtonUrl: /volunteer
-    bannerImageUrl: /img/jd_website_home_calloutbanner_1920x540_3_greg_053118.jpg
-    bannerText: 2.2+M Contacted
-    calloutIcon: /img/jd_site_reportcover_300x400_040818_lr.png
-    calloutText: >-
-      Polling data demonstrates that the Democratic Party’s base has moved left,
-      and voters are ready for a progressive agenda. Though the party elites may
-      be “divided” the base is not; they are ready for unabashed progressive
-      politicians. — www.futureoftheparty.com
+      "Polling data demonstrates the Democratic Party’s base of voters are ready
+      for a more progressive agenda. Though the party elites may be 'divided'
+      the base is not; they are ready for unabashed progressive politicians." —
+      www.futureoftheparty.com
     header: A Platform for America
     htmlContent: >-
-      The Democratic Party needs to fight FOR something. Progressive policies
-      like Medicare For All, free public college, and marijuana legalization are
-      popular with voters. It's time to fight for them.
+      **The Democratic Party needs to fight for something.** Progressive
+      policies like Medicare For All, free public college, and marijuana
+      legalization are popular with voters. It’s time to fight for them.
     moreButtonText: Read The Report
-    moreButtonUrl: 'https://www.futureoftheparty.com'
-    subheader: 'A bold, progressive vision — policies to transform America.'
+    moreButtonUrl: "https://www.futureoftheparty.com"
+    subheader: "A bold, progressive vision — policies to transform America."
 ---
-

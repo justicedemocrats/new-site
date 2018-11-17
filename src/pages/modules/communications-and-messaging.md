@@ -1,7 +1,7 @@
 ---
 title: Communications and Messaging
+templateKey: module-page
 reference: F2M1
-templateKey: ignore-fragment
 preface: >-
   ## Tell us how will you speak to your community
 
@@ -20,28 +20,30 @@ preface: >-
   through each question. We recommend writing your answers out in a separate
   document and getting plenty of feedback from others before submitting to
   Justice Democrats.
-redirect: 'https://secure.actblue.com/donate/jd-nomination'
+redirect: "https://secure.actblue.com/donate/justicedemocrats"
 questions:
   - label: >-
       What do you think is a winning message for a campaign in your district?
       Explain why this messaging will be effective.
-    max_length: '3000'
+    max_length: "3000"
     name: Messaging
+    required: true
     type: textarea
     width: full
   - label: >-
       What are three policies that are essential for a nominee to highlight in
       this district? Why?
-    max_length: '3000'
+    max_length: "3000"
     name: Core Policies
+    required: true
     type: textarea
     width: full
   - label: >-
       What would be the best strategy for this nominee to get media coverage?
       Why would a local or national reporter want to cover the campaign?
-    max_length: '3000'
+    max_length: "3000"
     name: Media Strategy
+    required: true
     type: textarea
     width: full
 ---
-

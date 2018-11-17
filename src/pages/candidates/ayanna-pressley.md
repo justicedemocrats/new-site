@@ -14,11 +14,10 @@ donationLink: 'https://secure.actblue.com/donate/ayannajd'
 outcome: Won
 image: /img/jd_site_ayannapressley_550x600_061218.jpg
 blurb: >-
-  Ayanna Pressley is a progressive member of the Boston City Council who is
-  running for Congress in Massachusetts’ 7th district. Ayanna has a robust
-  record of fighting for politically marginalized communities in Boston and has
-  been nationally recognized for being on the forefront of the next generation
-  of leadership. She is challenging incumbent Democrat Mike Capuano, becoming
-  his first primary opponent since he was elected 20 years ago.
+  Ayanna Pressley is the congresswoman-elect for Massachusetts’ 7th district.
+  Ayanna has a robust record of fighting for politically marginalized
+  communities in Boston, having served on the city council since 2009. She has
+  been nationally recognized for her work on the forefront of economic and
+  racial justice.
 ---
 

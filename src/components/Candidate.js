@@ -1,28 +1,28 @@
-import PropTypes from "prop-types";
-import React from "react";
-import "../style/candidate.scss";
+import PropTypes from 'prop-types'
+import React from 'react'
+import '../style/candidate.scss'
 
-const defaultImage = "/assets/Fist.svg";
+const defaultImage = '/assets/Fist.svg'
 const officeTypeMap = {
-  governor: "GOV",
-  senate: "SN",
-  "lieutenant-governor": "LTGOV"
-};
+  governor: 'GOV',
+  senate: 'SN',
+  'lieutenant-governor': 'LTGOV',
+}
 const electionTypeMap = {
-  fake: "FAKE",
-  primary: "Primary"
-};
+  fake: 'FAKE',
+  primary: 'Primary',
+}
 
 class Candidate extends React.Component {
-  state = { expanded: false };
+  state = { expanded: false }
 
   toggleExpanded = ev => {
-    ev.stopPropagation();
-    this.setState({ expanded: !this.state.expanded });
-  };
+    ev.stopPropagation()
+    this.setState({ expanded: !this.state.expanded })
+  }
 
-  expand = () => this.setState({ expanded: true });
-  collapse = () => this.setState({ expanded: false });
+  expand = () => this.setState({ expanded: true })
+  collapse = () => this.setState({ expanded: false })
 
   render() {
     const {
@@ -38,45 +38,47 @@ class Candidate extends React.Component {
       donationLink,
       outcome,
       office,
-      incumbent
-    } = this.props;
+      incumbent,
+      hideDonate,
+    } = this.props
 
-    let ed = new Date(electionDate);
-    let [d, m] = [ed.getDate(), ed.getMonth()];
-    d = d + 1;
+    console.log(hideDonate)
+
+    let ed = new Date(electionDate)
+    let [d, m] = [ed.getDate(), ed.getMonth()]
+    d = d + 1
     m = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec"
-    ][m];
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ][m]
     return (
       <div className="candidate-container">
         <div
-          className={`candidate ${this.state.expanded && "no-fixed-height"}`}
+          className={`candidate ${this.state.expanded && 'no-fixed-height'}`}
           onClick={this.expand}
         >
           <div
             className="headshot"
             style={{
               backgroundImage: `url(${(image || defaultImage).trim('"')})`,
-              backgroundSize: "cover"
+              backgroundSize: 'cover',
             }}
           >
-            {outcome == "Won" ? (
-              <div className="office bold-m orange-bg">WON</div>
+            {false ? (
+              <div className="office bold-m dark-blue-bg">WON</div>
             ) : (
               <div className="office bold-m">
-                {state}-
-                {office == "house" ? district : officeTypeMap[office]}
+                {state}-{office == 'house' ? district : officeTypeMap[office]}
               </div>
             )}
           </div>
@@ -86,13 +88,13 @@ class Candidate extends React.Component {
               <span className="name bold-m">
                 {firstName} {lastName}
               </span>
-              <span className="incumbent">{incumbent && "(Incumbent)"}</span>
+              <span className="incumbent">{incumbent && '(Incumbent)'}</span>
             </div>
             <div className="office bold-m">
-              {state}-
-              {office == "house" ? district : officeTypeMap[office]}
+              {state}-{office == 'house' ? district : officeTypeMap[office]}
             </div>
-            <div className="race-date">
+
+            {/* <div className="race-date">
               <span className="race bold-m">
                 {electionType === "general"
                   ? "General Election"
@@ -114,12 +116,14 @@ class Candidate extends React.Component {
                 </span>
               )}
             </div>
-
+ */}
             <div className="links-container">
-              <a href={website} target="_blank">
-                <img src="/assets/candidate-home.svg" />
-              </a>
-              {donationLink && (
+              {!hideDonate && (
+                <a href={website} target="_blank">
+                  <img src="/assets/candidate-home.svg" />
+                </a>
+              )}
+              {donationLink && !hideDonate && (
                 <a href={donationLink} target="_blank">
                   <img src="/assets/candidate-donate.svg" />
                 </a>
@@ -132,7 +136,7 @@ class Candidate extends React.Component {
                 <img src="/assets/small-toggle-plus.svg" />
               )}
 
-              {this.state.expanded ? "Close" : "Read More"}
+              {this.state.expanded ? 'Close' : 'Read More'}
             </div>
           </div>
         </div>
@@ -144,15 +148,15 @@ class Candidate extends React.Component {
           </div>
         )}
       </div>
-    );
+    )
   }
 }
 
 Candidate.propTypes = {
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
-  office: PropTypes.oneOf(["governor", "senate", "house"]).isRequired,
-  electionType: PropTypes.oneOf(["fake", "primary", "general"]).isRequired,
+  office: PropTypes.oneOf(['governor', 'senate', 'house']).isRequired,
+  electionType: PropTypes.oneOf(['fake', 'primary', 'general']).isRequired,
   incumbent: PropTypes.bool.isRequired,
   district: PropTypes.string.isRequired,
   state: PropTypes.string.isRequired,
@@ -162,14 +166,14 @@ Candidate.propTypes = {
   donationLink: PropTypes.string,
   outcome: PropTypes.oneOf([
     // if the election is passed, what was the outcome?
-    "Won",
-    "Lost",
-    "Unknown"
-  ])
-};
+    'Won',
+    'Lost',
+    'Unknown',
+  ]),
+}
 
 Candidate.defaultProps = {
-  incumbent: false
-};
+  incumbent: false,
+}
 
-export default Candidate;
+export default Candidate

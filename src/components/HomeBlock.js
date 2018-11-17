@@ -1,11 +1,11 @@
-import React from "react";
-import Link from "gatsby-link";
-import { HTMLContent } from "../components/Content";
-import Responsive from "react-responsive";
-require("../style/home-block.scss");
+import React from 'react'
+import Link from 'gatsby-link'
+import { HTMLContent } from '../components/Content'
+import Responsive from 'react-responsive'
+require('../style/home-block.scss')
 
-const Mobile = props => <Responsive {...props} maxWidth={767} />;
-const Default = props => <Responsive {...props} minWidth={768} />;
+const Mobile = props => <Responsive {...props} maxWidth={767} />
+const Default = props => <Responsive {...props} minWidth={768} />
 
 export default ({
   alignment,
@@ -19,20 +19,20 @@ export default ({
   moreButtonText,
   moreButtonUrl,
   calloutIcon,
-  calloutText
+  calloutText,
 }) => {
   const alignItems = {
-    right: "flex-end",
-    center: "center",
-    left: "flex-start"
-  };
+    right: 'flex-end',
+    center: 'center',
+    left: 'flex-start',
+  }
 
-  const linkComponent = moreButtonUrl.startsWith("https://") ? (
+  const linkComponent = moreButtonUrl.startsWith('https://') ? (
     <a
       href={moreButtonUrl}
       target="_blank"
-      className="block-content-button button light-blue-bg button-text full-width-button"
-      style={{ marginTop: 10, display: "block" }}
+      className="block-content-button button orange-bg button-text full-width-button medium-m"
+      style={{ marginTop: 10, display: 'block' }}
     >
       {moreButtonText}
     </a>
@@ -40,11 +40,16 @@ export default ({
     <Link
       to={moreButtonUrl}
       style={{ marginTop: 10 }}
-      className="block-content-button button light-blue-bg button-text full-width-button"
+      className="block-content-button button orange-bg button-text full-width-button medium-m"
     >
       {moreButtonText}
     </Link>
-  );
+  )
+
+  const bannerTextWords = bannerText.split(' ')
+  const midwayPoint = Math.ceil(bannerTextWords.length / 2)
+  const beggingBannerText = bannerTextWords.slice(0, midwayPoint).join(' ')
+  const endBannerText = bannerTextWords.slice(midwayPoint).join(' ')
 
   return (
     <section className="home-block">
@@ -52,29 +57,26 @@ export default ({
         className="block-banner page-container"
         style={{
           backgroundImage: `url(${bannerImageUrl})`,
-          backgroundSize: "cover",
-          height: "50vh",
-          textTransform: "uppercase",
-          justifyContent: "center"
+          backgroundSize: 'cover',
+          height: '50vh',
+          textTransform: 'uppercase',
+          justifyContent: 'center',
+          backgroundPositionX: 'right',
         }}
       >
         <div
           className="mobile-alignment-override"
           style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
             alignItems: alignItems[alignment],
             maxWidth: 1200,
-            width: "100%"
+            width: '100%',
           }}
         >
-          <div className="extra-bold-m home-header-w">
-            {bannerText.split(" ")[0]}
-          </div>
-          <div className="light-m home-header-w">
-            {bannerText.split(" ")[1]}
-          </div>
+          <div className="extra-bold-m home-header-w">{beggingBannerText}</div>
+          <div className="light-m home-header-w">{endBannerText}</div>
           <Link
             to={bannerButtonUrl}
             className="orange-bg extra-bold-m button-text callout-button plain-button extra-bold-m"
@@ -87,14 +89,9 @@ export default ({
       <div className="standard-padded-container">
         <div className="block-body">
           <div className="block-contents row">
-            <div className="six columns" style={{ color: "blue" }}>
+            <div className="six columns" style={{ color: 'blue' }}>
               <div className="block-contents-left-chunk">
-                <div
-                  className="home-header-b extra-bold-m"
-                  style={{ textTransform: "uppercase" }}
-                >
-                  {header}
-                </div>
+                <div className="home-header-b extra-bold-m">{header}</div>
                 <div className="home-subheader-b medium-m">{subheader}</div>
               </div>
             </div>
@@ -124,5 +121,5 @@ export default ({
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

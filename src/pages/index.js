@@ -5,13 +5,15 @@ import "../style/join-page.scss";
 
 export const SplashPageTemplate = ({
   title,
-  hed,
+  headerImage,
   subhed,
   content,
   bgimg,
   contentComponent
 }) => {
   const PageContent = contentComponent || Content;
+  console.log(15);
+  console.log(headerImage);
 
   return (
     <div
@@ -20,7 +22,12 @@ export const SplashPageTemplate = ({
     >
       <div className="splash">
         <div className="row">
-          <div className="hed six columns">{hed}</div>
+          <div className="hed six columns">
+            <img
+              src={headerImage}
+              style={{ width: "100%", height: "auto", objectFit: "contain" }}
+            />
+          </div>
         </div>
         <div className="row">
           <div
@@ -107,7 +114,7 @@ const SplashPage = ({ data }) => {
     <SplashPageTemplate
       contentComponent={HTMLContent}
       title={page.frontmatter.title}
-      hed={page.frontmatter.hed}
+      headerImage={page.frontmatter.headerImage}
       subhed={page.frontmatter.subhed}
       content={page.html}
       bgimg={page.frontmatter.bgimg}
@@ -129,7 +136,7 @@ export const splashPageQuery = graphql`
           html
           frontmatter {
             title
-            hed
+            headerImage
             subhed
             bgimg
           }

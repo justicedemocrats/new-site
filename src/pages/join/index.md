@@ -1,18 +1,18 @@
 ---
 templateKey: ignore-fragment
 uniq: join-page
-bgimg: /img/jd_website_splash_background_1920x1080_080818_sept14.jpg
+bgimg: /img/jd_site_splash_background_1920x980_111618_mid.jpg
 title: Join
-hed: 'Democrats representing people, not corporations'
+headerImage: /img/jd_site_splash_ourtime_header_800x200_111618.png
 subhed: >-
-  It’s time to transform the Democratic Party -- fight for voters, not big money
+  It's time to usher in a new generation of diverse working class leaders into
+  the Democratic Party. A Democratic Party that fights for its voters, not just
   corporate donors.
 ---
-### Justice Democrats Stand for:
 
-* Medicare For All
-* Jobs Guarantee + Living Wage
-* Tuition-Free Public College
-* Criminal Justice Reform
-* Green New Deal
-* Fighting Inequality in All Forms
+- Medicare For All
+- Free College
+- Green New Deal
+- Justice Reform
+- Immigrant Rights
+- Reject Corporate PAC Money

@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import React from "react";
 import "../style/banner.scss";
 
@@ -16,9 +15,15 @@ export default props => {
     >
       <div className="page-contents">
         <div className="banner-text">
-          <div className="banner-text-bold">{first}</div>
-          <div className="banner-text-light">{rest}</div>
-          <div className="banner-text-bold">{last}</div>
+          {first == last ? (
+            <div className="banner-text-bold">{first}</div>
+          ) : (
+            [
+              <div className="banner-text-bold">{first}</div>,
+              <div className="banner-text-light">{rest}</div>,
+              <div className="banner-text-bold">{last}</div>
+            ]
+          )}
         </div>
       </div>
     </div>

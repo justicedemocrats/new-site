@@ -2,7 +2,7 @@
 
 $form-column-gap: 30px;
 $form-input-maxwidth: 410px;
-$column1-maxwidth: 2*$form-input-maxwidth + $form-column-gap;
+$column1-maxwidth: 2 * $form-input-maxwidth + $form-column-gap;
 
 div.container {
   background-size: cover;
@@ -21,7 +21,6 @@ div.splash {
   font-family: $jd-sans;
   margin: 0 auto;
   padding: 50px;
-  padding-top: 100px;
 
   @include breakpoint(mobile) {
     padding-top: 50px;

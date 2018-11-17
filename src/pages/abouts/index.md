@@ -2,7 +2,7 @@
 templateKey: ignore-fragment
 uniq: about-index
 title: About Justice Democrats
-bannerBackgroundImage: /img/jd_website_about_banner_1920x540_070918_benjealous2.jpg
+bannerBackgroundImage: /img/jd_site_mission_banner_1920x540_111518_temp.png
 bannerText: Mission for Justice
 header: >-
   **Our mission is to elect a new type of Democratic majority in Congress,** one
@@ -36,7 +36,7 @@ sections:
 
 
           We want our democracy to work for Americans again as soon as possible.
-          The best way to do this is by working to change the Democratic party
+          The best way to do this is by working to change the Democratic Party
           from the inside out. Once Justice Democrats take power, we plan to
           implement electoral reform like ranked choice voting so third parties
           can have more power in our democracy.
@@ -63,10 +63,10 @@ sections:
           All candidates are required to pledge not to take any corporate PAC or
           corporate lobbyist money. Additionally, they will be progressive
           candidates who generally agree with the [**Justice Democrats
-          platform**](/issues). Please check out the detailed description of who
-          we are looking for at the top of our [**candidate endorsement
-          form**](https://go.justicedemocrats.com/survey/application-endorsement/).
-          Read about our candidates on our [**candidates page**](/candidates).
+          platform**](http://www.justicedemocrats.com/issues). Please check out
+          the detailed description of who we are looking for at the top of our
+          [**nomination page**](justicedemocrats.com/nominate). Read about our
+          candidates on our [**candidates page**](/candidates).
         question: ' Who are Justice Democrat candidates?'
       - answer: >-
           We won’t run against candidates that fully support the Justice
@@ -78,7 +78,7 @@ sections:
           against them?
     title: ABOUT THE CANDIDATES
   - items:
-      - answer: 'See our policy platform at [**here**](/issues).'
+      - answer: 'See our policy platform [**here**](/issues).'
         question: What is your platform? What do you stand for?
     title: PLATFORM
   - items:
@@ -148,7 +148,7 @@ sections:
           corporate influence in American elections and pay-to-play politics in
           any form.
         question: Do you accept Dark Money? Will you be disclosing all donations?
-      - answer: 'The American people, with an average donation of less than $16.'
+      - answer: 'The American people, with an average donation of $15.13.'
         question: Who are the major funders?
       - answer: >-
           The [**Federal Election
@@ -160,18 +160,9 @@ sections:
     title: FUNDING
   - items:
       - answer: >-
-          Yes! Sign up to volunteer at
-          [**justicedemocrats.com/volunteer**](https://go.justicedemocrats.com/survey/volunteer-directly-jd-campaign/).
-        question: I don’t have a lot of money. Can I volunteer my time instead?
-      - answer: >-
           You can visit our store at
           [**shop.justicedemocrats.com**](https://shop.justicedemocrats.com).
         question: Where can I buy merchandise to show my support?
-      - answer: >-
-          Thanks for your enthusiasm! You can’t donate quite yet, but you can
-          volunteer your time! We are most in need of your help spreading our
-          message on the ground.
-        question: I’m under 18 — can I join/donate? Can I help in other ways?
       - answer: >-
           You can only donate if you are a US citizen or permanent resident. You
           can, however, volunteer your time. People overseas often make great
@@ -195,8 +186,8 @@ sections:
           Platform. Can I make a suggestion?
       - answer: >-
           You can donate online at [**Act
-          Blue**](<https://secure.actblue.com/donate/jdpacslate >). (The donate
-          link at the top of the page will also get you there.)
+          Blue**](https://secure.actblue.com/donate/justicedemocrats). (The
+          donate link at the top of the page will also get you there.)
 
 
           If you are more comfortable mailing your contribution, please address

@@ -4,19 +4,19 @@
 .home-header-b {
   font-size: 42px;
   line-height: 42px;
-  color: $jd-light-blue;
+  color: $jd-dark-blue;
 }
 
 .home-header-w {
-  font-size: 115px;
-  line-height: 110px;
+  font-size: 75px;
+  line-height: 75px;
   color: white;
 }
 
 .home-subheader-b {
   font-size: 28px;
   line-height: 28px;
-  color: $jd-light-blue;
+  color: $jd-dark-blue;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -137,13 +137,15 @@
 
 .sign-up-input {
   background: none !important;
-  border: 1px solid $jd-dark-blue !important;
+  border: 1px solid white !important;
+  color: white;
   font-size: 22px;
   height: 38px;
   line-height: 38px;
+  border-radius: 0px;
 
   &::placeholder {
-    color: $jd-dark-blue;
+    color: white;
     font-family: $jd-sans;
     font-size: 16px;
     font-weight: 700;
@@ -172,7 +174,7 @@
 
 .callout-container {
   padding: 20px 10px;
-  border-top: 1px dotted orange;
+  border-top: 2px dotted $jd-orange;
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -184,9 +186,9 @@
 }
 
 .home-banner {
-  background-size: cover;
   padding-top: 50;
-  height: calc(100vh - 100px);
+  height: calc(100vw * 0.56 + 60px);
+  position: relative;
 
   .home-banner-text-image {
     height: calc(100% - 60px);
@@ -200,7 +202,7 @@
   .home-banner {
     background-size: cover;
     padding-top: 50;
-    height: calc(100vh - 100px);
+    height: calc(100vw * 0.56 + 170px);
 
     .home-banner-text-image {
       height: calc(100% - 155px);
@@ -214,6 +216,10 @@
 .primary-issue-box {
   display: flex;
   flex-direction: column;
+
+  img {
+    height: 80%;
+  }
 }
 
 .highlight-container {

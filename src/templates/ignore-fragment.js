@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 
-export const IgnoreFragmentTemplate = () => <div />;
+export const IgnoreFragmentTemplate = () => <div />
 
 const IgnoreFragment = () => {
-  return <div />;
-};
+  return <div />
+}
 
-export default IgnoreFragment;
+export default IgnoreFragment

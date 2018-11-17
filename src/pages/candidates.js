@@ -1,63 +1,62 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Content, { HTMLContent } from "../components/Content";
-import Candidate from "../components/Candidate";
-import Banner from "../components/Banner";
-import "../style/candidates.scss";
-import sortBy from "lodash.sortby";
+import React from 'react'
+import PropTypes from 'prop-types'
+import Content, { HTMLContent } from '../components/Content'
+import Candidate from '../components/Candidate'
+import Banner from '../components/Banner'
+import '../style/candidates.scss'
+import sortBy from 'lodash.sortby'
 
 const alphabeticalSort = (a, b) => {
   return a.toLowerCase() < b.toLowerCase()
     ? 1
-    : a.toLowerCase() > b.toLowerCase() ? 1 : 0;
-};
+    : a.toLowerCase() > b.toLowerCase()
+    ? 1
+    : 0
+}
 
 const lastWord = string => {
-  const list = string.split(" ");
-  return list[list.length - 1];
-};
+  const list = string.split(' ')
+  return list[list.length - 1]
+}
 
 export const sortFunctions = {
   state: candidates => sortBy(candidates, c => `${c.state}${c.district}`),
   alphabetical: candidates => sortBy(candidates, c => lastWord(c.lastName)),
-  electionDate: candidates =>
+  primaryWinners: candidates =>
     sortBy(
       sortBy(
-        candidates.filter(c => c.outcome != "Won"),
+        candidates.filter(c => c.electionType == 'general'),
         c => `${c.state}${c.district}`
       ),
       c => new Date(c.electionDate)
     ),
-  carousel: candidates =>
+  generalWinners: candidates =>
     sortBy(
       sortBy(
-        sortBy(candidates, c => `${c.state}${c.district}`),
+        sortBy(
+          candidates.filter(c => c.outcome == 'Won'),
+          c => `${c.state}${c.district}`
+        ),
         c => new Date(c.electionDate)
       ),
-      c => (c.outcome == "Won" ? "A" : "Z")
+      c => (c.outcome == 'Won' ? 'A' : 'Z')
     ),
-  general: candidates =>
-    sortBy(
-      candidates.filter(c => c.outcome == "Won"),
-      c => `${c.outcome == "Won" ? "A" : "Z"}${c.state}${c.district}`
-    )
-};
+}
 
 export class CandidatePageTemplate extends React.Component {
-  state = { sortFunction: "state" };
+  state = { sortFunction: 'state' }
 
-  currySetSort = key => () => this.setState({ sortFunction: key });
+  currySetSort = key => () => this.setState({ sortFunction: key })
 
   render() {
     const {
       bannerBackgroundImage,
       bannerText,
       candidates,
-      pastCandidates,
       stats,
       intro,
-      priorCandidatesIntro
-    } = this.props;
+      priorCandidatesIntro,
+    } = this.props
 
     return (
       <div>
@@ -66,9 +65,9 @@ export class CandidatePageTemplate extends React.Component {
           <div className="candidate-intro-section row">
             <div className="six columns stat-container">
               {stats.map(({ title, count }) => {
-                const split = title.split(" ");
-                const first = split.slice(0, split.length - 1).join(" ");
-                const last = split[split.length - 1];
+                const split = title.split(' ')
+                const first = split.slice(0, split.length - 1).join(' ')
+                const last = split[split.length - 1]
 
                 return (
                   <div className="stat">
@@ -77,7 +76,7 @@ export class CandidatePageTemplate extends React.Component {
                     <span className="light-m light-blue-color"> = </span>
                     <span className="extra-bold-m orange-color"> {count} </span>
                   </div>
-                );
+                )
               })}
             </div>
             <div
@@ -90,33 +89,35 @@ export class CandidatePageTemplate extends React.Component {
 
           <div className="sort-options">
             {[
-              ["State/District", "state"],
-              ["Alphabetical", "alphabetical"],
-              ["Upcoming Primaries", "electionDate"],
-              ["General Election", "general"]
+              ['State/District', 'state'],
+              ['Alphabetical', 'alphabetical'],
+              ['Primary Winners', 'primaryWinners'],
+              ['General Election', 'generalWinners'],
             ].map(([label, key]) => (
               <button
                 onClick={this.currySetSort(key)}
                 className={`sort-button bold-m ${this.state.sortFunction ===
-                  key && "selected"}`}
+                  key && 'selected'}`}
               >
                 {label}
               </button>
             ))}
             <a
               className="sort-button orange-bg extra-bold-m orange-border button"
-              href="https://secure.actblue.com/donate/jd-candidates?refcode=candidatepage"
+              href="https://secure.actblue.com/donate/justicedemocrats?refcode=candidatesection"
               target="_blank"
             >
               Donate to All
             </a>
           </div>
 
-          <div className="candidates">
+          {/* <div className="candidates">
             {sortFunctions[this.state.sortFunction](candidates).map(
-              (props, i) => <Candidate key={i} {...props} />
+              (props, i) => (
+                <Candidate key={i} {...props} hideDonate={true} />
+              )
             )}
-          </div>
+          </div> */}
         </div>
         <div className="divider" />
         <div className="page-container">
@@ -124,16 +125,16 @@ export class CandidatePageTemplate extends React.Component {
             <div
               className="four columns extra-bold-m light-blue-color"
               style={{
-                textTransform: "uppercase",
-                fontSize: "42px",
-                lineHeight: 1
+                textTransform: 'uppercase',
+                fontSize: '42px',
+                lineHeight: 1,
               }}
             >
               Prior 2018 Primaries
             </div>
             <div className="eight columns">
               <HTMLContent
-                content={priorCandidatesIntro || ""}
+                content={priorCandidatesIntro || ''}
                 markdown={true}
                 className="medium-m standard-text"
               />
@@ -142,51 +143,53 @@ export class CandidatePageTemplate extends React.Component {
         </div>
         <div className="page-container">
           <div className="candidates">
-            {sortFunctions
-              .state(pastCandidates)
-              .map((props, i) => <Candidate key={i} {...props} />)}
+            {sortFunctions[this.state.sortFunction](candidates).map(
+              (props, i) => (
+                <Candidate key={i} {...props} hideDonate={true} />
+              )
+            )}
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
 CandidatePageTemplate.propTypes = {
-  candidates: PropTypes.array.isRequired
-};
+  candidates: PropTypes.array.isRequired,
+}
 
 const CandidatePage = ({ data }) => {
-  const { candidates: { edges } } = data;
-  const baseCandidates = edges.map(edge => edge.node.frontmatter);
-  const candidates = baseCandidates.filter(c => c.outcome !== "Lost");
-  const pastCandidates = baseCandidates.filter(c => c.outcome === "Lost");
+  const {
+    candidates: { edges },
+  } = data
+  const baseCandidates = edges.map(edge => edge.node.frontmatter)
+  const candidates = baseCandidates
   const {
     bannerBackgroundImage,
     bannerText,
     intro,
     priorCandidatesIntro,
-    stats
-  } = data.page.edges[0].node.frontmatter;
+    stats,
+  } = data.page.edges[0].node.frontmatter
 
   return (
     <CandidatePageTemplate
       candidates={candidates}
-      pastCandidates={pastCandidates}
       bannerBackgroundImage={bannerBackgroundImage}
       bannerText={bannerText}
       intro={intro}
       priorCandidatesIntro={priorCandidatesIntro}
       stats={stats}
     />
-  );
-};
+  )
+}
 
 CandidatePage.propTypes = {
-  data: PropTypes.object.isRequired
-};
+  data: PropTypes.object.isRequired,
+}
 
-export default CandidatePage;
+export default CandidatePage
 
 export const pageQuery = graphql`
   query CandidateQuery {
@@ -234,4 +237,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
