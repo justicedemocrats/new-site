@@ -14,10 +14,10 @@ donationLink: 'https://secure.actblue.com/donate/jdalexo'
 outcome: Won
 image: /img/jd_site_alexandriaocasiocortez_550x600_061218.jpg
 blurb: >-
-  New York’s 14th Congressional District urgently needs access to more reliable
-  jobs, increased access to family support services like parental leave and free
-  childcare. She will fight for universal access to quality education from pre-K
-  until college regardless of income and enrollment status because your ZIP code
-  should never determine your quality of life.
+  Alexandria Ocasio-Cortez is the congresswoman-elect for New York's 14th
+  district. Running a fiercely progressive, grassroots campaign, her primary
+  victory in June 2018 shocked the political establishment. Alexandria is a
+  tireless campaigner for social justice, advocating in Congress for Medicare
+  for All, a Green New Deal, and support for Puerto Rico.
 ---
 
