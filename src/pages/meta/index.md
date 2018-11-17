@@ -14,8 +14,6 @@ quickLinks:
     url: 'https://www.justicedemocrats.com/privacy'
   - text: Candidate Endorsement
     url: 'https://go.justicedemocrats.com/survey/application-endorsement/'
-  - text: Volunteer
-    url: 'https://go.justicedemocrats.com/survey/volunteer-directly-jd-campaign/'
 socialIcons:
   - icon: /img/jd_site_icons_social_twitter_100x100_white.svg
     type: social
