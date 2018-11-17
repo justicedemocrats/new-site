@@ -127,7 +127,7 @@ collections:
             }
           - { label: "Background Image", name: "bgimg", widget: "image" }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Header", name: "hed", widget: "string" }
+          - { label: "Header Image", name: "headerImage", widget: "image" }
           - { label: "Sub Header", name: "subhed", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
 
