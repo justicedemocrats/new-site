@@ -63,10 +63,10 @@ sections:
           All candidates are required to pledge not to take any corporate PAC or
           corporate lobbyist money. Additionally, they will be progressive
           candidates who generally agree with the [**Justice Democrats
-          platform**](/issues). Please check out the detailed description of who
-          we are looking for at the top of our [**candidate endorsement
-          form**](https://go.justicedemocrats.com/survey/application-endorsement/).
-          Read about our candidates on our [**candidates page**](/candidates).
+          platform**](http://www.justicedemocrats.com/issues). Please check out
+          the detailed description of who we are looking for at the top of our
+          [**nomination page**](http://www.justicedemocrats.com/nominate). Read
+          about our candidates on our [**candidates page**](/candidates).
         question: ' Who are Justice Democrat candidates?'
       - answer: >-
           We won’t run against candidates that fully support the Justice
@@ -148,7 +148,7 @@ sections:
           corporate influence in American elections and pay-to-play politics in
           any form.
         question: Do you accept Dark Money? Will you be disclosing all donations?
-      - answer: 'The American people, with an average donation of less than $16.'
+      - answer: 'The American people, with an average donation of $15.13.'
         question: Who are the major funders?
       - answer: >-
           The [**Federal Election
@@ -186,8 +186,8 @@ sections:
           Platform. Can I make a suggestion?
       - answer: >-
           You can donate online at [**Act
-          Blue**](<https://secure.actblue.com/donate/jdpacslate >). (The donate
-          link at the top of the page will also get you there.)
+          Blue**](https://secure.actblue.com/donate/justicedemocrats). (The
+          donate link at the top of the page will also get you there.)
 
 
           If you are more comfortable mailing your contribution, please address
