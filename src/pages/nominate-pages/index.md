@@ -16,8 +16,10 @@ thankYou: >-
   and an invitation to our national Justice Democrats calls. If you don't see it
   right away, please check your spam folder.
 redirect: 'https://secure.actblue.com/donate/justicedemocrats'
-incumbentsIntro: X
-incumbentsStatement: X
+incumbentsIntro: Justice Democrats in the House
+incumbentsStatement: >-
+  2019 Congress kicks off with 7 Justice Democrats pushing for change in the
+  U.S. House of Representatives.
 lookingForBullets:
   - header: Bold Leaders
     body: >-
