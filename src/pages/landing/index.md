@@ -52,8 +52,8 @@ blocks:
     calloutText: ''
     header: 'Elect a new generation of diverse, working-class Democrats'
     htmlContent: >-
-      **We recruited, trained, and helped Alexandria pull off one of the biggest
-      upsets in American history.** But the top of the Democratic Party is still
+      **We recruited and helped Alexandria pull off one of the biggest upsets in
+      American history.** But the top of the Democratic Party is still
       disproportionately wealthier, whiter, and more male than the base. 
 
 
