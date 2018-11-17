@@ -45,9 +45,11 @@ formIntro: >-
 
 
   There are some questions we ask in this form which may take some time to
-  answer. You can preview the questions
-  [here](https://docs.google.com/document/d/1_EUuelRKCEycShqrguNZ3XO42y22F1qQ-ywFZ6RT0uU/edit?usp=sharing)
-  and prepare your answers offline before submitting the form. Please be as
+  answer. You can read the Quick Start guide
+  [**here**](https://docs.google.com/document/d/10rxLBisP6kE8bWM-47_y-G7frgLPYU66BuMI9LmZgm0/edit?usp=sharing)
+  and then preview the questions
+  [**here**](https://docs.google.com/document/d/1_EUuelRKCEycShqrguNZ3XO42y22F1qQ-ywFZ6RT0uU/edit?usp=sharing)**
+  **and prepare your answers offline before submitting the form. Please be as
   complete as possible!
 stages:
   - display: both
