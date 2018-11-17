@@ -5,7 +5,7 @@ import Question from "../components/Question";
 import request from "superagent";
 import "../style/issues.scss";
 
-const ENDPOINT = "https://ben2.ngrok.io/module/";
+const ENDPOINT = "https://api.justicedemocrats.com/module/";
 const REDIRECT_DELAY = 3000;
 
 class ModulePageTemplate extends React.Component {

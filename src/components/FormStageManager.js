@@ -6,9 +6,7 @@ import validate from "../lib/validate";
 import "../style/form-stage-manager.scss";
 import { HTMLContent } from "./Content";
 
-// const ENDPOINT = "https://api.justicedemocrats.com/nominate/";
-// const ENDPOINT = "http://localhost:8080/nominate/";
-const ENDPOINT = "https://ben2.ngrok.io/nominate/";
+const ENDPOINT = "https://api.justicedemocrats.com/nominate/";
 const REDIRECT_DELAY = 3000;
 
 const customStyles = {
