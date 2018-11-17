@@ -78,7 +78,7 @@ sections:
           against them?
     title: ABOUT THE CANDIDATES
   - items:
-      - answer: 'See our policy platform at [**here**](/issues).'
+      - answer: 'See our policy platform [**here**](/issues).'
         question: What is your platform? What do you stand for?
     title: PLATFORM
   - items:
