@@ -30,11 +30,11 @@ primaryIssues:
   - color: pink
     image: /img/jd_site_policy_icon_2_rights_nov18_rev.svg
     text: Medicare for All
-    url: '/issues#economy'
+    url: '/issues#rights'
   - color: aqua
     image: /img/jd_site_policy_icon_1_growth_nov18_rev.svg
     text: Green New Deal
-    url: '/issues#rights'
+    url: '/issues#economy'
   - color: blue
     image: /img/jd_site_policy_icon_3_democracy_nov18.svg
     text: Racial Justice
@@ -68,7 +68,7 @@ blocks:
       and help build the movement.
   - alignment: left
     bannerButtonText: Join Us
-    bannerButtonUrl: /join
+    bannerButtonUrl: /
     bannerImageUrl: /img/jd_site_home_calloutbanner_2_support_1920x540_111518.jpg
     bannerText: '350,000+ Supporters'
     calloutIcon: /img/jd_site_home_icon_4jds_mini_350x200.png
