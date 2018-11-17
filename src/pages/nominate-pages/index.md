@@ -4,10 +4,10 @@ uniq: nominate-index
 title: Justice Democrats | Nominate
 bannerBackgroundImage: /img/jd_site_nominate_banner_1920x540_111518_temp.png
 bannerText: Candidates For Justice
-header: "#OurTime"
+header: "It's #OurTime"
 subheader: >-
-  We are searching for bold, compelling leaders to run as Justice Democrats in
-  2020.
+  We are recruiting diverse working class leaders to run as Justice Democrats
+  for Congress for 2020.
 thankYou: >-
   # Thank You! Your Submission Has Been Received
 
@@ -29,15 +29,15 @@ lookingForBullets:
     icon: /img/jd_site_nominate_icon_boldleaders_500x300.png
   - header: Grassroots Campaigners
     body: >-
-      who will run on Big Organizing over Big Money — inspiring volunteers
-      across the district, and rejecting all corporate PAC and lobbyist
-      donations.
+      who will run on Big Organizing over Big Money — inspiring thousands of
+      grassroots volunteers across the district, and rejecting all corporate PAC
+      and lobbyist donations.
     icon: /img/jd_site_nominate_icon_grassroots_500x300.png
   - header: Movement Builders
     body: >-
-      who will work with Justice Democrats across the country to build the
-      Democratic party into a progressive force that truly represents all
-      Americans.
+      who will work with Justice Democrats in Congress and across the country to
+      build the Democratic Party into a progressive force that truly represents
+      all Americans.
     icon: /img/jd_site_noninate_icon_movementbuilders_500x300.png
 formIntro: >-
   **Fill out the nomination form to tell us about your nominee, the district,
@@ -133,7 +133,7 @@ stages:
         width: half
       - label: "At least one link to a webpage, video, or social media site"
         name: Nominee Other Links
-        required: true
+        required: false
         type: textarea
         width: full
     title: Tell Us About The Person You're Nominating
