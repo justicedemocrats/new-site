@@ -16,8 +16,10 @@ thankYou: >-
   and an invitation to our national Justice Democrats calls. If you don't see it
   right away, please check your spam folder.
 redirect: "https://secure.actblue.com/donate/justicedemocrats"
-incumbentsIntro: X
-incumbentsStatement: X
+incumbentsIntro: Justice Democrats in the House
+incumbentsStatement: >-
+  2019 Congress kicks off with 7 Justice Democrats pushing for change in the
+  U.S. House of Representatives.
 lookingForBullets:
   - header: Bold Leaders
     body: >-
@@ -139,31 +141,34 @@ stages:
     preface: >-
       There are no disqualifiers, but we're particularly interested in: working
       class backgrounds, people of color, and women who show evidence of
-      leadership (not  through titles, but through action/results) and an
-      uninhibited fight for what's right
+      leadership (not through titles, but through action and results) and an
+      uninhibited fighter for justice.
     questions:
       - label: What is your nominee's occupation?
+        max_length: "200"
         name: Nominee Occupation
         required: true
         type: input
         width: full
       - label: How are they involved in their community?
+        max_length: "1000"
         name: Nominee Community Involvement
         required: true
         type: textarea
         width: full
       - label: Any other info you'd like to add?
+        max_length: "2000"
         name: Nominee Other Occupation Info
         type: textarea
     title: Tell Us How Your Nominee Is Spending Their Time
   - display: candidate
     preface: >-
-      Make a case drawing direct connections between characteristics about your
-      nominee and characteristics about the district that show them to be a good
-      fit and match.
+      Make a case drawing direct connections between characteristics of your
+      nominee and characteristics of the district that show how they are a great
+      fit.
     questions:
       - label: ""
-        max_length: "200"
+        max_length: "2000"
         name: Why Nominee
         required: true
         type: textarea
@@ -172,7 +177,7 @@ stages:
   - display: district
     preface: >-
       Specify the unique set of characteristics you think a candidate should
-      have - or not have - to be successful in this district
+      have - or not have - to be successful in this district.
     questions:
       - label: What are you looking for in a nominee?
         max_length: "2000"
