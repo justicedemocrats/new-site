@@ -4,7 +4,11 @@ uniq: nominate-index
 title: Justice Democrats | Nominate
 bannerBackgroundImage: /img/jd_site_nominate_banner_1920x540_111518_temp.png
 bannerText: Candidates For Justice
+<<<<<<< HEAD
 header: "It’s #OurTime"
+=======
+header: 'It’s #OurTime'
+>>>>>>> origin/cms/nominate
 subheader: >-
   We are recruiting diverse working class leaders to run as Justice Democrats
   for Congress for 2020.
@@ -15,7 +19,11 @@ thankYou: >-
   You will receive an email shortly with next steps in the nomination process
   and an invitation to our national Justice Democrats calls. If you don't see it
   right away, please check your spam folder.
+<<<<<<< HEAD
 redirect: "https://secure.actblue.com/donate/justicedemocrats"
+=======
+redirect: 'https://secure.actblue.com/donate/justicedemocrats'
+>>>>>>> origin/cms/nominate
 incumbentsIntro: Justice Democrats in the House
 incumbentsStatement: >-
   2019 Congress kicks off with 7 Justice Democrats pushing for change in the
@@ -51,6 +59,35 @@ formIntro: >-
   [**here**](https://docs.google.com/document/d/1_EUuelRKCEycShqrguNZ3XO42y22F1qQ-ywFZ6RT0uU/edit?usp=sharing)**
   **and prepare your answers offline before submitting the form. Please be as
   complete as possible!
+stage0Explanation: >-
+  **SUBMIT A NOMINATION**
+
+
+  No single candidate can carry this movement for working-class Americans alone.
+  That’s why we’re recruiting candidates from districts all across the country
+  who will take the courage of their convictions -- for a Green New Deal,
+  Medicare for All, $15/hr minimum wage, racial justice, and so much more --
+  into the 2020 Democratic primary field, and give clear voice to so many
+  working-class Americans who are demanding representation that will fight for
+  them -- not corporate donors. 
+
+
+  The days of political theatrics are over. We need bold fearless action, now.
+  It’s #OurTime. 
+
+
+  * But we at Justice Democrats can’t find these candidates alone. We need your
+  help. Along with your friends, family, co-workers, neighbors, former
+  classmates, anyone you know to join and submit nominations here on an ongoing
+  basis. You can submit nominations for:
+
+  * People you think will make great Justice Democrats, and also
+
+  * Districts where maybe you don’t know anyone but you think needs a Justice
+  Democrat in the primary field.
+
+
+  Thanks for your time, your commitment, and continued support.
 stages:
   - display: both
     questions:
@@ -91,8 +128,8 @@ stages:
       Make your case using specific facts about the failures of the incumbent
       and unmet needs of the district's constituents.
     questions:
-      - label: ""
-        max_length: "2000"
+      - label: ''
+        max_length: '2000'
         name: Why District
         required: true
         type: textarea
@@ -133,7 +170,7 @@ stages:
         name: Nominee Instagram
         type: input
         width: half
-      - label: "At least one link to a webpage, video, or social media site"
+      - label: 'At least one link to a webpage, video, or social media site'
         name: Nominee Other Links
         required: false
         type: textarea
@@ -147,19 +184,19 @@ stages:
       uninhibited fighter for justice.
     questions:
       - label: What is your nominee's occupation?
-        max_length: "200"
+        max_length: '200'
         name: Nominee Occupation
         required: true
         type: input
         width: full
       - label: How are they involved in their community?
-        max_length: "1000"
+        max_length: '1000'
         name: Nominee Community Involvement
         required: true
         type: textarea
         width: full
       - label: Any other info you'd like to add?
-        max_length: "2000"
+        max_length: '2000'
         name: Nominee Other Occupation Info
         type: textarea
     title: Tell Us How Your Nominee Is Spending Their Time
@@ -169,8 +206,8 @@ stages:
       nominee and characteristics of the district that show how they are a great
       fit.
     questions:
-      - label: ""
-        max_length: "2000"
+      - label: ''
+        max_length: '2000'
         name: Why Nominee
         required: true
         type: textarea
@@ -182,7 +219,7 @@ stages:
       have - or not have - to be successful in this district.
     questions:
       - label: What are you looking for in a nominee?
-        max_length: "2000"
+        max_length: '2000'
         name: Desired Candidate Qualities
         required: true
         type: textarea
@@ -194,8 +231,8 @@ stages:
       with organizations and community leaders in the district, and more. Share
       with us all the ways you could be a resource for this nominee.
     questions:
-      - label: ""
-        max_length: "2000"
+      - label: ''
+        max_length: '2000'
         name: Nominator Pledge
         required: true
         type: textarea
