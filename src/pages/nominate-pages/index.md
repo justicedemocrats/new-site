@@ -130,7 +130,7 @@ stages:
         width: half
       - label: 'At least one link to a webpage, video, or social media site'
         name: Nominee Other Links
-        required: true
+        required: false
         type: textarea
         width: full
     title: Tell Us About The Person You're Nominating
