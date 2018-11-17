@@ -36,7 +36,7 @@ sections:
 
 
           We want our democracy to work for Americans again as soon as possible.
-          The best way to do this is by working to change the Democratic party
+          The best way to do this is by working to change the Democratic Party
           from the inside out. Once Justice Democrats take power, we plan to
           implement electoral reform like ranked choice voting so third parties
           can have more power in our democracy.
