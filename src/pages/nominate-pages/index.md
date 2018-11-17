@@ -58,25 +58,25 @@ stage0Explanation: >-
   No single candidate can carry this movement for working-class Americans alone.
   That’s why we’re recruiting candidates from districts all across the country
   who will take the courage of their convictions -- for a Green New Deal,
-  Medicare for All, $15/hr minimum wage, racial justice, and so much more --
-  into the 2020 Democratic primary field, and give clear voice to so many
-  working-class Americans who are demanding representation that will fight for
-  them -- not corporate donors. 
+  Medicare for All, racial justice, and so much more -- into the 2020 Democratic
+  primary field and give clear voice to so many working-class Americans who are
+  demanding representation that fights for them -- not corporate donors. 
 
 
   The days of political theatrics are over. We need bold fearless action, now.
   It’s #OurTime. 
 
 
-  * But we at Justice Democrats can’t find these candidates alone. We need your
+  But we at Justice Democrats can’t find these candidates alone. We need your
   help. Along with your friends, family, co-workers, neighbors, former
   classmates, anyone you know to join and submit nominations here on an ongoing
   basis. You can submit nominations for:
 
-  * People you think will make great Justice Democrats, and also
 
-  * Districts where maybe you don’t know anyone but you think needs a Justice
-  Democrat in the primary field.
+  * **People** you think will make great Justice Democrats, and also
+
+  * **Districts** where maybe you don’t know anyone but you think needs a
+  Justice Democrat in the primary field.
 
 
   Thanks for your time, your commitment, and continued support.
