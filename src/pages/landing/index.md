@@ -60,7 +60,7 @@ blocks:
       **Now it’s time for more leaders in the Democratic Party who don’t just
       represent corporate donors, but the voters of the Democratic Party:**
       women, people of color, young people, and working-class people of all
-      backgrounds and help build our progressive movement.
+      backgrounds to help build our progressive movement.
     moreButtonText: See our 2018 Slate
     moreButtonUrl: /candidates
     subheader: >-
