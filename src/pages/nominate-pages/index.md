@@ -51,6 +51,35 @@ formIntro: >-
   [**here**](https://docs.google.com/document/d/1_EUuelRKCEycShqrguNZ3XO42y22F1qQ-ywFZ6RT0uU/edit?usp=sharing)**
   **and prepare your answers offline before submitting the form. Please be as
   complete as possible!
+stage0Explanation: >-
+  **SUBMIT A NOMINATION**
+
+
+  No single candidate can carry this movement for working-class Americans alone.
+  That’s why we’re recruiting candidates from districts all across the country
+  who will take the courage of their convictions -- for a Green New Deal,
+  Medicare for All, $15/hr minimum wage, racial justice, and so much more --
+  into the 2020 Democratic primary field, and give clear voice to so many
+  working-class Americans who are demanding representation that will fight for
+  them -- not corporate donors. 
+
+
+  The days of political theatrics are over. We need bold fearless action, now.
+  It’s #OurTime. 
+
+
+  * But we at Justice Democrats can’t find these candidates alone. We need your
+  help. Along with your friends, family, co-workers, neighbors, former
+  classmates, anyone you know to join and submit nominations here on an ongoing
+  basis. You can submit nominations for:
+
+  * People you think will make great Justice Democrats, and also
+
+  * Districts where maybe you don’t know anyone but you think needs a Justice
+  Democrat in the primary field.
+
+
+  Thanks for your time, your commitment, and continued support.
 stages:
   - display: both
     questions:
