@@ -52,15 +52,15 @@ blocks:
     calloutText: ""
     header: "Elect a new generation of diverse, working-class Democrats"
     htmlContent: >-
-      **We recruited, trained, and helped Alexandria pull off one of the biggest
-      upsets in American history.** But the top of the Democratic Party is still
+      **We recruited and helped Alexandria pull off one of the biggest upsets in
+      American history.** But the top of the Democratic Party is still
       disproportionately wealthier, whiter, and more male than the base. 
 
 
       **Now it’s time for more leaders in the Democratic Party who don’t just
-      represent the corporate donors, but the voters of the Democratic Party:**
+      represent corporate donors, but the voters of the Democratic Party:**
       women, people of color, young people, and working-class people of all
-      backgrounds and help build our multiracial populist movement.
+      backgrounds and help build our progressive movement.
     moreButtonText: See our 2018 Slate
     moreButtonUrl: /candidates
     subheader: >-
@@ -73,10 +73,10 @@ blocks:
     bannerText: "350,000+ Supporters"
     calloutIcon: /img/jd_site_home_icon_4jds_mini_350x200.png
     calloutText: >-
-      Polling data demonstrates that the Democratic Party’s base has moved left,
-      and voters are ready for a progressive agenda. Though the party elites may
-      be “divided” the base is not; they are ready for unabashed progressive
-      politicians. — www.futureoftheparty.com
+      "Polling data demonstrates the Democratic Party’s base of voters are ready
+      for a more progressive agenda. Though the party elites may be 'divided'
+      the base is not; they are ready for unabashed progressive politicians." —
+      www.futureoftheparty.com
     header: A Platform for America
     htmlContent: >-
       **The Democratic Party needs to fight for something.** Progressive
