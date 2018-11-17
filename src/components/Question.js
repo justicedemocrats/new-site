@@ -14,7 +14,8 @@ export default class Question extends React.Component {
     this.props.setData({ target: { value: new_cosigners } });
   };
 
-  addCosigner = () => {
+  addCosigner = ev => {
+    ev.preventDefault();
     const value = (this.props.value || []).slice(0);
     value.push({});
     this.props.setData({ target: { value: value } });
@@ -163,7 +164,7 @@ export default class Question extends React.Component {
         result = (
           <div>
             {!value && (
-              <div style={{ display: "flex" }}>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <div>
                   <label> Name </label>
                   <input
@@ -236,7 +237,7 @@ export default class Question extends React.Component {
 
             {value && value.length < 3 && (
               <button className="button" onClick={this.addCosigner}>
-                &#65291; Add Cosigner
+                &#65291; Add Another Cosigner
               </button>
             )}
           </div>

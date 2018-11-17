@@ -33,6 +33,7 @@ export default class FormStageManager extends React.Component {
     errors: {},
     error: undefined,
     success: false,
+    // success: true,
     mode: undefined
   };
 
@@ -124,11 +125,11 @@ export default class FormStageManager extends React.Component {
         onRequestClose={this.props.endNomination}
       >
         {success ? (
-          <div>
+          <div style={{ padding: 20 }}>
             <HTMLContent
               content={thankYou}
               markdown={true}
-              className="medium-m font-size-20"
+              className="medium-m"
             />
           </div>
         ) : error ? (
