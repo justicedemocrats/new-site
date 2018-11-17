@@ -6,13 +6,16 @@ bannerBackgroundImage: /img/jd_site_nominate_banner_1920x540_111518_temp.png
 bannerText: Candidates For Justice
 header: '#OurTime'
 subheader: >-
-  We are searching for bold,  compelling leaders to run as Justice Democrats in
+  We are searching for bold, compelling leaders to run as Justice Democrats in
   2020. 
-thankYou: |-
-  # Your Submission Has Been Received
+thankYou: >-
+  # Thank You! Your Submission Has Been Received
 
-  You will receive an email shortly with further instructions.
-redirect: 'https://secure.actblue.com/donate/jdpacslate'
+
+  You will receive an email shortly with next steps in the nomination process
+  and an invitation to our national Justice Democrats calls. If you don't see it
+  right away, please check your spam folder.
+redirect: 'https://secure.actblue.com/donate/justicedemocrats'
 incumbentsIntro: X
 incumbentsStatement: X
 lookingForBullets:
@@ -221,6 +224,6 @@ stages:
         type: cosigners
     title: Co-Signers
 ---
-**Is the next Alexandria Ocasio-Cortez, the next Rashida Tlaib, the next Ayanna Pressley in your district?** 
+**Is the next Alexandria Ocasio-Cortez, the next Rashida Tlaib, the next Ilhan Omar, or the next Ayanna Pressley in your district?** 
 
-Help us find them by nominating a candidate or by nominating a district where you want to help find a great candidate.
+Help us find them by nominating a candidate, or by nominating a district where you want to help find a great candidate.
