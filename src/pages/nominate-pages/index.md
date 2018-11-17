@@ -4,7 +4,7 @@ uniq: nominate-index
 title: Justice Democrats | Nominate
 bannerBackgroundImage: /img/jd_site_nominate_banner_1920x540_111518_temp.png
 bannerText: Candidates For Justice
-header: Need 2Words
+header: '#OurTime'
 subheader: >-
   We are searching for bold,  compelling leaders to run as Justice Democrats in
   2020. 
@@ -13,10 +13,8 @@ thankYou: |-
 
   You will receive an email shortly with further instructions.
 redirect: 'https://secure.actblue.com/donate/jdpacslate'
-incumentsIntro: Justice Democrats in the House
-incumentsStatement: >-
-  2019 Congress kicks off with 7 Justice Democrats pushing for change in the
-  U.S. House of Representatives.
+incumbentsIntro: X
+incumbentsStatement: X
 lookingForBullets:
   - header: Bold Leaders
     body: >-
