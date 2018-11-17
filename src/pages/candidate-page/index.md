@@ -9,19 +9,19 @@ priorCandidatesIntro: >-
   for All, Money Out of Politics, Livable Wage, Green Energy, and Equality and
   Justice for all people. We are proud to call them Justice Democrats.
 intro: >-
-  We’re running a broad slate of candidates across the country — most of whom we
-  have counted on you to nominate. Some have been previously involved in
-  politics but most are running for the first time. They are educators, nurses,
-  small business owners, and local community organizers. Every one of them is
-  concerned about their community, our country, and making sure every person has
-  the same protections, rights, and opportunities.
+  In 2018, we ran a broad slate of candidates from across the country — most of
+  whom we counted on you to nominate. Some had been previously involved in
+  politics but most are running for the first time. They were (and are)
+  educators, nurses, small business owners, and local community organizers.
+  Every one of them concerned about their community, our country, and making
+  sure every person has the same protections, rights, and opportunities.
 stats:
   - count: '7'
-    title: To Be Seated
+    title: Elected to Congress
   - count: '26'
-    title: Ran in General
+    title: Won in General
   - count: '78'
-    title: Ran in Primaries
+    title: Won in Primaries
   - count: '2020'
     title: Next Election
 ---
