@@ -160,18 +160,9 @@ sections:
     title: FUNDING
   - items:
       - answer: >-
-          Yes! Sign up to volunteer at
-          [**justicedemocrats.com/volunteer**](https://go.justicedemocrats.com/survey/volunteer-directly-jd-campaign/).
-        question: I don’t have a lot of money. Can I volunteer my time instead?
-      - answer: >-
           You can visit our store at
           [**shop.justicedemocrats.com**](https://shop.justicedemocrats.com).
         question: Where can I buy merchandise to show my support?
-      - answer: >-
-          Thanks for your enthusiasm! You can’t donate quite yet, but you can
-          volunteer your time! We are most in need of your help spreading our
-          message on the ground.
-        question: I’m under 18 — can I join/donate? Can I help in other ways?
       - answer: >-
           You can only donate if you are a US citizen or permanent resident. You
           can, however, volunteer your time. People overseas often make great
