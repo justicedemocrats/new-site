@@ -38,6 +38,10 @@ module.exports = class HTML extends React.Component {
             property="og:image"
             content="https://www.justicedemocrats.com/img/jd_site_home_cr2020_background_1920x1980_test.jpg"
           />
+          <meta
+            property="twitter:image"
+            content="https://www.justicedemocrats.com/img/jd_site_home_cr2020_background_1920x1980_test.jpg"
+          />
           <link
             href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800"
             rel="stylesheet"
