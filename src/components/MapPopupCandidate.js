@@ -6,20 +6,20 @@ export default props => (
       <span className="close" onClick={props.onClose}>
         x
       </span>
-      <div class="candidate-profile">
+      <div className="candidate-profile">
         <div
-          class="candidate-pic"
+          className="candidate-pic"
           style={{ backgroundImage: `url(${props.image})` }}
         />
-        <div class="candidate-info">
-          <h3 class="candidate-name">
+        <div className="candidate-info">
+          <h3 className="candidate-name">
             {props.candidate_name}{' '}
             <span>
               {props.is_incumbent || true ? 'incumbent' : 'candidate'}
             </span>
           </h3>
           <h3>{props.name}</h3>
-          <div class="candidate-actions">
+          <div className="candidate-actions">
             <a href="/">
               <img src="/assets/candidate-home.svg" />
             </a>
@@ -29,7 +29,7 @@ export default props => (
           </div>
         </div>
       </div>
-      <div class="candidate-description">
+      <div className="candidate-description">
         <p>{props.description}</p>
       </div>
     </div>

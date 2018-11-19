@@ -6,12 +6,14 @@ export default props => (
     <div>
       <h3>{props.name}</h3>
       <table>
-        <tr>
-          <th>Total Nominations</th>
-          <td>6,302</td>
-        </tr>
+        <tbody>
+          <tr>
+            <th>Total Nominations</th>
+            <td>6,302</td>
+          </tr>
+        </tbody>
       </table>
-      <span class="note">click to show districts</span>
+      <span className="note">click to show districts</span>
     </div>
   </div>
 )

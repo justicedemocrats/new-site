@@ -13,6 +13,7 @@ import MapStateHover from '../components/MapStateHover'
 import MapPopup from '../components/MapPopup'
 import MapCDHoverCandidate from '../components/MapCDHoverCandidate'
 import MapPopupCandidate from '../components/MapPopupCandidate'
+import MapGeocoder from '../components/MapGeocoder'
 
 import '../style/map.scss'
 const Map = ReactMapboxGl({
@@ -30,11 +31,69 @@ export default class MapPage extends React.Component {
       hoveredState: null,
       hoveredStateMarker: null,
       hoveredCD: null,
-      hoveredCDMarker: null,
+      hoveredCDMarker: null
     }
   }
 
+  onGeolocate(result) {
+    console.log("Results ::: ", result, this.map);
+    
+    const center = result.geometry.location;
+    const ne = result.geometry.viewport.northeast;
+    const sw = result.geometry.viewport.southwest;
+    const bbox = [[sw.lng,sw.lat], [ne.lng, ne.lat]];
+    let stateId;
+
+
+    
+    // Check if type is street_address, otherwise, just choose state?
+    if (result.types.includes("street_address")) {
+      //Set state and CD of feature
+      this.map.fitBounds(bbox, { padding: 300, animate: false});
+      
+      const pbox = [this.map.project(bbox[0]), this.map.project(bbox[1])]
+      const target = this.map.queryRenderedFeatures(pbox, { layers: ['cd-fill']});
+      stateId = target[0].properties.STATEFP;
+
+      console.log(target.length > 0, target[0]);
+      target.length > 0 && this.setState({ 
+          selectedCD: target[0].properties, 
+          selectedState: stateId,
+          popupLngLat: [center.lng, center.lat]
+      });
+
+      console.log(this.state.selectedCD);
+    } else {
+      this.map.fitBounds(bbox, { padding: 100, animate: false});
+    }
+
+    // console.log("Map setting pain property ~~>", stateId);
+      // Show all districts in the state
+    // setTimeout(() => {
+      this.map.setPaintProperty('cd-line', 'line-opacity', [
+        'case',
+        ['==', ['get', 'STATEFP'], `${stateId}`],
+        1,
+        0,
+      ]);
+      this.map.setPaintProperty('cd-fill', 'fill-opacity', [
+        'case',
+        ['==', ['get', 'STATEFP'], `${stateId}`],
+        0.1,
+        0,
+      ]);
+    // }, 1000);
+
+    
+
+  }
+
+  componentDidMount() {
+    this.map = null; // I had to.. :-/
+  }
+
   onStyleLoad(map) {
+    this.map = map;
     map.setCenter({ lng: -95.7129, lat: 37.0902 })
     map.setZoom(4)
 
@@ -238,8 +297,8 @@ export default class MapPage extends React.Component {
               id="states-hover-layer"
               before={'cd-line'}
               paint={{
-                'fill-color': '#FAFAFA',
-                'fill-opacity': 1,
+                'fill-color': '#ffffff',
+                'fill-opacity': 0.5,
               }}
             >
               {this.state.hoveredState &&
@@ -253,8 +312,8 @@ export default class MapPage extends React.Component {
               id="cd-hover-layer"
               before={'cd-line'}
               paint={{
-                'fill-color': '#FAFAFA',
-                'fill-opacity': 1,
+                'fill-color': '#FFFFFF',
+                'fill-opacity': 0.5,
               }}
             >
               {this.state.hoveredCD &&
@@ -317,7 +376,11 @@ export default class MapPage extends React.Component {
             )}
           </Map>
         </section>
-        <section className="activity-area" />
+        <section className="activity-area">
+          <div className='aa-search'>
+            <MapGeocoder onGeolocate={this.onGeolocate.bind(this)}/>
+          </div>
+        </section>
       </div>
     )
   }

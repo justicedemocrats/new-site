@@ -3,13 +3,13 @@ import '../style/map.scss'
 export default props => (
   <div className="map-hover map-cd-candidate map-cd-candidate-popup">
     <div>
-      <div class="candidate-profile">
+      <div className="candidate-profile">
         <div
-          class="candidate-pic"
+          className="candidate-pic"
           style={{ backgroundImage: `url(${props.image})` }}
         />
-        <div class="candidate-info">
-          <h3 class="candidate-name">
+        <div className="candidate-info">
+          <h3 className="candidate-name">
             {props.candidate_name}{' '}
             <span>
               {props.is_incumbent || true ? 'incumbent' : 'candidate'}
@@ -18,7 +18,7 @@ export default props => (
           <h3>{props.name}</h3>
         </div>
       </div>
-      <span class="note">click to expand</span>
+      <span className="note">click to expand</span>
     </div>
   </div>
 )
