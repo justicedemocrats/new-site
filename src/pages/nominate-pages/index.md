@@ -10,6 +10,10 @@ subheader: >-
   2020. 
 thankYou: Thank you
 redirect: 'https://secure.actblue.com/donate/jdpacslate'
+incumbentsIntro: Justice Democrats in the House
+incumbentsStatement: >-
+  2019 Congress kicks off with 7 Justice Democrats pushing for change in the
+  U.S. House of Representatives.
 lookingForBullets:
   - header: Bold Leaders
     body: >-
@@ -33,6 +37,37 @@ formIntro: >-
 
   We’ll need some information to stay in touch throughout the process, please
   fill out the form as best you can.
+stage0Explanation: >-
+  # **SUBMIT A NOMINATION**
+
+
+
+
+  No single candidate can carry this movement for working-class Americans alone.
+  That’s why we’re recruiting candidates from districts all across the country
+  who will take the courage of their convictions -- for a Green New Deal,
+  Medicare for All, racial justice, and so much more -- into the 2020 Democratic
+  primary field and give clear voice to so many working-class Americans who are
+  demanding representation that fights for them -- not corporate donors.
+
+
+  The days of political theatrics are over. We need bold fearless action, now.
+  It’s #OurTime.
+
+
+  But we at Justice Democrats can’t find these candidates alone. We need your
+  help. Along with your friends, family, co-workers, neighbors, former
+  classmates, anyone you know to join and submit nominations here on an ongoing
+  basis. You can submit nominations for:
+
+
+  * People you think will make great Justice Democrats, and also
+
+  * Districts where maybe you don’t know anyone but you think needs a Justice
+  Democrat in the primary field.
+
+
+  Thanks for your time, your commitment, and continued support.
 stages:
   - display: both
     questions:
