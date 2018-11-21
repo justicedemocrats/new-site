@@ -52,10 +52,10 @@ formIntro: >-
   \*\*and prepare your answers offline before submitting the form. Please be as
   complete as possible! No self nominations please.
 stage0Explanation: >-
-  **SUBMIT A NOMINATION**
+  ## **SUBMIT A NOMINATION**
 
 
-  _(No self nominations please)_
+  (No self nominations please!)
 
 
   No single candidate can carry this movement for working-class Americans alone.
