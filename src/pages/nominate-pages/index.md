@@ -20,16 +20,19 @@ lookingForBullets:
       who will represent and mobilize their communities to fight for the Justice
       Democrats platform, from Medicare for All to the Green New Deal and ending
       mass incarceration.
+    icon: /img/jd_site_nominate_icon_boldleaders_500x300.png
   - header: Grassroots Campaigners
     body: >-
       who will run on Big Organizing over Big Money — inspiring volunteers
       across the district, and rejecting all corporate PAC and lobbyist
       donations.
+    icon: /img/jd_site_nominate_icon_grassroots_500x300.png
   - header: Movement Builders
     body: >-
       who will work with Justice Democrats across the country to build the
       Democratic party into a progressive force that truly represents all
       Americans.
+    icon: /img/jd_site_noninate_icon_movementbuilders_500x300.png
 formIntro: >-
   **Let us know more about yourself, your district, and why you are so excited
   about Justice Democrats!**
