@@ -2,21 +2,20 @@
 templateKey: ignore-fragment
 uniq: nominate-index
 title: Justice Democrats | Nominate
-bannerBackgroundImage: /img/jd_website_policies_banner_1920x540_061418.jpg
+bannerBackgroundImage: /img/jd_site_nominate_banner_1920x540_111518_temp.png
 bannerText: Candidates For Justice
-header: Need Headline
+header: "It’s #OurTime"
 subheader: >-
-  We are searching for bold,  compelling leaders to run as Justice Democrats in
-  2020. 
+  We are recruiting diverse working class leaders to run as Justice Democrats
+  for Congress for 2020.
 thankYou: >-
-  # Thank You! 
+  # Thank You! Your Submission Has Been Received
 
 
-  Your Submission Has Been Received You will receive an email shortly with next
-  steps in the nomination process and an invitation to our national Justice
-  Democrats calls. If you don't see it right away, please check your spam
-  folder.
-redirect: 'https://secure.actblue.com/donate/jdpacslate'
+  You will receive an email shortly with next steps in the nomination process
+  and an invitation to our national Justice Democrats calls. If you don't see it
+  right away, please check your spam folder.
+redirect: "https://secure.actblue.com/donate/justicedemocrats"
 incumbentsIntro: Justice Democrats in the House
 incumbentsStatement: >-
   2019 Congress kicks off with 7 Justice Democrats pushing for change in the
@@ -30,25 +29,30 @@ lookingForBullets:
     icon: /img/jd_site_nominate_icon_boldleaders_500x300.png
   - header: Grassroots Campaigners
     body: >-
-      who will run on Big Organizing over Big Money — inspiring volunteers
-      across the district, and rejecting all corporate PAC and lobbyist
-      donations.
+      who will run on Big Organizing over Big Money — inspiring thousands of
+      grassroots volunteers across the district, and rejecting all corporate PAC
+      and lobbyist donations.
     icon: /img/jd_site_nominate_icon_grassroots_500x300.png
   - header: Movement Builders
     body: >-
-      who will work with Justice Democrats across the country to build the
-      Democratic party into a progressive force that truly represents all
-      Americans.
+      who will work with Justice Democrats in Congress and across the country to
+      build the Democratic Party into a progressive force that truly represents
+      all Americans.
     icon: /img/jd_site_noninate_icon_movementbuilders_500x300.png
 formIntro: >-
-  **Let us know more about yourself, your district, and why you are so excited
-  about Justice Democrats!**
+  **Fill out the nomination form to tell us about your nominee, the district,
+  yourself, and why you are so excited about Justice Democrats.**
 
 
-  We’ll need some information to stay in touch throughout the process, please
-  fill out the form as best you can.
+  There are some questions we ask in this form which may take some time to
+  answer. You can read the Quick Start guide
+  [**here**](https://docs.google.com/document/d/10rxLBisP6kE8bWM-47_y-G7frgLPYU66BuMI9LmZgm0/edit?usp=sharing)
+  and then preview the questions
+  [**here**](https://docs.google.com/document/d/1_EUuelRKCEycShqrguNZ3XO42y22F1qQ-ywFZ6RT0uU/edit?usp=sharing)**
+  **and prepare your answers offline before submitting the form. Please be as
+  complete as possible!
 stage0Explanation: >-
-  # **SUBMIT A NOMINATION**
+  **SUBMIT A NOMINATION**
 
 
   No single candidate can carry this movement for working-class Americans alone.
@@ -56,11 +60,11 @@ stage0Explanation: >-
   who will take the courage of their convictions -- for a Green New Deal,
   Medicare for All, racial justice, and so much more -- into the 2020 Democratic
   primary field and give clear voice to so many working-class Americans who are
-  demanding representation that fights for them -- not corporate donors.
+  demanding representation that fights for them -- not corporate donors. 
 
 
   The days of political theatrics are over. We need bold fearless action, now.
-  It’s #OurTime.
+  It’s #OurTime. 
 
 
   But we at Justice Democrats can’t find these candidates alone. We need your
@@ -81,6 +85,7 @@ stages:
     questions:
       - label: Your First Name
         name: Nominator First Name
+        required: true
         type: input
         width: half
       - label: Your Last Name
@@ -90,34 +95,46 @@ stages:
         width: half
       - label: Your Email
         name: Nominator Email
+        required: true
         type: email
         width: full
       - label: Your Zipcode
-        max_length: '5'
+        max_length: "5"
         name: Nominator Zip
+        required: true
         type: input
         width: half
       - label: State
         name: State
-        type: input
+        required: true
+        type: state
         width: full
-      - label: District that you're Nominating
+      - label: Congressional District
         name: District
-        type: input
+        required: true
+        type: district
         width: full
     title: Tell Us About Yourself
   - display: both
+    preface: >-
+      Make your case using specific facts about the failures of the incumbent
+      and unmet needs of the district's constituents.
     questions:
-      - label: 'Why does your district/state need a Justice Democrat? '
-        max_length: '2000'
+      - label: ""
+        max_length: "2000"
         name: Why District
+        required: true
         type: textarea
         width: full
-    title: Why does your district/state need a Justice Democrat?
+    title: Why does your district need a Justice Democrat?
   - display: candidate
+    preface: >-
+      The links we ask for below matter a lot. Thanks for including as many as
+      you can.
     questions:
       - label: Nominee First Name
         name: Nominee First Name
+        required: true
         type: input
         width: half
       - label: Nominee Last Name
@@ -144,45 +161,72 @@ stages:
       - label: Nominee Instagram
         name: Nominee Instagram
         type: input
-      - label: Any Other Webpage or Video Links
+        width: half
+      - label: "At least one link to a webpage, video, or social media site"
         name: Nominee Other Links
+        required: false
         type: textarea
+        width: full
     title: Tell Us About The Person You're Nominating
   - display: candidate
+    preface: >-
+      There are no disqualifiers, but we're particularly interested in: working
+      class backgrounds, people of color, and women who show evidence of
+      leadership (not through titles, but through action and results) and an
+      uninhibited fighter for justice.
     questions:
       - label: What is your nominee's occupation?
+        max_length: "200"
         name: Nominee Occupation
+        required: true
         type: input
         width: full
       - label: How are they involved in their community?
+        max_length: "1000"
         name: Nominee Community Involvement
+        required: true
         type: textarea
         width: full
       - label: Any other info you'd like to add?
+        max_length: "2000"
         name: Nominee Other Occupation Info
         type: textarea
     title: Tell Us How Your Nominee Is Spending Their Time
   - display: candidate
+    preface: >-
+      Make a case drawing direct connections between characteristics of your
+      nominee and characteristics of the district that show how they are a great
+      fit.
     questions:
-      - label: ' '
-        max_length: '200'
+      - label: ""
+        max_length: "2000"
         name: Why Nominee
+        required: true
         type: textarea
         width: full
     title: Why would this nominee make a great Justice Democrat for your district?
   - display: district
+    preface: >-
+      Specify the unique set of characteristics you think a candidate should
+      have - or not have - to be successful in this district.
     questions:
       - label: What are you looking for in a nominee?
-        max_length: '200'
+        max_length: "2000"
         name: Desired Candidate Qualities
+        required: true
         type: textarea
         width: full
     title: What are you looking for in a nominee?
   - display: both
+    preface: >-
+      Candidates need help knocking on doors, phone/text banking, connecting
+      with organizations and community leaders in the district, and more. Share
+      with us all the ways you could be a resource for this nominee.
     questions:
-      - label: What will you do to help Justice Democrats win?
-        max_length: '2000'
+      - label: ""
+        max_length: "2000"
         name: Nominator Pledge
+        required: true
         type: textarea
         width: full
     title: What will you do to help Justice Democrats win?
@@ -190,6 +234,7 @@ stages:
     questions:
       - label: Phone Number
         name: Nominator Phone
+        required: true
         type: tel
         width: half
       - label: Facebook
@@ -209,7 +254,16 @@ stages:
         type: textarea
         width: half
     title: Tell Us A Little More About Yourself
+  - display: candidate
+    questions:
+      - label: >-
+          Please add anyone here who also supports this nomination! They will
+          get a separate email as well.
+        name: Co-Signers
+        type: cosigners
+    title: Co-Signers
 ---
-**Is the next Alexandria Ocasio-Cortez, the next Rashida Tlaib, the next Ayanna Pressley in your district?** 
 
-Help us find them by nominating a candidate or by nominating a district where you want to help find a great candidate.
+**Is the next Alexandria Ocasio-Cortez, the next Rashida Tlaib, the next Ilhan Omar, or the next Ayanna Pressley in your district?**
+
+Help us find them by nominating a candidate, or by nominating a district where you want to help find a great candidate.
