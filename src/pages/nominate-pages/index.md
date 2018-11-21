@@ -8,7 +8,14 @@ header: Need Headline
 subheader: >-
   We are searching for bold,  compelling leaders to run as Justice Democrats in
   2020. 
-thankYou: Thank you
+thankYou: >-
+  # Thank You! 
+
+
+  Your Submission Has Been Received You will receive an email shortly with next
+  steps in the nomination process and an invitation to our national Justice
+  Democrats calls. If you don't see it right away, please check your spam
+  folder.
 redirect: 'https://secure.actblue.com/donate/jdpacslate'
 incumbentsIntro: Justice Democrats in the House
 incumbentsStatement: >-
@@ -20,16 +27,19 @@ lookingForBullets:
       who will represent and mobilize their communities to fight for the Justice
       Democrats platform, from Medicare for All to the Green New Deal and ending
       mass incarceration.
+    icon: /img/jd_site_nominate_icon_boldleaders_500x300.png
   - header: Grassroots Campaigners
     body: >-
       who will run on Big Organizing over Big Money — inspiring volunteers
       across the district, and rejecting all corporate PAC and lobbyist
       donations.
+    icon: /img/jd_site_nominate_icon_grassroots_500x300.png
   - header: Movement Builders
     body: >-
       who will work with Justice Democrats across the country to build the
       Democratic party into a progressive force that truly represents all
       Americans.
+    icon: /img/jd_site_noninate_icon_movementbuilders_500x300.png
 formIntro: >-
   **Let us know more about yourself, your district, and why you are so excited
   about Justice Democrats!**
@@ -39,8 +49,6 @@ formIntro: >-
   fill out the form as best you can.
 stage0Explanation: >-
   # **SUBMIT A NOMINATION**
-
-
 
 
   No single candidate can carry this movement for working-class Americans alone.
@@ -61,10 +69,10 @@ stage0Explanation: >-
   basis. You can submit nominations for:
 
 
-  * People you think will make great Justice Democrats, and also
+  * **People** you think will make great Justice Democrats, and also
 
-  * Districts where maybe you don’t know anyone but you think needs a Justice
-  Democrat in the primary field.
+  * **Districts** where maybe you don’t know anyone but you think needs a
+  Justice Democrat in the primary field.
 
 
   Thanks for your time, your commitment, and continued support.
