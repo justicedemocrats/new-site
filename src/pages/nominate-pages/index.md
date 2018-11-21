@@ -44,8 +44,6 @@ stage0Explanation: >-
   # **SUBMIT A NOMINATION**
 
 
-
-
   No single candidate can carry this movement for working-class Americans alone.
   That’s why we’re recruiting candidates from districts all across the country
   who will take the courage of their convictions -- for a Green New Deal,
@@ -64,10 +62,10 @@ stage0Explanation: >-
   basis. You can submit nominations for:
 
 
-  * People you think will make great Justice Democrats, and also
+  * **People** you think will make great Justice Democrats, and also
 
-  * Districts where maybe you don’t know anyone but you think needs a Justice
-  Democrat in the primary field.
+  * **Districts** where maybe you don’t know anyone but you think needs a
+  Justice Democrat in the primary field.
 
 
   Thanks for your time, your commitment, and continued support.
