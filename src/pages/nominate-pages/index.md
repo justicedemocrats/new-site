@@ -8,7 +8,14 @@ header: Need Headline
 subheader: >-
   We are searching for bold,  compelling leaders to run as Justice Democrats in
   2020. 
-thankYou: Thank you
+thankYou: >-
+  # Thank You! 
+
+
+  Your Submission Has Been Received You will receive an email shortly with next
+  steps in the nomination process and an invitation to our national Justice
+  Democrats calls. If you don't see it right away, please check your spam
+  folder.
 redirect: 'https://secure.actblue.com/donate/jdpacslate'
 incumbentsIntro: Justice Democrats in the House
 incumbentsStatement: >-
