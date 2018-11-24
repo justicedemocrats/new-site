@@ -19,7 +19,20 @@ class ModulePageTemplate extends React.Component {
     if (window.location.hash === "") {
       this.state.badUrl = true;
     }
-    this.state.data.id = window.location.hash.split("#")[1];
+
+    if (window.location.hash.includes("#")) {
+      this.state.data.id = window.location.hash.split("#")[1];
+    } else {
+      const params = window.location.search.split("?")[1];
+      for (let param of params.split(";")) {
+        const split = param.split("=");
+        const key = split[0];
+        if (key == "id") {
+          this.state.data.id = split[1];
+        }
+      }
+    }
+
     this.state.data.module = this.props.title
       .toLowerCase()
       .replace(" ", "-")
