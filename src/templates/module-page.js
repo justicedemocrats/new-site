@@ -16,10 +16,6 @@ class ModulePageTemplate extends React.Component {
   };
 
   componentDidMount() {
-    if (window.location.hash === "") {
-      this.state.badUrl = true;
-    }
-
     if (window.location.hash.includes("#")) {
       this.state.data.id = window.location.hash.split("#")[1];
     } else {
@@ -37,8 +33,10 @@ class ModulePageTemplate extends React.Component {
       .toLowerCase()
       .replace(" ", "-")
       .replace("_", "-");
+
+    this.state.badUrl = !!this.state.data.id;
+
     this.forceUpdate();
-    console.log(this.state.data);
   }
 
   setData = attribute => ev => {
