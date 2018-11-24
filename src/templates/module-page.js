@@ -34,7 +34,7 @@ class ModulePageTemplate extends React.Component {
       .replace(" ", "-")
       .replace("_", "-");
 
-    this.state.badUrl = !!this.state.data.id;
+    this.state.badUrl = !this.state.data.id;
 
     this.forceUpdate();
   }
