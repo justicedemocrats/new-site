@@ -29,30 +29,27 @@ export default class Plank extends React.Component {
           className="extra-bold-m dark-blue-color plank-title"
           style={{ textTransform: 'uppercase' }}
         >
-          {this.state.open ? (
-            <div onClick={this.close} style={{ width: 30 }}>
-              {' '}
-              <img src="/assets/small-toggle-minus.svg" />{' '}
-            </div>
-          ) : (
-            <div onClick={this.open} style={{ width: 30 }}>
-              {' '}
-              <img src="/assets/small-toggle-plus.svg" />{' '}
-            </div>
-          )}
+          {this.state.open
+            ? <div onClick={this.close} style={{ width: 30 }}>
+                {' '}
+                <img src="/assets/small-toggle-minus.svg" />{' '}
+              </div>
+            : <div onClick={this.open} style={{ width: 30 }}>
+                {' '}
+                <img src="/assets/small-toggle-plus.svg" />{' '}
+              </div>}
 
           <div style={{ width: 'calc(100% - 30px)' }}>{title}</div>
         </div>
 
-        {this.state.open && (
+        {this.state.open &&
           <div style={{ fontSize: 18, marginBottom: 20 }}>
             <HTMLContent
               content={contents}
               className="light-m plank-contents standard-text"
               markdown={true}
             />
-          </div>
-        )}
+          </div>}
       </div>
     )
   }

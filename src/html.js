@@ -1,48 +1,54 @@
-import React from "react";
+import React from 'react'
 
-let stylesStr;
+let stylesStr
 if (process.env.NODE_ENV === `production`) {
   try {
-    stylesStr = require(`!raw-loader!../public/styles.css`);
+    stylesStr = require(`!raw-loader!../public/styles.css`)
   } catch (e) {
-    console.log(e);
+    console.log(e)
   }
 }
 
 module.exports = class HTML extends React.Component {
   render() {
-    let css;
+    let css
     if (process.env.NODE_ENV === `production`) {
       css = (
         <style
           id="gatsby-inlined-css"
           dangerouslySetInnerHTML={{ __html: stylesStr }}
         />
-      );
+      )
     }
+
+    const simpleMetas = [
+      [
+        'google-site-verification',
+        '-jhrvT598jaA36zbZ6wjXo04JLa705-J9L8jm_GNE2s',
+      ],
+      ['viewport', 'width=device-width, initial-scale=1, shrink-to-fit=no'],
+      [
+        'og:image',
+        'https://www.justicedemocrats.com/img/jd_site_home_cr2020_background_1920x1980_test.jpg',
+      ],
+      [
+        'twitter:image',
+        'https://www.justicedemocrats.com/img/jd_site_home_cr2020_background_1920x1980_test.jpg',
+      ],
+      ['twitter:card', 'summary_large_image'],
+      ['og:title', "Justice Democrats | It's #OurTime"],
+      ['twitter:title', "Justice Democrats | It's #OurTime"],
+      ['og:text', 'Justice Democrats FTW'],
+    ]
 
     return (
       <html {...this.props.htmlAttributes}>
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-          <meta
-            name="google-site-verification"
-            content="-jhrvT598jaA36zbZ6wjXo04JLa705-J9L8jm_GNE2s"
-          />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
-          <meta
-            property="og:image"
-            content="https://www.justicedemocrats.com/img/jd_site_home_cr2020_background_1920x1980_test.jpg"
-          />
-          <meta
-            property="twitter:image"
-            content="https://www.justicedemocrats.com/img/jd_site_home_cr2020_background_1920x1980_test.jpg"
-          />
-          <meta property="twitter:card" content="summary_large_image" />
+          {simpleMetas.map(prop => (
+            <meta name={prop[0]} content={prop[1]} key={prop[0]} />
+          ))}
           <link
             href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800"
             rel="stylesheet"
@@ -68,7 +74,7 @@ module.exports = class HTML extends React.Component {
                 <input type="email" name="email" required="true" />
                 <input type="text" maxlength="5" minlength="5" name="zip" required="true" />
                 <input name="phone" type="tel" required="true" />
-              </form>`
+              </form>`,
             }}
           />
           <div
@@ -81,6 +87,6 @@ module.exports = class HTML extends React.Component {
           <script>window.request = window.superagent;</script>
         </body>
       </html>
-    );
+    )
   }
-};
+}
