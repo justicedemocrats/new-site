@@ -527,3 +527,13 @@ collections:
             widget: "list"
             fields:
               - { label: "Option", widget: "string", name: "option" }
+
+      - file: "src/pages/general/dialer.md"
+        label: "Dialer"
+        name: "dialer"
+        fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "ignore-fragment" }
+          - { label: "Unique", name: "uniq", widget: "hidden", default: "dialer-index" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
