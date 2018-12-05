@@ -11,7 +11,7 @@ To that end, the Justice Democrats organizing team decided to invest resources t
 
 As the Democratic primaries were winding down, we realized that the technology we had built could be a crucial asset in the overall midterm general elections, and so we turned over management and development of the technology to [Relay](https://www.relaytxt.io/), a company created out of peer-to-peer texting in Bernie's 2016 presidential campaign. Thus, the [Relay Dialer](https://www.relaydialer.com/) was born, and was used by many of the most inspiring and important races and ballot initiatives in the 2018 general election across the country.
 
-**This was all possible due to the generosity of our supporters and donors. **We were able to devote resources to technology development and management only because you all believed in the power of grassroots campaigning and our vision for the Democratic Party and our country.
+**This was all possible due to the generosity of our supporters and donors.** We were able to devote resources to technology development and management only because you all believed in the power of grassroots campaigning and our vision for the Democratic Party and our country.
 
 If you believe in our work and would like to enable us to continue to innovate to out-organize the competition, please consider [donating here](https://secure.actblue.com/donate/justicedemocrats?refcode=dialerpage). If you have a friend, mentor, community leader, or really anyone that you think should run for congress in 2020, please [nominate them here](https://www.justicedemocrats.com/nominate/)!
 
