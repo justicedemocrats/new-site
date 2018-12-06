@@ -168,6 +168,10 @@ stages:
         required: false
         type: textarea
         width: full
+      - label: Nominee LinkedIn
+        name: Nominee LinkedIn
+        type: input
+        width: half
     title: Tell Us About The Person You're Nominating
   - display: candidate
     preface: >-
