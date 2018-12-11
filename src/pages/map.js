@@ -30,6 +30,12 @@ const SAMPLE_DATA = [
   { state: 'Conneticut', count: 100, target: 1500, abbr: 'CT' },
 ]
 
+const mapData = {
+  style: 'mapbox://styles/rcscastillo/cjo93ejwe010e2spp07lyalev',
+  districtTileSource: 'mapbox://rcscastillo.5r1x01zm',
+  stateTileSource: 'mapbox://rcscastillo.25eloeq2',
+}
+
 export default class MapPage extends React.Component {
   constructor(props) {
     super(props)
@@ -247,7 +253,7 @@ export default class MapPage extends React.Component {
       <div className="map-container">
         <section className="map-area">
           <Map
-            style="mapbox://styles/rcscastillo/cjo93ejwe010e2spp07lyalev"
+            style={mapData.style}
             containerStyle={{
               height: '100%',
               width: '100%',
@@ -255,22 +261,22 @@ export default class MapPage extends React.Component {
             onMouseMove={(map, evt) => {}}
             onStyleLoad={this.onStyleLoad.bind(this)}
           >
-            <ZoomControl className="zoom-control" position={'top-left'} />
+            <ZoomControl className="zoom-control" position="top-left" />
 
             {/* Congressional Districts */}
             <Source
               id="congressional-districts"
               tileJsonSource={{
                 type: 'vector',
-                url: 'mapbox://rcscastillo.5r1x01zm',
+                url: mapData.districtTileSource,
               }}
             />
             <Layer
               type="line"
               id="cd-line"
-              sourceId={'congressional-districts'}
-              sourceLayer={'cd-0ayx0b'}
-              before={'waterway-label'}
+              sourceId="congressional-districts"
+              sourceLayer="cd-0ayx0b"
+              before="waterway-label"
               paint={{
                 'line-color': 'red',
                 'line-opacity': 0,
@@ -282,9 +288,9 @@ export default class MapPage extends React.Component {
             <Layer
               type="fill"
               id="cd-fill"
-              sourceId={'congressional-districts'}
-              sourceLayer={'cd-0ayx0b'}
-              before={'waterway-label'}
+              sourceId="congressional-districts"
+              sourceLayer="cd-0ayx0b"
+              before="waterway-label"
               paint={{ 'fill-opacity': 0 }}
             />
 
@@ -293,15 +299,15 @@ export default class MapPage extends React.Component {
               id="states"
               tileJsonSource={{
                 type: 'vector',
-                url: 'mapbox://rcscastillo.25eloeq2',
+                url: mapData.stateTileSource,
               }}
             />
             <Layer
               type="fill"
               id="states-fill"
-              sourceId={'states'}
-              before={'waterway-label'}
-              sourceLayer={'gz_2010_us_040_00_5m-81sosm'}
+              sourceId="states"
+              before="waterway-label"
+              sourceLayer="gz_2010_us_040_00_5m-81sosm"
               paint={{
                 'fill-color': 'green',
                 'fill-opacity': 0.1,
@@ -312,7 +318,7 @@ export default class MapPage extends React.Component {
             <Layer
               type="fill"
               id="states-hover-layer"
-              before={'cd-line'}
+              before="cd-line"
               paint={{
                 'fill-color': '#ffffff',
                 'fill-opacity': 0.5,
@@ -327,7 +333,7 @@ export default class MapPage extends React.Component {
             <Layer
               type="fill"
               id="cd-hover-layer"
-              before={'cd-line'}
+              before="cd-line"
               paint={{
                 'fill-color': '#FFFFFF',
                 'fill-opacity': 0.5,
@@ -342,12 +348,12 @@ export default class MapPage extends React.Component {
             {this.state.selectedCD && this.state.popupLngLat && (
               <Popup
                 coordinates={this.state.popupLngLat}
-                className={'mb-mkr-popup'}
+                className="mb-mkr-popup"
               >
                 {this.state.selectedCD.isIncumbent || true ? (
                   <MapPopupCandidate
-                    name={'NY-14'}
-                    candidate_name={'Alexandria Ocasio-Cortez'}
+                    name="NY-14"
+                    candidate_name="Alexandria Ocasio-Cortez"
                     image={
                       '/img/jd_site_alexandriaocasiocortez_550x600_061218.jpg'
                     }
@@ -356,19 +362,20 @@ export default class MapPage extends React.Component {
                   />
                 ) : (
                   <MapPopup
-                    name={'NY-14'}
+                    name="NY-14"
                     onClose={this.onPopupClose.bind(this)}
                   />
                 )}
               </Popup>
             )}
+
             {this.state.hoveredStateMarker && (
               <Marker
                 coordinates={this.state.hoveredStateMarker}
                 anchor="bottom"
-                className={'mb-mkr-hovered-state'}
+                className="mb-mkr-hovered-state"
               >
-                <MapStateHover name={'New York'} />
+                <MapStateHover name="New York" />
               </Marker>
             )}
 
@@ -376,18 +383,18 @@ export default class MapPage extends React.Component {
               <Marker
                 coordinates={this.state.hoveredCDMarker}
                 anchor="bottom"
-                className={'mb-mkr-hovered-state'}
+                className="mb-mkr-hovered-state"
               >
                 {this.state.hoveredCD.isIncumbent || true ? (
                   <MapCDHoverCandidate
-                    name={'NY-14'}
-                    candidate_name={'Alexandria Ocasio-Cortez'}
+                    name="NY-14"
+                    candidate_name="Alexandria Ocasio-Cortez"
                     image={
                       '/img/jd_site_alexandriaocasiocortez_550x600_061218.jpg'
                     }
                   />
                 ) : (
-                  <MapCDHover name={'NY-14'} />
+                  <MapCDHover name="NY-14" />
                 )}
               </Marker>
             )}
@@ -410,8 +417,8 @@ export default class MapPage extends React.Component {
               <h4>District Details</h4>
               <div className="aa-candidate-container">
                 <MapPopupCandidate
-                  name={'NY-14'}
-                  candidate_name={'Alexandria Ocasio-Cortez'}
+                  name="NY-14"
+                  candidate_name="Alexandria Ocasio-Cortez"
                   image={
                     '/img/jd_site_alexandriaocasiocortez_550x600_061218.jpg'
                   }
