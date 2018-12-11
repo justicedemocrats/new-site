@@ -18,6 +18,7 @@ import MapLegends from "../components/MapLegends";
 import MapStateStatus from "../components/MapStateStatus";
 
 import "../style/map.scss";
+
 const Map = ReactMapboxGl({
   accessToken:
     "pk.eyJ1IjoianVzdGljZWRlbW9jcmF0cyIsImEiOiJjamQ2Y2p0anQyMDlyMzNud3ppbm1rcG9sIn0.mxzbQ35NUz70LILrs5yOYA"
@@ -38,6 +39,11 @@ const mapData = {
   },
   districtTileSource: "mapbox://justicedemocrats.districts",
   stateTileSource: "mapbox://justicedemocrats.states"
+};
+
+const print = s => {
+  console.log(s);
+  return s;
 };
 
 export default class MapPage extends React.Component {
@@ -247,18 +253,42 @@ export default class MapPage extends React.Component {
       howeveredDistrict
     } = this.state;
 
-    const possibleDistricts = new Array(54)
-      .fill(null)
-      .map(
-        (_, district) => `${selectedState}-${`${district}`.padStart(2, "0")}`
-      );
+    const queries = {
+      state: { isSelected: ["==", ["get", "name"], selectedState] },
+      district: {
+        isSelected: ["==", ["get", "name"], selectedDistrict],
+        isInState: [
+          "any",
+          ...new Array(54)
+            .fill(null)
+            .map(
+              (_, district) =>
+                `${selectedState}-${`${district}`.padStart(2, "0")}`
+            )
+            .map(pd => ["==", ["get", "name"], pd])
+        ]
+      }
+    };
 
-    const districtsInState = [
-      "any",
-      ...possibleDistricts.map(pd => ["==", ["get", "name"], pd])
+    const districtInterpolation = [
+      "interpolate",
+      ["linear"],
+      ["get", "nominations"],
+      0,
+      0,
+      20,
+      1
     ];
 
-    const districtSelected = ["==", ["get", "name"], selectedDistrict];
+    const localDistrictInterpolation = [
+      "interpolate",
+      ["linear"],
+      ["get", "nominations"],
+      0,
+      0,
+      10,
+      1
+    ];
 
     return (
       <div className="map-container">
@@ -291,7 +321,7 @@ export default class MapPage extends React.Component {
               paint={{
                 "line-color": "red",
                 "line-opacity": selectedState
-                  ? ["case", districtsInState, 1, 0]
+                  ? ["case", queries.district.isInState, 1, 0]
                   : 0
               }}
               layout={{
@@ -307,13 +337,18 @@ export default class MapPage extends React.Component {
               // If we've selected a district, show it as green, and give other districts no fill
               paint={{
                 "fill-color": selectedDistrict
-                  ? ["case", districtSelected, "green", "white"]
-                  : "none",
+                  ? ["case", queries.district.isSelected, "#00769c", "white"]
+                  : "#00769c",
                 "fill-opacity": selectedDistrict
-                  ? ["case", districtSelected, 0.5, 0]
+                  ? ["case", queries.district.isSelected, 1, 0]
                   : selectedState
-                  ? ["case", districtsInState, 0.5, 0]
-                  : 0
+                  ? [
+                      "case",
+                      queries.district.isInState,
+                      localDistrictInterpolation,
+                      0
+                    ]
+                  : districtInterpolation
               }}
             />
 
@@ -333,7 +368,9 @@ export default class MapPage extends React.Component {
               before="waterway"
               paint={{
                 "fill-color": "green",
-                "fill-opacity": 0.1
+                "fill-opacity": selectedState
+                  ? ["case", queries.state.isSelected, 0.1, 0]
+                  : 0
               }}
             />
 
