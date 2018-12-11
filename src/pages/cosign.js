@@ -1,9 +1,9 @@
-import React from "react";
-import request from "superagent";
-import { HTMLContent } from "../components/Content";
-import Banner from "../components/Banner";
+import React from 'react'
+import request from 'superagent'
+import { HTMLContent } from '../components/Content'
+import Banner from '../components/Banner'
 
-const ENDPOINT = "https://api.justicedemocrats.com/cosigner";
+const ENDPOINT = 'https://api.justicedemocrats.com/cosigner'
 
 class CosignPageTemplate extends React.Component {
   state = {
@@ -12,48 +12,48 @@ class CosignPageTemplate extends React.Component {
     done: false,
     cosignerId: undefined,
     badUrl: false,
-    cosignerData: {}
-  };
+    cosignerData: {},
+  }
 
   componentWillMount() {
-    if (window.location.hash === "") {
-      this.state.badUrl = true;
+    if (window.location.hash === '') {
+      this.state.badUrl = true
     }
-    this.state.cosignerId = window.location.hash.split("#")[1];
+    this.state.cosignerId = window.location.hash.split('#')[1]
   }
 
   componentDidMount() {
-    request.get(ENDPOINT + "/info/" + this.state.cosignerId).end((err, res) => {
+    request.get(ENDPOINT + '/info/' + this.state.cosignerId).end((err, res) => {
       if (err || !res.body) {
-        this.setState({ error: true, loading: false });
+        this.setState({ error: true, loading: false })
       } else {
-        this.setState({ cosignerData: res.body, loading: false });
+        this.setState({ cosignerData: res.body, loading: false })
       }
-    });
+    })
   }
 
   confirm = () => {
-    this.setState({ loading: true });
+    this.setState({ loading: true })
     request
-      .get(ENDPOINT + "/confirm/" + this.state.cosignerId)
+      .get(ENDPOINT + '/confirm/' + this.state.cosignerId)
       .end((err, res) => {
         if (err || !res.body) {
-          this.setState({ error: true, loading: false });
+          this.setState({ error: true, loading: false })
         } else {
-          this.setState({ done: true, loading: false });
+          this.setState({ done: true, loading: false })
           setTimeout(() => {
-            window.location.href = this.props.frontmatter.redirect;
-          }, REDIRECT_DELAY);
+            window.location.href = this.props.frontmatter.redirect
+          }, REDIRECT_DELAY)
         }
-      });
-  };
+      })
+  }
 
   render() {
     const {
-      frontmatter: { bannerBackgroundImage, bannerText, thankYou }
-    } = this.props;
+      frontmatter: { bannerBackgroundImage, bannerText, thankYou },
+    } = this.props
 
-    const { loading, error, done, cosignerData } = this.state;
+    const { loading, error, done, cosignerData } = this.state
 
     return (
       <div>
@@ -69,7 +69,7 @@ class CosignPageTemplate extends React.Component {
                 in the email you received.
               </p>
               <p>
-                If the problem persists, please contact{" "}
+                If the problem persists, please contact{' '}
                 <a href="mailto:us@justicedemocrats.com">
                   us@justicedemocrats.com
                 </a>
@@ -81,17 +81,17 @@ class CosignPageTemplate extends React.Component {
           {!done && <div> </div>}
         </div>
       </div>
-    );
+    )
   }
 }
 
 const CosignPage = props => {
-  const nominateData = props.data.nominate.edges[0].node;
+  const nominateData = props.data.nominate.edges[0].node
 
-  return <CosignPageTemplate {...nominateData} />;
-};
+  return <CosignPageTemplate {...nominateData} />
+}
 
-export default CosignPage;
+export default CosignPage
 
 export const pageQuery = graphql`
   query CosignQuery {
@@ -110,6 +110,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
 
-const Divider = () => <div className="divider" />;
+const Divider = () => <div className="divider" />

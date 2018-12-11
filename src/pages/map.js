@@ -24,10 +24,10 @@ const Map = ReactMapboxGl({
 })
 
 const SAMPLE_DATA = [
-  {state: "California", count: 1000, target: 6500, abbr: "CA"},
-  {state: "New York", count: 500, target: 4000, abbr: "NY"},
-  {state: "Maryland", count: 500, target: 1200, abbr: "MD"},
-  {state: "Conneticut", count: 100, target: 1500, abbr: "CT"}
+  { state: 'California', count: 1000, target: 6500, abbr: 'CA' },
+  { state: 'New York', count: 500, target: 4000, abbr: 'NY' },
+  { state: 'Maryland', count: 500, target: 1200, abbr: 'MD' },
+  { state: 'Conneticut', count: 100, target: 1500, abbr: 'CT' },
 ]
 
 export default class MapPage extends React.Component {
@@ -40,34 +40,35 @@ export default class MapPage extends React.Component {
       hoveredState: null,
       hoveredStateMarker: null,
       hoveredCD: null,
-      hoveredCDMarker: null
+      hoveredCDMarker: null,
     }
   }
 
   onGeolocate(result) {
+    const center = result.geometry.location
+    const ne = result.geometry.viewport.northeast
+    const sw = result.geometry.viewport.southwest
+    const bbox = [[sw.lng, sw.lat], [ne.lng, ne.lat]]
+    let stateId = null
 
-    const center = result.geometry.location;
-    const ne = result.geometry.viewport.northeast;
-    const sw = result.geometry.viewport.southwest;
-    const bbox = [[sw.lng,sw.lat], [ne.lng, ne.lat]];
-    let stateId = null;
-    
     // Check if type is street_address, otherwise, just choose state?
-    if (result.types.includes("street_address")) {
+    if (result.types.includes('street_address')) {
       //Set state and CD of feature
-      this.map.fitBounds(bbox, { padding: 300, animate: false});
+      this.map.fitBounds(bbox, { padding: 300, animate: false })
       const pbox = [this.map.project(bbox[0]), this.map.project(bbox[1])]
-      const target = this.map.queryRenderedFeatures(pbox, { layers: ['cd-fill']});
+      const target = this.map.queryRenderedFeatures(pbox, {
+        layers: ['cd-fill'],
+      })
 
       if (target.length > 0) {
-        stateId = target[0].properties.STATEFP;
-        this.setState({ 
-          selectedCD: target[0].properties, 
-          selectedState: stateId
-        });
+        stateId = target[0].properties.STATEFP
+        this.setState({
+          selectedCD: target[0].properties,
+          selectedState: stateId,
+        })
       }
     } else {
-      this.map.fitBounds(bbox, { padding: 100, animate: false});
+      this.map.fitBounds(bbox, { padding: 100, animate: false })
     }
 
     // console.log("Map setting pain property ~~>", stateId);
@@ -78,22 +79,22 @@ export default class MapPage extends React.Component {
         ['==', ['get', 'STATEFP'], `${stateId}`],
         1,
         0,
-      ]);
+      ])
       this.map.setPaintProperty('cd-fill', 'fill-opacity', [
         'case',
         ['==', ['get', 'STATEFP'], `${stateId}`],
         0.1,
         0,
-      ]);
+      ])
     }
   }
 
   componentDidMount() {
-    this.map = null; // I had to.. :-/
+    this.map = null // I had to.. :-/
   }
 
   onStyleLoad(map) {
-    this.map = map;
+    this.map = map
     map.setCenter({ lng: -95.7129, lat: 37.0902 })
     map.setZoom(4)
 
@@ -167,24 +168,19 @@ export default class MapPage extends React.Component {
 
       const allEq = [
         'all',
-        ['==', ['get','CD116FP'], cdProps.CD116FP],
-        ['==', ['get','STATEFP'], cdProps.STATEFP],
-      ];
+        ['==', ['get', 'CD116FP'], cdProps.CD116FP],
+        ['==', ['get', 'STATEFP'], cdProps.STATEFP],
+      ]
 
       if (this.state.selectedState == cdProps.STATEFP) {
         map.setPaintProperty('cd-fill', 'fill-color', [
           'case',
-          allEq, 'green',
+          allEq,
+          'green',
           'white',
-        ]);
-        map.setPaintProperty('cd-fill', 'fill-opacity', [
-          'case',
-          allEq, 0.5,
-          0
-        ]);
+        ])
+        map.setPaintProperty('cd-fill', 'fill-opacity', ['case', allEq, 0.5, 0])
       }
-      
-
     })
 
     // Select a state to focus
@@ -207,14 +203,13 @@ export default class MapPage extends React.Component {
         ['==', ['get', 'STATEFP'], `${stateProp.STATE}`],
         1,
         0,
-      ]);
+      ])
       map.setPaintProperty('cd-fill', 'fill-opacity', [
         'case',
         ['==', ['get', 'STATEFP'], `${stateProp.STATE}`],
         0.1,
         0,
-      ]);
-
+      ])
 
       const bounds = this.getBounds(e.features[0].geometry)
       if (map.getZoom() <= 5) {
@@ -397,39 +392,41 @@ export default class MapPage extends React.Component {
               </Marker>
             )}
           </Map>
-          <MapLegends splits={[
-              {label: '40%', color: 'blue'},
-              {label: '60%', color: 'yellow'},
-              {label: '80%', color: 'brown'},
-              {label: '100%', color: 'purple'},
-          ]}/>
+          <MapLegends
+            splits={[
+              { label: '40%', color: 'blue' },
+              { label: '60%', color: 'yellow' },
+              { label: '80%', color: 'brown' },
+              { label: '100%', color: 'purple' },
+            ]}
+          />
         </section>
         <section className="activity-area">
-          <div className='aa-search'>
-            <MapGeocoder onGeolocate={this.onGeolocate.bind(this)}/>
+          <div className="aa-search">
+            <MapGeocoder onGeolocate={this.onGeolocate.bind(this)} />
           </div>
-          {
-            this.state.selectedCD && (
-              <div>
-                <h4>District Details</h4>
-                <div className='aa-candidate-container'>
-                  <MapPopupCandidate
-                      name={'NY-14'}
-                      candidate_name={'Alexandria Ocasio-Cortez'}
-                      image={
-                        '/img/jd_site_alexandriaocasiocortez_550x600_061218.jpg'
-                      }
-                      description={`New York’s 14th Congressional District urgently needs access to more reliable jobs, increased access to family support services like parental leave and free childcare. She will fight for universal access to quality education from pre-K until college regardless of income and enrollment status because your ZIP code should never determine your quality of life.`}
-                      onClose={this.onPopupClose.bind(this)}
-                    />
-                </div>
+          {this.state.selectedCD && (
+            <div>
+              <h4>District Details</h4>
+              <div className="aa-candidate-container">
+                <MapPopupCandidate
+                  name={'NY-14'}
+                  candidate_name={'Alexandria Ocasio-Cortez'}
+                  image={
+                    '/img/jd_site_alexandriaocasiocortez_550x600_061218.jpg'
+                  }
+                  description={`New York’s 14th Congressional District urgently needs access to more reliable jobs, increased access to family support services like parental leave and free childcare. She will fight for universal access to quality education from pre-K until college regardless of income and enrollment status because your ZIP code should never determine your quality of life.`}
+                  onClose={this.onPopupClose.bind(this)}
+                />
               </div>
-            )
-          }
-          <h4>State Stats</h4>
-          <div className='aa-stats'>
-              {SAMPLE_DATA.map(item => (<MapStateStatus {...{...item}} />))}
             </div>
+          )}
+          <h4>State Stats</h4>
+          <div className="aa-stats">
+            {SAMPLE_DATA.map(item => (
+              <MapStateStatus {...{ ...item }} />
+            ))}
+          </div>
         </section>
       </div>
     )
