@@ -282,7 +282,6 @@ export default class MapPage extends React.Component {
               height: "100%",
               width: "100%"
             }}
-            onMouseMove={(map, evt) => {}}
             onStyleLoad={this.onStyleLoad}
           >
             <ZoomControl className="zoom-control" position="top-left" />
@@ -420,6 +419,7 @@ export default class MapPage extends React.Component {
               </Marker>
             )}
           </Map>
+
           <MapLegends
             splits={[
               { label: "40%", color: "blue" },
