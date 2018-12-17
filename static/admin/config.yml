@@ -4,7 +4,6 @@ backend:
 
 media_folder: static/img
 public_folder: /img
-publish_mode: editorial_workflow
 
 collections:
   - name: "candidates"
@@ -476,15 +475,6 @@ collections:
           - { label: "CTA Text", name: "ctaText", widget: "string" }
           - { label: "CTA Url", name: "ctaUrl", widget: "string" }
 
-      - file: "src/pages/general/dialer.md"
-        label: "Dialer"
-        name: "dialer"
-        fields:
-          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "ignore-fragment" }
-          - { label: "Unique", name: "uniq", widget: "hidden", default: "dialer-index" }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
-
   - name: "modules"
     label: "Nomination Modules"
     folder: "src/pages/modules"
@@ -536,3 +526,16 @@ collections:
             widget: "list"
             fields:
               - { label: "Option", widget: "string", name: "option" }
+
+  - name: "actions"
+    label: "Actions"
+    folder: "src/pages/actions"
+    create: true
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "action",
+        }
+      - { label: "Title", name: "title", widget: "string" }
