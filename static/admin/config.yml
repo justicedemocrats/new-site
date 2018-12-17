@@ -539,3 +539,4 @@ collections:
           default: "action",
         }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Embed Code", name: "embedCode", widget: "text" }
