@@ -6,24 +6,25 @@ class ActionPageTemplate extends React.Component {
     const { embedCode, metaImg, title } = this.props;
     return (
       <div>
-        <div
-          style={{ height: "calc(100vh - 50px)", paddingTop: 100 }}
-          id="newmode"
-          dangerouslySetInnerHTML={{ __html: embedCode }}
-        />
         <Helmet>
           <meta name="og:image" content={metaImg} />
           <meta name="twitter:image" content={metaImg} />
           <meta name="og:title" content={title} />
           <meta name="twitter:title" content={title} />
         </Helmet>
+
+        <div
+          style={{ height: "calc(100vh - 50px)", paddingTop: 100 }}
+          id="newmode"
+          dangerouslySetInnerHTML={{ __html: embedCode }}
+        />
       </div>
     );
   }
 
   componentDidMount() {
-    window.x = document.getElementById("newmode").innerHTML;
-    const regex = new RegExp("<script>.*</script>", "ms");
+    window.x = document.getElementById("newmode").innerHTML.replace(/\n/g, "");
+    const regex = new RegExp("<script>.*</script>");
 
     debugger;
 
@@ -49,6 +50,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         embedCode
+        metaImg
       }
     }
   }
