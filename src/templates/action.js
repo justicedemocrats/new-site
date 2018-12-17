@@ -4,11 +4,12 @@ import Helmet from "react-helmet";
 class ActionPageTemplate extends React.Component {
   render() {
     const { embedCode, metaImg, title } = this.props;
+    const img = `https://www.justicedemocrats.com${metaImg}`;
     return (
       <div>
         <Helmet>
-          <meta name="og:image" content={metaImg} />
-          <meta name="twitter:image" content={metaImg} />
+          <meta name="og:image" content={img} />
+          <meta name="twitter:image" content={img} />
           <meta name="og:title" content={title} />
           <meta name="twitter:title" content={title} />
         </Helmet>
