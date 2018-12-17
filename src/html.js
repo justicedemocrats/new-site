@@ -27,12 +27,18 @@ module.exports = class HTML extends React.Component {
         "-jhrvT598jaA36zbZ6wjXo04JLa705-J9L8jm_GNE2s"
       ],
       ["viewport", "width=device-width, initial-scale=1, shrink-to-fit=no"],
-      ["og:image", "https://www.justicedemocrats.com/img/temp-meta.png"],
-      ["twitter:image", "https://www.justicedemocrats.com/imgtemp-meta.png"],
+      [
+        "og:image",
+        "https://www.justicedemocrats.com/img/jd_site_home_cr2020_background_1920x1980_test.jpg"
+      ],
+      [
+        "twitter:image",
+        "https://www.justicedemocrats.com/img/jd_site_home_cr2020_background_1920x1980_test.jpg"
+      ],
       ["twitter:card", "summary_large_image"],
       ["og:title", "Justice Democrats | It's #OurTime"],
       ["twitter:title", "Justice Democrats | It's #OurTime"],
-      ["og:text", "Justice Democrats FTW"]
+      ["og:text", "Justice Democrats"]
     ];
 
     return (

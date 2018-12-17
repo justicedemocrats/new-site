@@ -1,14 +1,23 @@
 import React from "react";
+import Helmet from "react-helmet";
 
 class ActionPageTemplate extends React.Component {
   render() {
-    const { embedCode } = this.props;
+    const { embedCode, metaImg, title } = this.props;
     return (
-      <div
-        style={{ height: "calc(100vh - 50px)", paddingTop: 100 }}
-        id="newmode"
-        dangerouslySetInnerHTML={{ __html: embedCode }}
-      />
+      <div>
+        <div
+          style={{ height: "calc(100vh - 50px)", paddingTop: 100 }}
+          id="newmode"
+          dangerouslySetInnerHTML={{ __html: embedCode }}
+        />
+        <Helmet>
+          <meta name="og:image" content={metaImg} />
+          <meta name="twitter:image" content={metaImg} />
+          <meta name="og:title" content={title} />
+          <meta name="twitter:title" content={title} />
+        </Helmet>
+      </div>
     );
   }
 

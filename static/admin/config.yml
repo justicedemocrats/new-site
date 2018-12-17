@@ -540,3 +540,4 @@ collections:
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Embed Code", name: "embedCode", widget: "text" }
+      - { label: "Meta Image", name: "metaImg", widget: "image" }

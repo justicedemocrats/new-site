@@ -8,5 +8,5 @@ embedCode: |2-
       o=n.getElementsByTagName(e)[0];o.parentNode.insertBefore(m,o);
       })(document,'script','//engage.newmode.net/embed/7427/7458.js');
     </script>
+metaImg: /img/temp-meta.png
 ---
-
