@@ -15,7 +15,7 @@ class ActionPageTemplate extends React.Component {
         </Helmet>
 
         <div
-          style={{ height: "calc(100vh - 50px)", paddingTop: 100 }}
+          style={{ minHeight: "calc(100vh - 50px)", paddingTop: 100 }}
           id="newmode"
           dangerouslySetInnerHTML={{ __html: embedCode }}
         />
