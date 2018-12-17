@@ -8,5 +8,6 @@ embedCode: |2-
       o=n.getElementsByTagName(e)[0];o.parentNode.insertBefore(m,o);
       })(document,'script','//engage.newmode.net/embed/7427/7458.js');
     </script>
-metaImg: /img/temp-meta.png
+metaImg: /img/jd_keycommittees_an_banner_5reps_1500x600_2.png
 ---
+
