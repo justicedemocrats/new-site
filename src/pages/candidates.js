@@ -9,9 +9,7 @@ import sortBy from 'lodash.sortby'
 const alphabeticalSort = (a, b) => {
   return a.toLowerCase() < b.toLowerCase()
     ? 1
-    : a.toLowerCase() > b.toLowerCase()
-    ? 1
-    : 0
+    : a.toLowerCase() > b.toLowerCase() ? 1 : 0
 }
 
 const lastWord = string => {
@@ -96,8 +94,7 @@ export class CandidatePageTemplate extends React.Component {
             ].map(([label, key]) => (
               <button
                 onClick={this.currySetSort(key)}
-                className={`sort-button bold-m ${this.state.sortFunction ===
-                  key && 'selected'}`}
+                className={`sort-button bold-m ${this.state.sortFunction === key && 'selected'}`}
               >
                 {label}
               </button>
@@ -120,7 +117,7 @@ export class CandidatePageTemplate extends React.Component {
           </div> */}
         </div>
         <div className="divider" />
-        <div className="page-container">
+        {/* <div className="page-container">
           <div className="row candidate-intro-section">
             <div
               className="four columns extra-bold-m light-blue-color"
@@ -140,14 +137,14 @@ export class CandidatePageTemplate extends React.Component {
               />
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="page-container">
           <div className="candidates">
-            {sortFunctions[this.state.sortFunction](candidates).map(
-              (props, i) => (
+            {sortFunctions
+              [this.state.sortFunction](candidates)
+              .map((props, i) => (
                 <Candidate key={i} {...props} hideDonate={true} />
-              )
-            )}
+              ))}
           </div>
         </div>
       </div>
@@ -160,9 +157,7 @@ CandidatePageTemplate.propTypes = {
 }
 
 const CandidatePage = ({ data }) => {
-  const {
-    candidates: { edges },
-  } = data
+  const { candidates: { edges } } = data
   const baseCandidates = edges.map(edge => edge.node.frontmatter)
   const candidates = baseCandidates
   const {

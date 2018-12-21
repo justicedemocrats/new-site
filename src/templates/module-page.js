@@ -16,16 +16,28 @@ class ModulePageTemplate extends React.Component {
     success: false,
   }
 
-  componentWillMount() {
-    if (window.location.hash === '') {
-      this.state.badUrl = true
+  componentDidMount() {
+    if (window.location.hash.includes('#')) {
+      this.state.data.id = window.location.hash.split('#')[1]
+    } else {
+      const params = window.location.search.split('?')[1]
+      for (let param of params.split(';')) {
+        const split = param.split('=')
+        const key = split[0]
+        if (key == 'id') {
+          this.state.data.id = split[1]
+        }
+      }
     }
-    this.state.data.id = window.location.hash.split('#')[1]
+
     this.state.data.module = this.props.title
       .toLowerCase()
       .replace(' ', '-')
       .replace('_', '-')
-    console.log(this.state.data)
+
+    this.state.badUrl = !this.state.data.id
+
+    this.forceUpdate()
   }
 
   setData = attribute => ev => {
@@ -87,15 +99,10 @@ class ModulePageTemplate extends React.Component {
                     />
                   ))}
                 </div>
-
-                <button onClick={this.submit}> Submit </button>
-              </div>
-            ) : (
-              <div className="medium-m font-size-20">
-                <h1> Thanks for your submission! </h1>
-                <p> We'll be in touch soon with next steps. </p>
-              </div>
-            )}
+              : <div className="medium-m font-size-20">
+                  <h1> Thanks for your submission! </h1>
+                  <p> We'll be in touch soon with next steps. </p>
+                </div>}
           </div>
         </div>
       </div>

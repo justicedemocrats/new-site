@@ -74,13 +74,11 @@ class Candidate extends React.Component {
               backgroundSize: 'cover',
             }}
           >
-            {false ? (
-              <div className="office bold-m dark-blue-bg">WON</div>
-            ) : (
-              <div className="office bold-m">
-                {state}-{office == 'house' ? district : officeTypeMap[office]}
-              </div>
-            )}
+            {false
+              ? <div className="office bold-m dark-blue-bg">WON</div>
+              : <div className="office bold-m">
+                  {state}-{office == 'house' ? district : officeTypeMap[office]}
+                </div>}
           </div>
 
           <div className="meta">
@@ -118,35 +116,31 @@ class Candidate extends React.Component {
             </div>
  */}
             <div className="links-container">
-              {!hideDonate && (
+              {!hideDonate &&
                 <a href={website} target="_blank">
                   <img src="/assets/candidate-home.svg" />
-                </a>
-              )}
-              {donationLink && !hideDonate && (
+                </a>}
+              {donationLink &&
+                !hideDonate &&
                 <a href={donationLink} target="_blank">
                   <img src="/assets/candidate-donate.svg" />
-                </a>
-              )}
+                </a>}
             </div>
             <div className="read-more" onClick={this.toggleExpanded}>
-              {this.state.expanded ? (
-                <img src="/assets/small-toggle-minus.svg" />
-              ) : (
-                <img src="/assets/small-toggle-plus.svg" />
-              )}
+              {this.state.expanded
+                ? <img src="/assets/small-toggle-minus.svg" />
+                : <img src="/assets/small-toggle-plus.svg" />}
 
               {this.state.expanded ? 'Close' : 'Read More'}
             </div>
           </div>
         </div>
 
-        {this.state.expanded && (
+        {this.state.expanded &&
           <div className="candidate-blurb">
             <br />
             <p> {blurb} </p>
-          </div>
-        )}
+          </div>}
       </div>
     )
   }

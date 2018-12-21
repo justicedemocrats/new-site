@@ -117,10 +117,7 @@ export default class Question extends React.Component {
                         {`${idx}`.padStart(2, '0')}
                       </option>
                     )
-                  )
-              ) : (
-                <option value=""> (please select a state) </option>
-              )}
+                : <option value=""> (please select a state) </option>}
             </select>
             <a
               target="_blank"
@@ -141,9 +138,7 @@ export default class Question extends React.Component {
             style={{ fontSize: 14 }}
           >
             <option value="" />
-            {Object.keys(states).map(s => (
-              <option>{s} </option>
-            ))}
+            {Object.keys(states).map(s => <option>{s} </option>)}
           </select>
         )
         break
@@ -163,7 +158,7 @@ export default class Question extends React.Component {
       case 'cosigners':
         result = (
           <div>
-            {!value && (
+            {!value &&
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <div>
                   <label> Name </label>
@@ -193,8 +188,7 @@ export default class Question extends React.Component {
                     onChange={this.editCosigner(0, 'zip')}
                   />
                 </div>
-              </div>
-            )}
+              </div>}
 
             {value &&
               value.map((v, idx) => (
@@ -235,11 +229,11 @@ export default class Question extends React.Component {
                 </div>
               ))}
 
-            {value && value.length < 3 && (
+            {value &&
+              value.length < 3 &&
               <button className="button" onClick={this.addCosigner}>
-                &#65291; Add Another Cosigner
-              </button>
-            )}
+                ＋ Add Another Cosigner
+              </button>}
           </div>
         )
     }

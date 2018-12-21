@@ -74,9 +74,8 @@ const IssuePageTemplate = ({
                 </div>
               </div>
 
-              {(planks || []).map((plank, idx) => (
-                <Plank {...plank} index={idx} />
-              ))}
+              {(planks || [])
+                .map((plank, idx) => <Plank {...plank} index={idx} />)}
             </div>
           ))}
         </div>

@@ -77,7 +77,7 @@ export default class FormStageManager extends React.Component {
 
     const errors = validate(questions)
     if (!errors) {
-      request
+      window.request
         .post(ENDPOINT + this.state.mode)
         .send(this.state.data)
         .end((error, res) => {
@@ -149,26 +149,19 @@ export default class FormStageManager extends React.Component {
                 />
               ))}
             </div>
-            <div className="modal-activity">
-              <h1> {title} </h1>
-              {preface && (
-                <HTMLContent
-                  content={preface}
-                  markdown={true}
-                  className="medium-m font-size-16"
-                />
-              )}
-              <form>
-                {rows.map(r => (
-                  <div className="row">
-                    {r.map(q => (
-                      <Question
-                        question={q}
-                        error={this.state.errors[q.name]}
-                        setData={this.setData(q.name)}
-                        value={this.state.data[q.name]}
-                        key={q.name}
-                        otherData={this.state.data}
+          : error
+              ? <div>
+                  <h1> Hm, there seems to have been an error. </h1>
+                  <p>
+                    Our developers have already been alerted, and will be working on
+                    it as soon as possible to process your nomination
+                  </p>
+                </div>
+              : <div className="modal-content">
+                  <div className="modal-counter">
+                    {stages.map((item, index) => (
+                      <div
+                        className={`counter-item ${index <= stage ? 'counter-done' : ''}`}
                       />
                     ))}
                   </div>

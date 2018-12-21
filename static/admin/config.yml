@@ -4,7 +4,6 @@ backend:
 
 media_folder: static/img
 public_folder: /img
-publish_mode: editorial_workflow
 
 collections:
   - name: "candidates"
@@ -527,3 +526,18 @@ collections:
             widget: "list"
             fields:
               - { label: "Option", widget: "string", name: "option" }
+
+  - name: "actions"
+    label: "Actions"
+    folder: "src/pages/actions"
+    create: true
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "action",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Embed Code", name: "embedCode", widget: "text" }
+      - { label: "Meta Image", name: "metaImg", widget: "image" }

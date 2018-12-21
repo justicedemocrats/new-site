@@ -149,15 +149,14 @@ class NominatePageTemplate extends React.Component {
               />
             </div>
 
-            {nominating && (
+            {nominating &&
               <FormStageManager
                 stages={stages}
                 redirect={redirect}
                 endNomination={this.endNomination}
                 thankYou={thankYou}
                 stage0Explanation={stage0Explanation}
-              />
-            )}
+              />}
           </div>
           <Divider />
 
@@ -192,9 +191,7 @@ class NominatePageTemplate extends React.Component {
             </Link>
           </div>
           <div className="candidates">
-            {candidates.map((props, i) => (
-              <Candidate key={i} {...props} />
-            ))}
+            {candidates.map((props, i) => <Candidate key={i} {...props} />)}
           </div>
         </div>
       </div>

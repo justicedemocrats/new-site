@@ -63,23 +63,25 @@ export default class Footer extends React.Component {
             </div>
 
             <div className="social-icons">
-              {socialIcons
-                .filter(({ type }) => type == 'social')
-                .map(({ icon, url }) => (
-                  <a href={url} target="_blank">
-                    <img src={icon} />
-                  </a>
-                ))}
+              {socialIcons.filter(({ type }) => type == 'social').map(({
+                icon,
+                url,
+              }) => (
+                <a href={url} target="_blank">
+                  <img src={icon} />
+                </a>
+              ))}
 
               <div className="icon-divider" />
 
-              {socialIcons
-                .filter(({ type }) => type == 'contact')
-                .map(({ icon, url }) => (
-                  <a href={url} target="_blank">
-                    <img src={icon} />
-                  </a>
-                ))}
+              {socialIcons.filter(({ type }) => type == 'contact').map(({
+                icon,
+                url,
+              }) => (
+                <a href={url} target="_blank">
+                  <img src={icon} />
+                </a>
+              ))}
             </div>
           </div>
         </div>

@@ -97,19 +97,22 @@ class Navbar extends React.Component {
               </a>
             </div>
             <div className="navbar-hanger">
-              {links.map(({ display, href }) =>
-                href.startsWith('https://') ? (
-                  <a className="hanger-link bold-m" href={href} target="_blank">
-                    <div> {display} </div>
-                  </a>
-                ) : (
-                  <Link
-                    className={`hanger-link bold-m ${display.toLowerCase()}`}
-                    to={href}
-                  >
-                    <div> {display} </div>
-                  </Link>
-                )
+              {links.map(
+                ({ display, href }) =>
+                  (href.startsWith('https://')
+                    ? <a
+                        className="hanger-link bold-m"
+                        href={href}
+                        target="_blank"
+                      >
+                        <div> {display} </div>
+                      </a>
+                    : <Link
+                        className={`hanger-link bold-m ${display.toLowerCase()}`}
+                        to={href}
+                      >
+                        <div> {display} </div>
+                      </Link>)
               )}
             </div>
           </div>
@@ -132,17 +135,24 @@ class Navbar extends React.Component {
                   {/* <Link className="bold-m" to={href}>
                     {display}
                   </Link> */}
-                  {href.startsWith('https://') ? (
-                    <a className="bold-m" href={href} target="_blank">
-                      <div> {display} </div>
-                    </a>
-                  ) : (
-                    <Link className="bold-m" to={href}>
-                      <div> {display} </div>
-                    </Link>
-                  )}
+                  {href.startsWith('https://')
+                    ? <a className="bold-m" href={href} target="_blank">
+                        <div> {display} </div>
+                      </a>
+                    : <Link className="bold-m" to={href}>
+                        <div> {display} </div>
+                      </Link>}
                 </div>
               ))}
+              <div onClick={this.closeMenu}>
+                <a
+                  className="bold-m"
+                  href="https://justicedemocrats.com/donate"
+                  target="_blank"
+                >
+                  <div> Donate </div>
+                </a>
+              </div>
             </Menu>
           </div>
         </Mobile>

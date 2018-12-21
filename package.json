@@ -37,7 +37,6 @@
     "react-modal": "^3.6.1",
     "react-responsive": "^4.1.0",
     "showdown": "^1.8.6",
-    "superagent": "^4.0.0",
     "uuid": "^3.2.1"
   },
   "keywords": [

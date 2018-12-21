@@ -60,9 +60,7 @@ const IndexPage = ({ data }) => {
     issuesIntro,
   } = data.landingPage.edges[0].node.frontmatter
 
-  const {
-    candidates: { edges: candidateEdges },
-  } = data
+  const { candidates: { edges: candidateEdges } } = data
   const candidates = candidateEdges.map(edge => edge.node.frontmatter)
 
   return (
@@ -105,7 +103,7 @@ const IndexPage = ({ data }) => {
             method="post"
             action="/donate"
             style={{
-              backgroundColor: 'rgba(255, 255, 255, .8)',
+              backgroundColor: 'rgba(0, 118, 156, .75)',
               position: 'absolute',
               bottom: 0,
             }}
@@ -127,8 +125,9 @@ const IndexPage = ({ data }) => {
                 {boldHeader
                   .split('.')
                   .filter(section => section != '')
-                  .map((section, idx) =>
-                    idx > 0 ? [<br />, section + '.'] : [section + '.']
+                  .map(
+                    (section, idx) =>
+                      (idx > 0 ? [<br />, section + '.'] : [section + '.'])
                   )}
               </div>
               <div
@@ -151,7 +150,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
 
-        {firstCalloutText && (
+        {firstCalloutText &&
           <div
             className="callout-container"
             style={{
@@ -167,8 +166,7 @@ const IndexPage = ({ data }) => {
               />
             </Default>
             <div className="bold-m callout-b">{firstCalloutText}</div>
-          </div>
-        )}
+          </div>}
       </div>
 
       {/* <div
@@ -267,9 +265,7 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
 
-      {blocks.map((b, i) => (
-        <HomeBlock key={i} {...b} />
-      ))}
+      {blocks.map((b, i) => <HomeBlock key={i} {...b} />)}
     </div>
   )
 }

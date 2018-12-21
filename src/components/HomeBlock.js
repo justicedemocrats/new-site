@@ -27,24 +27,22 @@ export default ({
     left: 'flex-start',
   }
 
-  const linkComponent = moreButtonUrl.startsWith('https://') ? (
-    <a
-      href={moreButtonUrl}
-      target="_blank"
-      className="block-content-button button orange-bg button-text full-width-button medium-m"
-      style={{ marginTop: 10, display: 'block' }}
-    >
-      {moreButtonText}
-    </a>
-  ) : (
-    <Link
-      to={moreButtonUrl}
-      style={{ marginTop: 10 }}
-      className="block-content-button button orange-bg button-text full-width-button medium-m"
-    >
-      {moreButtonText}
-    </Link>
-  )
+  const linkComponent = moreButtonUrl.startsWith('https://')
+    ? <a
+        href={moreButtonUrl}
+        target="_blank"
+        className="block-content-button button orange-bg button-text full-width-button medium-m"
+        style={{ marginTop: 10, display: 'block' }}
+      >
+        {moreButtonText}
+      </a>
+    : <Link
+        to={moreButtonUrl}
+        style={{ marginTop: 10 }}
+        className="block-content-button button orange-bg button-text full-width-button medium-m"
+      >
+        {moreButtonText}
+      </Link>
 
   const bannerTextWords = bannerText.split(' ')
   const midwayPoint = Math.ceil(bannerTextWords.length / 2)
@@ -110,14 +108,13 @@ export default ({
             </div>
           </div>
 
-          {calloutText && (
+          {calloutText &&
             <div className="callout-container">
               <Default>
                 <img src={calloutIcon} style={{ height: 60 }} />
               </Default>
               <div className="bold-m callout-b">{calloutText}</div>
-            </div>
-          )}
+            </div>}
         </div>
       </div>
     </section>
