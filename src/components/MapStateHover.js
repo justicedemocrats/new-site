@@ -1,5 +1,5 @@
-import React from 'react'
-import '../style/map.scss'
+import React from "react";
+import "../style/map.scss";
 
 export default props => (
   <div className="map-hover map-state-hover">
@@ -9,11 +9,11 @@ export default props => (
         <tbody>
           <tr>
             <th>Total Nominations</th>
-            <td>6,302</td>
+            <td>{props.nominations}</td>
           </tr>
         </tbody>
       </table>
       <span className="note">click to show districts</span>
     </div>
   </div>
-)
+);

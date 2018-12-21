@@ -8,10 +8,8 @@ import ReactMapboxGl, {
   Source,
   Popup
 } from "react-mapbox-gl";
-import MapCDHover from "../components/MapCDHover";
+import MapDistrictHover from "../components/MapDistrictHover";
 import MapStateHover from "../components/MapStateHover";
-import MapPopup from "../components/MapPopup";
-import MapCDHoverCandidate from "../components/MapCDHoverCandidate";
 import MapPopupCandidate from "../components/MapPopupCandidate";
 import MapGeocoder from "../components/MapGeocoder";
 import MapLegends from "../components/MapLegends";
@@ -46,17 +44,18 @@ const print = s => {
   return s;
 };
 
-export default class MapPage extends React.Component {
-  state = {
-    selectedState: null,
-    selectedDistrict: null,
-    popupLngLat: null,
-    hoveredState: null,
-    hoveredStateMarker: null,
-    hoveredDistrict: null,
-    hoveredDistrictMarker: null
-  };
+const initialState = {
+  selectedState: null,
+  selectedDistrict: null,
+  selectedDistrictMarker: null,
+  hoveredState: null,
+  hoveredStateMarker: null,
+  hoveredDistrict: null,
+  hoveredDistrictMarker: null
+};
 
+export default class MapPage extends React.Component {
+  state = Object.assign({}, initialState);
   map = null;
 
   /* TODO – zoom to containing district, not actual address, and start as if it had been clicked on */
@@ -117,6 +116,12 @@ export default class MapPage extends React.Component {
     map.on("click", "states-fill", this.onClick["states-fill"]);
   };
 
+  onZoomEnd = () => {
+    // if (this.map.getZoom() >= 4) {
+    //   this.setState(Object.assign({}, initialState));
+    // }
+  };
+
   onMouseMove = {
     "states-fill": e => {
       const properties = e.features[0].properties;
@@ -124,16 +129,9 @@ export default class MapPage extends React.Component {
 
       // When you're zoomed in on a state, and you hover over a nearby state
       // highlight the howevered state
-      if (this.state.selectedState !== state) {
-        const relatedFeatures = state
-          ? this.map.querySourceFeatures("states", {
-              sourceLayer: mapData.layers.state,
-              filter: ["==", "name", state]
-            })
-          : null;
-
+      if (!this.state.selectedState) {
         this.setState({
-          hoveredState: relatedFeatures,
+          hoveredState: properties,
           hoveredStateMarker: [e.lngLat.lng, e.lngLat.lat]
         });
       } else {
@@ -142,32 +140,26 @@ export default class MapPage extends React.Component {
     },
     "district-fill": e => {
       const properties = e.features[0].properties;
-      const state_district = properties.name;
-      const [state, district] = state_district.split("-");
+      const { state, district, name: state_district } = properties;
 
       // If we're zoomed in, (selectedState is not null)
       // and we've selected the state clicked on,
-      // and we have selected a CD that's not the current one,
-      // set hoveredCD and the hoveredCDMarker
-      if (
-        this.state.selectedState &&
-        this.state.selectedState == state &&
-        (!this.state.selectedCD || this.state.selectedCD !== state_district)
-      ) {
-        const relatedFeatures = this.map.querySourceFeatures(
-          "justicedemocrats.districts",
-          {
-            sourceLayer: "district-fill",
-            filter: ["all", ["==", "name", state_district]]
-          }
-        );
+      // and we have selected a district that's not the one being hovered,
+      // set hoveredDistrict and the hoveredDistrictMarker
+      const inSelectedState =
+        this.state.selectedState && this.state.selectedState.name == state;
 
+      const inSelectedDistrict =
+        this.state.selectedDistrict &&
+        this.state.selectedDistrict.name == state_district;
+
+      if (inSelectedState && !inSelectedDistrict) {
         this.setState({
-          hoveredCD: relatedFeatures,
-          hoveredCDMarker: [e.lngLat.lng, e.lngLat.lat]
+          hoveredDistrict: properties,
+          hoveredDistrictMarker: [e.lngLat.lng, e.lngLat.lat]
         });
       } else {
-        this.setState({ hoveredCD: null, hoveredCDMarker: null });
+        this.setState({ hoveredDistrict: null, hoveredDistrictMarker: null });
       }
     }
   };
@@ -175,39 +167,36 @@ export default class MapPage extends React.Component {
   onClick = {
     /* Clear popups, select a state to fill, zoom there */
     "states-fill": e => {
-      console.log("On click states-fill");
-      const nextState = Object.assign({}, this.state);
-
       const properties = e.features[0].properties;
-      const state = properties.name;
 
-      // Clear any popups for other states
-      if (this.state.selectedState != state) {
-        nextState.popupLngLat = null;
-        nextState.selectedCD = null;
+      const clickWasInSameStateAsSelectedDistrict =
+        this.state.selectedDistrict &&
+        this.state.selectedDistrict.state == properties.name;
+
+      if (!clickWasInSameStateAsSelectedDistrict) {
+        this.setState({
+          selectedDistrict: null,
+          selectedState: properties,
+          hoveredStateMarker: null,
+          hoveredState: null
+        });
       }
 
-      // Mark selected state attributes
-      nextState.selectedState = state;
-      nextState.hoveredStateMarker = null;
-      nextState.hoveredState = null;
-      this.setState(nextState);
       this.zoomToBounds(e.features[0].geometry);
     },
     "district-fill": e => {
-      console.log("On click district-fill");
       const properties = e.features[0].properties;
-      const state_district = properties.name;
-      const [state, district] = state_district.split("-");
+      const { state, district, name: state_district } = properties;
 
       const clickedOnCurrentState =
-        this.state.selectedState && state === this.state.selectedState;
+        this.state.selectedState && state === this.state.selectedState.name;
 
       if (clickedOnCurrentState) {
         this.setState({
-          selectedDistrict: state_district,
-          popupLngLat: [e.lngLat.lng, e.lngLat.lat],
-          hoveredCDMarker: null // clear a different CD marker
+          selectedDistrict: properties,
+          selectedDistrictMarker: [e.lngLat.lng, e.lngLat.lat],
+          hoveredDistrictMarker: null,
+          hoveredDistrict: null
         });
       }
     }
@@ -249,23 +238,31 @@ export default class MapPage extends React.Component {
     const {
       selectedState,
       selectedDistrict,
-      howeveredState,
-      howeveredDistrict
+      selectedDistrictMarker,
+      hoveredState,
+      hoveredStateMarker,
+      hoveredDistrict,
+      hoveredDistrictMarker
     } = this.state;
 
     const queries = {
-      state: { isSelected: ["==", ["get", "name"], selectedState] },
+      state: {
+        isSelected: [
+          "==",
+          ["get", "name"],
+          selectedState ? selectedState.name : "--"
+        ]
+      },
       district: {
-        isSelected: ["==", ["get", "name"], selectedDistrict],
+        isSelected: [
+          "==",
+          ["get", "name"],
+          selectedDistrict ? selectedDistrict.name : "--"
+        ],
         isInState: [
-          "any",
-          ...new Array(54)
-            .fill(null)
-            .map(
-              (_, district) =>
-                `${selectedState}-${`${district}`.padStart(2, "0")}`
-            )
-            .map(pd => ["==", ["get", "name"], pd])
+          "==",
+          ["get", "state"],
+          selectedState ? selectedState.name : "--"
         ]
       }
     };
@@ -276,7 +273,7 @@ export default class MapPage extends React.Component {
       ["get", "nominations"],
       0,
       0,
-      20,
+      50,
       1
     ];
 
@@ -300,9 +297,9 @@ export default class MapPage extends React.Component {
               width: "100%"
             }}
             onStyleLoad={this.onStyleLoad}
+            onZoomEnd={this.onZoomEnd}
           >
             <ZoomControl className="zoom-control" position="top-left" />
-
             {/* Congressional Districts */}
             <Source
               id="districts"
@@ -348,10 +345,9 @@ export default class MapPage extends React.Component {
                       localDistrictInterpolation,
                       0
                     ]
-                  : districtInterpolation
+                  : localDistrictInterpolation
               }}
             />
-
             {/* States */}
             <Source
               id="states"
@@ -373,86 +369,46 @@ export default class MapPage extends React.Component {
                   : 0
               }}
             />
+            {/* 
 
-            {/* Hover */}
-            {/* <Layer
-              type="fill"
-              id="states-hover-layer"
-              before="cd-line"
-              paint={{
-                "fill-color": "#ffffff",
-                "fill-opacity": 0.5
-              }}
-            >
-              {this.state.hoveredState &&
-                this.state.hoveredState.map(state => (
-                  <Feature coordinates={state.geometry.coordinates} />
-                ))}
-            </Layer>
+            ***** Hovered State ***** 
 
-            <Layer
-              type="fill"
-              id="cd-hover-layer"
-              before="cd-line"
-              paint={{
-                "fill-color": "#FFFFFF",
-                "fill-opacity": 0.5
-              }}
-            >
-              {this.state.hoveredCD &&
-                this.state.hoveredCD.map(cd => (
-                  <Feature coordinates={cd.geometry.coordinates} />
-                ))}
-            </Layer>
- */}
-            {this.state.selectedCD && this.state.popupLngLat && (
-              <Popup
-                coordinates={this.state.popupLngLat}
-                className="mb-mkr-popup"
-              >
-                {this.state.selectedCD.isIncumbent || true ? (
-                  <MapPopupCandidate
-                    name="NY-14"
-                    candidate_name="Alexandria Ocasio-Cortez"
-                    image={
-                      "/img/jd_site_alexandriaocasiocortez_550x600_061218.jpg"
-                    }
-                    description={`New York’s 14th Congressional District urgently needs access to more reliable jobs, increased access to family support services like parental leave and free childcare. She will fight for universal access to quality education from pre-K until college regardless of income and enrollment status because your ZIP code should never determine your quality of life.`}
-                    onClose={this.onPopupClose}
-                  />
-                ) : (
-                  <MapPopup name="NY-14" onClose={this.onPopupClose} />
-                )}
-              </Popup>
-            )}
-
-            {this.state.hoveredStateMarker && (
+            */}
+            {hoveredStateMarker && (
               <Marker
-                coordinates={this.state.hoveredStateMarker}
+                coordinates={hoveredStateMarker}
                 anchor="bottom"
                 className="mb-mkr-hovered-state"
               >
-                <MapStateHover name="New York" />
+                <MapStateHover {...hoveredState} />
               </Marker>
             )}
+            {/*
 
-            {this.state.hoveredCD && this.state.hoveredCDMarker && (
+            ***** Hovered District *****
+            
+            */}
+            {hoveredDistrict && hoveredDistrictMarker && (
               <Marker
-                coordinates={this.state.hoveredCDMarker}
+                coordinates={hoveredDistrictMarker}
                 anchor="bottom"
                 className="mb-mkr-hovered-state"
               >
-                {this.state.hoveredCD.isIncumbent || true ? (
-                  <MapCDHoverCandidate
-                    name="NY-14"
-                    candidate_name="Alexandria Ocasio-Cortez"
-                    image={
-                      "/img/jd_site_alexandriaocasiocortez_550x600_061218.jpg"
-                    }
-                  />
-                ) : (
-                  <MapCDHover name="NY-14" />
-                )}
+                <MapDistrictHover {...hoveredDistrict} />
+              </Marker>
+            )}
+            {/*
+
+            ***** Selected District *****
+
+            */}
+            {selectedDistrict && (
+              <Marker
+                coordinates={selectedDistrictMarker}
+                anchor="bottom"
+                className="mb-mkr-hovered-state"
+              >
+                <MapPopupCandidate {...selectedDistrict} />
               </Marker>
             )}
           </Map>
