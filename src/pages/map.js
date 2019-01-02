@@ -1,13 +1,14 @@
 import React from "react";
-import MapboxGL from "mapbox-gl";
-import ReactMapboxGl, {
+import {
+  MapboxGL,
+  Map,
   Marker,
   ZoomControl,
   Layer,
   Feature,
   Source,
   Popup
-} from "react-mapbox-gl";
+} from "../components/MapWrapper";
 import MapDistrictHover from "../components/MapDistrictHover";
 import MapStateHover from "../components/MapStateHover";
 import MapPopupCandidate from "../components/MapPopupCandidate";
@@ -16,11 +17,6 @@ import MapLegends from "../components/MapLegends";
 import MapStateStatus from "../components/MapStateStatus";
 
 import "../style/map.scss";
-
-const Map = ReactMapboxGl({
-  accessToken:
-    "pk.eyJ1IjoianVzdGljZWRlbW9jcmF0cyIsImEiOiJjamQ2Y2p0anQyMDlyMzNud3ppbm1rcG9sIn0.mxzbQ35NUz70LILrs5yOYA"
-});
 
 const SAMPLE_DATA = [
   { state: "California", count: 1000, target: 6500, abbr: "CA" },
@@ -231,6 +227,7 @@ export default class MapPage extends React.Component {
       return bounds.extend(coord);
     }, new MapboxGL.LngLatBounds(init, init));
 
+    // return [0, 0];
     return bounds;
   };
 
