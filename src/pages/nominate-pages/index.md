@@ -52,10 +52,10 @@ formIntro: >-
   \*\*and prepare your answers offline before submitting the form. Please be as
   complete as possible! No self nominations please.
 stage0Explanation: >-
-  **SUBMIT A NOMINATION**
+  ## **SUBMIT A NOMINATION**
 
 
-  _(No self nominations please)_
+  (No self nominations please!)
 
 
   No single candidate can carry this movement for working-class Americans alone.
@@ -168,6 +168,10 @@ stages:
         required: false
         type: textarea
         width: full
+      - label: Nominee LinkedIn
+        name: Nominee LinkedIn
+        type: input
+        width: half
     title: Tell Us About The Person You're Nominating
   - display: candidate
     preface: >-
