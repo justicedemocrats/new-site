@@ -227,7 +227,6 @@ export default class MapPage extends React.Component {
       return bounds.extend(coord);
     }, new MapboxGL.LngLatBounds(init, init));
 
-    // return [0, 0];
     return bounds;
   };
 
@@ -330,19 +329,21 @@ export default class MapPage extends React.Component {
               before="waterway"
               // If we've selected a district, show it as green, and give other districts no fill
               paint={{
-                "fill-color": selectedDistrict
-                  ? ["case", queries.district.isSelected, "#00769c", "white"]
-                  : "#00769c",
-                "fill-opacity": selectedDistrict
-                  ? ["case", queries.district.isSelected, 1, 0]
-                  : selectedState
-                  ? [
-                      "case",
-                      queries.district.isInState,
-                      localDistrictInterpolation,
-                      0
-                    ]
-                  : localDistrictInterpolation
+                "fill-color": "#00769c",
+                // "fill-color": selectedDistrict
+                //   ? ["case", queries.district.isSelected, "#00769c", "white"]
+                //   : "#00769c",
+                // "fill-opacity": selectedDistrict
+                //   ? ["case", queries.district.isSelected, 1, 0]
+                //   : selectedState
+                //   ? [
+                //       "case",
+                //       queries.district.isInState,
+                //       localDistrictInterpolation,
+                //       0
+                //     ]
+                //   : localDistrictInterpolation
+                "fill-opacity": localDistrictInterpolation
               }}
             />
             {/* States */}
