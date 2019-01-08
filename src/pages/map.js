@@ -312,10 +312,11 @@ export default class MapPage extends React.Component {
               before="waterway"
               // If we've selected a state, show its district boundaries
               paint={{
-                "line-color": "red",
-                "line-opacity": selectedState
-                  ? ["case", queries.district.isInState, 1, 0]
-                  : 0
+                "line-color": "#d5176e",
+                "line-opacity": 1
+                // "line-opacity": selectedState
+                //   ? ["case", queries.district.isInState, 1, 0]
+                //   : 0
               }}
               layout={{
                 visibility: "visible"
