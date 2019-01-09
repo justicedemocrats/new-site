@@ -19,11 +19,30 @@ export default props => (
       {props.member_supports_gnd && (
         <div className="gnd-tag"> Suppports the Green New Deal </div>
       )}
-      {!props.member_is_jd && (
+      {!props.member_is_jd && props.member_party == "D" ? (
         <div className="nominations-count">
-          Nominations for a primary challenger: {props.nominations}
+          We've received {props.nominations} for a primary challenger.
+          <br />
+          {!props.member_supports_gnd && (
+            <div className="no-gnd-tag">
+              {" "}
+              {props.member_name} does not support the Green New Deal{" "}
+            </div>
+          )}
           <h3>
             Would you like to see a primary challenger to {props.member_name}?
+          </h3>
+          <Link to={`/nominate?district=${props.state_district}`}>
+            Nominate One Here
+          </Link>
+        </div>
+      ) : (
+        <div className="nominations-count">
+          We've received {props.nominations} for possible Justice Democrats to
+          run against {props.member_name}
+          <h3>
+            Would you like to see a Justice Democrat run against{" "}
+            {props.member_name}?
           </h3>
           <Link to={`/nominate?district=${props.state_district}`}>
             Nominate One Here

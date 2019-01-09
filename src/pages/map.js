@@ -15,15 +15,9 @@ import MapPopupCandidate from "../components/MapPopupCandidate";
 import MapGeocoder from "../components/MapGeocoder";
 import MapLegends from "../components/MapLegends";
 import MapStateStatus from "../components/MapStateStatus";
+import MapSidebar from "../components/MapSidebar";
 
 import "../style/map.scss";
-
-const SAMPLE_DATA = [
-  { state: "California", count: 1000, target: 6500, abbr: "CA" },
-  { state: "New York", count: 500, target: 4000, abbr: "NY" },
-  { state: "Maryland", count: 500, target: 1200, abbr: "MD" },
-  { state: "Conneticut", count: 100, target: 1500, abbr: "CT" }
-];
 
 const mapData = {
   style: "mapbox://styles/justicedemocrats/cjpk6niji0vec2splua1fs6e9",
@@ -35,10 +29,22 @@ const mapData = {
   stateTileSource: "mapbox://justicedemocrats.states"
 };
 
-const print = s => {
-  console.log(s);
-  return s;
-};
+const DISTRICT_BREAKDOWN_ENDPOINT =
+  "https://api.justicedemocrats.com/district-breakdown";
+
+/*
+ ----- ----- BEHAVIOR ----- -----
+ State options –
+  - Nothing is selected - selectedState: null, selectedDistrict: null
+  
+  - State is selected - selectedState: {}, selectedDistrict: null
+    - visuals: enhanced state border
+    - sidebar: top districts in state
+  
+  - District is selected – selectedState: {}, selectedDistrict: {}
+    - visuals: enhanced district border
+    - sidebar: rep info
+*/
 
 const initialState = {
   selectedState: null,
@@ -47,12 +53,260 @@ const initialState = {
   hoveredState: null,
   hoveredStateMarker: null,
   hoveredDistrict: null,
-  hoveredDistrictMarker: null
+  hoveredDistrictMarker: null,
+  districtBreakdownQuery: [],
+  districtBreakdown: [],
+  districtLookup: {}
 };
 
 export default class MapPage extends React.Component {
   state = Object.assign({}, initialState);
   map = null;
+
+  componentDidMount() {
+    window.request.get(DISTRICT_BREAKDOWN_ENDPOINT).end((err, res) => {
+      this.setState({
+        districtBreakdownQuery: this.produceDistrictInterpolationQuery(
+          res.body || []
+        ),
+        districtLookup: this.produceDistrictLookup(res.body || []),
+        districtBreakdown: res.body
+      });
+    });
+  }
+
+  render() {
+    const {
+      selectedState,
+      selectedDistrict,
+      selectedDistrictMarker,
+      hoveredState,
+      hoveredStateMarker,
+      hoveredDistrict,
+      hoveredDistrictMarker,
+      districtBreakdown,
+      districtBreakdownQuery,
+      districtLookup
+    } = this.state;
+
+    const queries = {
+      state: {
+        isSelected: [
+          "==",
+          ["get", "name"],
+          selectedState ? selectedState.name : "--"
+        ]
+      },
+      district: {
+        isSelected: [
+          "==",
+          ["get", "name"],
+          selectedDistrict ? selectedDistrict.name : "--"
+        ],
+        isInState: [
+          "==",
+          ["get", "state"],
+          selectedState ? selectedState.name : "--"
+        ]
+      }
+    };
+
+    return (
+      <div className="map-container">
+        <section className="map-area">
+          <Map
+            style={mapData.style}
+            containerStyle={{
+              height: "100%",
+              width: "100%"
+            }}
+            onStyleLoad={this.onStyleLoad}
+            onZoomEnd={this.onZoomEnd}
+          >
+            <ZoomControl className="zoom-control" position="top-left" />
+            {/*
+
+            Congressional Districts Source
+
+            */}
+            <Source
+              id="districts"
+              tileJsonSource={{
+                type: "vector",
+                url: mapData.districtTileSource
+              }}
+            />
+            {/*
+
+            Congressional Districts Lines
+
+            */}
+            <Layer
+              type="line"
+              id="district-boundaries"
+              sourceId="districts"
+              sourceLayer="districts"
+              before="waterway"
+              // If we've selected a state, show its district boundaries
+              paint={{
+                "line-color": "#d5176e",
+                "line-opacity": selectedState
+                  ? ["case", queries.district.isInState, 1, 0]
+                  : 0
+              }}
+              layout={{
+                visibility: "visible"
+              }}
+            />
+            {/*
+
+            Congressional Districts Fill
+
+            */}
+            <Layer
+              type="fill"
+              id="district-fill"
+              sourceId="districts"
+              sourceLayer="districts"
+              before="waterway"
+              // If we've selected a district, show it as green, and give other districts no fill
+              paint={{
+                "fill-color": "#00769c",
+                "fill-opacity": districtBreakdownQuery
+              }}
+            />
+            {/* 
+            
+            States Source
+
+            */}
+            <Source
+              id="states"
+              tileJsonSource={{
+                type: "vector",
+                url: mapData.stateTileSource
+              }}
+            />
+            {/* 
+            
+            States Line
+
+            */}
+            <Layer
+              type="line"
+              id="states-line"
+              sourceId="states"
+              sourceLayer="states"
+              before="waterway"
+              paint={{
+                "line-color": "#051832",
+                "line-width": 2,
+                "line-opacity": selectedState
+                  ? ["case", queries.state.isSelected, 1, 0]
+                  : 0
+              }}
+            />
+
+            {/* 
+            
+            States Fill
+
+            */}
+            <Layer
+              type="fill"
+              id="states-fill"
+              sourceId="states"
+              sourceLayer="states"
+              before="waterway"
+              paint={{
+                "fill-opacity": 0
+              }}
+            />
+            {/* 
+
+            ***** Hovered State ***** 
+
+            */}
+            {hoveredStateMarker && (
+              <Marker
+                coordinates={hoveredStateMarker}
+                anchor="bottom"
+                className="mb-mkr-hovered-state"
+              >
+                <MapStateHover {...hoveredState} />
+              </Marker>
+            )}
+            {/*
+
+            ***** Hovered District *****
+            
+            */}
+            {hoveredDistrict && hoveredDistrictMarker && (
+              <Marker
+                coordinates={hoveredDistrictMarker}
+                anchor="bottom"
+                className="mb-mkr-hovered-state"
+              >
+                <MapDistrictHover {...hoveredDistrict} />
+              </Marker>
+            )}
+            {/*
+
+            ***** Selected District *****
+
+            */}
+            {selectedDistrict && (
+              <Marker
+                coordinates={selectedDistrictMarker}
+                anchor="bottom"
+                className="mb-mkr-hovered-state"
+              >
+                <MapPopupCandidate {...selectedDistrict} />
+              </Marker>
+            )}
+          </Map>
+
+          <MapLegends
+            splits={[
+              { label: "40%", color: "blue" },
+              { label: "60%", color: "yellow" },
+              { label: "80%", color: "brown" },
+              { label: "100%", color: "purple" }
+            ]}
+          />
+        </section>
+        <section className="activity-area">
+          <div className="aa-search">
+            <MapGeocoder onGeolocate={this.onGeolocate} />
+          </div>
+          {this.state.selectedCD && (
+            <div>
+              <h4>District Details</h4>
+              <div className="aa-candidate-container">
+                <MapPopupCandidate
+                  name="NY-14"
+                  candidate_name="Alexandria Ocasio-Cortez"
+                  image={
+                    "/img/jd_site_alexandriaocasiocortez_550x600_061218.jpg"
+                  }
+                  description={`New York’s 14th Congressional District urgently needs access to more reliable jobs, increased access to family support services like parental leave and free childcare. She will fight for universal access to quality education from pre-K until college regardless of income and enrollment status because your ZIP code should never determine your quality of life.`}
+                  onClose={this.onPopupClose}
+                />
+              </div>
+            </div>
+          )}
+          <MapSidebar
+            {...{
+              selectedDistrict,
+              selectedState,
+              districtBreakdown,
+              districtLookup
+            }}
+          />
+        </section>
+      </div>
+    );
+  }
 
   /* TODO – zoom to containing district, not actual address, and start as if it had been clicked on */
   onGeolocate = result => {
@@ -102,14 +356,18 @@ export default class MapPage extends React.Component {
 
   onStyleLoad = map => {
     this.map = map;
-    map.setCenter({ lng: -95.7129, lat: 37.0902 });
-    map.setZoom(4);
+    this.map.setCenter({ lng: -95.7129, lat: 37.0902 });
+    this.map.setZoom(4);
 
-    map.on("mousemove", "states-fill", this.onMouseMove["states-fill"]);
-    map.on("mousemove", "district-fill", this.onMouseMove["district-fill"]);
+    this.map.on("mousemove", "states-fill", this.onMouseMove["states-fill"]);
+    this.map.on(
+      "mousemove",
+      "district-fill",
+      this.onMouseMove["district-fill"]
+    );
 
-    map.on("click", "district-fill", this.onClick["district-fill"]);
-    map.on("click", "states-fill", this.onClick["states-fill"]);
+    this.map.on("click", "district-fill", this.onClick["district-fill"]);
+    this.map.on("click", "states-fill", this.onClick["states-fill"]);
   };
 
   onZoomEnd = () => {
@@ -198,15 +456,16 @@ export default class MapPage extends React.Component {
     }
   };
 
-  zoomToBounds = geo => {
-    const bounds = this.getBounds(geo);
-    if (this.map.getZoom() <= 5) {
-      this.map.fitBounds(bounds, { padding: 100, animate: false });
-    }
-  };
-
   onPopupClose = e => {
     this.setState({ selectedCD: null, popupLngLat: null });
+  };
+
+  ZOOM_TO_NEIGHBORING_STATE = true;
+  zoomToBounds = geo => {
+    const bounds = this.getBounds(geo);
+    if (this.ZOOM_TO_NEIGHBORING_STATE || this.map.getZoom() <= 5) {
+      this.map.fitBounds(bounds, { padding: 100, animate: false });
+    }
   };
 
   getBounds = geom => {
@@ -230,225 +489,27 @@ export default class MapPage extends React.Component {
     return bounds;
   };
 
-  render() {
-    const {
-      selectedState,
-      selectedDistrict,
-      selectedDistrictMarker,
-      hoveredState,
-      hoveredStateMarker,
-      hoveredDistrict,
-      hoveredDistrictMarker
-    } = this.state;
+  produceDistrictInterpolationQuery = breakdown => {
+    const counts = breakdown.map(d => d.count);
+    const maxNominations = Math.max(...counts);
+    const districtInterpolation = ["case"];
+    breakdown.forEach(({ state, district, count }) => {
+      districtInterpolation.push([
+        "==",
+        ["get", "name"],
+        `${state}-${district}`
+      ]);
+      districtInterpolation.push(count / maxNominations);
+    });
+    districtInterpolation.push(0);
+    return districtInterpolation;
+  };
 
-    const queries = {
-      state: {
-        isSelected: [
-          "==",
-          ["get", "name"],
-          selectedState ? selectedState.name : "--"
-        ]
-      },
-      district: {
-        isSelected: [
-          "==",
-          ["get", "name"],
-          selectedDistrict ? selectedDistrict.name : "--"
-        ],
-        isInState: [
-          "==",
-          ["get", "state"],
-          selectedState ? selectedState.name : "--"
-        ]
-      }
-    };
-
-    const districtInterpolation = [
-      "interpolate",
-      ["linear"],
-      ["get", "nominations"],
-      0,
-      0,
-      50,
-      1
-    ];
-
-    const localDistrictInterpolation = [
-      "interpolate",
-      ["linear"],
-      ["get", "nominations"],
-      0,
-      0,
-      10,
-      1
-    ];
-
-    return (
-      <div className="map-container">
-        <section className="map-area">
-          <Map
-            style={mapData.style}
-            containerStyle={{
-              height: "100%",
-              width: "100%"
-            }}
-            onStyleLoad={this.onStyleLoad}
-            onZoomEnd={this.onZoomEnd}
-          >
-            <ZoomControl className="zoom-control" position="top-left" />
-            {/* Congressional Districts */}
-            <Source
-              id="districts"
-              tileJsonSource={{
-                type: "vector",
-                url: mapData.districtTileSource
-              }}
-            />
-            <Layer
-              type="line"
-              id="district-boundaries"
-              sourceId="districts"
-              sourceLayer="districts"
-              before="waterway"
-              // If we've selected a state, show its district boundaries
-              paint={{
-                "line-color": "#d5176e",
-                "line-opacity": 1
-                // "line-opacity": selectedState
-                //   ? ["case", queries.district.isInState, 1, 0]
-                //   : 0
-              }}
-              layout={{
-                visibility: "visible"
-              }}
-            />
-            <Layer
-              type="fill"
-              id="district-fill"
-              sourceId="districts"
-              sourceLayer="districts"
-              before="waterway"
-              // If we've selected a district, show it as green, and give other districts no fill
-              paint={{
-                "fill-color": "#00769c",
-                // "fill-color": selectedDistrict
-                //   ? ["case", queries.district.isSelected, "#00769c", "white"]
-                //   : "#00769c",
-                // "fill-opacity": selectedDistrict
-                //   ? ["case", queries.district.isSelected, 1, 0]
-                //   : selectedState
-                //   ? [
-                //       "case",
-                //       queries.district.isInState,
-                //       localDistrictInterpolation,
-                //       0
-                //     ]
-                //   : localDistrictInterpolation
-                "fill-opacity": localDistrictInterpolation
-              }}
-            />
-            {/* States */}
-            <Source
-              id="states"
-              tileJsonSource={{
-                type: "vector",
-                url: mapData.stateTileSource
-              }}
-            />
-            <Layer
-              type="fill"
-              id="states-fill"
-              sourceId="states"
-              sourceLayer="states"
-              before="waterway"
-              paint={{
-                "fill-color": "green",
-                "fill-opacity": selectedState
-                  ? ["case", queries.state.isSelected, 0.1, 0]
-                  : 0
-              }}
-            />
-            {/* 
-
-            ***** Hovered State ***** 
-
-            */}
-            {hoveredStateMarker && (
-              <Marker
-                coordinates={hoveredStateMarker}
-                anchor="bottom"
-                className="mb-mkr-hovered-state"
-              >
-                <MapStateHover {...hoveredState} />
-              </Marker>
-            )}
-            {/*
-
-            ***** Hovered District *****
-            
-            */}
-            {hoveredDistrict && hoveredDistrictMarker && (
-              <Marker
-                coordinates={hoveredDistrictMarker}
-                anchor="bottom"
-                className="mb-mkr-hovered-state"
-              >
-                <MapDistrictHover {...hoveredDistrict} />
-              </Marker>
-            )}
-            {/*
-
-            ***** Selected District *****
-
-            */}
-            {selectedDistrict && (
-              <Marker
-                coordinates={selectedDistrictMarker}
-                anchor="bottom"
-                className="mb-mkr-hovered-state"
-              >
-                <MapPopupCandidate {...selectedDistrict} />
-              </Marker>
-            )}
-          </Map>
-
-          <MapLegends
-            splits={[
-              { label: "40%", color: "blue" },
-              { label: "60%", color: "yellow" },
-              { label: "80%", color: "brown" },
-              { label: "100%", color: "purple" }
-            ]}
-          />
-        </section>
-        <section className="activity-area">
-          <div className="aa-search">
-            <MapGeocoder onGeolocate={this.onGeolocate} />
-          </div>
-          {this.state.selectedCD && (
-            <div>
-              <h4>District Details</h4>
-              <div className="aa-candidate-container">
-                <MapPopupCandidate
-                  name="NY-14"
-                  candidate_name="Alexandria Ocasio-Cortez"
-                  image={
-                    "/img/jd_site_alexandriaocasiocortez_550x600_061218.jpg"
-                  }
-                  description={`New York’s 14th Congressional District urgently needs access to more reliable jobs, increased access to family support services like parental leave and free childcare. She will fight for universal access to quality education from pre-K until college regardless of income and enrollment status because your ZIP code should never determine your quality of life.`}
-                  onClose={this.onPopupClose}
-                />
-              </div>
-            </div>
-          )}
-          <h4>State Stats</h4>
-          <div className="aa-stats">
-            {SAMPLE_DATA.map(item => (
-              <MapStateStatus {...{ ...item }} />
-            ))}
-          </div>
-        </section>
-      </div>
-    );
-  }
+  produceDistrictLookup = breakdown => {
+    const result = {};
+    breakdown.forEach(({ state, district, count }) => {
+      result[`${state}-${district}`] = count;
+    });
+    return result;
+  };
 }
