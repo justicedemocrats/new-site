@@ -1,5 +1,6 @@
-import React from 'react'
-import '../style/map.scss'
+import React from "react";
+import "../style/map.scss";
+
 export default props => (
   <div className="map-legends">
     <h5>% Target Application</h5>
@@ -11,4 +12,4 @@ export default props => (
       ))}
     </div>
   </div>
-)
+);

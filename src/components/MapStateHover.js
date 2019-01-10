@@ -1,10 +1,11 @@
 import React from "react";
 import "../style/map.scss";
+import states from "../lib/states";
 
 export default props => (
   <div className="map-hover map-state-hover">
     <div>
-      <h3>{props.name}</h3>
+      <h3>{states[props.name]}</h3>
       <table>
         <tbody>
           <tr>

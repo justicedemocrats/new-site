@@ -19,8 +19,16 @@ import MapSidebar from "../components/MapSidebar";
 
 import "../style/map.scss";
 
+const colors = {
+  "jd-dark-dark-blue": "#051832",
+  "jd-text-gray": "#575a5f",
+  "jd-dark-blue": "#00769c",
+  "jd-orange": "#d5176e",
+  "jd-light-blue": "#6fccdd"
+};
+
 const mapData = {
-  style: "mapbox://styles/justicedemocrats/cjpk6niji0vec2splua1fs6e9",
+  style: "mapbox://styles/justicedemocrats/cjpkajukh00aw2qm9kxnqmvrv",
   layers: {
     district: "cjpk209eo0equ2qqdjp6bs0ps",
     state: "cjpk1tg000ekd2qqdhsymy2jo"
@@ -149,7 +157,7 @@ export default class MapPage extends React.Component {
               before="waterway"
               // If we've selected a state, show its district boundaries
               paint={{
-                "line-color": "#d5176e",
+                "line-color": colors["jd-dark-dark-blue"],
                 "line-opacity": selectedState
                   ? ["case", queries.district.isInState, 1, 0]
                   : 0
@@ -171,7 +179,7 @@ export default class MapPage extends React.Component {
               before="waterway"
               // If we've selected a district, show it as green, and give other districts no fill
               paint={{
-                "fill-color": "#00769c",
+                "fill-color": colors["jd-dark-blue"],
                 "fill-opacity": districtBreakdownQuery
               }}
             />
@@ -199,7 +207,7 @@ export default class MapPage extends React.Component {
               sourceLayer="states"
               before="waterway"
               paint={{
-                "line-color": "#051832",
+                "line-color": colors["jd-orange"],
                 "line-width": 2,
                 "line-opacity": selectedState
                   ? ["case", queries.state.isSelected, 1, 0]

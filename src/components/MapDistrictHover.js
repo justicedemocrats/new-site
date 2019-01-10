@@ -1,5 +1,7 @@
 import React from "react";
 import "../style/map.scss";
+import MapTags from "./MapTags";
+
 export default props => (
   <div className="map-hover map-cd-candidate map-cd-candidate-popup map-cd-hover">
     <div>
@@ -13,10 +15,9 @@ export default props => (
           <h3>{props.name}</h3>
         </div>
       </div>
-      {props.member_is_jd && <div className="jd-tag"> Justice Democrat </div>}
-      {props.member_supports_gnd && (
-        <div className="gnd-tag"> Suppports the Green New Deal </div>
-      )}
+
+      <MapTags member={props} />
+
       {!props.member_is_jd && (
         <div className="nominations-count">
           Nominations for a primary challenger: {props.nominations}

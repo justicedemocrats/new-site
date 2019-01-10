@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import "../style/map.scss";
+import MapTags from "./MapTags";
 
 export default props => (
   <div className="map-hover map-cd-candidate map-cd-candidate-popup map-cd-hover">
@@ -15,10 +16,9 @@ export default props => (
           <h3>{props.name}</h3>
         </div>
       </div>
-      {props.member_is_jd && <div className="jd-tag"> Justice Democrat </div>}
-      {props.member_supports_gnd && (
-        <div className="gnd-tag"> Suppports the Green New Deal </div>
-      )}
+
+      <MapTags member={props} />
+
       {!props.member_is_jd && props.member_party == "D" ? (
         <div className="nominations-count">
           We've received {props.nominations} for a primary challenger.
