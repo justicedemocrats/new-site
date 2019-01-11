@@ -14,9 +14,9 @@ export default props => (
           <h3 className="candidate-name">{props.member_name} </h3>
           <h3>{props.name}</h3>
         </div>
-      </div>
 
-      <MapTags member={props} />
+        <MapTags member={props} />
+      </div>
 
       {!props.member_is_jd && (
         <div className="nominations-count">

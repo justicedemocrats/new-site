@@ -15,13 +15,14 @@ export default props => (
           <h3 className="candidate-name">{props.member_name} </h3>
           <h3>{props.name}</h3>
         </div>
-      </div>
 
-      <MapTags member={props} />
+        <MapTags member={props} />
+      </div>
 
       {!props.member_is_jd && props.member_party == "D" ? (
         <div className="nominations-count">
-          We've received {props.nominations} for a primary challenger.
+          We've received {props.nominations} nominations for a primary
+          challenger.
           <br />
           {!props.member_supports_gnd && (
             <div className="no-gnd-tag">
@@ -32,23 +33,30 @@ export default props => (
           <h3>
             Would you like to see a primary challenger to {props.member_name}?
           </h3>
-          <Link to={`/nominate?district=${props.state_district}`}>
-            Nominate One Here
+          <Link
+            to={`/nominate?district=${props.state_district}`}
+            className="nominate-button bold-m"
+          >
+            Nominate
           </Link>
         </div>
       ) : (
         <div className="nominations-count">
-          We've received {props.nominations} for possible Justice Democrats to
-          run against {props.member_name}
+          We've received {props.nominations} nominations for possible Justice
+          Democrats to run against {props.member_name}
           <h3>
             Would you like to see a Justice Democrat run against{" "}
             {props.member_name}?
           </h3>
-          <Link to={`/nominate?district=${props.state_district}`}>
-            Nominate One Here
+          <Link
+            to={`/nominate?district=${props.state_district}`}
+            className="nominate-button bold-m"
+          >
+            Nominate
           </Link>
         </div>
       )}
+
       <div />
     </div>
   </div>

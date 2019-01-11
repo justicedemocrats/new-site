@@ -28,7 +28,8 @@ const colors = {
 };
 
 const mapData = {
-  style: "mapbox://styles/justicedemocrats/cjpkajukh00aw2qm9kxnqmvrv",
+  style:
+    "mapbox://styles/justicedemocrats/cjpkajukh00aw2qm9kxnqmvrv?fresh=true",
   layers: {
     district: "cjpk209eo0equ2qqdjp6bs0ps",
     state: "cjpk1tg000ekd2qqdhsymy2jo"
@@ -287,6 +288,7 @@ export default class MapPage extends React.Component {
           <div className="aa-search">
             <MapGeocoder onGeolocate={this.onGeolocate} />
           </div>
+          <div className="divider" style={{ margin: "5px 0px" }} />
           {this.state.selectedCD && (
             <div>
               <h4>District Details</h4>

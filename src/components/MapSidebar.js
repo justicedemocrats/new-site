@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
+import MapSidebarRow from "./MapSidebarRow";
 import "../style/map.scss";
 
 const stateSortFn = props => (a, b) =>
@@ -8,23 +9,25 @@ const stateSortFn = props => (a, b) =>
 const countOfDistrict = (props, district) =>
   props.districtLookup[`${district.state}-${district.district}`];
 
+const wrapCountFn = props => district => countOfDistrict(props, district);
+
 const renderOverView = props => (
   <React.Fragment>
-    <div className="map-sidebar-header"> Most Nominated Districts </div>
+    <div className="map-sidebar-header extra-bold-m home-subheader-b">
+      Most Nominated Districts
+    </div>
     {props.districtBreakdown
       .sort(stateSortFn(props))
       .slice(0, 5)
       .map(d => (
-        <div className="map-sidebar-item">
-          {d.state + "-" + d.district}: {countOfDistrict(props, d)}
-        </div>
+        <MapSidebarRow district={d} countFn={wrapCountFn(props)} />
       ))}
   </React.Fragment>
 );
 
 const renderStateView = props => (
   <React.Fragment>
-    <div className="map-sidebar-header">
+    <div className="map-sidebar-header extra-bold-m home-subheader-b">
       Most Nominated Districts in {props.selectedState.name}
     </div>
     {props.districtBreakdown
@@ -32,16 +35,16 @@ const renderStateView = props => (
       .sort(stateSortFn(props))
       .slice(0, 5)
       .map(d => (
-        <div className="map-sidebar-item">
-          {d.state + "-" + d.district}: {countOfDistrict(props, d)}
-        </div>
+        <MapSidebarRow district={d} countFn={wrapCountFn(props)} />
       ))}
   </React.Fragment>
 );
 
 const renderDistrictView = props => (
   <React.Fragment>
-    <div className="map-sidebar-header">{props.selectedDistrict.name}</div>
+    <div className="map-sidebar-header extra-bold-m home-subheader-b">
+      {props.selectedDistrict.name}
+    </div>
   </React.Fragment>
 );
 

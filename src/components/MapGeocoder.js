@@ -85,8 +85,10 @@ class MapGeocoder extends React.Component {
 
   render = () => (
     <div className="map-geocoder" style={this.props.style}>
-      <div style={{ width: "100%" }}>
-        <h3> Don't Know Your District? </h3>
+      <div style={{ width: "100%", display: "flex", flexDirection: "column" }}>
+        <h3 className="home-subheader-b extra-bold-m">
+          Don't Know Your District?
+        </h3>
         <input
           type="text"
           onChange={this.onMapGeocoderChange.bind(this)}

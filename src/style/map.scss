@@ -94,6 +94,7 @@
         .candidate-profile .candidate-pic {
           width: 70px;
           height: 55px;
+          background-size: cover;
         }
       }
     }
@@ -219,15 +220,18 @@
 
   .map-popup-candidate,
   .map-cd-candidate-popup {
+    padding: 20px;
+    width: 350px;
+
     .candidate-profile {
       display: flex;
     }
     .candidate-pic {
       width: 60px;
       height: 60px;
-      border-radius: 30px;
       background-size: 80px;
       background-position: top center;
+      background-size: cover;
     }
     .candidate-info {
       padding-left: 10px;
@@ -261,8 +265,6 @@
   }
 
   .map-cd-candidate-popup {
-    padding-top: 10px;
-
     .candidate-info {
       h3 {
         &.candidate-name {
@@ -290,4 +292,20 @@
       height: 30px;
     }
   }
+}
+
+.map-sidebar-header {
+  background-color: $jd-dark-blue;
+  color: white;
+  font-size: 28px;
+  padding: 10px;
+}
+
+.nominate-button {
+  background-color: $jd-orange;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
 }
