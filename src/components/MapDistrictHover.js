@@ -1,7 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
 import "../style/map.scss";
-
 export default props => (
   <div className="map-hover map-cd-candidate map-cd-candidate-popup map-cd-hover">
     <div>
@@ -22,15 +20,9 @@ export default props => (
       {!props.member_is_jd && (
         <div className="nominations-count">
           Nominations for a primary challenger: {props.nominations}
-          <h3>
-            Would you like to see a primary challenger to {props.member_name}?
-          </h3>
-          <Link to={`/nominate?district=${props.state_district}`}>
-            Nominate One Here
-          </Link>
         </div>
       )}
-      <div />
+      <span className="note">click to expand</span>
     </div>
   </div>
 );
