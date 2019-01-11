@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import CtaModal from "../components/CtaModal";
 import "./all.sass";
 import "../style/footer.scss";
 
@@ -34,7 +35,10 @@ const TemplateWrapper = ({ data, children, location }) => {
         ))}
       </Helmet>
       <Navbar path={location.pathname} />
-      <div>{children()}</div>
+      <div>
+        <CtaModal {...content} path={location.pathname} />
+        {children()}
+      </div>
       <Footer {...content} />
     </div>
   );
@@ -65,6 +69,13 @@ export const pageQuery = graphql`
               url
               type
             }
+            ctaEnabled
+            ctaName
+            ctaTitle
+            ctaImage
+            ctaBody
+            ctaText
+            ctaUrl
           }
         }
       }
