@@ -167,7 +167,6 @@ const ModulePage = props => {
   } = props.data.nominate.edges[0].node.frontmatter;
 
   Object.assign(attrs, { bannerBackgroundImage, bannerText });
-  console.log(props);
 
   return <ModulePageTemplate {...attrs} />;
 };

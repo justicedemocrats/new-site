@@ -12,8 +12,6 @@ export const SplashPageTemplate = ({
   contentComponent
 }) => {
   const PageContent = contentComponent || Content;
-  console.log(15);
-  console.log(headerImage);
 
   return (
     <div

@@ -12,7 +12,6 @@ let Popup;
 if (typeof window !== `undefined`) {
   MapboxGL = require("mapbox-gl");
   ReactMapboxGl = require("react-mapbox-gl");
-  console.log(ReactMapboxGl);
   Map = ReactMapboxGl.Map({
     accessToken:
       "pk.eyJ1IjoianVzdGljZWRlbW9jcmF0cyIsImEiOiJjamQ2Y2p0anQyMDlyMzNud3ppbm1rcG9sIn0.mxzbQ35NUz70LILrs5yOYA"

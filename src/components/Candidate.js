@@ -48,8 +48,6 @@ class Candidate extends React.Component {
       hideDonate
     } = this.props;
 
-    console.log(hideDonate);
-
     let ed = new Date(electionDate);
     let [d, m] = [ed.getDate(), ed.getMonth()];
     d = d + 1;
