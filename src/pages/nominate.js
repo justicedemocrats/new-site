@@ -5,6 +5,7 @@ import { HTMLContent } from "../components/Content";
 import Banner from "../components/Banner";
 import Candidate from "../components/Candidate";
 import FormStageManager from "../components/FormStageManager";
+import queryString from "query-string";
 import "../style/issues.scss";
 
 const lastWord = string => {
@@ -27,6 +28,17 @@ class NominatePageTemplate extends React.Component {
     analytics.track("Nomination Modal Closed");
   };
 
+  componentDidMount() {
+    const params = queryString.parse(window.location.search);
+    if (params.district) {
+      this.setState({ nominating: true, districtPreset: params.district });
+      // analytics.track(
+      //   "Nomination Modal Opened By Default Because of District Visit",
+      //   { district: params.district }
+      // );
+    }
+  }
+
   render() {
     const {
       candidates,
@@ -47,7 +59,7 @@ class NominatePageTemplate extends React.Component {
       }
     } = this.props;
 
-    const { nominating } = this.state;
+    const { nominating, districtPreset } = this.state;
 
     return (
       <div>
@@ -163,6 +175,7 @@ class NominatePageTemplate extends React.Component {
                 endNomination={this.endNomination}
                 thankYou={thankYou}
                 stage0Explanation={stage0Explanation}
+                districtPreset={districtPreset}
               />
             )}
           </div>
