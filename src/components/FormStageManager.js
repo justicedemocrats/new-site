@@ -38,6 +38,11 @@ export default class FormStageManager extends React.Component {
     this.setState({
       stage: this.state.stage - 1
     });
+
+    analytics.track("Nomination Modal - Previous Stage", {
+      from: this.state.stage,
+      to: this.state.stage - 1
+    });
   };
 
   nextStage = () => {
@@ -68,7 +73,7 @@ export default class FormStageManager extends React.Component {
   };
 
   submit = () => {
-    console.log(this.state.data);
+    analytics.track("Nomination Modal - Submit");
 
     const questions = this.currentQuestions().map(q =>
       Object.assign({}, q, { value: this.state.data[q.name] })
