@@ -34,6 +34,13 @@ export default class FormStageManager extends React.Component {
     mode: undefined
   };
 
+  componentWillMount() {
+    if (this.props.districtPreset) {
+      this.state.data.State = this.props.districtPreset.split("-")[0];
+      this.state.data.District = this.props.districtPreset.split("-")[1];
+    }
+  }
+
   prevStage = () => {
     this.setState({
       stage: this.state.stage - 1
