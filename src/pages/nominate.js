@@ -5,7 +5,6 @@ import { HTMLContent } from "../components/Content";
 import Banner from "../components/Banner";
 import Candidate from "../components/Candidate";
 import FormStageManager from "../components/FormStageManager";
-import queryString from "query-string";
 import "../style/issues.scss";
 
 const lastWord = string => {
@@ -29,7 +28,7 @@ class NominatePageTemplate extends React.Component {
   };
 
   componentDidMount() {
-    const params = queryString.parse(window.location.search);
+    const params = getUrlVars();
     if (params.district) {
       this.setState({ nominating: true, districtPreset: params.district });
       analytics.track(
@@ -307,3 +306,15 @@ export const pageQuery = graphql`
 `;
 
 const Divider = () => <div className="divider" />;
+
+function getUrlVars() {
+  var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(
+    m,
+    key,
+    value
+  ) {
+    vars[key] = value;
+  });
+  return vars;
+}

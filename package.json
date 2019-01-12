@@ -29,7 +29,6 @@
     "netlify-cms": "^1.7.0",
     "papaparse": "^4.6.1",
     "prop-types": "15.6.2",
-    "query-string": "^6.2.0",
     "react": "16.5.2",
     "react-burger-menu": "^2.5.2",
     "react-dom": "16.5.2",
