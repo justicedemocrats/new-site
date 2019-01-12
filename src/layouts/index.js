@@ -36,7 +36,7 @@ const TemplateWrapper = ({ data, children, location }) => {
       </Helmet>
       <Navbar path={location.pathname} />
       <div>
-        <CtaModal {...content} path={location.pathname} />
+        {/* <CtaModal {...content} path={location.pathname} /> */}
         {children()}
       </div>
       <Footer {...content} />
