@@ -14,6 +14,32 @@ sections:
       of new jobs for those who have been left out of the workforce.
     planks:
       - contents: >-
+          Scientists are sounding the alarm on climate change. Communities are
+          fighting back. It’s time to drastically and immediately move away from
+          fossil fuels, develop the technologies of the future, and create
+          prosperity for all of us -- not just those on top. The Green New Deal
+          is a mass mobilization to dramatically expand existing renewable power
+          sources and deploy new production capacity with the goal of meeting
+          100% of national power demand through renewable sources. The Green New
+          Deal will also provide all members of our society, across all regions
+          and all communities, the opportunity, training and education to be a
+          full and equal participant in the transition, including through a job
+          guarantee program to assure a living wage job to every person who
+          wants one and ensure a ‘just transition’ for all workers, low-income
+          communities, communities of color, indigenous communities, rural and
+          urban communities and the front-line communities most affected by
+          climate change, pollution and other environmental harm including by
+          ensuring that local implementation of the transition is led from the
+          community level and by prioritizing solutions that end the harms faced
+          by front-line communities from climate change and environmental
+          pollution.
+        title: Green New Deal
+      - contents: >-
+          This is about justice and basic human decency. If you work hard and
+          you work full time you shouldn’t live in poverty. Furthermore, we
+          support strong unions and collective bargaining.
+        title: Secure a Living Wage and Tie it to Inflation
+      - contents: >-
           The idea behind a federal jobs guarantee is that anyone who wants to
           work and contribute but can’t find a way to do that in the economy can
           do that. A federal jobs guarantee program would establish a floor for
@@ -25,32 +51,18 @@ sections:
           that needs to be done.
         title: Enact a Federal Jobs Guarantee
       - contents: >-
-          This is about justice and basic human decency. If you work hard and
-          you work full time you shouldn’t live in poverty. Furthermore, we
-          support strong unions and collective bargaining.
-        title: Secure a Living Wage and Tie it to Inflation
-      - contents: >-
-          Scientists are sounding the alarm on climate change. In order to avoid
-          the worst case scenario and a dystopian future we need a massive green
-          revolution. It’s time to drastically and immediately move away from
-          fossil fuels and develop the technologies of the future. This will be
-          a giant boon to both the private and public sector, as well as a
-          necessary response to a global crisis. We can and we must be #1 in
-          sustainable energy production in the world.
-        title: Create the Renewable Energy Revolution
-      - contents: >-
           Our infrastructure gets a grade of D from the Society of Civil
           Engineers. The government should invest trillions in rebuilding our
           crumbling roads, bridges, schools, levees, airports, etc. There’s no
           reason why we can’t have the world’s #1 infrastructure.
-        title: Build the New New Deal
+        title: Rebuild Our Crumbling Infrastructure
       - contents: >-
-          As a result of NAFTA, CAFTA, PNTR with China and the WTO, Americans
-          have lost millions of decent paying jobs. It’s time to end the race to
-          the bottom and renegotiate these rigged deals that only benefit
-          elites. We should not sacrifice our sovereignty. The only people who
-          are allowed to make laws for the United States should be the American
-          people, not multinational corporations.
+          Americans have lost millions of decent paying jobs due to unfair trade
+          deals. It’s time to end the race to the bottom and renegotiate these
+          rigged deals that only benefit elites. We should not sacrifice our
+          sovereignty. The only people who are allowed to make laws for the
+          United States should be the American people, not multinational
+          corporations.
         title: Block Bad Trade Deals
       - contents: >-
           Corporations dodge $450 billion a year in taxes by using offshore tax
@@ -68,29 +80,27 @@ sections:
           people. The disastrous war in Iraq cost trillions, the war in
           Afghanistan is going on 17 years in with no end in sight, and we’re
           currently bombing 7 different countries. We spend more on our military
-          than the next 8 countries combined. Despite countless lives lost and
-          destroyed, terrorism has only gotten worse. It’s time to end the wars
-          and the perverse monetary incentive structure that makes politicians
-          flippant about sending young men and women to die. Unilateral U.S.
-          military force should only be used as a last resort to defend the
-          nation. The current budget could be cut drastically if we used our
-          department of defense for what it was intended — defending us, instead
-          of waging interventionist wars.
+          than the next 8 countries combined. It’s time to end the wars and the
+          perverse monetary incentive structure that makes politicians flippant
+          about sending young men and women to die. Unilateral U.S. military
+          force should only be used as a last resort to defend the nation. The
+          current budget could be cut drastically if we used our department of
+          defense for what it was intended — defending us, instead of waging
+          interventionist wars.
         title: End Unnecessary Wars and Nation Building
     title: Transform Our Economy
   - icon: /img/jd_site_policy_icon_2_rights_nov18_rev.svg
     intro: >-
-      The growing disparities in income and wealth among our nation’s citizenry
+      The growing disparities in income and wealth among our nation’s people
       have long-term impacts on our population — for wealth accumulation, debt
       reduction, and educational attainment.
     planks:
       - contents: >-
           The United States should catch up to every other modern nation and
-          implement a single payer, Medicare for All system. There’s no reason
-          we can’t be #1 in the world instead of #37. It’s time to end the
-          destruction of American health care by rapacious, price gouging,
+          implement a single payer, Medicare for All system. It’s time to end
+          the destruction of American health care by rapacious, price gouging,
           for-profit, private health insurance middlemen.
-        title: Healthcare as A Right
+        title: Medicare For All
       - contents: >-
           Educating the citizenry of a nation pays dividends in the long run,
           with the economy getting back much more than is initially put in.
@@ -106,7 +116,7 @@ sections:
           poverty rate from 35% to 10%. 3.4 million Americans would immediately
           fall into poverty without Medicaid. Gutting these vital programs is
           not an option.
-        title: 'Defend Social Security, Medicare, and Medicaid'
+        title: 'Defend and Expand Social Security, Medicare, and Medicaid'
       - contents: >-
           The United States is one of just three countries in the world that
           doesn’t offer paid maternity leave, the others being Oman and Papua
@@ -114,22 +124,25 @@ sections:
           paid vacation time. This should be changed immediately.
         title: 'Ensure Paid Vacation Time, Sick Time, Family Leave, Childcare'
       - contents: >-
-          Xenophobia and racism are running rampant in the nation, emboldened by
-          the hate-filled rhetoric spilled by the nation’s 45th president across
-          the news and social media. Amid this hatefulness and fear mongering,
-          African Americans and Hispanics in particular, and people of color
-          generally, have been targets in our nation’s continued assault against
-          their rights, liberties, existence, and humanity. As did generations
-          before us, we will continue to advocate and push for justice, equity,
-          and equality in all manner and forms, and will sponsor and vote on
-          legislation to secure the same.
+          Racism and xenophobia have always been part of our country's history.
+          Since our nation's founding, the wealthy and the powerful have always
+          used divide-and-conquer tactics to make working people fight each
+          other instead of the people on top. African Americans and Latinos in
+          particular, and people of color generally, have been targets in our
+          nation’s continued assault against their rights, liberties, and
+          humanity. As did generations before us, we will continue to advocate
+          and push for justice, equity, and equality in all manner and forms,
+          and will sponsor and vote on legislation to secure the same. We
+          support a truth and reconciliation commission to investigate the
+          generational harms caused by slavery and Jim Crow and propose
+          remedies.
         title: Fight For Racial Justice
       - contents: >-
-          We support the Paycheck Fairness Act. We oppose Republican cuts to
-          Planned Parenthood and women’s health clinics all across the country.
-          In 2016 alone, 60 TRAP laws targeting abortion were passed in 19
-          states. We will vigorously oppose all efforts to dismantle
-          reproductive rights.
+          We support the Paycheck Fairness Act and we support repealing the Hyde
+          Amendment. We oppose Republican cuts to Planned Parenthood and women’s
+          health clinics all across the country. In 2016 alone, 60 TRAP laws
+          targeting abortion were passed in 19 states. We will vigorously oppose
+          all efforts to dismantle reproductive rights.
         title: Protect Women’s Rights
       - contents: >-
           More than 600,000 Americans are homeless on any given night, including
@@ -139,18 +152,16 @@ sections:
           responsible thing to do.
         title: Combat Homelessness
       - contents: >-
-          We believe in the core idea of policing — to serve and protect the
-          community. Police are a vital part of American society and that is why
-          it’s so important to reform the system to make it serve all Americans.
           For-profit policing and for-profit prisons should be abolished. Police
           training should be retooled to emphasize de-escalation tactics, and
           body cameras should be mandatory on all officers. Furthermore,
           community oversight boards should be created and broken windows
           policing should be eliminated. Stop & frisk — which disproportionately
-          targets blacks and latinos 87% of the time — has a 97% failure rate.
-          On top of being discriminatory and ineffective, it’s also
-          unconstitutional and should be ended. Special prosecutors must also be
-          appointed to hold police accountable.
+          targets African Americans and Latinos 87% of the time — has a 97%
+          failure rate. On top of being discriminatory and ineffective, it’s
+          also unconstitutional and should be ended. Special prosecutors must
+          also be appointed to hold police accountable. We should invest more in
+          jobs and education, less in jails and incarceration.
         title: Law Enforcement Reform
       - contents: >-
           92% of Americans want expanded background checks, 54% want a ban on
@@ -193,18 +204,9 @@ sections:
           be implemented to end the takeover of our government by corporations
           and billionaires. Americans deserve free and fair elections — free
           from the corruption of big money donors. The Supreme Court has
-          effectively legalized bribery. It’s time for an Article 5 convention
-          to take our Democracy back from the brink of Oligarchy.
+          effectively legalized bribery. We need public financing of our
+          elections.
         title: End Corruption
-      - contents: >-
-          Ban the NSA from bulk data-collection and warrantless spying. Shut
-          down Guantanamo Bay and all extrajudicial prisons. Prosecute torturers
-          and those who violated the Geneva Conventions, Nuremberg Tribunal,
-          International law and US law. Defend habeas corpus and due process.
-          Pardon whistleblowers like Edward Snowden. We shouldn’t be leading
-          from behind on human rights; we must be the home of liberty. We should
-          practice the values we preach.
-        title: Stop Constitutional Overreaches
       - contents: >-
           America imprisons more people than any other nation in the world. With
           4.4% of the world’s population, America incarcerates 22% of the
@@ -229,16 +231,13 @@ sections:
           path to citizenship. America is a proud nation of immigrants.
         title: Implement Comprehensive Immigration Reform
       - contents: >-
-          Ban arming human rights violators. We recently gave Saudi Arabia
-          billions in weapons and watched the civilian death toll in their
-          vicious bombing campaign in Yemen tick up. We continue sending Egypt
-          arms as they violently crack down on peaceful protesters. Israel
-          received $38 billion in aid and promptly announced new settlements.
-          The first step to peace is not enabling nations who regularly violate
-          international law. We must be bold enough to stand up to human rights
-          violators who aren’t just our enemies, but our allies. We don’t weaken
-          our allies by holding them accountable, we strengthen them.
-        title: No Longer Sell Arms to Human Rights Violators
+          We recently gave Saudi Arabia billions in weapons and watched the
+          civilian death toll in their vicious bombing campaign in Yemen tick
+          up. We continue sending Egypt arms as they violently crack down on
+          peaceful protesters. Israel received $38 billion in aid and promptly
+          announced new settlements. The first step to peace is not enabling
+          nations who regularly violate international law.
+        title: Stop Selling Arms to Human Rights Violators
       - contents: >-
           The racist War on Drugs has torn families apart all across our
           country. Politicians in both parties created a system of mass
@@ -266,10 +265,8 @@ sections:
       - contents: >-
           We must speak out against racism, sexism, xenophobia, and all forms of
           bigotry. Non-discrimination protections that currently apply to race,
-          religion, and gender should be expanded to include the LGBTQ community
-          and the atheist community. Making all Americans equal is not asking
-          for special privileges, it’s asking for the rule of law—justice and
-          equality for all as promised in the United States Constitution.
+          religion, and gender should be expanded to include the LGBTQ
+          community.
         title: Oppose Bigotry
       - contents: >-
           These days, our reliance on technology has become second-nature, and
