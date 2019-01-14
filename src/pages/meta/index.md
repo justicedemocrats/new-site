@@ -35,18 +35,22 @@ socialIcons:
   - icon: /img/jd_site_icons_contact_email_100x100_white.svg
     type: contact
     url: "mailto:us@justicedemocrats.com"
-ctaEnabled: false
-ctaName: cta-modal-pelosi-petition
-ctaTitle: CTA Title
-ctaImage: /img/editor-2018-09-09.jpg
+ctaEnabled: true
+ctaName: primary-cuellar-1-11
+ctaTitle: Our First 2020 Target
+ctaImage: /img/cuellar-primary-graphic.png
 ctaBody: |-
-  CTA Body! 
+  We're launching our first primary target: Henry Cuellar, a fake Democrat.
 
-  We need to do:
+  ❌ Votes with Trump 69% of the time
 
-  1. X
-  2. Y
-  3. Z
-ctaText: Join Us
-ctaUrl: "https://go.justicedemocrats.com/sign/cuomo-mailer/?source=link0909"
+  ❌ 'A' Rating from the NRA
+
+  ❌ Voted to penalize sanctuary cities
+
+  ❌ Fundraises for the GOP
+
+  ✅ Let's recruit a grassroots progressive challenger
+ctaText: Support Our Challenge
+ctaUrl: "https://secure.actblue.com/donate/cuellarprimaryfund?refcode=cuellarmodalpopup"
 ---

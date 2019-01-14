@@ -34,9 +34,21 @@ export default class FormStageManager extends React.Component {
     mode: undefined
   };
 
+  componentWillMount() {
+    if (this.props.districtPreset) {
+      this.state.data.State = this.props.districtPreset.split("-")[0];
+      this.state.data.District = this.props.districtPreset.split("-")[1];
+    }
+  }
+
   prevStage = () => {
     this.setState({
       stage: this.state.stage - 1
+    });
+
+    analytics.track("Nomination Modal - Previous Stage", {
+      from: this.state.stage,
+      to: this.state.stage - 1
     });
   };
 
@@ -60,7 +72,6 @@ export default class FormStageManager extends React.Component {
   setMode = mode => () => this.setState({ mode });
   setData = attribute => ev => {
     const value = ev.target.value;
-    console.log({ attribute, value });
     this.setState(prevState => {
       const data = Object.assign({}, prevState.data, { [attribute]: value });
       return Object.assign(prevState, { data });
@@ -68,7 +79,7 @@ export default class FormStageManager extends React.Component {
   };
 
   submit = () => {
-    console.log(this.state.data);
+    analytics.track("Nomination Modal - Submit");
 
     const questions = this.currentQuestions().map(q =>
       Object.assign({}, q, { value: this.state.data[q.name] })

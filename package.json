@@ -14,6 +14,7 @@
     "gatsby-plugin-netlify-cms": "^1.0.9",
     "gatsby-plugin-react-helmet": "^2.0.5",
     "gatsby-plugin-sass": "^1.0.17",
+    "gatsby-plugin-segment-js": "^2.0.1",
     "gatsby-plugin-sharp": "^1.6.34",
     "gatsby-remark-images": "^1.5.50",
     "gatsby-source-filesystem": "^1.5.23",
@@ -37,6 +38,7 @@
     "react-modal": "^3.6.1",
     "react-responsive": "^4.1.0",
     "showdown": "^1.8.6",
+    "store": "^2.0.12",
     "uuid": "^3.2.1"
   },
   "keywords": [

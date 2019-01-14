@@ -1,34 +1,34 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
-import { HTMLContent } from '../components/Content'
-import HomeBlock from '../components/HomeBlock'
-import Responsive from 'react-responsive'
-import CarouselCandidate from '../components/CarouselCandidate'
-import { sortFunctions } from './candidates'
-require('../style/includes/_skeleton.scss')
+import React from "react";
+import PropTypes from "prop-types";
+import Link from "gatsby-link";
+import { HTMLContent } from "../components/Content";
+import HomeBlock from "../components/HomeBlock";
+import Responsive from "react-responsive";
+import CarouselCandidate from "../components/CarouselCandidate";
+import { sortFunctions } from "./candidates";
+require("../style/includes/_skeleton.scss");
 
-const Mobile = props => <Responsive {...props} maxWidth={767} />
-const Default = props => <Responsive {...props} minWidth={768} />
+const Mobile = props => <Responsive {...props} maxWidth={767} />;
+const Default = props => <Responsive {...props} minWidth={768} />;
 
 const renderSignUpInputs = () =>
-  ['Name', 'Email', 'Zip', 'Phone'].map((name, i) => (
+  ["Name", "Email", "Zip", "Phone"].map((name, i) => (
     <div key={i} className="sign-up-el">
       <input
         placeholder={name}
         className="sign-up-input"
         name={name.toLowerCase()}
         required="true"
-        style={{ margin: 0, width: '100%' }}
+        style={{ margin: 0, width: "100%" }}
         {...{
-          Name: { type: 'text' },
-          Email: { type: 'email' },
-          Zip: { type: 'text', maxLength: 5 },
-          Phone: { type: 'tel' },
+          Name: { type: "text" },
+          Email: { type: "email" },
+          Zip: { type: "text", maxLength: 5 },
+          Phone: { type: "tel" }
         }[name]}
       />
     </div>
-  ))
+  ));
 
 const renderSignUpButton = () => (
   <div className="sign-up-el sign-up-button-container">
@@ -36,15 +36,15 @@ const renderSignUpButton = () => (
       type="submit"
       className="sign-up-button orange-bg extra-bold-m "
       style={{
-        fontSize: '18px',
-        textTransform: 'uppercase',
-        margin: 0,
+        fontSize: "18px",
+        textTransform: "uppercase",
+        margin: 0
       }}
     >
       Sign Up
     </button>
   </div>
-)
+);
 
 const IndexPage = ({ data }) => {
   const {
@@ -57,18 +57,20 @@ const IndexPage = ({ data }) => {
     introContent,
     firstCalloutIcon,
     firstCalloutText,
-    issuesIntro,
-  } = data.landingPage.edges[0].node.frontmatter
+    issuesIntro
+  } = data.landingPage.edges[0].node.frontmatter;
 
-  const { candidates: { edges: candidateEdges } } = data
-  const candidates = candidateEdges.map(edge => edge.node.frontmatter)
+  const {
+    candidates: { edges: candidateEdges }
+  } = data;
+  const candidates = candidateEdges.map(edge => edge.node.frontmatter);
 
   return (
     <div style={{ paddingLeft: 0, paddingRight: 0 }}>
       <div className="home-banner">
         <img
           src={bannerBackgroundImg}
-          style={{ width: '100%', position: 'absolute' }}
+          style={{ width: "100%", position: "absolute" }}
         />
         <Default>
           <form
@@ -80,12 +82,12 @@ const IndexPage = ({ data }) => {
             method="post"
             action="/donate"
             style={{
-              backgroundColor: 'rgba(0,118,156, .75)',
+              backgroundColor: "rgba(0,118,156, .75)",
               minHeight: 60,
-              position: 'absolute',
+              position: "absolute",
               bottom: 0,
               marginBottom: -2,
-              width: '100%',
+              width: "100%"
             }}
           >
             <input type="hidden" name="form-name" value="main-signup" />
@@ -103,9 +105,9 @@ const IndexPage = ({ data }) => {
             method="post"
             action="/donate"
             style={{
-              backgroundColor: 'rgba(0, 118, 156, .75)',
-              position: 'absolute',
-              bottom: 0,
+              backgroundColor: "rgba(0, 118, 156, .75)",
+              position: "absolute",
+              bottom: 0
             }}
           >
             <div className="sign-up-row">{renderSignUpInputs()}</div>
@@ -119,15 +121,14 @@ const IndexPage = ({ data }) => {
         style={{ padding: 40, paddingTop: 60, maxWidth: 1120 }}
       >
         <div className="block-contents row">
-          <div className="six columns" style={{ color: 'blue' }}>
+          <div className="six columns" style={{ color: "blue" }}>
             <div className="block-contents-left-chunk">
               <div className="home-header-b extra-bold-m">
                 {boldHeader
-                  .split('.')
-                  .filter(section => section != '')
-                  .map(
-                    (section, idx) =>
-                      (idx > 0 ? [<br />, section + '.'] : [section + '.'])
+                  .split(".")
+                  .filter(section => section != "")
+                  .map((section, idx) =>
+                    idx > 0 ? [<br />, section + "."] : [section + "."]
                   )}
               </div>
               <div
@@ -150,23 +151,24 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
 
-        {firstCalloutText &&
+        {firstCalloutText && (
           <div
             className="callout-container"
             style={{
-              borderBottom: '2px dotted #d5176e',
+              borderBottom: "2px dotted #d5176e"
             }}
           >
             <Default>
               <img
                 src={firstCalloutIcon}
                 style={{
-                  height: 60,
+                  height: 60
                 }}
               />
             </Default>
             <div className="bold-m callout-b">{firstCalloutText}</div>
-          </div>}
+          </div>
+        )}
       </div>
 
       {/* <div
@@ -215,20 +217,20 @@ const IndexPage = ({ data }) => {
       <div
         style={{
           padding: 40,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
         }}
       >
         <div
           className="extra-bold-m dark-blue-color"
           style={{
-            maxWidth: '1040px',
-            width: '100%',
-            fontSize: '42px',
+            maxWidth: "1040px",
+            width: "100%",
+            fontSize: "42px"
           }}
         >
-          <div style={{ lineHeight: '42px', width: '100%' }}>{issuesIntro}</div>
+          <div style={{ lineHeight: "42px", width: "100%" }}>{issuesIntro}</div>
 
           <div
             className="primary-issues-container row"
@@ -238,7 +240,7 @@ const IndexPage = ({ data }) => {
               <div
                 style={{
                   height: 300,
-                  paddingTop: 10,
+                  paddingTop: 10
                 }}
                 className="four columns primary-issue-box"
               >
@@ -246,14 +248,14 @@ const IndexPage = ({ data }) => {
                 <a
                   className="primary-issue-text"
                   style={{
-                    textDecoration: 'none',
+                    textDecoration: "none",
                     bottom: 0,
-                    marginTop: 'auto',
+                    marginTop: "auto",
                     backgroundColor: {
-                      pink: '#d5176e',
-                      aqua: '#6fccdd',
-                      blue: '#00769c',
-                    }[color],
+                      pink: "#d5176e",
+                      aqua: "#6fccdd",
+                      blue: "#00769c"
+                    }[color]
                   }}
                   href={url}
                 >
@@ -265,16 +267,18 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
 
-      {blocks.map((b, i) => <HomeBlock key={i} {...b} />)}
+      {blocks.map((b, i) => (
+        <HomeBlock key={i} {...b} />
+      ))}
     </div>
-  )
-}
+  );
+};
 
 IndexPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
+  data: PropTypes.object.isRequired
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -346,4 +350,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

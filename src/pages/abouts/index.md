@@ -9,17 +9,11 @@ header: >-
   which will create a thriving economy and democracy that works for the people,
   not big money interests.
 leadership:
-  - headshot: /img/jd_site_about_leaders_saikatc_600x600.png
-    name: Saikat Chakrabarti
-    title: ''
   - headshot: /img/jd_site_about_leaders_alexr_600x600.png
     name: Alexandra Rojas
     title: ''
   - headshot: /img/jd_site_about_leaders_nasimt_600x600_2.jpg
     name: Nasim Thompson
-    title: ''
-  - headshot: /img/jd_site_about_leaders_corbint_600x600.png
-    name: Corbin Trent
     title: ''
 generalEmail: us@justicedemocrats.com
 pressEmail: press@justicedemocrats.com
@@ -53,9 +47,7 @@ sections:
         question: >-
           How are you different from these other Democratic groups such as Brand
           New Congress and Our Revolution?
-      - answer: >-
-          Justice Democrats current leadership is Saikat Chakrabarti, Alexandra
-          Rojas, Nasim Thompson, and Corbin Trent.
+      - answer: Justice Democrats current leadership is Alexandra Rojas.
         question: Who is running Justice Democrats? Who are the major players?
     title: GENERAL
   - items:
@@ -111,8 +103,7 @@ sections:
 
 
           Justice Democrats PAC has a board with legal control over the entity.
-          Board members are Saikat Chakrabarti, Alexandra Rojas and Nasim
-          Thompson.
+          Board members are Alexandra Rojas and Nasim Thompson.
 
 
           One of Justice Democrats' goals is to get everyday, working people
