@@ -6,21 +6,36 @@ import "../style/map.scss";
 const stateSortFn = props => (a, b) =>
   countOfDistrict(props, b) - countOfDistrict(props, a);
 
-const countOfDistrict = (props, district) =>
-  props.districtLookup[`${district.state}-${district.district}`];
+const countOfDistrict = (props, district) => {
+  return props.districtLookup[district.name] || 0;
+};
 
 const wrapCountFn = props => district => countOfDistrict(props, district);
+
+const getDistrictDetails = props => district =>
+  props.districtsInView.filter(
+    d => d.state == district.state && d.district == district.district
+  )[0];
 
 const renderOverView = props => (
   <React.Fragment>
     <div className="map-sidebar-header extra-bold-m home-subheader-b">
       Most Nominated Districts
     </div>
-    {props.districtBreakdown
+    {props.districtsInView
       .sort(stateSortFn(props))
       .slice(0, 5)
       .map(d => (
-        <MapSidebarRow district={d} countFn={wrapCountFn(props)} />
+        <MapSidebarRow
+          district={d}
+          countFn={wrapCountFn(props)}
+          details={getDistrictDetails(props)(d)}
+          hovered={
+            props.hoveredDistrict && props.hoveredDistrict.name == d.name
+          }
+          setHoveredDistrict={() => props.setHoveredDistrict(d)}
+          setSelectedDistrict={() => props.setSelectedDistrict(d)}
+        />
       ))}
   </React.Fragment>
 );
@@ -30,12 +45,21 @@ const renderStateView = props => (
     <div className="map-sidebar-header extra-bold-m home-subheader-b">
       Most Nominated Districts in {props.selectedState.name}
     </div>
-    {props.districtBreakdown
+    {props.districtsInView
       .filter(d => d.state == props.selectedState.name)
       .sort(stateSortFn(props))
       .slice(0, 5)
       .map(d => (
-        <MapSidebarRow district={d} countFn={wrapCountFn(props)} />
+        <MapSidebarRow
+          district={d}
+          countFn={wrapCountFn(props)}
+          details={getDistrictDetails(props)(d)}
+          hovered={
+            props.hoveredDistrict && props.hoveredDistrict.name == d.name
+          }
+          setHoveredDistrict={() => props.setHoveredDistrict(d)}
+          setSelectedDistrict={() => props.setSelectedDistrict(d)}
+        />
       ))}
   </React.Fragment>
 );

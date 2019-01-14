@@ -1,4 +1,5 @@
 import React from "react";
+import polylabel from "polylabel";
 import {
   MapboxGL,
   Map,
@@ -24,7 +25,8 @@ const colors = {
   "jd-text-gray": "#575a5f",
   "jd-dark-blue": "#00769c",
   "jd-orange": "#d5176e",
-  "jd-light-blue": "#6fccdd"
+  "jd-light-blue": "#6fccdd",
+  "jd-dark-purple": "#311956"
 };
 
 const mapData = {
@@ -55,22 +57,28 @@ const DISTRICT_BREAKDOWN_ENDPOINT =
     - sidebar: rep info
 */
 
-const initialState = {
+const defaultState = {
+  mode: "sidebar",
   selectedState: null,
   selectedDistrict: null,
   selectedDistrictMarker: null,
   hoveredState: null,
   hoveredStateMarker: null,
   hoveredDistrict: null,
-  hoveredDistrictMarker: null,
+  hoveredDistrictMarker: null
+};
+
+const initialState = Object.assign({}, defaultState, {
   districtBreakdownQuery: [],
   districtBreakdown: [],
-  districtLookup: {}
-};
+  districtLookup: {},
+  districtsInView: []
+});
 
 export default class MapPage extends React.Component {
   state = Object.assign({}, initialState);
   map = null;
+  zoomStartedAt = undefined;
 
   componentDidMount() {
     window.request.get(DISTRICT_BREAKDOWN_ENDPOINT).end((err, res) => {
@@ -95,7 +103,8 @@ export default class MapPage extends React.Component {
       hoveredDistrictMarker,
       districtBreakdown,
       districtBreakdownQuery,
-      districtLookup
+      districtLookup,
+      districtsInView
     } = this.state;
 
     const queries = {
@@ -120,6 +129,28 @@ export default class MapPage extends React.Component {
       }
     };
 
+    const styleTree = {
+      districtBoundaries: selectedDistrict
+        ? {
+            "line-color": [
+              "case",
+              queries.district.isSelected,
+              colors["jd-dark-purple"],
+              colors["jd-dark-dark-blue"]
+            ],
+            "line-opacity": ["case", queries.district.isInState, 1, 0],
+            "line-width": ["case", queries.district.isSelected, 2, 1]
+          }
+        : selectedState
+        ? {
+            "line-color": colors["jd-dark-dark-blue"],
+            "line-opacity": ["case", queries.district.isInState, 1, 0]
+          }
+        : {
+            "line-opacity": 0
+          }
+    };
+
     return (
       <div className="map-container">
         <section className="map-area">
@@ -130,6 +161,7 @@ export default class MapPage extends React.Component {
               width: "100%"
             }}
             onStyleLoad={this.onStyleLoad}
+            onZoomStart={this.onZoomStart}
             onZoomEnd={this.onZoomEnd}
           >
             <ZoomControl className="zoom-control" position="top-left" />
@@ -157,14 +189,10 @@ export default class MapPage extends React.Component {
               sourceLayer="districts"
               before="waterway"
               // If we've selected a state, show its district boundaries
-              paint={{
-                "line-color": colors["jd-dark-dark-blue"],
-                "line-opacity": selectedState
-                  ? ["case", queries.district.isInState, 1, 0]
-                  : 0
-              }}
+              paint={styleTree.districtBoundaries}
               layout={{
-                visibility: "visible"
+                visibility: "visible",
+                "line-join": "round"
               }}
             />
             {/*
@@ -178,7 +206,6 @@ export default class MapPage extends React.Component {
               sourceId="districts"
               sourceLayer="districts"
               before="waterway"
-              // If we've selected a district, show it as green, and give other districts no fill
               paint={{
                 "fill-color": colors["jd-dark-blue"],
                 "fill-opacity": districtBreakdownQuery
@@ -214,6 +241,7 @@ export default class MapPage extends React.Component {
                   ? ["case", queries.state.isSelected, 1, 0]
                   : 0
               }}
+              layout={{ "line-join": "round" }}
             />
 
             {/* 
@@ -264,7 +292,7 @@ export default class MapPage extends React.Component {
             ***** Selected District *****
 
             */}
-            {selectedDistrict && (
+            {selectedDistrict && selectedDistrictMarker && (
               <Marker
                 coordinates={selectedDistrictMarker}
                 anchor="bottom"
@@ -310,7 +338,11 @@ export default class MapPage extends React.Component {
               selectedDistrict,
               selectedState,
               districtBreakdown,
-              districtLookup
+              districtLookup,
+              districtsInView,
+              hoveredDistrict,
+              setHoveredDistrict: this.setHoveredDistrict,
+              setSelectedDistrict: this.setSelectedDistrict
             }}
           />
         </section>
@@ -368,6 +400,7 @@ export default class MapPage extends React.Component {
     this.map = map;
     this.map.setCenter({ lng: -95.7129, lat: 37.0902 });
     this.map.setZoom(4);
+    window.map = this.map;
 
     this.map.on("mousemove", "states-fill", this.onMouseMove["states-fill"]);
     this.map.on(
@@ -380,14 +413,41 @@ export default class MapPage extends React.Component {
     this.map.on("click", "states-fill", this.onClick["states-fill"]);
   };
 
-  onZoomEnd = () => {
-    // if (this.map.getZoom() >= 4) {
-    //   this.setState(Object.assign({}, initialState));
-    // }
+  setHoveredDistrict = hoveredDistrict => this.setState({ hoveredDistrict });
+  setSelectedDistrict = selectedDistrict => {
+    const stateUpdate = { selectedDistrict };
+
+    const district = this.getDistrictFeature(selectedDistrict.name);
+    console.log(district);
+    this.zoomToBounds(district.geometry);
+
+    if (district) {
+      stateUpdate.selectedState = this.getStateFeature(
+        selectedDistrict.state
+      ).properties;
+    }
+
+    this.setState(stateUpdate);
+  };
+
+  onZoomStart = () => {
+    this.zoomStart = this.map.getZoom();
+  };
+
+  onZoomEnd = ev => {
+    const zoomStart = this.zoomStart;
+    const zoomEnd = this.map.getZoom();
+    this.updatePropertiesInView();
+
+    if (zoomEnd < zoomStart && zoomEnd < 4) {
+      this.setState(defaultState);
+    }
+    this.zoomStart = undefined;
   };
 
   onMouseMove = {
     "states-fill": e => {
+      this.updatePropertiesInView();
       const properties = e.features[0].properties;
       const state = properties.name;
 
@@ -396,13 +456,14 @@ export default class MapPage extends React.Component {
       if (!this.state.selectedState) {
         this.setState({
           hoveredState: properties,
-          hoveredStateMarker: [e.lngLat.lng, e.lngLat.lat]
+          hoveredStateMarker: myPolylabel(e.features[0].geometry)
         });
       } else {
         this.setState({ hoveredStateMarker: null });
       }
     },
     "district-fill": e => {
+      this.updatePropertiesInView();
       const properties = e.features[0].properties;
       const { state, district, name: state_district } = properties;
 
@@ -418,9 +479,10 @@ export default class MapPage extends React.Component {
         this.state.selectedDistrict.name == state_district;
 
       if (inSelectedState && !inSelectedDistrict) {
+        const centroid = myPolylabel(e.features[0].geometry);
         this.setState({
           hoveredDistrict: properties,
-          hoveredDistrictMarker: [e.lngLat.lng, e.lngLat.lat]
+          hoveredDistrictMarker: centroid
         });
       } else {
         this.setState({ hoveredDistrict: null, hoveredDistrictMarker: null });
@@ -458,7 +520,7 @@ export default class MapPage extends React.Component {
       if (clickedOnCurrentState) {
         this.setState({
           selectedDistrict: properties,
-          selectedDistrictMarker: [e.lngLat.lng, e.lngLat.lat],
+          selectedDistrictMarker: myPolylabel(e.features[0].geometry),
           hoveredDistrictMarker: null,
           hoveredDistrict: null
         });
@@ -474,29 +536,28 @@ export default class MapPage extends React.Component {
   zoomToBounds = geo => {
     const bounds = this.getBounds(geo);
     if (this.ZOOM_TO_NEIGHBORING_STATE || this.map.getZoom() <= 5) {
-      this.map.fitBounds(bounds, { padding: 100, animate: false });
+      this.map.fitBounds(bounds, { padding: 200, animate: true });
     }
   };
 
   getBounds = geom => {
     // Zoom in to State
-    let coordinates = geom.coordinates;
-    if (coordinates.length > 1) {
-      let newCoord = [];
-      coordinates.forEach(coordSet => {
-        newCoord = newCoord.concat(coordSet[0]);
-      });
-      coordinates = newCoord;
-    } else {
-      coordinates = coordinates[0];
-    }
+    const coordinates = flattenToPairs(geom.coordinates);
 
-    const init = coordinates[0];
     const bounds = coordinates.reduce(function(bounds, coord) {
       return bounds.extend(coord);
-    }, new MapboxGL.LngLatBounds(init, init));
+    }, new MapboxGL.LngLatBounds(coordinates[0], coordinates[0]));
 
     return bounds;
+  };
+
+  updatePropertiesInView = () => {
+    const districtsInView = this.map
+      .queryRenderedFeatures({
+        layers: ["district-fill"]
+      })
+      .map(feature => feature.properties);
+    this.setState({ districtsInView });
   };
 
   produceDistrictInterpolationQuery = breakdown => {
@@ -522,4 +583,29 @@ export default class MapPage extends React.Component {
     });
     return result;
   };
+
+  getStateFeature = state =>
+    this.map.queryRenderedFeatures({
+      layers: ["states-fill"],
+      filter: ["==", ["get", "name"], state]
+    })[0];
+  getDistrictFeature = name =>
+    this.map.queryRenderedFeatures({
+      layers: ["district-fill"],
+      filter: ["==", ["get", "name"], name]
+    })[0];
 }
+
+const flattenToPairs = arr =>
+  arr.reduce(
+    (acc, val) =>
+      Array.isArray(val) && Array.isArray(val[0]) && Array.isArray(val[0][0])
+        ? acc.concat(flattenToPairs(val))
+        : acc.concat(val),
+    []
+  );
+
+const myPolylabel = geojson =>
+  geojson.type == "Polygon"
+    ? polylabel(geojson.coordinates)
+    : polylabel(geojson.coordinates[0]);

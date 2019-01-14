@@ -217,62 +217,63 @@
       }
     }
   }
+}
 
-  .map-popup-candidate,
-  .map-cd-candidate-popup {
-    padding: 20px;
-    width: 350px;
+.map-popup-candidate,
+.map-cd-candidate-popup {
+  padding: 20px;
+  width: 350px;
+}
 
-    .candidate-profile {
-      display: flex;
-    }
-    .candidate-pic {
-      width: 60px;
-      height: 60px;
-      background-size: 80px;
-      background-position: top center;
-      background-size: cover;
-    }
-    .candidate-info {
-      padding-left: 10px;
-      h3 {
-        margin-bottom: 0;
+.candidate-profile {
+  display: flex;
+}
+.candidate-pic {
+  width: 60px;
+  height: 60px;
+  background-size: 80px;
+  background-position: top center;
+  background-size: cover;
+}
+.candidate-info {
+  padding-left: 10px;
+  h3 {
+    margin-bottom: 0;
 
-        &.candidate-name {
-          color: $jd-dark-dark-blue;
-          span {
-            text-transform: uppercase;
-            font-size: 10px;
-            font-weight: 400;
-            color: $jd-orange;
-          }
-        }
+    &.candidate-name {
+      color: $jd-dark-dark-blue;
+      span {
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 400;
+        color: $jd-orange;
       }
-
-      .candidate-actions {
-        a img {
-          width: 20px;
-          margin-right: 5px;
-        }
-      }
-    }
-    .candidate-description {
-      margin-top: 5px;
-      padding-top: 5px;
-      border-top: 1px solid lightgray;
-      font-size: 11px;
     }
   }
 
-  .map-cd-candidate-popup {
-    .candidate-info {
-      h3 {
-        &.candidate-name {
-          display: flex;
-          flex-direction: column-reverse;
-          span {
-            line-height: 10px;
-          }
+  .candidate-actions {
+    a img {
+      width: 20px;
+      margin-right: 5px;
+    }
+  }
+}
+.candidate-description {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid lightgray;
+  font-size: 11px;
+}
+// }
+
+.map-cd-candidate-popup {
+  .candidate-info {
+    h3 {
+      &.candidate-name {
+        display: flex;
+        flex-direction: column-reverse;
+        span {
+          line-height: 10px;
         }
       }
     }
@@ -308,4 +309,12 @@
   margin-top: 20px;
   display: block;
   text-align: center;
+}
+
+.map-sidebar-row {
+  padding: 10px;
+  margin: 10px;
+  &.hovered {
+    border: 1px solid $jd-dark-dark-blue;
+  }
 }
