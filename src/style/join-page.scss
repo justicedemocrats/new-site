@@ -4,13 +4,12 @@ $form-column-gap: 30px;
 $form-input-maxwidth: 410px;
 $column1-maxwidth: 2 * $form-input-maxwidth + $form-column-gap;
 
-div.container {
+div.join-page-content-container {
   background-size: cover;
   background-position-x: right;
-  margin: 0 auto;
   width: 100%;
   max-width: 1920px;
-  padding: 2rem 1rem;
+  padding: 1rem;
 }
 
 .full-height {
@@ -56,7 +55,7 @@ div.splash {
     input,
     input::placeholder {
       font-weight: bold;
-      color: white;
+      color: $jd-dark-blue;
       font-family: "Montserrat", sans-serif;
       font-size: 22px;
     }
@@ -65,8 +64,7 @@ div.splash {
       height: 60px;
       width: 48%;
       border-radius: 0px;
-      background-color: rgba(0, 0, 0, 0);
-      border: 1px solid white;
+      border: 1px solid $jd-dark-blue;
     }
 
     input[type="submit"] {
@@ -103,15 +101,15 @@ div.splash {
   .content-container {
     padding-left: 50px;
     margin-left: 50px;
-    border-left: 1px solid white;
+    border-left: 1px solid $jd-dark-blue;
 
     div.content {
-      color: white;
+      color: $jd-dark-blue;
       font-family: $jd-sans;
 
       h3 {
         font-weight: bold;
-        color: white;
+        color: $jd-dark-blue;
       }
       ul {
         margin-left: 0;
