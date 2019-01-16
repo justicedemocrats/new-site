@@ -20,6 +20,7 @@ incumbentsIntro: Justice Democrats in the House
 incumbentsStatement: >-
   2019 Congress kicks off with 7 Justice Democrats pushing for change in the
   U.S. House of Representatives.
+youtubeVideo: 'https://www.youtube.com/embed/Gcqoo0Jn18A'
 lookingForBullets:
   - header: Bold Leaders
     body: >-
