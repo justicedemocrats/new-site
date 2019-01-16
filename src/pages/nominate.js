@@ -54,7 +54,8 @@ class NominatePageTemplate extends React.Component {
         incumbentsIntro,
         incumbentsStatement,
         thankYou,
-        stage0Explanation
+        stage0Explanation,
+        youtubeVideo
       }
     } = this.props;
 
@@ -99,6 +100,16 @@ class NominatePageTemplate extends React.Component {
               </div>
             </div>
             <Divider />
+            {youtubeVideo && (
+              <iframe
+                width="100%"
+                height="400"
+                src={youtubeVideo}
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            )}
             <div
               style={{
                 display: "flex",
@@ -227,6 +238,8 @@ const NominatePage = props => {
     .map(edge => edge.node.frontmatter)
     .filter(c => c.outcome === "Won");
 
+  console.log(data);
+
   return <NominatePageTemplate {...data} candidates={candidates} />;
 };
 
@@ -252,6 +265,7 @@ export const pageQuery = graphql`
             bannerText
             redirect
             thankYou
+            youtubeVideo
             incumbentsIntro
             incumbentsStatement
             lookingForBullets {
@@ -298,6 +312,7 @@ export const pageQuery = graphql`
             office
             district
             blurb
+            youtubeVideo
           }
         }
       }
