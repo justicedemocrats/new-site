@@ -4,7 +4,10 @@ import "../style/map.scss";
 import MapTags from "./MapTags";
 
 export default props => (
-  <div className="map-hover map-cd-candidate map-cd-candidate-popup map-cd-hover">
+  <div
+    className="map-hover map-cd-candidate map-cd-candidate-popup map-cd-hover"
+    style={{ padding: 20 }}
+  >
     <div>
       <div className="candidate-profile">
         <div

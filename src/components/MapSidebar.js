@@ -2,6 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import MapSidebarRow from "./MapSidebarRow";
 import "../style/map.scss";
+import uniqBy from "lodash.uniqby";
 
 const stateSortFn = props => (a, b) =>
   countOfDistrict(props, b) - countOfDistrict(props, a);
@@ -11,6 +12,8 @@ const countOfDistrict = (props, district) => {
 };
 
 const wrapCountFn = props => district => countOfDistrict(props, district);
+
+const uniq = arr => uniqBy(arr, d => d.name);
 
 const getDistrictDetails = props => district =>
   props.districtsInView.filter(
@@ -22,7 +25,7 @@ const renderOverView = props => (
     <div className="map-sidebar-header extra-bold-m home-subheader-b">
       Most Nominated Districts
     </div>
-    {props.districtsInView
+    {uniq(props.districtsInView)
       .sort(stateSortFn(props))
       .slice(0, 5)
       .map(d => (
@@ -45,7 +48,7 @@ const renderStateView = props => (
     <div className="map-sidebar-header extra-bold-m home-subheader-b">
       Most Nominated Districts in {props.selectedState.name}
     </div>
-    {props.districtsInView
+    {uniq(props.districtsInView)
       .filter(d => d.state == props.selectedState.name)
       .sort(stateSortFn(props))
       .slice(0, 5)

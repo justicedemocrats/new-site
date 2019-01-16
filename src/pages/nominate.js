@@ -31,10 +31,10 @@ class NominatePageTemplate extends React.Component {
     const params = getUrlVars();
     if (params.district) {
       this.setState({ nominating: true, districtPreset: params.district });
-      analytics.track(
-        "Nomination Modal Opened By Default Because of District Visit",
-        { district: params.district }
-      );
+      // analytics.track(
+      //   "Nomination Modal Opened By Default Because of District Visit",
+      //   { district: params.district }
+      // );
     }
   }
 
