@@ -129,6 +129,12 @@ collections:
           - { label: "Header Image", name: "headerImage", widget: "image" }
           - { label: "Sub Header", name: "subhed", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: "Youtube Video",
+              name: "youtubeVideo",
+              widget: "string",
+              required: "false",
+            }
 
       - file: "src/pages/candidate-page/index.md"
         label: "Candidate"
@@ -203,6 +209,12 @@ collections:
               label: "Incumbents Statement",
               name: "incumbentsStatement",
               widget: "string",
+            }
+          - {
+              label: "Youtube Video",
+              name: "youtubeVideo",
+              widget: "string",
+              required: "false",
             }
           - label: "Looking For Bullets"
             name: "lookingForBullets"
@@ -346,7 +358,12 @@ collections:
               name: "issuesIntro",
               widget: "string",
             }
-
+          - {
+              label: "Youtube Video",
+              name: "youtubeVideo",
+              widget: "string",
+              required: "false",
+            }
           - label: "Primary Issues"
             name: "primaryIssues"
             widget: "list"
