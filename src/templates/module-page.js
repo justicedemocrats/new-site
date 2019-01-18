@@ -96,6 +96,10 @@ class ModulePageTemplate extends React.Component {
                     ignoreWidth={true}
                   />
                 ))}
+                <button onClick={this.submit} className="orange-bg color-white">
+                  {" "}
+                  Submit{" "}
+                </button>
               </div>
             ) : (
               <div className="medium-m font-size-20">
