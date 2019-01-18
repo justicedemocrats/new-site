@@ -107,7 +107,7 @@ sections:
           Crushing student debt for higher education would no longer burden
           young men and women trying to improve their lives through hard work.
           We should strive to have the best education system in the world.
-        title: 'Tuition-Free Public Colleges and Trade Schools  '
+        title: 'Free Public Colleges and Trade Schools  '
       - contents: >-
           Republicans have been trying to privatize and cut earned benefit
           programs for decades. Corporate Democrats have been willing to go
@@ -162,7 +162,7 @@ sections:
           also unconstitutional and should be ended. Special prosecutors must
           also be appointed to hold police accountable. We should invest more in
           jobs and education, less in jails and incarceration.
-        title: Law Enforcement Reform
+        title: Police Reform
       - contents: >-
           92% of Americans want expanded background checks, 54% want a ban on
           assault weapons, and 54% want a ban on high capacity magazines. We
@@ -262,6 +262,19 @@ sections:
           indefensible and should be reformed. We want justice for the American
           people but killing innocent people on death row is the exact opposite.
         title: Abolish the Death Penalty
+      - contents: >-
+          73% of congressional districts in America are deemed "safely
+          Republican or safely Democrat" and do not have competitive general
+          elections. We support bold reforms to provide voters an equal say in
+          our democracy. This includes efforts to expand the House of
+          Representatives and the Fair Representation Act to create multi-member
+          districts and ranked-choice voting. We also support the movement to
+          provide statehood for Washington D.C. and Puerto Rico in order to
+          bring balance to the increasingly skewed Senate. These efforts are in
+          line with movements for racial and economic justice in our country. We
+          also support public financing of elections and the removal of the
+          corrupting influence of corporate and big money in our democracy.
+        title: Democracy Reform
       - contents: >-
           We must speak out against racism, sexism, xenophobia, and all forms of
           bigotry. Non-discrimination protections that currently apply to race,
