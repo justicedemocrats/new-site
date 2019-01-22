@@ -82,11 +82,12 @@ export default class MapPage extends React.Component {
 
   componentDidMount() {
     window.request.get(DISTRICT_BREAKDOWN_ENDPOINT).end((err, res) => {
+      console.log(res.body);
       this.setState({
         districtBreakdownQuery: this.produceDistrictInterpolationQuery(
-          res.body || []
+          res.body || {}
         ),
-        districtLookup: this.produceDistrictLookup(res.body || []),
+        districtLookup: this.produceDistrictLookup(res.body || {}),
         districtBreakdown: res.body
       });
     });
@@ -284,7 +285,10 @@ export default class MapPage extends React.Component {
                 anchor="bottom"
                 className="mb-mkr-hovered-state"
               >
-                <MapDistrictHover {...hoveredDistrict} />
+                <MapDistrictHover
+                  {...hoveredDistrict}
+                  count={districtLookup[selectedDistrict.name]}
+                />
               </Marker>
             )}
             {/*
@@ -298,7 +302,10 @@ export default class MapPage extends React.Component {
                 anchor="bottom"
                 className="mb-mkr-hovered-state"
               >
-                <MapPopupCandidate {...selectedDistrict} />
+                <MapPopupCandidate
+                  {...selectedDistrict}
+                  count={districtLookup[selectedDistrict.name]}
+                />
               </Marker>
             )}
           </Map>
@@ -561,27 +568,24 @@ export default class MapPage extends React.Component {
   };
 
   produceDistrictInterpolationQuery = breakdown => {
-    const counts = breakdown.map(d => d.count);
+    const counts = Object.values(breakdown);
     const maxNominations = Math.max(...counts);
     const districtInterpolation = ["case"];
-    breakdown.forEach(({ state, district, count }) => {
-      districtInterpolation.push([
-        "==",
-        ["get", "name"],
-        `${state}-${district}`
-      ]);
-      districtInterpolation.push(count / maxNominations);
+    Object.keys(breakdown).forEach(name => {
+      districtInterpolation.push(["==", ["get", "name"], name]);
+      districtInterpolation.push(breakdown[name] / maxNominations);
     });
     districtInterpolation.push(0);
     return districtInterpolation;
   };
 
   produceDistrictLookup = breakdown => {
-    const result = {};
-    breakdown.forEach(({ state, district, count }) => {
-      result[`${state}-${district}`] = count;
-    });
-    return result;
+    return breakdown;
+    // const result = {};
+    // breakdown.forEach(({ state, district, count }) => {
+    //   result[`${state}-${district}`] = count;
+    // });
+    // return result;
   };
 
   getStateFeature = state =>

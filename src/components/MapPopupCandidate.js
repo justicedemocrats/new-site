@@ -24,8 +24,7 @@ export default props => (
 
       {!props.member_is_jd && props.member_party == "D" ? (
         <div className="nominations-count">
-          We've received {props.nominations} nominations for a primary
-          challenger.
+          We've received {props.count} nominations for a primary challenger.
           <br />
           {!props.member_supports_gnd && (
             <div className="no-gnd-tag">

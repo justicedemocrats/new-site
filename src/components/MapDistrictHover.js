@@ -23,7 +23,7 @@ export default props => (
 
       {!props.member_is_jd && (
         <div className="nominations-count">
-          Nominations for a primary challenger: {props.nominations}
+          Nominations for a primary challenger: {props.count}
         </div>
       )}
       <span className="note">click to expand</span>
