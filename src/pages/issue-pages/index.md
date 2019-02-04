@@ -291,8 +291,6 @@ sections:
           freedom of expression and medium for improving our lives.
 
 
-
-
           For more than a decade,  the Internet has served as a great equalizer,
           and has provided an opportunity and platform for small businesses and
           voices (who may not otherwise have a platform to compete in the market
@@ -303,18 +301,17 @@ sections:
           continued machinations by corporate giants.
 
 
-
-
           We believe in upholding net neutrality as a condition of Internet
           Freedom, and will work with our colleagues in Congress and around the
           country to ensure that Congress once and for all adopts a legislative
           solution to uphold the open internet. We cannot afford to continue
-          partisan jockeying on this issue that has changed consistently over
-          the past ten years based on who occupies the which and which party in
-          Congress dominates in the realm of legislative control. There is too
-          much at stake and on the line to stop now. Internet Freedom is a must,
-          and we will do what it takes to ensure that all people have the
-          opportunity to access the internet freely, openly, and affordably.
+          partisan jockeying on this issue. The rules have changed consistently
+          over the past ten years based on who occupies the White House and
+          which party in Congress dominates in the realm of legislative control.
+          There is too much at stake and on the line to stop now. Internet
+          Freedom is a must, and we will do what it takes to ensure that all
+          people have the opportunity to access the internet freely, openly, and
+          affordably.
         title: Defend Net Neutrality
     title: Defend Our Democracy
 ---
