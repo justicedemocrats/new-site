@@ -153,7 +153,7 @@ stages:
           - option: I don't know
         required: true
         type: dropdown
-        width: quarter
+        width: full
       - label: Nominee Phone Number
         name: Nominee Phone
         required: false
