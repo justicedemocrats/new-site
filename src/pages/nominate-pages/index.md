@@ -144,8 +144,19 @@ stages:
         required: true
         type: input
         width: half
+      - label: I think this person plans to run
+        max_length: ''
+        name: I think this person plans to run
+        options:
+          - option: 'Yes'
+          - option: 'No'
+          - option: I don't know
+        required: true
+        type: dropdown
+        width: quarter
       - label: Nominee Phone Number
         name: Nominee Phone
+        required: false
         type: tel
         width: full
       - label: Nominee Email
@@ -160,6 +171,10 @@ stages:
         name: Nominee Twitter
         type: input
         width: half
+      - label: Nominee LinkedIn
+        name: Nominee LinkedIn
+        type: input
+        width: half
       - label: Nominee Instagram
         name: Nominee Instagram
         type: input
@@ -169,10 +184,6 @@ stages:
         required: false
         type: textarea
         width: full
-      - label: Nominee LinkedIn
-        name: Nominee LinkedIn
-        type: input
-        width: half
     title: Tell Us About The Person You're Nominating
   - display: candidate
     preface: >-
