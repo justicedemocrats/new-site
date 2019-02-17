@@ -285,6 +285,9 @@ export const pageQuery = graphql`
                 type
                 width
                 required
+                options {
+                  option
+                }
               }
             }
           }

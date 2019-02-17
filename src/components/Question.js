@@ -23,7 +23,8 @@ export default class Question extends React.Component {
 
   render() {
     const { setData, question, value, error, otherData } = this.props;
-    const { label, type, name, width, required } = question;
+    const { label, type, name, width, required, options } = question;
+
     return (
       <div
         className={!this.props.ignoreWidth && getWidthClass(width)}
@@ -34,12 +35,20 @@ export default class Question extends React.Component {
           {required && "*"}
         </label>
         {error && <label style={{ color: "#d5176e" }}> {error} </label>}
-        {this.renderInput(type, name, value, error, setData, otherData)}
+        {this.renderInput(
+          type,
+          name,
+          value,
+          error,
+          options,
+          setData,
+          otherData
+        )}
       </div>
     );
   }
 
-  renderInput(type, name, value, error, setData, otherData) {
+  renderInput(type, name, value, error, options, setData, otherData) {
     let result;
     const inputStyle = Object.assign({}, baseInputStyle);
     if (error) {
@@ -157,6 +166,23 @@ export default class Question extends React.Component {
               style={inputStyle}
               onChange={setData}
             />
+          </div>
+        );
+        break;
+      case "dropdown":
+        result = (
+          <div>
+            <select
+              name={name}
+              value={value}
+              style={inputStyle}
+              onChange={setData}
+            >
+              <option value="" />
+              {options.map(o => (
+                <option value={o.option}>{o.option}</option>
+              ))}
+            </select>
           </div>
         );
         break;
