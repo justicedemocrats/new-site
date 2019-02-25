@@ -43,14 +43,14 @@ module.exports = class HTML extends React.Component {
                 <input type="text" name="name" required="true" />
                 <input type="email" name="email" required="true" />
                 <input type="text" maxlength="5" minlength="5" name="zip" required="true" />
-                <input name="phone" type="tel" required="true" />
+                <input name="phone" type="tel" />
               </form>
 
               <form name="main-signup" netlify netlify-honeypot="bot-field" method="post" action="/donate" hidden>
                 <input type="text" name="name" required="true" />
                 <input type="email" name="email" required="true" />
                 <input type="text" maxlength="5" minlength="5" name="zip" required="true" />
-                <input name="phone" type="tel" required="true" />
+                <input name="phone" type="tel" />
               </form>`
             }}
           />
