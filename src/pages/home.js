@@ -18,12 +18,11 @@ const renderSignUpInputs = () =>
         placeholder={name}
         className="sign-up-input"
         name={name.toLowerCase()}
-        required="true"
         style={{ margin: 0, width: "100%" }}
         {...{
-          Name: { type: "text" },
-          Email: { type: "email" },
-          Zip: { type: "text", maxLength: 5 },
+          Name: { type: "text", required: true },
+          Email: { type: "email", required: true },
+          Zip: { type: "text", maxLength: 5, required: true },
           Phone: { type: "tel" }
         }[name]}
       />
