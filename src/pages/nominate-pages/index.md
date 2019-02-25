@@ -146,7 +146,7 @@ stages:
         width: half
       - label: I think this person plans to run
         max_length: ''
-        name: Running
+        name: I think this person plans to run
         options:
           - option: 'Yes'
           - option: 'No'
