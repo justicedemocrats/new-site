@@ -60,7 +60,7 @@ module.exports = class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          <script src="https://unpkg.com/superagent/superagent.js" />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/4.1.0/superagent.min.js" />
           <script>window.request = window.superagent;</script>
         </body>
       </html>
