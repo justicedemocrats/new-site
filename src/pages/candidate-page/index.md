@@ -19,9 +19,9 @@ stats:
   - count: '7'
     title: Elected to Congress
   - count: '26'
-    title: Won in General
+    title: Ran in General
   - count: '78'
-    title: Won in Primaries
+    title: Ran in Primaries
   - count: '2020'
     title: Next Election
 ---
