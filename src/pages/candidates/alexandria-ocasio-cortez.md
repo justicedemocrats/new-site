@@ -14,10 +14,10 @@ donationLink: 'https://secure.actblue.com/donate/jdalexo'
 outcome: Won
 image: /img/jd_site_alexandriaocasiocortez_550x600_061218.jpg
 blurb: >-
-  Alexandria Ocasio-Cortez is the congresswoman-elect for New York's 14th
-  district. Running a fiercely progressive, grassroots campaign, her primary
-  victory in June 2018 shocked the political establishment. Alexandria is a
-  tireless campaigner for social justice, advocating in Congress for Medicare
-  for All, a Green New Deal, and support for Puerto Rico.
+  Alexandria Ocasio-Cortez is the congresswoman for New York's 14th district.
+  Running a fiercely progressive, grassroots campaign, her primary victory in
+  June 2018 shocked the political establishment. Alexandria is a tireless
+  campaigner for social justice, advocating in Congress for Medicare for All, a
+  Green New Deal, and support for Puerto Rico.
 ---
 
