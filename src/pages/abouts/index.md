@@ -5,9 +5,17 @@ title: About Justice Democrats
 bannerBackgroundImage: /img/jd_site_mission_banner_1920x540_111518_temp.png
 bannerText: Mission for Justice
 header: >-
-  **Our mission is to elect a new type of Democratic majority in Congress,** one
-  which will create a thriving economy and democracy that works for the people,
-  not big money interests.
+  **Justice Democrats is working to elect a mission-driven caucus in Congress
+  **that will fight for solutions that match the scale of our many crises:
+  skyrocketing inequality, catastrophic climate change, deepening structural
+  racism as the country becomes more diverse, and the corporate takeover of our
+  democracy.
+
+
+  We need a Democratic Party that fights for its voters, not just its corporate
+  donors. That’s why we helped elect leaders like Alexandria Ocasio-Cortez to
+  Congress. We need leadership in the Democratic Party that will represent and
+  fight for our communities.
 leadership:
   - headshot: /img/jd_site_about_leaders_alexr_600x600.png
     name: Alexandra Rojas
@@ -23,17 +31,20 @@ sections:
   - items:
       - answer: >-
           The two-party paradigm is the model for our country’s current
-          political system. While we agree with and often champion many
-          third-party candidates and movements, the reality is that right now it
-          is next to impossible for a third-party candidate to win a national
-          election.
+          political system. While we agree with efforts to reform our two-party
+          system, the reality is that right now it is next to impossible for a
+          third-party candidate to win a national election. Justice Democrats
+          functions like a party within the Democratic Party -- running our own
+          candidates in primary elections and holding those on top accountable
+          to the grassroots.
 
 
           We want our democracy to work for Americans again as soon as possible.
           The best way to do this is by working to change the Democratic Party
-          from the inside out. Once Justice Democrats take power, we plan to
-          implement electoral reform like ranked choice voting so third parties
-          can have more power in our democracy.
+          from the inside out. Once Justice Democrats take power, we support
+          electoral reform like ranked choice voting and mixed-member districts
+          so third parties can have have a voice in our democracy rather than
+          continue to play a spoiler effect.
         question: Why “Democrats”? Why not just start a new party?
       - answer: >-
           We are thrilled that so many new organizations have come forward to
@@ -41,13 +52,12 @@ sections:
           local and state elections. Brand New Congress has many of the same
           principles as us, but are attempting to recruit Congressional
           candidates to run as Republicans in red districts. Justice Democrats
-          is recruiting and running Democrats all over the country (starting
-          with Congress) and our belief is that strong Democrats with a real
-          message have the best shot of winning anywhere — even red districts.
+          is recruiting and supporting progressive Democrats all over the
+          country (starting with Congress).
         question: >-
           How are you different from these other Democratic groups such as Brand
           New Congress and Our Revolution?
-      - answer: Justice Democrats current leadership is Alexandra Rojas.
+      - answer: Justice Democrats current executive director is Alexandra Rojas.
         question: Who is running Justice Democrats? Who are the major players?
     title: GENERAL
   - items:
@@ -61,10 +71,8 @@ sections:
           candidates on our [**candidates page**](/candidates).
         question: ' Who are Justice Democrat candidates?'
       - answer: >-
-          We won’t run against candidates that fully support the Justice
-          Democrats platform, but we also know that challenging incumbents in
-          primaries is the best way to make them start to listen to people over
-          corporate donors.
+          We're looking for candidates who will actively build a movement around
+          solutions that match the scale of the crisis.
         question: >-
           What about good candidates already in Congress? Are you going to run
           against them?
@@ -88,11 +96,12 @@ sections:
           The PAC uses donation money to hire staff that recruits and trains
           candidates, runs all Justice Democrats social media, send e-mails to
           the Justice Democrats e-mail list, manages the Justice Democrats
-          website, answers all incoming e-mails to our help desk, create videos
-          and other design assets that are used to promote Justice Democrats
-          policies and candidates, handle inbound and outbound press
-          communications, and also any other work involved with promoting
-          Justice Democrats candidates as well as Justice Democrats issues.  
+          website, answers incoming e-mails to our help desk, create videos and
+          other design assets that are used to promote Justice Democrats
+          policies and candidates, utilize communications and digital strategies
+          to drive progressive policies forward, and also any other work
+          involved with promoting Justice Democrats candidates as well as
+          Justice Democrats issues.  
 
 
           In addition to promoting candidates, Justice Democrats PAC also
@@ -130,24 +139,8 @@ sections:
           fee schedule here:
           [**http://justicedemocrats.com/services**](http://justicedemocrats.com/services).
         question: What type of organization is Justice Democrats?
-      - answer: 'Yes, it is the federal limit of $5,000 per year.'
+      - answer: 'Yes, the Justice Democrats PAC has a federal limit of $5,000 per year.'
         question: Do you have a dollar amount cap on donations from any one individual?
-      - answer: >-
-          Our designation as a Federal PAC does not allow us to receive
-          anonymous or unlimited donations. Not only are we required by law to
-          disclose all donors, but our platform is fundamentally opposed to
-          corporate influence in American elections and pay-to-play politics in
-          any form.
-        question: Do you accept Dark Money? Will you be disclosing all donations?
-      - answer: 'The American people, with an average donation of $15.13.'
-        question: Who are the major funders?
-      - answer: >-
-          The [**Federal Election
-          Commission**](http://www.fec.gov/finance/disclosure/candcmte_info.shtml)
-          posts all campaign filings publicly, where you are able to [**review
-          all donor
-          information**](http://www.fec.gov/finance/disclosure/candcmte_info.shtml).
-        question: Where can I go to see a list of your donors?
     title: FUNDING
   - items:
       - answer: >-
@@ -168,24 +161,7 @@ sections:
         question: >-
           I’m currently-enlisted military — can I join/donate? Can I help in
           other ways?
-      - answer: >-
-          Justice Democrats platform is a dynamic document. We welcome
-          suggestions. Email us at
-          [**us@justicedemocrats.com**](mailto:us@justicedemocrats.com).
-        question: >-
-          I have an issue I’d like to see addressed in the Justice Democrats
-          Platform. Can I make a suggestion?
-      - answer: >-
-          You can donate online at [**Act
-          Blue**](https://secure.actblue.com/donate/justicedemocrats). (The
-          donate link at the top of the page will also get you there.)
-
-
-          If you are more comfortable mailing your contribution, please address
-          to:
-
-
-          Justice Democrats, P. O. Box 910, Knoxville, TN, 37901
+      - answer: 'https://secure.actblue.com/donate/justicedemocrats'
         question: How can I support Justice Democrats with a donation?
     title: YOUR PART
 ---
