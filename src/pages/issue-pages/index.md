@@ -40,15 +40,13 @@ sections:
           support strong unions and collective bargaining.
         title: Secure a Living Wage and Tie it to Inflation
       - contents: >-
-          The idea behind a federal jobs guarantee is that anyone who wants to
-          work and contribute but can’t find a way to do that in the economy can
-          do that. A federal jobs guarantee program would establish a floor for
-          wages and benefits for the nation’s workforce. This program would
-          provide a baseline minimum wage of $15 an hour and guarantee for
-          public workers a basic benefits package, including healthcare and
-          childcare. By investing in our own workforce, we can lift thousands of
-          American families out of poverty and get people to work doing the work
-          that needs to be done.
+          A federal jobs guarantee program would establish a floor for wages and
+          benefits for the nation’s workforce. This program would provide a
+          baseline minimum wage of $15 an hour and guarantee for public workers
+          a basic benefits package, including healthcare and childcare. By
+          investing in our own workforce, we can lift thousands of American
+          families out of poverty and get people to work doing the work that
+          needs to be done.
         title: Enact a Federal Jobs Guarantee
       - contents: >-
           Our infrastructure gets a grade of D from the Society of Civil
