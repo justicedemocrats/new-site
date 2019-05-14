@@ -43,7 +43,7 @@ sections:
           The best way to do this is by working to change the Democratic Party
           from the inside out. Once Justice Democrats take power, we support
           electoral reform like ranked choice voting and mixed-member districts
-          so third parties can have have a voice in our democracy rather than
+          so third parties can have a voice in our democracy rather than
           continue to play a spoiler effect.
         question: Why “Democrats”? Why not just start a new party?
       - answer: >-
