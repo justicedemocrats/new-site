@@ -6,9 +6,9 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "candidates"
-    label: "Candidates"
-    folder: "src/pages/candidates"
+  - name: "2018candidates"
+    label: "2018 Candidates"
+    folder: "src/pages/2018-candidates"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -16,7 +16,58 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "candidate-fragment",
+          default: "2018-candidate-fragment",
+        }
+      - { label: "First Name", name: "firstName", widget: "string" }
+      - { label: "Last Name", name: "lastName", widget: "string" }
+      - { label: "District", name: "district", widget: "string" }
+      - { label: "State", name: "state", widget: "string" }
+      - { label: "Election Date", name: "electionDate", widget: "date" }
+      - {
+          label: "Election Type",
+          name: "electionType",
+          widget: "select",
+          options: ["fake", "primary", "general"],
+        }
+      - {
+          label: "Office",
+          name: "office",
+          widget: "select",
+          options: ["lieutenant-governor", "governor", "house", "senate"],
+        }
+      - {
+          label: "Incumbent",
+          name: "incumbent",
+          widget: "boolean",
+          default: false,
+        }
+      - { label: "Website", name: "website", widget: "string" }
+      - {
+          label: "Donation Link",
+          name: "donationLink",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Outcome",
+          name: "outcome",
+          widget: "select",
+          options: ["Won", "Lost", "Unknown"],
+        }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Blurb", name: "blurb", widget: "text" }
+
+  - name: "2020candidates"
+    label: "2020 Candidates"
+    folder: "src/pages/2020-candidates"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "2020-candidate-fragment",
         }
       - { label: "First Name", name: "firstName", widget: "string" }
       - { label: "Last Name", name: "lastName", widget: "string" }
@@ -136,9 +187,9 @@ collections:
               required: "false",
             }
 
-      - file: "src/pages/candidate-page/index.md"
-        label: "Candidate"
-        name: "candidate"
+      - file: "src/pages/2018-candidate-page/index.md"
+        label: "2018 Candidate"
+        name: "2018-candidate"
         fields:
           - {
               label: "Template Key",
@@ -150,7 +201,43 @@ collections:
               label: "Unique ID",
               name: "uniq",
               widget: "hidden",
-              default: "candidate-index",
+              default: "2018-candidate-index",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Banner Background Image",
+              name: "bannerBackgroundImage",
+              widget: "image",
+            }
+          - { label: "Banner Text", name: "bannerText", widget: "string" }
+          - {
+              label: "Prior Candidates Intro",
+              name: "priorCandidatesIntro",
+              widget: "markdown",
+            }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Count", name: "count", widget: "string" }
+
+      - file: "src/pages/2020-candidate-page/index.md"
+        label: "2020 Candidate"
+        name: "2020-candidate"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "ignore-fragment",
+            }
+          - {
+              label: "Unique ID",
+              name: "uniq",
+              widget: "hidden",
+              default: "2020-candidate-index",
             }
           - { label: "Title", name: "title", widget: "string" }
           - {

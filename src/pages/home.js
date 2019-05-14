@@ -59,11 +59,6 @@ const IndexPage = ({ data }) => {
     issuesIntro
   } = data.landingPage.edges[0].node.frontmatter;
 
-  const {
-    candidates: { edges: candidateEdges }
-  } = data;
-  const candidates = candidateEdges.map(edge => edge.node.frontmatter);
-
   return (
     <div style={{ paddingLeft: 0, paddingRight: 0 }}>
       <div className="home-banner">
@@ -319,31 +314,6 @@ export const pageQuery = graphql`
               alignment
               bannerImageUrl
             }
-          }
-        }
-      }
-    }
-
-    candidates: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "candidate-fragment" } } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            firstName
-            lastName
-            electionType
-            incumbent
-            district
-            state
-            electionDate
-            image
-            website
-            donationLink
-            outcome
-            office
-            district
-            blurb
           }
         }
       }

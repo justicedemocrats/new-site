@@ -185,10 +185,10 @@ CandidatePage.propTypes = {
 export default CandidatePage;
 
 export const pageQuery = graphql`
-  query CandidateQuery2020 {
+  query CandidateQuery2018 {
     candidates: allMarkdownRemark(
       filter: {
-        frontmatter: { templateKey: { eq: "2020-candidate-fragment" } }
+        frontmatter: { templateKey: { eq: "2018-candidate-fragment" } }
       }
     ) {
       edges {
@@ -214,7 +214,7 @@ export const pageQuery = graphql`
     }
 
     page: allMarkdownRemark(
-      filter: { frontmatter: { uniq: { eq: "2020-candidate-index" } } }
+      filter: { frontmatter: { uniq: { eq: "2018-candidate-index" } } }
     ) {
       edges {
         node {
