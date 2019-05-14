@@ -53,9 +53,9 @@ export class CandidatePageTemplate extends React.Component {
       bannerBackgroundImage,
       bannerText,
       candidates,
-      stats,
-      intro,
-      priorCandidatesIntro
+      body,
+      header,
+      subheader
     } = this.props;
 
     return (
@@ -85,23 +85,6 @@ export class CandidatePageTemplate extends React.Component {
             >
               <p> {intro} </p>
             </div>
-          </div>
-
-          <div className="sort-options">
-            {[
-              ["State/District", "state"],
-              ["Alphabetical", "alphabetical"],
-              ["Primary Winners", "primaryWinners"],
-              ["General Election", "generalWinners"]
-            ].map(([label, key]) => (
-              <button
-                onClick={this.currySetSort(key)}
-                className={`sort-button bold-m ${this.state.sortFunction ===
-                  key && "selected"}`}
-              >
-                {label}
-              </button>
-            ))}
           </div>
 
           {/* <div className="candidates">
@@ -161,19 +144,19 @@ const CandidatePage = ({ data }) => {
   const {
     bannerBackgroundImage,
     bannerText,
-    intro,
-    priorCandidatesIntro,
-    stats
+    header,
+    subheader
   } = data.page.edges[0].node.frontmatter;
+  const body = data.page.edges[0].node.html;
 
   return (
     <CandidatePageTemplate
       candidates={candidates}
       bannerBackgroundImage={bannerBackgroundImage}
       bannerText={bannerText}
-      intro={intro}
-      priorCandidatesIntro={priorCandidatesIntro}
-      stats={stats}
+      header={header}
+      subheader={subheader}
+      body={body}
     />
   );
 };
@@ -218,11 +201,12 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          html
           frontmatter {
+            header
+            subheader
             bannerBackgroundImage
             bannerText
-            intro
-            priorCandidatesIntro
             stats {
               count
               title

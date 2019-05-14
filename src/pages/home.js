@@ -56,8 +56,11 @@ const IndexPage = ({ data }) => {
     introContent,
     firstCalloutIcon,
     firstCalloutText,
-    issuesIntro
+    issuesIntro,
+    youtubeVideo
   } = data.landingPage.edges[0].node.frontmatter;
+
+  console.log(data.landingPage.edges[0].node);
 
   return (
     <div style={{ paddingLeft: 0, paddingRight: 0 }}>
@@ -164,6 +167,27 @@ const IndexPage = ({ data }) => {
           </div>
         )}
       </div>
+
+      {youtubeVideo && (
+        <div
+          style={{
+            padding: 40,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center"
+          }}
+        >
+          <iframe
+            style={{ margin: 10, maxWidth: 1040 }}
+            width="100%"
+            height="500"
+            src={youtubeVideo}
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </div>
+      )}
 
       {/* <div
         style={{
@@ -314,6 +338,7 @@ export const pageQuery = graphql`
               alignment
               bannerImageUrl
             }
+            youtubeVideo
           }
         }
       }

@@ -251,13 +251,12 @@ collections:
               name: "priorCandidatesIntro",
               widget: "markdown",
             }
-          - { label: "Intro", name: "intro", widget: "text" }
-          - label: "Stats"
-            name: "stats"
-            widget: "list"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Count", name: "count", widget: "string" }
+          - { label: "Banner Text", name: "bannerText", widget: "string" }
+          - { label: "Header", name: "header", widget: "string" }
+          - { label: "Sub Header", name: "subheader", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+
 
       - file: "src/pages/nominate-pages/index.md"
         label: "Nominate"
@@ -464,7 +463,6 @@ collections:
                   widget: "select",
                   options: ["pink", "aqua", "blue"],
                 }
-
           - {
               label: "JD Highlight Header",
               name: "jdHighlightHeader",
@@ -480,7 +478,6 @@ collections:
               name: "jdHighlightIcon",
               widget: "image",
             }
-
           - label: "Blocks"
             name: "blocks"
             widget: list
@@ -521,6 +518,12 @@ collections:
                 }
               - { label: "Call Out Icon", name: "calloutIcon", widget: "image" }
               - { label: "Call Out Text", name: "calloutText", widget: "text" }
+          - label: "Youtube Video",
+            name: "youtubeVideo",
+            widget: "string",
+            required: "false",
+
+
 
       - file: "src/pages/meta/index.md"
         label: "Meta"
