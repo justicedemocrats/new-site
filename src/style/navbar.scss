@@ -56,10 +56,29 @@
   position: absolute;
   top: 50px;
   width: 100%;
-  background-color: rgba($jd-dark-dark-blue, 0.7);
+
+  .hanger-link-container {
+    background-color: rgba($jd-dark-dark-blue, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .child {
+      display: none;
+      position: relative;
+      background-color: rgba($jd-dark-dark-blue, 0.7);
+    }
+
+    &:hover {
+      .child {
+        display: flex;
+      }
+    }
+  }
 
   .hanger-link {
-    display: block;
     color: white;
     text-transform: uppercase;
     padding-left: 25px;
@@ -68,6 +87,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    width: 100%;
+
+    &:hover {
+      background-color: rgba($jd-dark-dark-blue, 0.9);
+    }
   }
 
   .join {
