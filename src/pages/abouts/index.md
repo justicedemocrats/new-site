@@ -43,7 +43,7 @@ sections:
           The best way to do this is by working to change the Democratic Party
           from the inside out. Once Justice Democrats take power, we support
           electoral reform like ranked choice voting and mixed-member districts
-          so third parties can have have a voice in our democracy rather than
+          so third parties can have a voice in our democracy rather than
           continue to play a spoiler effect.
         question: Why “Democrats”? Why not just start a new party?
       - answer: >-
@@ -134,10 +134,7 @@ sections:
           candidates can use to run their campaigns, we are able to start
           creating a party-like infrastructure that not only endorses and
           fundraises for candidates, but also provides them with the tools and
-          people necessary to run a successful campaign. If you are curious
-          about what Justice Democrats charges its candidates, you can view our
-          fee schedule here:
-          [**http://justicedemocrats.com/services**](http://justicedemocrats.com/services).
+          people necessary to run a successful campaign.
         question: What type of organization is Justice Democrats?
       - answer: 'Yes, the Justice Democrats PAC has a federal limit of $5,000 per year.'
         question: Do you have a dollar amount cap on donations from any one individual?
