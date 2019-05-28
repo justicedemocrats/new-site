@@ -17,7 +17,7 @@ export default PrivacyPage;
 export const pageQuery = graphql`
   query PageQuery {
     privacyPages: allMarkdownRemark(
-      filter: { frontmatter: { uniq: { eq: "candidate-index" } } }
+      filter: { frontmatter: { uniq: { eq: "privacy-page" } } }
     ) {
       edges {
         node {
