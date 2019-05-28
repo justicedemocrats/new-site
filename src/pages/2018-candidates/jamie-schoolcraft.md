@@ -3,14 +3,14 @@ title: Jamie Schoolcraft
 templateKey: 2018-candidate-fragment
 firstName: Jamie
 lastName: Schoolcraft
-district: '07'
+district: "07"
 state: MO
-electionDate: '2018-11-06'
+electionDate: "2018-11-06"
 electionType: general
 office: house
 incumbent: false
-website: 'https://www.electschoolcraft.com/'
-donationLink: ''
+website: "https://www.electschoolcraft.com/"
+donationLink: ""
 outcome: Lost
 image: /img/jd_site_jamieschoolcraft_550x600_071718.jpg
 blurb: >-
@@ -23,4 +23,3 @@ blurb: >-
   Congress by reaching every small town in the district, and connecting with as
   many working class voters as possible.
 ---
-

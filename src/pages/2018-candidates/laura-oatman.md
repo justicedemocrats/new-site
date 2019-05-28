@@ -1,12 +1,12 @@
 ---
-district: '48'
+district: "48"
 state: CA
-website: 'https://oatmanforcongress.com/'
+website: "https://oatmanforcongress.com/"
 firstName: Laura
 lastName: Oatman
 title: Laura Oatman
 image: /img/jd_site_lauraoatman_550x600_100918.jpg
-electionDate: '2018-06-05'
+electionDate: "2018-06-05"
 blurb: >-
   Laura Oatman is a former candidate and Justice Democrat  who ran for Congress
   in California's 48th District. She will continue to fight for big bold

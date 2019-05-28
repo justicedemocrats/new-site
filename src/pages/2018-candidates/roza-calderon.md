@@ -1,12 +1,12 @@
 ---
-district: '04'
+district: "04"
 state: CA
-website: 'https://electroza.org'
+website: "https://electroza.org"
 firstName: Roza
 lastName: Calderon
 title: Roza Calderon
 image: /img/jd_site_rozacalderon_550x600_100918.jpg
-electionDate: '2018-06-05'
+electionDate: "2018-06-05"
 blurb: >-
   As a scientist, activist, and single mother, Roza Calderon knows that we need
   leaders who represent real people’s needs over party interests. That means
