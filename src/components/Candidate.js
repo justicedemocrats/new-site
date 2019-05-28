@@ -30,6 +30,12 @@ class Candidate extends React.Component {
 
   collapse = () => this.setState({ expanded: false });
 
+  componentWillMount() {
+    if (this.props.defaultExpanded) {
+      this.state.expanded = true;
+    }
+  }
+
   render() {
     const {
       firstName,

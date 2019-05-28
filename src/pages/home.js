@@ -60,7 +60,11 @@ const IndexPage = ({ data }) => {
     youtubeVideo
   } = data.landingPage.edges[0].node.frontmatter;
 
-  console.log(data.landingPage.edges[0].node);
+  const {
+    launchModeEnabled,
+    launchingCandidateName,
+    launchingCandidateDonateUrl
+  } = data.metas.edges[0].node.frontmatter;
 
   return (
     <div style={{ paddingLeft: 0, paddingRight: 0 }}>
@@ -90,6 +94,11 @@ const IndexPage = ({ data }) => {
             <input type="hidden" name="form-name" value="main-signup" />
             {renderSignUpInputs()}
             {renderSignUpButton()}
+            {launchModeEnabled && (
+              <div style={{ color: "white", fontSize: "xx-small" }}>
+                {`By signing up, you agree to receive communications from Justice Democrats and ${launchingCandidateName}.`}
+              </div>
+            )}
           </form>
         </Default>
         <Mobile>
@@ -104,11 +113,17 @@ const IndexPage = ({ data }) => {
             style={{
               backgroundColor: "rgba(0, 118, 156, .75)",
               position: "absolute",
-              bottom: 0
+              bottom: 0,
+              padding: launchModeEnabled ? 7 : 15
             }}
           >
             <div className="sign-up-row">{renderSignUpInputs()}</div>
             <div className="sign-up-row">{renderSignUpButton()}</div>
+            {launchModeEnabled && (
+              <div style={{ color: "white", fontSize: "xx-small" }}>
+                {`By signing up, you agree to receive communications from Justice Democrats and ${launchingCandidateName}.`}
+              </div>
+            )}
           </form>
         </Mobile>
       </div>
@@ -339,6 +354,20 @@ export const pageQuery = graphql`
               bannerImageUrl
             }
             youtubeVideo
+          }
+        }
+      }
+    }
+
+    metas: allMarkdownRemark(
+      filter: { frontmatter: { uniq: { eq: "meta-index" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            launchModeEnabled
+            launchingCandidateName
+            launchingCandidateDonateUrl
           }
         }
       }

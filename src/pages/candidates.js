@@ -62,28 +62,28 @@ export class CandidatePageTemplate extends React.Component {
       <div>
         <Banner backgroundImage={bannerBackgroundImage} text={bannerText} />,
         <div className="page-container">
-          <div className="candidate-intro-section row">
-            <div className="six columns stat-container">
-              {stats.map(({ title, count }) => {
-                const split = title.split(" ");
-                const first = split.slice(0, split.length - 1).join(" ");
-                const last = split[split.length - 1];
-
-                return (
-                  <div className="stat">
-                    <span className="light-m light-blue-color"> {first} </span>
-                    <span className="bold-m light-blue-color"> {last} </span>
-                    <span className="light-m light-blue-color"> = </span>
-                    <span className="extra-bold-m orange-color"> {count} </span>
-                  </div>
-                );
-              })}
+          <div className="row">
+            <div className="six columns">
+              <div className="dark-blue-color">
+                <div
+                  className="extra-bold-m"
+                  style={{ fontSize: 42, lineHeight: "42px" }}
+                >
+                  {header}
+                </div>
+                <div
+                  className="medium-m font-size-25"
+                  style={{ marginTop: 10 }}
+                >
+                  {subheader}
+                </div>
+              </div>
             </div>
-            <div
-              className="six columns medium-m standard-text"
-              style={{ marginTop: 10, marginBottom: 10 }}
-            >
-              <p> {intro} </p>
+            <div className="six columns">
+              <HTMLContent
+                content={body}
+                className="medium-m issues-contents standard-text"
+              />
             </div>
           </div>
 
@@ -121,7 +121,12 @@ export class CandidatePageTemplate extends React.Component {
           <div className="candidates">
             {sortFunctions[this.state.sortFunction](candidates).map(
               (props, i) => (
-                <Candidate key={i} {...props} hideDonate={true} />
+                <Candidate
+                  key={i}
+                  {...props}
+                  hideDonate={false}
+                  defaultExpanded={true}
+                />
               )
             )}
           </div>
@@ -207,10 +212,6 @@ export const pageQuery = graphql`
             subheader
             bannerBackgroundImage
             bannerText
-            stats {
-              count
-              title
-            }
           }
         }
       }

@@ -8,6 +8,7 @@ import "./all.sass";
 import "../style/footer.scss";
 
 const TemplateWrapper = ({ data, children, location }) => {
+  console.log(data);
   const content = data.allMarkdownRemark.edges[0].node.frontmatter;
 
   const simpleMetas = [
