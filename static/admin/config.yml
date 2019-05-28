@@ -256,8 +256,6 @@ collections:
           - { label: "Sub Header", name: "subheader", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
 
-
-
       - file: "src/pages/nominate-pages/index.md"
         label: "Nominate"
         name: "nominate"
@@ -478,6 +476,12 @@ collections:
               name: "jdHighlightIcon",
               widget: "image",
             }
+          - {
+              label: "Youtube Video",
+              name: "youtubeVideo",
+              widget: "string",
+              required: "false",
+            }
           - label: "Blocks"
             name: "blocks"
             widget: list
@@ -518,12 +522,6 @@ collections:
                 }
               - { label: "Call Out Icon", name: "calloutIcon", widget: "image" }
               - { label: "Call Out Text", name: "calloutText", widget: "text" }
-          - label: "Youtube Video",
-            name: "youtubeVideo",
-            widget: "string",
-            required: "false",
-
-
 
       - file: "src/pages/meta/index.md"
         label: "Meta"
@@ -580,9 +578,21 @@ collections:
           - { label: "CTA Body", name: "ctaBody", widget: "markdown" }
           - { label: "CTA Text", name: "ctaText", widget: "string" }
           - { label: "CTA Url", name: "ctaUrl", widget: "string" }
-          - { label: "Launch Mode Enabled", name: "launchModeEnabled", widget: "boolean" }
-          - { label: "Launching Candidate Name", name: "launchingCandidateName", widget: "string" }
-          - { label: "Launching Candidate / Tandem Donate Url", name: "launchingCandidateDonateUrl", widget: "string" }
+          - {
+              label: "Launch Mode Enabled",
+              name: "launchModeEnabled",
+              widget: "boolean",
+            }
+          - {
+              label: "Launching Candidate Name",
+              name: "launchingCandidateName",
+              widget: "string",
+            }
+          - {
+              label: "Launching Candidate / Tandem Donate Url",
+              name: "launchingCandidateDonateUrl",
+              widget: "string",
+            }
 
   - name: "modules"
     label: "Nomination Modules"
