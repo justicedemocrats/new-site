@@ -142,7 +142,6 @@ collections:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Headshot", name: "headshot", widget: "image" }
-
           - { label: "General Email", name: "generalEmail", widget: "string" }
           - { label: "Press Email", name: "pressEmail", widget: "string" }
           - { label: "Phone Number", name: "phone", widget: "string" }
@@ -158,6 +157,34 @@ collections:
                 fields:
                   - { label: "Question", name: "question", widget: "string" }
                   - { label: "Answer", name: "answer", widget: "markdown" }
+
+      - file: "src/pages/volunteer/index.md"
+        label: "Volunteer"
+        name: "volunteer"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "ignore-fragment",
+            }
+          - {
+              label: "Unique",
+              name: "uniq",
+              widget: "hidden",
+              default: "volunteer-index",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Banner Background Image",
+              name: "bannerBackgroundImage",
+              widget: "image",
+            }
+          - { label: "Banner Text", name: "bannerText", widget: "string" }
+          - { label: "Header", name: "header", widget: "markdown" }
+          - label: "Iframe Url"
+            name: "iframeUrl"
+            widget: "string"
 
       - file: "src/pages/join/index.md"
         label: "Join"
