@@ -26,7 +26,7 @@ const links = [
   // { display: 'News', href: '/news'},
   // { display: 'Actions', href: '/actions'},
   { display: "Store", href: "https://shop.justicedemocrats.com" },
-  { display: "Join", href: "/" }
+  { display: "Volunteer", href: "/volunteer" }
 ];
 
 class Navbar extends React.Component {
