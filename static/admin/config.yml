@@ -175,13 +175,15 @@ collections:
               default: "volunteer-index",
             }
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Banner Text", name: "bannerText", widget: "string" }
+          - { label: "Header", name: "header", widget: "string" }
+          - { label: "Sub Header", name: "subheader", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
           - {
               label: "Banner Background Image",
               name: "bannerBackgroundImage",
               widget: "image",
             }
-          - { label: "Banner Text", name: "bannerText", widget: "string" }
-          - { label: "Header", name: "header", widget: "markdown" }
           - label: "Iframe Url"
             name: "iframeUrl"
             widget: "string"

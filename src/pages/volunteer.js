@@ -8,6 +8,8 @@ const VolunteerPageTemplate = ({
   bannerBackgroundImage,
   bannerText,
   header,
+  subheader,
+  body,
   iframeUrl
 }) => {
   console.log(12);
@@ -16,11 +18,31 @@ const VolunteerPageTemplate = ({
       <Banner backgroundImage={bannerBackgroundImage} text={bannerText} />
       <div className="page-container">
         <div className="page-contents">
-          <HTMLContent
-            content={header}
-            markdown={true}
-            className="about-header dark-blue-color medium-m subheader-size"
-          />
+          <div className="row">
+            <div className="six columns">
+              <div className="dark-blue-color">
+                <div
+                  className="extra-bold-m"
+                  style={{ fontSize: 42, lineHeight: "42px" }}
+                >
+                  {header}
+                </div>
+                <div
+                  className="medium-m font-size-25"
+                  style={{ marginTop: 10 }}
+                >
+                  {subheader}
+                </div>
+              </div>
+            </div>
+            <div className="six columns">
+              <HTMLContent
+                content={body}
+                className="medium-m issues-contents standard-text"
+              />
+            </div>
+          </div>
+
           <div style={{ paddingBottom: 5 }} />
           <Divider />
 
@@ -32,9 +54,11 @@ const VolunteerPageTemplate = ({
 };
 
 const VolunteerPage = props => {
-  const data = props.data.allMarkdownRemark.edges[0].node;
-  console.log(43);
-  return <VolunteerPageTemplate {...data.frontmatter} />;
+  console.log(props);
+  const data = props.data.volunteerPageData.edges[0].node;
+  return (
+    <VolunteerPageTemplate {...{ body: data.html, ...data.frontmatter }} />
+  );
 };
 
 VolunteerPage.propTypes = {
@@ -45,7 +69,7 @@ export default VolunteerPage;
 
 export const pageQuery = graphql`
   query VolunteerQuery {
-    allMarkdownRemark(
+    volunteerPageData: allMarkdownRemark(
       filter: { frontmatter: { uniq: { eq: "volunteer-index" } } }
     ) {
       edges {
@@ -55,6 +79,8 @@ export const pageQuery = graphql`
             header
             bannerBackgroundImage
             bannerText
+            header
+            subheader
             iframeUrl
           }
         }

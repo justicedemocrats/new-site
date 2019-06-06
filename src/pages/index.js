@@ -27,8 +27,6 @@ export const SplashPageTemplate = ({
     store.set("redirect_destination", launchingCandidateDonateUrl);
   };
 
-  console.log({ launchModeEnabled, launchingCandidateName });
-
   return (
     <div
       className="full-height"
