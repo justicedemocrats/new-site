@@ -8,6 +8,7 @@ subhed: >-
   It's time to usher in a new generation of diverse working class leaders into
   the Democratic Party. A Democratic Party that fights for its voters, not just
   corporate donors.
+textureImg: /img/jd_2020_launch_061319_jdsplash_backgroundtexture_1920x1080.jpg
 youtubeVideo: 'https://www.youtube.com/embed/Gcqoo0Jn18A'
 ---
 
