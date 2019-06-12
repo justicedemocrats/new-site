@@ -210,6 +210,12 @@ collections:
           - { label: "Sub Header", name: "subhed", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
           - {
+              label: "Texture Image",
+              name: "textureImg",
+              widget: "string",
+              required: "true",
+            }
+          - {
               label: "Youtube Video",
               name: "youtubeVideo",
               widget: "string",
