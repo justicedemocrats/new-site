@@ -212,7 +212,7 @@ collections:
           - {
               label: "Texture Image",
               name: "textureImg",
-              widget: "string",
+              widget: "image",
               required: "true",
             }
           - {
