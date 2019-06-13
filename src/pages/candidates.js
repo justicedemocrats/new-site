@@ -53,6 +53,7 @@ export class CandidatePageTemplate extends React.Component {
       bannerBackgroundImage,
       bannerText,
       candidates,
+      incumbentCandidates,
       body,
       header,
       subheader
@@ -86,16 +87,26 @@ export class CandidatePageTemplate extends React.Component {
               />
             </div>
           </div>
-
-          {/* <div className="candidates">
+        </div>
+        <div className="page-container">
+          <div className="extra-bold-m about-section-title">
+            <span className="dark-blue-color"> Our </span>
+            <span className="orange-color"> Challengers </span>
+          </div>
+          <div className="divider" />
+          <div className="candidates">
             {sortFunctions[this.state.sortFunction](candidates).map(
               (props, i) => (
-                <Candidate key={i} {...props} hideDonate={true} />
+                <Candidate
+                  key={i}
+                  {...props}
+                  hideDonate={false}
+                  defaultExpanded={true}
+                />
               )
             )}
-          </div> */}
+          </div>
         </div>
-        <div className="divider" />
         {/* <div className="page-container">
           <div className="row candidate-intro-section">
             <div
@@ -118,8 +129,14 @@ export class CandidatePageTemplate extends React.Component {
           </div>
         </div> */}
         <div className="page-container">
+          <div className="extra-bold-m about-section-title">
+            <span className="dark-blue-color"> Our </span>
+            <span className="orange-color"> Incumbents </span>
+          </div>
+          <div className="divider" />
+
           <div className="candidates">
-            {sortFunctions[this.state.sortFunction](candidates).map(
+            {sortFunctions[this.state.sortFunction](incumbentCandidates).map(
               (props, i) => (
                 <Candidate
                   key={i}
@@ -142,7 +159,8 @@ CandidatePageTemplate.propTypes = {
 
 const CandidatePage = ({ data }) => {
   const {
-    candidates: { edges }
+    candidates: { edges },
+    incumbentCandidates: { edges: incumbentEdges }
   } = data;
   const baseCandidates = edges.map(edge => edge.node.frontmatter);
   const candidates = baseCandidates;
@@ -154,9 +172,14 @@ const CandidatePage = ({ data }) => {
   } = data.page.edges[0].node.frontmatter;
   const body = data.page.edges[0].node.html;
 
+  const incumbentCandidates = incumbentEdges
+    .map(edge => edge.node.frontmatter)
+    .filter(cand => cand.incumbent);
+
   return (
     <CandidatePageTemplate
       candidates={candidates}
+      incumbentCandidates={incumbentCandidates}
       bannerBackgroundImage={bannerBackgroundImage}
       bannerText={bannerText}
       header={header}
@@ -177,6 +200,33 @@ export const pageQuery = graphql`
     candidates: allMarkdownRemark(
       filter: {
         frontmatter: { templateKey: { eq: "2020-candidate-fragment" } }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            firstName
+            lastName
+            electionType
+            incumbent
+            district
+            state
+            electionDate
+            image
+            website
+            donationLink
+            outcome
+            office
+            district
+            blurb
+          }
+        }
+      }
+    }
+
+    incumbentCandidates: allMarkdownRemark(
+      filter: {
+        frontmatter: { templateKey: { eq: "2018-candidate-fragment" } }
       }
     ) {
       edges {
