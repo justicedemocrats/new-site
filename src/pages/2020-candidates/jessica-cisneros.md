@@ -12,7 +12,7 @@ incumbent: false
 website: 'https://jessicacisnerosforcongress.com'
 donationLink: 'https://jessicacisnerosforcongress.com/donate'
 outcome: Unknown
-image: /img/chemex.jpg
+image: /img/jd_site_jessicacisneros_550x600_061219.jpg
 blurb: >-
   Jessica Cisneros is an immigration and human rights attorney. As the proud
   daughter of Mexican immigrants and a human rights lawyer, Jessica is fighting
