@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import store from "store";
+
+const DEFAULT_DONATE_URL = "https://secure.actblue.com/donate/justicedemocrats";
 
 export default class DonateRedirect extends React.Component {
   componentDidMount() {
-    window.location.href = 'https://secure.actblue.com/donate/justicedemocrats'
+    const destinationUrl =
+      store.get("redirect_destination") || DEFAULT_DONATE_URL;
+    store.remove("redirect_destination");
+    window.location.href = destinationUrl;
   }
 
   render() {
-    return <div />
+    return <div />;
   }
 }

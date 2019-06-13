@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { HTMLContent } from '../components/Content'
-import Banner from '../components/Banner'
-import '../style/about.scss'
+import React from "react";
+import PropTypes from "prop-types";
+import { HTMLContent } from "../components/Content";
+import Banner from "../components/Banner";
+import "../style/about.scss";
 
 const AboutPageTemplate = ({
   bannerBackgroundImage,
@@ -13,7 +13,7 @@ const AboutPageTemplate = ({
   pressEmail,
   phone,
   address,
-  sections,
+  sections
 }) => {
   return (
     <div>
@@ -100,19 +100,19 @@ const AboutPageTemplate = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const AboutPage = props => {
-  const data = props.data.allMarkdownRemark.edges[0].node
-  return <AboutPageTemplate {...data.frontmatter} />
-}
+  const data = props.data.allMarkdownRemark.edges[0].node;
+  return <AboutPageTemplate {...data.frontmatter} />;
+};
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
+  data: PropTypes.object.isRequired
+};
 
-export default AboutPage
+export default AboutPage;
 
 export const pageQuery = graphql`
   query AboutQuery {
@@ -147,6 +147,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-const Divider = () => <div className="divider" />
+const Divider = () => <div className="divider" />;

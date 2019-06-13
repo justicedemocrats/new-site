@@ -53,66 +53,62 @@ export class CandidatePageTemplate extends React.Component {
       bannerBackgroundImage,
       bannerText,
       candidates,
-      stats,
-      intro,
-      priorCandidatesIntro
+      incumbentCandidates,
+      body,
+      header,
+      subheader
     } = this.props;
 
     return (
       <div>
         <Banner backgroundImage={bannerBackgroundImage} text={bannerText} />,
         <div className="page-container">
-          <div className="candidate-intro-section row">
-            <div className="six columns stat-container">
-              {stats.map(({ title, count }) => {
-                const split = title.split(" ");
-                const first = split.slice(0, split.length - 1).join(" ");
-                const last = split[split.length - 1];
-
-                return (
-                  <div className="stat">
-                    <span className="light-m light-blue-color"> {first} </span>
-                    <span className="bold-m light-blue-color"> {last} </span>
-                    <span className="light-m light-blue-color"> = </span>
-                    <span className="extra-bold-m orange-color"> {count} </span>
+          <div className="page-contents">
+            <div className="row">
+              <div className="six columns">
+                <div className="dark-blue-color">
+                  <div
+                    className="extra-bold-m"
+                    style={{ fontSize: 42, lineHeight: "42px" }}
+                  >
+                    {header}
                   </div>
-                );
-              })}
-            </div>
-            <div
-              className="six columns medium-m standard-text"
-              style={{ marginTop: 10, marginBottom: 10 }}
-            >
-              <p> {intro} </p>
+                  <div
+                    className="medium-m font-size-25"
+                    style={{ marginTop: 10 }}
+                  >
+                    {subheader}
+                  </div>
+                </div>
+              </div>
+              <div className="six columns">
+                <HTMLContent
+                  content={body}
+                  className="medium-m issues-contents standard-text"
+                />
+              </div>
             </div>
           </div>
-
-          <div className="sort-options">
-            {[
-              ["State/District", "state"],
-              ["Alphabetical", "alphabetical"],
-              ["Primary Winners", "primaryWinners"],
-              ["General Election", "generalWinners"]
-            ].map(([label, key]) => (
-              <button
-                onClick={this.currySetSort(key)}
-                className={`sort-button bold-m ${this.state.sortFunction ===
-                  key && "selected"}`}
-              >
-                {label}
-              </button>
-            ))}
+        </div>
+        <div className="page-container">
+          <div className="extra-bold-m about-section-title">
+            <span className="dark-blue-color"> Our </span>
+            <span className="orange-color"> Challengers </span>
           </div>
-
-          {/* <div className="candidates">
+          <div className="divider" />
+          <div className="candidates">
             {sortFunctions[this.state.sortFunction](candidates).map(
               (props, i) => (
-                <Candidate key={i} {...props} hideDonate={true} />
+                <Candidate
+                  key={i}
+                  {...props}
+                  hideDonate={false}
+                  defaultExpanded={true}
+                />
               )
             )}
-          </div> */}
+          </div>
         </div>
-        <div className="divider" />
         {/* <div className="page-container">
           <div className="row candidate-intro-section">
             <div
@@ -135,10 +131,21 @@ export class CandidatePageTemplate extends React.Component {
           </div>
         </div> */}
         <div className="page-container">
+          <div className="extra-bold-m about-section-title">
+            <span className="dark-blue-color"> Our </span>
+            <span className="orange-color"> Incumbents </span>
+          </div>
+          <div className="divider" />
+
           <div className="candidates">
-            {sortFunctions[this.state.sortFunction](candidates).map(
+            {sortFunctions[this.state.sortFunction](incumbentCandidates).map(
               (props, i) => (
-                <Candidate key={i} {...props} hideDonate={true} />
+                <Candidate
+                  key={i}
+                  {...props}
+                  hideDonate={false}
+                  defaultExpanded={true}
+                />
               )
             )}
           </div>
@@ -154,26 +161,32 @@ CandidatePageTemplate.propTypes = {
 
 const CandidatePage = ({ data }) => {
   const {
-    candidates: { edges }
+    candidates: { edges },
+    incumbentCandidates: { edges: incumbentEdges }
   } = data;
   const baseCandidates = edges.map(edge => edge.node.frontmatter);
   const candidates = baseCandidates;
   const {
     bannerBackgroundImage,
     bannerText,
-    intro,
-    priorCandidatesIntro,
-    stats
+    header,
+    subheader
   } = data.page.edges[0].node.frontmatter;
+  const body = data.page.edges[0].node.html;
+
+  const incumbentCandidates = incumbentEdges
+    .map(edge => edge.node.frontmatter)
+    .filter(cand => cand.incumbent);
 
   return (
     <CandidatePageTemplate
       candidates={candidates}
+      incumbentCandidates={incumbentCandidates}
       bannerBackgroundImage={bannerBackgroundImage}
       bannerText={bannerText}
-      intro={intro}
-      priorCandidatesIntro={priorCandidatesIntro}
-      stats={stats}
+      header={header}
+      subheader={subheader}
+      body={body}
     />
   );
 };
@@ -185,9 +198,38 @@ CandidatePage.propTypes = {
 export default CandidatePage;
 
 export const pageQuery = graphql`
-  query CandidateQuery {
+  query CandidateQuery2020 {
     candidates: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "candidate-fragment" } } }
+      filter: {
+        frontmatter: { templateKey: { eq: "2020-candidate-fragment" } }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            firstName
+            lastName
+            electionType
+            incumbent
+            district
+            state
+            electionDate
+            image
+            website
+            donationLink
+            outcome
+            office
+            district
+            blurb
+          }
+        }
+      }
+    }
+
+    incumbentCandidates: allMarkdownRemark(
+      filter: {
+        frontmatter: { templateKey: { eq: "2018-candidate-fragment" } }
+      }
     ) {
       edges {
         node {
@@ -212,19 +254,16 @@ export const pageQuery = graphql`
     }
 
     page: allMarkdownRemark(
-      filter: { frontmatter: { uniq: { eq: "candidate-index" } } }
+      filter: { frontmatter: { uniq: { eq: "2020-candidate-index" } } }
     ) {
       edges {
         node {
+          html
           frontmatter {
+            header
+            subheader
             bannerBackgroundImage
             bannerText
-            intro
-            priorCandidatesIntro
-            stats {
-              count
-              title
-            }
           }
         }
       }

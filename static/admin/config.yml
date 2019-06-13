@@ -1,14 +1,14 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: revamp
 
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "candidates"
-    label: "Candidates"
-    folder: "src/pages/candidates"
+  - name: "2018candidates"
+    label: "2018 Candidates"
+    folder: "src/pages/2018-candidates"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -16,7 +16,58 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "candidate-fragment",
+          default: "2018-candidate-fragment",
+        }
+      - { label: "First Name", name: "firstName", widget: "string" }
+      - { label: "Last Name", name: "lastName", widget: "string" }
+      - { label: "District", name: "district", widget: "string" }
+      - { label: "State", name: "state", widget: "string" }
+      - { label: "Election Date", name: "electionDate", widget: "date" }
+      - {
+          label: "Election Type",
+          name: "electionType",
+          widget: "select",
+          options: ["fake", "primary", "general"],
+        }
+      - {
+          label: "Office",
+          name: "office",
+          widget: "select",
+          options: ["lieutenant-governor", "governor", "house", "senate"],
+        }
+      - {
+          label: "Incumbent",
+          name: "incumbent",
+          widget: "boolean",
+          default: false,
+        }
+      - { label: "Website", name: "website", widget: "string" }
+      - {
+          label: "Donation Link",
+          name: "donationLink",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Outcome",
+          name: "outcome",
+          widget: "select",
+          options: ["Won", "Lost", "Unknown"],
+        }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Blurb", name: "blurb", widget: "text" }
+
+  - name: "2020candidates"
+    label: "2020 Candidates"
+    folder: "src/pages/2020-candidates"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "2020-candidate-fragment",
         }
       - { label: "First Name", name: "firstName", widget: "string" }
       - { label: "Last Name", name: "lastName", widget: "string" }
@@ -91,7 +142,6 @@ collections:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Headshot", name: "headshot", widget: "image" }
-
           - { label: "General Email", name: "generalEmail", widget: "string" }
           - { label: "Press Email", name: "pressEmail", widget: "string" }
           - { label: "Phone Number", name: "phone", widget: "string" }
@@ -107,6 +157,36 @@ collections:
                 fields:
                   - { label: "Question", name: "question", widget: "string" }
                   - { label: "Answer", name: "answer", widget: "markdown" }
+
+      - file: "src/pages/volunteer/index.md"
+        label: "Volunteer"
+        name: "volunteer"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "ignore-fragment",
+            }
+          - {
+              label: "Unique",
+              name: "uniq",
+              widget: "hidden",
+              default: "volunteer-index",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Banner Text", name: "bannerText", widget: "string" }
+          - { label: "Header", name: "header", widget: "string" }
+          - { label: "Sub Header", name: "subheader", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: "Banner Background Image",
+              name: "bannerBackgroundImage",
+              widget: "image",
+            }
+          - label: "Iframe Url"
+            name: "iframeUrl"
+            widget: "string"
 
       - file: "src/pages/join/index.md"
         label: "Join"
@@ -130,15 +210,21 @@ collections:
           - { label: "Sub Header", name: "subhed", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
           - {
+              label: "Texture Image",
+              name: "textureImg",
+              widget: "image",
+              required: "true",
+            }
+          - {
               label: "Youtube Video",
               name: "youtubeVideo",
               widget: "string",
               required: "false",
             }
 
-      - file: "src/pages/candidate-page/index.md"
-        label: "Candidate"
-        name: "candidate"
+      - file: "src/pages/2018-candidate-page/index.md"
+        label: "2018 Candidate"
+        name: "2018-candidate"
         fields:
           - {
               label: "Template Key",
@@ -150,7 +236,7 @@ collections:
               label: "Unique ID",
               name: "uniq",
               widget: "hidden",
-              default: "candidate-index",
+              default: "2018-candidate-index",
             }
           - { label: "Title", name: "title", widget: "string" }
           - {
@@ -171,6 +257,39 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Count", name: "count", widget: "string" }
+
+      - file: "src/pages/2020-candidate-page/index.md"
+        label: "2020 Candidate"
+        name: "2020-candidate"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "ignore-fragment",
+            }
+          - {
+              label: "Unique ID",
+              name: "uniq",
+              widget: "hidden",
+              default: "2020-candidate-index",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Banner Background Image",
+              name: "bannerBackgroundImage",
+              widget: "image",
+            }
+          - { label: "Banner Text", name: "bannerText", widget: "string" }
+          - {
+              label: "Prior Candidates Intro",
+              name: "priorCandidatesIntro",
+              widget: "markdown",
+            }
+          - { label: "Banner Text", name: "bannerText", widget: "string" }
+          - { label: "Header", name: "header", widget: "string" }
+          - { label: "Sub Header", name: "subheader", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
       - file: "src/pages/nominate-pages/index.md"
         label: "Nominate"
@@ -377,7 +496,6 @@ collections:
                   widget: "select",
                   options: ["pink", "aqua", "blue"],
                 }
-
           - {
               label: "JD Highlight Header",
               name: "jdHighlightHeader",
@@ -393,7 +511,12 @@ collections:
               name: "jdHighlightIcon",
               widget: "image",
             }
-
+          - {
+              label: "Youtube Video",
+              name: "youtubeVideo",
+              widget: "string",
+              required: "false",
+            }
           - label: "Blocks"
             name: "blocks"
             widget: list
@@ -467,7 +590,6 @@ collections:
             fields:
               - { label: "Text", name: "text", widget: "string" }
               - { label: "Url", name: "url", widget: "string" }
-
           - label: "Social Icons"
             name: "socialIcons"
             widget: "list"
@@ -491,6 +613,21 @@ collections:
           - { label: "CTA Body", name: "ctaBody", widget: "markdown" }
           - { label: "CTA Text", name: "ctaText", widget: "string" }
           - { label: "CTA Url", name: "ctaUrl", widget: "string" }
+          - {
+              label: "Launch Mode Enabled",
+              name: "launchModeEnabled",
+              widget: "boolean",
+            }
+          - {
+              label: "Launching Candidate Name",
+              name: "launchingCandidateName",
+              widget: "string",
+            }
+          - {
+              label: "Launching Candidate / Tandem Donate Url",
+              name: "launchingCandidateDonateUrl",
+              widget: "string",
+            }
 
   - name: "modules"
     label: "Nomination Modules"

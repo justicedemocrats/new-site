@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Responsive from "react-responsive";
+import store from "store";
 import Content, { HTMLContent } from "../components/Content";
 import "../style/join-page.scss";
 
@@ -15,9 +16,16 @@ export const SplashPageTemplate = ({
   bgimg,
   contentComponent,
   youtubeVideo,
-  mobile
+  mobile,
+  launchModeEnabled,
+  launchingCandidateName,
+  launchingCandidateDonateUrl
 }) => {
   const PageContent = contentComponent || Content;
+
+  const setDestinationCookie = () => {
+    store.set("redirect_destination", launchingCandidateDonateUrl);
+  };
 
   return (
     <div
@@ -30,11 +38,11 @@ export const SplashPageTemplate = ({
     >
       <div
         className="splash"
-        style={youtubeVideo ? { display: "flex", alignItems: "center" } : {}}
+        style={youtubeVideo ? { display: "flex", alignItems: "start" } : {}}
       >
         {youtubeVideo && !mobile && (
           <iframe
-            style={{ float: "left" }}
+            style={{ float: "left", marginTop: 25, marginLeft: 20 }}
             width="60%"
             height="400"
             src={youtubeVideo}
@@ -88,7 +96,8 @@ export const SplashPageTemplate = ({
               netlify="true"
               data-netlify-honeypot="bot-field"
               method="post"
-              action="/home"
+              action={launchModeEnabled ? "/donate" : "/home"}
+              onSubmit={setDestinationCookie}
             >
               <input type="hidden" name="form-name" value="splash-signup" />
               <div className="inputs-container">
@@ -122,6 +131,11 @@ export const SplashPageTemplate = ({
                   placeholder="Phone"
                 />
               </div>
+              {launchModeEnabled && (
+                <div>
+                  {`By signing up, you agree to receive communications from Justice Democrats and ${launchingCandidateName}.`}
+                </div>
+              )}
               <input
                 type="submit"
                 name="submit"
@@ -151,35 +165,30 @@ SplashPageTemplate.propTypes = {
 };
 
 const SplashPage = ({ data }) => {
-  console.log(data);
-  const { allMarkdownRemark: pages } = data;
+  const { pages, metas } = data;
   const page = pages.edges[0].node;
+  const meta = metas.edges[0].node;
+
+  const props = {
+    contentComponent: HTMLContent,
+    title: page.frontmatter.title,
+    headerImage: page.frontmatter.headerImage,
+    subhed: page.frontmatter.subhed,
+    content: page.html,
+    bgimg: page.frontmatter.bgimg,
+    youtubeVideo: page.frontmatter.youtubeVideo,
+    launchModeEnabled: meta.frontmatter.launchModeEnabled,
+    launchingCandidateName: meta.frontmatter.launchingCandidateName,
+    launchingCandidateDonateUrl: meta.frontmatter.launchingCandidateDonateUrl
+  };
 
   return (
     <div>
       <Mobile>
-        <SplashPageTemplate
-          contentComponent={HTMLContent}
-          title={page.frontmatter.title}
-          headerImage={page.frontmatter.headerImage}
-          subhed={page.frontmatter.subhed}
-          content={page.html}
-          bgimg={page.frontmatter.bgimg}
-          youtubeVideo={page.frontmatter.youtubeVideo}
-          mobile={true}
-        />
+        <SplashPageTemplate {...props} mobile={true} />
       </Mobile>
       <Default>
-        <SplashPageTemplate
-          contentComponent={HTMLContent}
-          title={page.frontmatter.title}
-          headerImage={page.frontmatter.headerImage}
-          subhed={page.frontmatter.subhed}
-          content={page.html}
-          bgimg={page.frontmatter.bgimg}
-          youtubeVideo={page.frontmatter.youtubeVideo}
-          mobile={false}
-        />
+        <SplashPageTemplate {...props} mobile={false} />
       </Default>
     </div>
   );
@@ -193,7 +202,9 @@ export default SplashPage;
 
 export const splashPageQuery = graphql`
   query SplashPage {
-    allMarkdownRemark(filter: { frontmatter: { uniq: { eq: "join-page" } } }) {
+    pages: allMarkdownRemark(
+      filter: { frontmatter: { uniq: { eq: "join-page" } } }
+    ) {
       edges {
         node {
           html
@@ -203,6 +214,20 @@ export const splashPageQuery = graphql`
             subhed
             bgimg
             youtubeVideo
+          }
+        }
+      }
+    }
+
+    metas: allMarkdownRemark(
+      filter: { frontmatter: { uniq: { eq: "meta-index" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            launchModeEnabled
+            launchingCandidateName
+            launchingCandidateDonateUrl
           }
         }
       }

@@ -56,13 +56,15 @@ const IndexPage = ({ data }) => {
     introContent,
     firstCalloutIcon,
     firstCalloutText,
-    issuesIntro
+    issuesIntro,
+    youtubeVideo
   } = data.landingPage.edges[0].node.frontmatter;
 
   const {
-    candidates: { edges: candidateEdges }
-  } = data;
-  const candidates = candidateEdges.map(edge => edge.node.frontmatter);
+    launchModeEnabled,
+    launchingCandidateName,
+    launchingCandidateDonateUrl
+  } = data.metas.edges[0].node.frontmatter;
 
   return (
     <div style={{ paddingLeft: 0, paddingRight: 0 }}>
@@ -92,6 +94,11 @@ const IndexPage = ({ data }) => {
             <input type="hidden" name="form-name" value="main-signup" />
             {renderSignUpInputs()}
             {renderSignUpButton()}
+            {launchModeEnabled && (
+              <div style={{ color: "white", fontSize: "xx-small" }}>
+                {`By signing up, you agree to receive communications from Justice Democrats and ${launchingCandidateName}.`}
+              </div>
+            )}
           </form>
         </Default>
         <Mobile>
@@ -106,11 +113,17 @@ const IndexPage = ({ data }) => {
             style={{
               backgroundColor: "rgba(0, 118, 156, .75)",
               position: "absolute",
-              bottom: 0
+              bottom: 0,
+              padding: launchModeEnabled ? 7 : 15
             }}
           >
             <div className="sign-up-row">{renderSignUpInputs()}</div>
             <div className="sign-up-row">{renderSignUpButton()}</div>
+            {launchModeEnabled && (
+              <div style={{ color: "white", fontSize: "xx-small" }}>
+                {`By signing up, you agree to receive communications from Justice Democrats and ${launchingCandidateName}.`}
+              </div>
+            )}
           </form>
         </Mobile>
       </div>
@@ -169,6 +182,27 @@ const IndexPage = ({ data }) => {
           </div>
         )}
       </div>
+
+      {youtubeVideo && (
+        <div
+          style={{
+            padding: 40,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center"
+          }}
+        >
+          <iframe
+            style={{ margin: 10, maxWidth: 1040 }}
+            width="100%"
+            height="500"
+            src={youtubeVideo}
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </div>
+      )}
 
       {/* <div
         style={{
@@ -319,31 +353,21 @@ export const pageQuery = graphql`
               alignment
               bannerImageUrl
             }
+            youtubeVideo
           }
         }
       }
     }
 
-    candidates: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "candidate-fragment" } } }
+    metas: allMarkdownRemark(
+      filter: { frontmatter: { uniq: { eq: "meta-index" } } }
     ) {
       edges {
         node {
           frontmatter {
-            firstName
-            lastName
-            electionType
-            incumbent
-            district
-            state
-            electionDate
-            image
-            website
-            donationLink
-            outcome
-            office
-            district
-            blurb
+            launchModeEnabled
+            launchingCandidateName
+            launchingCandidateDonateUrl
           }
         }
       }

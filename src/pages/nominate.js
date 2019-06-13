@@ -218,7 +218,7 @@ class NominatePageTemplate extends React.Component {
               className="block-content-button button dark-blue-bg button-text full-width-button"
               style={{ width: "45%" }}
             >
-              Go To 2018 Slate
+              Go To 2020 Slate
             </Link>
           </div>
           <div className="candidates">
@@ -296,7 +296,9 @@ export const pageQuery = graphql`
     }
 
     candidates: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "candidate-fragment" } } }
+      filter: {
+        frontmatter: { templateKey: { eq: "2018-candidate-fragment" } }
+      }
     ) {
       edges {
         node {

@@ -1,8 +1,8 @@
 ---
 templateKey: landing-page
 title: Justice Democrats
-bannerBackgroundImg: /img/jd_site_home_cr2020_background_1920x1980_test.jpg
-bannerTextImg: /img/jd_site_home_cr2020_background_1920x1980_test.jpg
+bannerBackgroundImg: /img/jd_2020launch_061319_cisneros_site_homebanner_1920x1080.jpg
+bannerTextImg: /img/jd_2020launch_061319_cisneros_site_homebanner_1920x1080.jpg
 boldHeader: 'It’s #OurTime. Join us.'
 boldSubheader: >-
   The Democratic Party needs to fight back. But the corporate wing of the party
@@ -62,7 +62,7 @@ blocks:
       represent corporate donors, but the voters of the Democratic Party:**
       women, people of color, young people, and working-class people of all
       backgrounds to help build our progressive movement.
-    moreButtonText: See our 2018 Slate
+    moreButtonText: See our 2020 Slate
     moreButtonUrl: /candidates
     subheader: >-
       We need a caucus of mission-driven members of Congress who vote together

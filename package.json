@@ -39,6 +39,7 @@
     "react-responsive": "^4.1.0",
     "showdown": "^1.8.6",
     "store": "^2.0.12",
+    "svgo": "^1.2.2",
     "uuid": "^3.2.1"
   },
   "keywords": [
