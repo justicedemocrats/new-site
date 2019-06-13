@@ -42,7 +42,7 @@ export const SplashPageTemplate = ({
       >
         {youtubeVideo && !mobile && (
           <iframe
-            style={{ float: "left" }}
+            style={{ float: "left", marginTop: 25, marginLeft: 20 }}
             width="60%"
             height="400"
             src={youtubeVideo}
@@ -66,7 +66,7 @@ export const SplashPageTemplate = ({
 
           {youtubeVideo && mobile && (
             <iframe
-              style={{ margin: 10, marginTop: 25, marginLeft: 20 }}
+              style={{ margin: 10 }}
               width="100%"
               height="300"
               src={youtubeVideo}
