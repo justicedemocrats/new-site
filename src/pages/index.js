@@ -38,7 +38,7 @@ export const SplashPageTemplate = ({
     >
       <div
         className="splash"
-        style={youtubeVideo ? { display: "flex", alignItems: "center" } : {}}
+        style={youtubeVideo ? { display: "flex", alignItems: "start" } : {}}
       >
         {youtubeVideo && !mobile && (
           <iframe
@@ -66,7 +66,7 @@ export const SplashPageTemplate = ({
 
           {youtubeVideo && mobile && (
             <iframe
-              style={{ margin: 10 }}
+              style={{ margin: 10, marginTop: 25, marginLeft: 20 }}
               width="100%"
               height="300"
               src={youtubeVideo}
