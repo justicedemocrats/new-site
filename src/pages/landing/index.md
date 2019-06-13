@@ -26,7 +26,7 @@ firstCalloutText: >-
 
   in the Democratic Party that will represent and fight for our communities.
 issuesIntro: 'A Party for Voters, Not Donors'
-youtubeVideo: 'https://www.youtube.com/watch?v=Xpz2TvXA05c'
+youtubeVideo: 'https://youtu.be/Gcqoo0Jn18A'
 primaryIssues:
   - color: pink
     image: /img/jd_site_policy_icon_2_rights_nov18_rev.svg
