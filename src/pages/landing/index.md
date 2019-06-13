@@ -86,5 +86,18 @@ blocks:
     moreButtonText: Read The Report
     moreButtonUrl: 'https://www.futureoftheparty.com'
     subheader: 'A bold, progressive vision — policies to transform America.'
+  - alignment: right
+    bannerButtonText: JOIN US
+    bannerButtonUrl: /volunteer
+    bannerImageUrl: /img/jd_site_volunteer_banner_1920x540_061219.jpg
+    bannerText: VOLUNTEER
+    header: Volunteer
+    htmlContent: >-
+      Do you want to phone bank, knock on doors, or text voters on behalf of our
+      candidates? Do you have any special skills in art, graphic design, film,
+      or something else that you’d like to contribute? Let us know!
+    moreButtonText: Volunteer
+    moreButtonUrl: /volunteer
+    subheader: Our grassroots campaigns are powered by people like you.
 ---
 
