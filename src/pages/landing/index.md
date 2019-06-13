@@ -1,9 +1,9 @@
 ---
 templateKey: landing-page
 title: Justice Democrats
-bannerBackgroundImg: /img/jd_site_home_cr2020_background_1920x1980_test.jpg
-bannerTextImg: /img/jd_site_home_cr2020_background_1920x1980_test.jpg
-boldHeader: "It’s #OurTime. Join us."
+bannerBackgroundImg: /img/jd_2020launch_061319_cisneros_site_homebanner_1920x1080.jpg
+bannerTextImg: /img/jd_2020launch_061319_cisneros_site_homebanner_1920x1080.jpg
+boldHeader: 'It’s #OurTime. Join us.'
 boldSubheader: >-
   The Democratic Party needs to fight back. But the corporate wing of the party
   keeps getting in the way.
@@ -25,33 +25,33 @@ firstCalloutText: >-
   leadership 
 
   in the Democratic Party that will represent and fight for our communities.
-issuesIntro: "A Party for Voters, Not Donors"
+issuesIntro: 'A Party for Voters, Not Donors'
+youtubeVideo: 'https://www.youtube.com/embed/Gcqoo0Jn18A'
 primaryIssues:
   - color: pink
     image: /img/jd_site_policy_icon_2_rights_nov18_rev.svg
     text: Medicare for All
-    url: "/issues#rights"
+    url: '/issues#rights'
   - color: aqua
     image: /img/jd_site_policy_icon_1_growth_nov18_rev.svg
     text: Green New Deal
-    url: "/issues#economy"
+    url: '/issues#economy'
   - color: blue
     image: /img/jd_site_policy_icon_3_democracy_nov18.svg
     text: Racial Justice
-    url: "/issues#democracy"
+    url: '/issues#democracy'
 jdHighlightHeader: THIS SECTION GOES AWAY
 jdHighlightText: THIS SECTION GOES AWAY
 jdHighlightIcon: /img/products-grid1.jpg
-youtubeVideo: "https://www.youtube.com/embed/Gcqoo0Jn18A"
 blocks:
   - alignment: left
     bannerButtonText: Nominate
     bannerButtonUrl: /nominate
     bannerImageUrl: /img/jd_site_home_calloutbanner_1_aoc_1920x540_111518.jpg
     bannerText: The Next Ocasio-Cortez
-    calloutIcon: ""
-    calloutText: ""
-    header: "Elect a new generation of diverse, working-class Democrats"
+    calloutIcon: ''
+    calloutText: ''
+    header: 'Elect a new generation of diverse, working-class Democrats'
     htmlContent: >-
       **We recruited and helped Alexandria pull off one of the biggest upsets in
       American history.** But the top of the Democratic Party is still
@@ -71,7 +71,7 @@ blocks:
     bannerButtonText: Join Us
     bannerButtonUrl: /
     bannerImageUrl: /img/jd_site_home_calloutbanner_2_support_1920x540_111518.jpg
-    bannerText: "350,000+ Supporters"
+    bannerText: '350,000+ Supporters'
     calloutIcon: /img/jd_site_home_icon_4jds_mini_350x200.png
     calloutText: >-
       "Polling data demonstrates the Democratic Party’s base of voters are ready
@@ -84,6 +84,7 @@ blocks:
       policies like Medicare For All, free public college, and marijuana
       legalization are popular with voters. It’s time to fight for them.
     moreButtonText: Read The Report
-    moreButtonUrl: "https://www.futureoftheparty.com"
-    subheader: "A bold, progressive vision — policies to transform America."
+    moreButtonUrl: 'https://www.futureoftheparty.com'
+    subheader: 'A bold, progressive vision — policies to transform America.'
 ---
+
