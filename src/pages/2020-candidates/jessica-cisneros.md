@@ -3,7 +3,7 @@ title: Jessica Cisneros
 templateKey: 2020-candidate-fragment
 firstName: Jessica
 lastName: Cisneros
-district: TX-28
+district: '28'
 state: TX
 electionDate: '2019-08-15'
 electionType: primary
