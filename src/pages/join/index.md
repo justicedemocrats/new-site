@@ -3,7 +3,7 @@ templateKey: ignore-fragment
 uniq: join-page
 bgimg: /img/jd_2020_launch_061319_jdsplash_backgroundtexture_1920x1080.jpg
 title: Join
-headerImage: /img/jd_site_splash_ourtime_header_800x200_111618.png
+headerImage: /img/jd_2020_launch_061319_jdsplash_headlinegraphic_800x200_hir.png
 subhed: >-
   It's time to usher in a new generation of diverse working class leaders into
   the Democratic Party. A Democratic Party that fights for its voters, not just
