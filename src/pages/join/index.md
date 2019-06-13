@@ -9,7 +9,7 @@ subhed: >-
   Jessica Cisneros in TX-28. She’s taking on Trump’s favorite Democrat. Let’s
   fight for a Democratic Party that fights for its voters, not corporate donors.
 textureImg: /img/jd_2020_launch_061319_jdsplash_backgroundtexture_1920x1080.jpg
-youtubeVideo: 'https://www.youtube.com/embed/Gcqoo0Jn18A'
+youtubeVideo: 'https://www.youtube.com/embed/Xpz2TvXA05c'
 ---
 
 - Medicare For All
