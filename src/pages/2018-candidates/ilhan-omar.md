@@ -3,14 +3,14 @@ title: Ilhan Omar
 templateKey: 2018-candidate-fragment
 firstName: Ilhan
 lastName: Omar
-district: "05"
+district: '05'
 state: MN
-electionDate: "2018-11-06"
+electionDate: '2018-11-06'
 electionType: general
 office: house
-incumbent: false
-website: "https://www.ilhanomar.com"
-donationLink: "https://secure.actblue.com/donate/ilhanjd"
+incumbent: true
+website: 'https://www.ilhanomar.com'
+donationLink: 'https://secure.actblue.com/donate/ilhanjd'
 outcome: Won
 image: /img/jd_site_ilhanomar_550x600_071718.jpg
 blurb: >-
@@ -23,3 +23,4 @@ blurb: >-
   for many years, advancing important issues like educational access,
   environmental protection, and racial equity.
 ---
+
