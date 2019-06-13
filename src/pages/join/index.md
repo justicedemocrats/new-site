@@ -1,7 +1,7 @@
 ---
 templateKey: ignore-fragment
 uniq: join-page
-bgimg: /img/jd_site_splash_background_1920x980_111618_mid.jpg
+bgimg: /img/jd_2020_launch_061319_jdsplash_backgroundtexture_1920x1080.jpg
 title: Join
 headerImage: /img/jd_site_splash_ourtime_header_800x200_111618.png
 subhed: >-
