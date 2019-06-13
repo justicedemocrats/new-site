@@ -9,10 +9,14 @@ electionDate: '2019-08-15'
 electionType: primary
 office: house
 incumbent: false
-website: 'https://google.com?q=TODO'
-donationLink: 'https://google.com?q=Donate'
+website: 'https://jessicacisnerosforcongress.com'
+donationLink: 'https://jessicacisnerosforcongress.com/donate'
 outcome: Unknown
 image: /img/chemex.jpg
-blurb: Hey!
+blurb: >-
+  Jessica Cisneros is an immigration and human rights attorney. As the proud
+  daughter of Mexican immigrants and a human rights lawyer, Jessica is fighting
+  to build an America for all of us -- no matter who we are, or where we come
+  from.
 ---
 
