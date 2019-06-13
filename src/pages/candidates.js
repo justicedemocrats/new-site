@@ -89,26 +89,27 @@ export class CandidatePageTemplate extends React.Component {
               </div>
             </div>
           </div>
-          <div className="page-container">
-            <div className="extra-bold-m about-section-title">
-              <span className="dark-blue-color"> Our </span>
-              <span className="orange-color"> Challengers </span>
-            </div>
-            <div className="divider" />
-            <div className="candidates">
-              {sortFunctions[this.state.sortFunction](candidates).map(
-                (props, i) => (
-                  <Candidate
-                    key={i}
-                    {...props}
-                    hideDonate={false}
-                    defaultExpanded={true}
-                  />
-                )
-              )}
-            </div>
+        </div>
+        <div className="page-container">
+          <div className="extra-bold-m about-section-title">
+            <span className="dark-blue-color"> Our </span>
+            <span className="orange-color"> Challengers </span>
           </div>
-          {/* <div className="page-container">
+          <div className="divider" />
+          <div className="candidates">
+            {sortFunctions[this.state.sortFunction](candidates).map(
+              (props, i) => (
+                <Candidate
+                  key={i}
+                  {...props}
+                  hideDonate={false}
+                  defaultExpanded={true}
+                />
+              )
+            )}
+          </div>
+        </div>
+        {/* <div className="page-container">
           <div className="row candidate-intro-section">
             <div
               className="four columns extra-bold-m light-blue-color"
@@ -129,25 +130,24 @@ export class CandidatePageTemplate extends React.Component {
             </div>
           </div>
         </div> */}
-          <div className="page-container">
-            <div className="extra-bold-m about-section-title">
-              <span className="dark-blue-color"> Our </span>
-              <span className="orange-color"> Incumbents </span>
-            </div>
-            <div className="divider" />
+        <div className="page-container">
+          <div className="extra-bold-m about-section-title">
+            <span className="dark-blue-color"> Our </span>
+            <span className="orange-color"> Incumbents </span>
+          </div>
+          <div className="divider" />
 
-            <div className="candidates">
-              {sortFunctions[this.state.sortFunction](incumbentCandidates).map(
-                (props, i) => (
-                  <Candidate
-                    key={i}
-                    {...props}
-                    hideDonate={false}
-                    defaultExpanded={true}
-                  />
-                )
-              )}
-            </div>
+          <div className="candidates">
+            {sortFunctions[this.state.sortFunction](incumbentCandidates).map(
+              (props, i) => (
+                <Candidate
+                  key={i}
+                  {...props}
+                  hideDonate={false}
+                  defaultExpanded={true}
+                />
+              )
+            )}
           </div>
         </div>
       </div>
