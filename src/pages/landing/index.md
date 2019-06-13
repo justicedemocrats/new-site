@@ -86,7 +86,7 @@ blocks:
     moreButtonText: Read The Report
     moreButtonUrl: 'https://www.futureoftheparty.com'
     subheader: 'A bold, progressive vision — policies to transform America.'
-  - alignment: right
+  - alignment: center
     bannerButtonText: JOIN US
     bannerButtonUrl: /volunteer
     bannerImageUrl: /img/jd_site_volunteer_banner_1920x540_061219.jpg
