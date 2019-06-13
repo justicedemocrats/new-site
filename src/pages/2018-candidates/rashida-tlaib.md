@@ -3,14 +3,14 @@ title: Rashida Tlaib
 templateKey: 2018-candidate-fragment
 firstName: Rashida
 lastName: Tlaib
-district: "13"
+district: '13'
 state: MI
-electionDate: "2018-11-06"
+electionDate: '2018-11-06'
 electionType: general
 office: house
-incumbent: false
-website: "https://www.rashidaforcongress.com/"
-donationLink: "https://secure.actblue.com/donate/jdrashida"
+incumbent: true
+website: 'https://www.rashidaforcongress.com/'
+donationLink: 'https://secure.actblue.com/donate/jdrashida'
 outcome: Won
 image: /img/jd_site_rashidatlaib_550x600_061218.jpg
 blurb: >-
@@ -21,3 +21,4 @@ blurb: >-
   across the entire district and spread her message of fighting for Medicare for
   All, protecting the environment, and ending corporate welfare.
 ---
+
