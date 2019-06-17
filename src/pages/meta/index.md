@@ -53,7 +53,7 @@ ctaBody: |-
   ✅ Let's recruit a grassroots progressive challenger
 ctaText: Support Our Challenge
 ctaUrl: 'https://secure.actblue.com/donate/cuellarprimaryfund?refcode=cuellarmodalpopup'
-launchModeEnabled: true
+launchModeEnabled: false
 launchingCandidateName: Jessica Cisneros
 launchingCandidateDonateUrl: 'https://secure.actblue.com/donate/jessica-goal?refcode=jdsignup'
 ---
