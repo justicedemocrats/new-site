@@ -9,7 +9,7 @@ subhed: >-
   Jamaal Brown in NY-16. It's time for a Democrat in NY-16 who will fight for
   jobs and education, not bombs and incarceration.
 textureImg: /img/jd_2020_launch_061319_jdsplash_backgroundtexture_1920x1080.jpg
-youtubeVideo: 'https://www.youtube.com/embed/Xpz2TvXA05c'
+youtubeVideo: 'https://www.youtube.com/embed/VnGn4sc_QVQ'
 ---
 
 - Medicare For All
