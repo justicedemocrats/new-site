@@ -9,7 +9,7 @@ subhed: >-
   Jamaal Bowman in NY-16. It's time for a Democrat in NY-16 who will fight for
   jobs and education, not bombs and incarceration.
 textureImg: /img/jd_2020_launch_061319_jdsplash_backgroundtexture_1920x1080.jpg
-youtubeVideo: 'https://www.youtube.com/embed/VnGn4sc_QVQ'
+youtubeVideo: 'https://www.youtube.com/embed/Gcqoo0Jn18A'
 ---
 
 - Medicare For All
