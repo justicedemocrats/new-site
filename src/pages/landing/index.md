@@ -40,7 +40,7 @@ primaryIssues:
     image: /img/jd_site_policy_icon_3_democracy_nov18.svg
     text: Racial Justice
     url: '/issues#democracy'
-jdHighlightHeader: THIS SECTION GOES AWAY
+jdHighlightHeader: THIS SECTION GOES AWAY AWAY
 jdHighlightText: THIS SECTION GOES AWAY
 jdHighlightIcon: /img/products-grid1.jpg
 blocks:
