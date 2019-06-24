@@ -5,9 +5,9 @@ bgimg: /img/jd_2020_launch_061319_jdsplash_backgroundtexture_1920x1080.jpg
 title: Join
 headerImage: /img/jd_site_splash_ourtime_header_800x200_111618.png
 subhed: >-
-  We’re proud to announce our second primary challenger and candidate of 2020:
-  Jamaal Bowman in NY-16. It's time for a Democrat in NY-16 who will fight for
-  jobs and education, not bombs and incarceration.
+  It's time to usher in a new generation of diverse working class leaders into
+  the Democratic Party. A Democratic Party that fights for its voters, not just
+  corporate donors.
 textureImg: /img/jd_2020_launch_061319_jdsplash_backgroundtexture_1920x1080.jpg
 youtubeVideo: 'https://www.youtube.com/embed/Gcqoo0Jn18A'
 ---
