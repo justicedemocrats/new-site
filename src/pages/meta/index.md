@@ -12,7 +12,7 @@ address: 'Justice Democrats, P.O Box 910, Knoxville, TN 37901'
 quickLinks:
   - text: Privacy Policy
     url: >-
-      https://docs.google.com/document/d/15psoGoFvJ12jRVT-qIHFTHle805KUm6PZXBt9hgSpdo/edit
+      https://docs.google.com/document/d/1xpvMuQ24IfKX9VgK_ieWqP0qNpeJF1Xww3Wx7VoGqBQ/edit
   - text: Nomination Quick Reference Guide
     url: >-
       https://docs.google.com/document/d/10rxLBisP6kE8bWM-47_y-G7frgLPYU66BuMI9LmZgm0/edit
