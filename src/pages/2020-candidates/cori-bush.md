@@ -10,7 +10,7 @@ electionType: primary
 office: house
 incumbent: false
 website: 'https://coribush.org'
-donationLink: 'https://secure.actblue.com/donate/supportcori2020?refcode=jdsite'
+donationLink: 'https://secure.actblue.com/donate/jd-cori'
 outcome: Unknown
 image: /img/jd_site_coribush_550x600_061218.jpg
 blurb: >-
