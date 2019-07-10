@@ -10,8 +10,7 @@ electionType: primary
 office: house
 incumbent: false
 website: 'https://www.marienewmanforcongress.com'
-donationLink: >-
-  https://secure.actblue.com/contribute/page/marienewmanforcongress?refcode=jdwebsite&amount=25&recurring=1
+donationLink: 'https://secure.actblue.com/donate/jd-marie'
 outcome: Unknown
 image: /img/jd_site_marienewman_550x600_070919.jpg
 blurb: >-
