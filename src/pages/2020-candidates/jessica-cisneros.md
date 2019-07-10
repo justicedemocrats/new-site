@@ -10,7 +10,7 @@ electionType: primary
 office: house
 incumbent: false
 website: 'https://jessicacisnerosforcongress.com'
-donationLink: 'https://jessicacisnerosforcongress.com/donate'
+donationLink: 'https://secure.actblue.com/donate/jessica-goal'
 outcome: Unknown
 image: /img/jd_site_jessicacisneros_550x600_061219.jpg
 blurb: >-
