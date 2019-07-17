@@ -61,6 +61,8 @@ const IndexPage = ({ data }) => {
     bannerUrl
   } = data.landingPage.edges[0].node.frontmatter;
 
+  console.log(data.landingPage.edges[0].node.frontmatter);
+
   const {
     launchModeEnabled,
     launchingCandidateName,
@@ -339,6 +341,7 @@ export const pageQuery = graphql`
             title
             bannerBackgroundImg
             bannerTextImg
+            bannerUrl
             boldHeader
             boldSubheader
             introContent
