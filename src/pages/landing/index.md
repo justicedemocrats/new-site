@@ -1,7 +1,8 @@
 ---
 templateKey: landing-page
 title: Justice Democrats
-bannerBackgroundImg: /img/jd_site_home_cr2020_background_1920x1980_test.jpg
+bannerBackgroundImg: /img/jd2020_woajuly_site_home_1920x1080_a.jpg
+bannnerUrl: 'https://go.justicedemocrats.com/survey/WoA-sign/?refcode=home-banner'
 bannerTextImg: /img/jd_site_home_cr2020_background_1920x1980_test.jpg
 boldHeader: 'It’s #OurTime. Join us.'
 boldSubheader: >-
