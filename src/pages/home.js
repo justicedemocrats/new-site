@@ -57,7 +57,8 @@ const IndexPage = ({ data }) => {
     firstCalloutIcon,
     firstCalloutText,
     issuesIntro,
-    youtubeVideo
+    youtubeVideo,
+    bannerUrl
   } = data.landingPage.edges[0].node.frontmatter;
 
   const {
@@ -66,9 +67,23 @@ const IndexPage = ({ data }) => {
     launchingCandidateDonateUrl
   } = data.metas.edges[0].node.frontmatter;
 
+  const BannerContainerDiv = props =>
+    bannerUrl ? (
+      <a
+        style={{ display: "block" }}
+        href={bannerUrl}
+        className="home-banner"
+        target="_blank"
+      >
+        {props.children}
+      </a>
+    ) : (
+      <div className="home-banner"> {props.children} </div>
+    );
+
   return (
     <div style={{ paddingLeft: 0, paddingRight: 0 }}>
-      <div className="home-banner">
+      <BannerContainerDiv>
         <img
           src={bannerBackgroundImg}
           style={{ width: "100%", position: "absolute" }}
@@ -126,7 +141,7 @@ const IndexPage = ({ data }) => {
             )}
           </form>
         </Mobile>
-      </div>
+      </BannerContainerDiv>
 
       <div
         className="block-body container"
