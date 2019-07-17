@@ -3,13 +3,13 @@ templateKey: ignore-fragment
 uniq: join-page
 bgimg: /img/jd_2020_launch_061319_jdsplash_backgroundtexture_1920x1080.jpg
 title: Join
-headerImage: /img/jd_2020_launch_061319_jdsplash_headlinegraphic_800x200_hir.png
+headerImage: /img/jd_site_splash_ourtime_header_800x200_111618.png
 subhed: >-
-  We’re proud to announce our first primary challenger and candidate of 2020:
-  Jessica Cisneros in TX-28. She’s taking on Trump’s favorite Democrat. Let’s
-  fight for a Democratic Party that fights for its voters, not corporate donors.
+  It's time to usher in a new generation of diverse working class leaders into
+  the Democratic Party. A Democratic Party that fights for its voters, not just
+  corporate donors.
 textureImg: /img/jd_2020_launch_061319_jdsplash_backgroundtexture_1920x1080.jpg
-youtubeVideo: 'https://www.youtube.com/embed/Xpz2TvXA05c'
+youtubeVideo: 'https://www.youtube.com/embed/Gcqoo0Jn18A'
 ---
 
 - Medicare For All

@@ -7,12 +7,12 @@ paidForMessage: >-
 copyright: ©2019 Justice Democrats
 generalEmail: us@justicedemocrats.com
 pressEmail: press@justicedemocrats.com
-phone: (865) 245-9567
+phone: 865-408-7313
 address: 'Justice Democrats, P.O Box 910, Knoxville, TN 37901'
 quickLinks:
   - text: Privacy Policy
     url: >-
-      https://docs.google.com/document/d/15psoGoFvJ12jRVT-qIHFTHle805KUm6PZXBt9hgSpdo/edit
+      https://docs.google.com/document/d/1xpvMuQ24IfKX9VgK_ieWqP0qNpeJF1Xww3Wx7VoGqBQ/edit
   - text: Nomination Quick Reference Guide
     url: >-
       https://docs.google.com/document/d/10rxLBisP6kE8bWM-47_y-G7frgLPYU66BuMI9LmZgm0/edit
@@ -53,8 +53,8 @@ ctaBody: |-
   ✅ Let's recruit a grassroots progressive challenger
 ctaText: Support Our Challenge
 ctaUrl: 'https://secure.actblue.com/donate/cuellarprimaryfund?refcode=cuellarmodalpopup'
-launchModeEnabled: true
-launchingCandidateName: Jessica Cisneros
-launchingCandidateDonateUrl: 'https://secure.actblue.com/donate/jessica-goal?refcode=jdsignup'
+launchModeEnabled: false
+launchingCandidateName: Jamaal Bowman
+launchingCandidateDonateUrl: 'https://secure.actblue.com/donate/jdjamaal-launch?refcode=jd-site'
 ---
 

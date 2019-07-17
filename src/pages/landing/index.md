@@ -1,8 +1,8 @@
 ---
 templateKey: landing-page
 title: Justice Democrats
-bannerBackgroundImg: /img/jd_2020launch_061319_cisneros_site_homebanner_1920x1080.jpg
-bannerTextImg: /img/jd_2020launch_061319_cisneros_site_homebanner_1920x1080.jpg
+bannerBackgroundImg: /img/jd_site_home_cr2020_background_1920x1980_test.jpg
+bannerTextImg: /img/jd_site_home_cr2020_background_1920x1980_test.jpg
 boldHeader: 'It’s #OurTime. Join us.'
 boldSubheader: >-
   The Democratic Party needs to fight back. But the corporate wing of the party
@@ -40,7 +40,7 @@ primaryIssues:
     image: /img/jd_site_policy_icon_3_democracy_nov18.svg
     text: Racial Justice
     url: '/issues#democracy'
-jdHighlightHeader: THIS SECTION GOES AWAY
+jdHighlightHeader: THIS SECTION GOES AWAY AWAY
 jdHighlightText: THIS SECTION GOES AWAY
 jdHighlightIcon: /img/products-grid1.jpg
 blocks:
