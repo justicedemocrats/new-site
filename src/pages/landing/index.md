@@ -2,7 +2,7 @@
 templateKey: landing-page
 title: Justice Democrats
 bannerBackgroundImg: /img/jd_site_home_cr2020_background_1920x1980_test.jpg
-bannerUrl: 'https://www.justicedemocrats.com/candidates'
+bannerUrl: ''
 bannerTextImg: /img/jd_site_home_cr2020_background_1920x1980_test.jpg
 boldHeader: 'It’s #OurTime. Join us.'
 boldSubheader: >-
