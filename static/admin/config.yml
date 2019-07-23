@@ -454,7 +454,12 @@ collections:
               name: "bannerBackgroundImg",
               widget: "image",
             }
-          - { label: "Banner Url", name: "bannerUrl", widget: "string" }
+          - {
+              label: "Banner Url",
+              name: "bannerUrl",
+              widget: "string",
+              required: false,
+            }
           - {
               label: "Banner Text Image",
               name: "bannerTextImg",
