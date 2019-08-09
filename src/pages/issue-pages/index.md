@@ -66,9 +66,9 @@ sections:
           Corporations dodge $450 billion a year in taxes by using offshore tax
           havens. We should end this injustice, as well as chain the capital
           gains tax to the income tax, increase the estate tax, and implement
-          the Buffet Rule so that no millionaire CEO pays less in taxes than his
-          or her secretary. It’s time for a tax system that benefits the middle
-          class and the poor, and makes the top 1% and multinational
+          the Buffett Rule so that no millionaire CEO pays less in taxes than
+          his or her secretary. It’s time for a tax system that benefits the
+          middle class and the poor, and makes the top 1% and multinational
           corporations pay their fair share.
         title: End Tax Dodging and Loopholes
       - contents: >-
