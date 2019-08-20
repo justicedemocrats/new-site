@@ -33,6 +33,10 @@ $jd-sans: Montserrat, sans-serif;
   color: white !important;
 }
 
+.light-blue-bg:hover {
+  background-color: $jd-dark-blue !important;
+}
+
 .caps {
   text-transform: uppercase;
 }
