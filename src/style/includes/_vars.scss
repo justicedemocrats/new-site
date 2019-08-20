@@ -13,6 +13,11 @@ $jd-light-blue: #6fccdd;
 // Font definitions
 $jd-sans: Montserrat, sans-serif;
 
+::selection {
+  background: $jd-dark-blue;
+  color: white;
+}
+
 @mixin orange-bg {
   background-color: $jd-orange;
   color: white;
