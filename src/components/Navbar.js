@@ -72,9 +72,10 @@ class Navbar extends React.Component {
               </a>
             </div>
             <div className="navbar-hanger">
-              {links.map(({ display, href, children }) => (
+              {links.map(({ display, href, children }, i) => (
                 <div
                   className={`hanger-link-container ${display.toLowerCase()}`}
+                  key={"nav-link-" + i}
                 >
                   <DesktopNavLink display={display} href={href} />
 
@@ -83,6 +84,7 @@ class Navbar extends React.Component {
                       {...child}
                       isChild={true}
                       heightOffset={(idx + 1) * 50}
+                      key={"nav-link-op-" + idx}
                     />
                   ))}
                 </div>
@@ -103,15 +105,15 @@ class Navbar extends React.Component {
               onStateChange={this.handleMenuChange}
               isOpen={this.state.open}
             >
-              {links.map(({ display, href, children }) => (
-                <div onClick={this.closeMenu}>
+              {links.map(({ display, href, children }, linkIndex) => (
+                <div onClick={this.closeMenu} key={"mobile-nav-link-" + linkIndex}>
                   <MobileNavLink display={display} href={href} />
-
-                  {(children || []).map(child => (
+                  {(children || []).map((child, optionIndex) => (
                     <MobileNavLink
                       display={child.display}
                       href={child.href}
                       isChild={true}
+                      key={"mobile-nav-link-op-" + optionIndex}
                     />
                   ))}
                 </div>
