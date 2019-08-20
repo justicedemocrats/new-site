@@ -2,10 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { HTMLContent } from '../components/Content'
 import Responsive from 'react-responsive'
-require('../style/home-block.scss')
+import '../style/home-block.scss'
 
-const Mobile = props => <Responsive {...props} maxWidth={767} />
-const Default = props => <Responsive {...props} minWidth={768} />
+const Mobile = props => <Responsive {...props} maxWidth={767} />;
+const Default = props => <Responsive {...props} minWidth={768} />;
 
 export default ({
   alignment,
@@ -42,12 +42,12 @@ export default ({
         className="block-content-button button orange-bg button-text full-width-button medium-m"
       >
         {moreButtonText}
-      </Link>
+      </Link>;
 
-  const bannerTextWords = bannerText.split(' ')
-  const midwayPoint = Math.ceil(bannerTextWords.length / 2)
-  const beggingBannerText = bannerTextWords.slice(0, midwayPoint).join(' ')
-  const endBannerText = bannerTextWords.slice(midwayPoint).join(' ')
+  const bannerTextWords = bannerText.split(' ');
+  const midwayPoint = Math.ceil(bannerTextWords.length / 2);
+  const beggingBannerText = bannerTextWords.slice(0, midwayPoint).join(' ');
+  const endBannerText = bannerTextWords.slice(midwayPoint).join(' ');
 
   return (
     <section className="home-block">
@@ -111,7 +111,7 @@ export default ({
           {calloutText &&
             <div className="callout-container">
               <Default>
-                <img src={calloutIcon} style={{ height: 60 }} />
+                <img alt="section-image" src={calloutIcon} style={{ height: 60 }} />
               </Default>
               <div className="bold-m callout-b">{calloutText}</div>
             </div>}

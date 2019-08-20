@@ -18,7 +18,7 @@ export default class Plank extends React.Component {
   };
 
   componentWillMount() {
-    if (this.props.index == 0) {
+    if (this.props.index === 0) {
       this.state.open = true;
     }
   }
