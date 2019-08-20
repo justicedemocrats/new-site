@@ -86,19 +86,7 @@ class Navbar extends React.Component {
               <a
                 href="/donate"
                 target="_blank"
-                style={{
-                  width: 150,
-                  display: "block",
-                  textDecoration: "none",
-                  color: "white",
-                  padding: 10,
-                  textTransform: "uppercase",
-                  height: "100%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center"
-                }}
-                className="light-blue-bg bold-m"
+                className="light-blue-bg bold-m navbar-donate-button"
               >
                 <div> Donate </div>
               </a>

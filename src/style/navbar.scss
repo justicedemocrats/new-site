@@ -49,6 +49,17 @@
       filter: brightness(0.4);
     }
   }
+  .navbar-donate-button {
+    width: 150px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .navbar-hanger {
@@ -229,7 +240,7 @@ ul.splash-navbar {
     border: none;
   }
 
-  &::hover {
+  &:hover {
     background-color: $jd-light-blue;
     color: white;
   }
