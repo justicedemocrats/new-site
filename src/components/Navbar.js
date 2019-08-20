@@ -37,34 +37,14 @@ class Navbar extends React.Component {
 
   render() {
     const { path } = this.props;
-
-    if (path == "/" || path == "") {
+    if (path === "/" || path === "") {
       return (
         <div className="navbar" style={{ position: "fixed" }}>
           <div className="navbar desktop">
-            <Default>
-              <div className="nav-social-container">
-                {/* <TwitterButton />
-              <FacebookButton /> */}
-              </div>
-            </Default>
             <HeaderLogo />
             <Link
               to="/home"
-              style={{
-                width: 150,
-                display: "block",
-                textDecoration: "none",
-                color: "white",
-                padding: 10,
-                textTransform: "uppercase",
-                height: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                marginLeft: 10
-              }}
-              className="orange-bg bold-m"
+              className="orange-bg bold-m navbar-enter-button"
             >
               <div style={{ textAlign: "center" }}> Enter Site </div>
             </Link>
@@ -88,7 +68,7 @@ class Navbar extends React.Component {
                 target="_blank"
                 className="light-blue-bg bold-m navbar-donate-button"
               >
-                <div> Donate </div>
+                <div>Donate</div>
               </a>
             </div>
             <div className="navbar-hanger">
