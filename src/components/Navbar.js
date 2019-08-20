@@ -40,7 +40,7 @@ class Navbar extends React.Component {
 
     if (path == "/" || path == "") {
       return (
-        <div className="navbar" style={{ osition: "fixed" }}>
+        <div className="navbar" style={{ position: "fixed" }}>
           <div className="navbar desktop">
             <Default>
               <div className="nav-social-container">
