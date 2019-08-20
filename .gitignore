@@ -10,3 +10,11 @@ yarn-error.log
 secrets/
 .env
 *.orig
+.idea/codeStyles/codeStyleConfig.xml
+.idea/codeStyles/Project.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/new-site.iml
+.idea/vcs.xml
+.idea/workspace.xml
