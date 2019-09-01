@@ -224,7 +224,7 @@ export default class Question extends React.Component {
 
             {value &&
               value.map((v, idx) => (
-                <div style={{ display: "flex" }}>
+                <div style={{ display: "flex" }} key={`${idx}-name`}>
                   <div>
                     <label> Name </label>
                     <input

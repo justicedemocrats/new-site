@@ -25,7 +25,7 @@ export default ({
     right: 'flex-end',
     center: 'center',
     left: 'flex-start',
-  }
+  };
 
   const linkComponent = moreButtonUrl.startsWith('https://')
     ? <a

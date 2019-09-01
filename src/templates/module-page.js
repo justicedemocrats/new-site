@@ -88,8 +88,9 @@ class ModulePageTemplate extends React.Component {
                 style={{ textAlign: "left" }}
                 className="center-contents-column"
               >
-                {questions.map(q => (
+                {questions.map((q, i) => (
                   <Question
+                    key={i}
                     question={q}
                     setData={this.setData(q.name)}
                     value={this.state.data[q.name]}

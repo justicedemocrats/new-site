@@ -64,13 +64,13 @@ export class CandidatePageTemplate extends React.Component {
         <div className="page-container">
           <div className="candidate-intro-section row">
             <div className="six columns stat-container">
-              {stats.map(({ title, count }) => {
+              {stats.map(({ title, count }, i) => {
                 const split = title.split(" ");
                 const first = split.slice(0, split.length - 1).join(" ");
                 const last = split[split.length - 1];
 
                 return (
-                  <div className="stat">
+                  <div className="stat" key={i}>
                     <span className="light-m light-blue-color"> {first} </span>
                     <span className="bold-m light-blue-color"> {last} </span>
                     <span className="light-m light-blue-color"> = </span>

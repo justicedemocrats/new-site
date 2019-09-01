@@ -33,8 +33,8 @@ const AboutPageTemplate = ({
           </div>
 
           <div className="leadership-container">
-            {leadership.map(({ name, title, headshot }) => (
-              <div className="leader">
+            {leadership.map(({ name, title, headshot }, i) => (
+              <div className="leader" key={i}>
                 <img src={headshot} />
                 <div className="leader-info">
                   <div className="leader-name extra-bold-m">{name}</div>
@@ -78,13 +78,13 @@ const AboutPageTemplate = ({
             <span className="orange-color"> FAQs </span>
           </div>
 
-          {sections.map(({ title, items }) => (
-            <div>
+          {sections.map(({ title, items }, i) => (
+            <div key={i}>
               <div className="faq-section-title dark-blue-color extra-bold-m">
                 {title}
               </div>
-              {items.map(({ question, answer }) => (
-                <div style={{ marginTop: 10, marginBottom: 10, fontSize: 14 }}>
+              {items.map(({ question, answer }, i) => (
+                <div key={i} style={{ marginTop: 10, marginBottom: 10, fontSize: 14 }}>
                   <div className="question standard-text bold-m">
                     {question}
                   </div>
