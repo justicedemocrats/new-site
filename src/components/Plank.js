@@ -12,9 +12,10 @@ export default class Plank extends React.Component {
   open = ev => {
     ev.stopPropagation();
     this.setState({ open: true });
-    analytics.track("Issue - Expanded", {
-      issue: this.props.title
-    });
+    if(typeof analytics !== 'undefined'){
+      analytics.track("Issue - Expanded", {
+        issue: this.props.title
+      });}
   };
 
   componentWillMount() {
@@ -27,10 +28,11 @@ export default class Plank extends React.Component {
     const { title, contents } = this.props;
 
     return (
-      <div className="plank" onClick={this.state.open ? this.close : this.open}>
-        <div
+      <div className="plank">
+        <button type="button"
           className="extra-bold-m dark-blue-color plank-title"
           style={{ textTransform: "uppercase" }}
+          onClick={this.state.open ? this.close : this.open}
         >
           {this.state.open ? (
             <div onClick={this.close} style={{ width: 30 }}>
@@ -45,7 +47,7 @@ export default class Plank extends React.Component {
           )}
 
           <div style={{ width: "calc(100% - 30px)" }}>{title}</div>
-        </div>
+        </button>
 
         {this.state.open && (
           <div style={{ fontSize: 18, marginBottom: 20 }}>
