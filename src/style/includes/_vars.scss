@@ -8,10 +8,17 @@ $jd-text-gray: #575a5f;
 // New colors 11/15
 $jd-dark-blue: #00769c;
 $jd-orange: #d5176e;
+$jd-orange-dark: #ad1058;
+$jd-orange-darker: #7a0b3e;
 $jd-light-blue: #6fccdd;
 
 // Font definitions
 $jd-sans: Montserrat, sans-serif;
+
+::selection {
+  background: $jd-dark-blue;
+  color: white;
+}
 
 @mixin orange-bg {
   background-color: $jd-orange;
@@ -23,6 +30,14 @@ $jd-sans: Montserrat, sans-serif;
   color: white !important;
 }
 
+.button-text.orange-bg:hover{
+  background-color: $jd-orange-dark !important;
+}
+
+.button-text.orange-bg:active{
+  background-color: $jd-orange-darker !important;
+}
+
 .dark-blue-bg {
   background-color: $jd-dark-blue !important;
   color: white !important;
@@ -31,6 +46,10 @@ $jd-sans: Montserrat, sans-serif;
 .light-blue-bg {
   background-color: $jd-light-blue !important;
   color: white !important;
+}
+
+.light-blue-bg:hover {
+  background-color: $jd-dark-blue !important;
 }
 
 .caps {

@@ -5,15 +5,15 @@ const officeTypeMap = {
   governor: 'GOV',
   senate: 'SN',
   'lieutenant-governor': 'LTGOV',
-}
+};
 
 const electionTypeMap = {
   fake: 'FAKE',
   primary: 'Primary',
-}
+};
 
 export default class CarouselCandidate extends React.Component {
-  state = { expanded: false }
+  state = { expanded: false };
 
   render() {
     const {
@@ -25,12 +25,12 @@ export default class CarouselCandidate extends React.Component {
       image,
       office,
       electionType,
-    } = this.props
+    } = this.props;
 
-    let ed = new Date(electionDate)
-    let [d, m] = [ed.getDate(), ed.getMonth()]
-    m = m + 1
-    d = d + 1
+    let ed = new Date(electionDate);
+    let [d, m] = [ed.getDate(), ed.getMonth()];
+    m = m + 1;
+    d = d + 1;
 
     return (
       <div className="carousel-candidate">

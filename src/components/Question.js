@@ -112,14 +112,14 @@ export default class Question extends React.Component {
               onChange={setData}
               value={value}
             >
-              {states[otherData.State] == "00" && (
+              {states[otherData.State] === "00" && (
                 <option value="00"> AL </option>
               )}
               {typeof states[otherData.State] == "string" ? (
                 new Array(parseInt(states[otherData.State]) + 1)
                   .fill(null)
                   .map((_, idx) =>
-                    idx == 0 ? (
+                    idx === 0 ? (
                       <option value=""> </option>
                     ) : (
                       <option value={`${idx}`.padStart(2, "0")}>
@@ -224,7 +224,7 @@ export default class Question extends React.Component {
 
             {value &&
               value.map((v, idx) => (
-                <div style={{ display: "flex" }}>
+                <div style={{ display: "flex" }} key={`${idx}-name`}>
                   <div>
                     <label> Name </label>
                     <input

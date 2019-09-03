@@ -30,7 +30,7 @@ export default class CtaModal extends Component {
     this.go();
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState,snapshot) {
     this.go();
   }
 
@@ -95,7 +95,7 @@ export default class CtaModal extends Component {
           </div>
 
           <a href={ctaUrl} target="_blank">
-            <img src={ctaImage} style={{ width: "100%" }} />
+            <img alt={"cta"} src={ctaImage} style={{ width: "100%" }} />
           </a>
         </div>
       </Modal>

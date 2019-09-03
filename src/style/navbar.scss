@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center !important;
-  width: 100vw;
+  width: 100%;
   height: 50px;
   min-height: auto !important;
   z-index: 100000;
@@ -45,6 +45,20 @@
       width: 30px;
       height: 30px;
     }
+    .nav-social:hover {
+      filter: brightness(0.4);
+    }
+  }
+  .navbar-donate-button, .navbar-enter-button {
+    width: 150px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -81,9 +95,9 @@
   .hanger-link {
     color: white;
     text-transform: uppercase;
-    padding-left: 25px;
-    padding-right: 25px;
-    height: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -226,7 +240,7 @@ ul.splash-navbar {
     border: none;
   }
 
-  &::hover {
+  &:hover {
     background-color: $jd-light-blue;
     color: white;
   }
