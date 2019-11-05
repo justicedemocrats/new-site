@@ -16,6 +16,9 @@ quickLinks:
   - text: Privacy Policy
     url: >-
       https://docs.google.com/document/d/1xpvMuQ24IfKX9VgK_ieWqP0qNpeJF1Xww3Wx7VoGqBQ/edit
+  - text: Jobs
+    url: >-
+      https://docs.google.com/document/d/1ob2YOmioTIrXPtWgicWVRlUy1VKT570Oj6fxo8PI6K8/edit
 socialIcons:
   - icon: /img/jd_site_icons_social_twitter_100x100_white.svg
     type: social
