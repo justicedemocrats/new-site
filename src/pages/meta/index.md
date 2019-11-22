@@ -10,9 +10,6 @@ pressEmail: press@justicedemocrats.com
 phone: 865-408-7313
 address: 'Justice Democrats, P.O Box 910, Knoxville, TN 37901'
 quickLinks:
-  - text: Jobs
-    url: >-
-      https://docs.google.com/document/d/1ob2YOmioTIrXPtWgicWVRlUy1VKT570Oj6fxo8PI6K8/edit
   - text: Nomination Quick Reference Guide
     url: >-
       https://docs.google.com/document/d/10rxLBisP6kE8bWM-47_y-G7frgLPYU66BuMI9LmZgm0/edit
