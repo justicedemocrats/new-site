@@ -1,7 +1,8 @@
 import React from "react";
 import store from "store";
 
-const DEFAULT_DONATE_URL = "https://secure.actblue.com/donate/justicedemocrats";
+const DEFAULT_DONATE_URL =
+  "https://secure.actblue.com/donate/justicedemocrats?refcode=website";
 
 export default class DonateRedirect extends React.Component {
   componentDidMount() {
