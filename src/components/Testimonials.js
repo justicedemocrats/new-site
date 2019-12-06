@@ -14,7 +14,7 @@ const Testimonials = ({ testimonials }) => (
       </article>
     ))}
   </div>
-)
+);
 
 Testimonials.propTypes = {
   testimonials: PropTypes.arrayOf(
@@ -23,6 +23,6 @@ Testimonials.propTypes = {
       author: PropTypes.string,
     })
   ),
-}
+};
 
 export default Testimonials

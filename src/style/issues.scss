@@ -21,12 +21,19 @@
     display: flex;
     align-items: center;
     font-size: 18px;
-    margin: 10px 0px;
-
+    margin: 10px 0;
+    padding: 0;
+    border: none;
     img {
       height: 15px;
       margin-right: 20px;
       cursor: pointer;
+    }
+    img:hover {
+      filter: brightness(75%);
+    }
+    img:active {
+      filter: brightness(50%);
     }
   }
 }

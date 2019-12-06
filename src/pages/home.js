@@ -61,7 +61,7 @@ const IndexPage = ({ data }) => {
     bannerUrl
   } = data.landingPage.edges[0].node.frontmatter;
 
-  console.log(data.landingPage.edges[0].node.frontmatter);
+  //console.log(data.landingPage.edges[0].node.frontmatter);
 
   const {
     launchModeEnabled,
@@ -89,6 +89,7 @@ const IndexPage = ({ data }) => {
         <img
           src={bannerBackgroundImg}
           style={{ width: "100%", position: "absolute" }}
+          alt={"main-banner"}
         />
         <Default>
           <form
@@ -157,7 +158,14 @@ const IndexPage = ({ data }) => {
                   .split(".")
                   .filter(section => section != "")
                   .map((section, idx) =>
-                    idx > 0 ? [<br />, section + "."] : [section + "."]
+                    <React.Fragment key={idx}>
+                      {
+                        idx > 0 ? <br/> : null
+                      }
+                      {
+                        section + "."
+                      }
+                    </React.Fragment>
                   )}
               </div>
               <div
@@ -189,6 +197,7 @@ const IndexPage = ({ data }) => {
           >
             <Default>
               <img
+                alt={"first-callout-icon"}
                 src={firstCalloutIcon}
                 style={{
                   height: 60
@@ -214,9 +223,9 @@ const IndexPage = ({ data }) => {
             width="100%"
             height="500"
             src={youtubeVideo}
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           />
         </div>
       )}
@@ -286,15 +295,16 @@ const IndexPage = ({ data }) => {
             className="primary-issues-container row"
             style={{ marginTop: 30 }}
           >
-            {primaryIssues.map(({ text, image, url, color }) => (
+            {primaryIssues.map(({ text, image, url, color }, i) => (
               <div
+                key={i}
                 style={{
                   height: 300,
                   paddingTop: 10
                 }}
                 className="four columns primary-issue-box"
               >
-                <img src={image} style={{ marginBottom: 10 }} />
+                <img alt={"primary-issue-" + i} src={image} style={{ marginBottom: 10 }} />
                 <a
                   className="primary-issue-text"
                   style={{

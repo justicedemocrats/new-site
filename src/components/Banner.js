@@ -15,7 +15,7 @@ export default props => {
     >
       <div className="page-contents">
         <div className="banner-text">
-          {first == last ? (
+          {first === last ? (
             <div className="banner-text-bold">{first}</div>
           ) : (
             [

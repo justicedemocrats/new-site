@@ -37,34 +37,14 @@ class Navbar extends React.Component {
 
   render() {
     const { path } = this.props;
-
-    if (path == "/" || path == "") {
+    if (path === "/" || path === "") {
       return (
-        <div className="navbar" style={{ osition: "fixed" }}>
+        <div className="navbar" style={{ position: "fixed" }}>
           <div className="navbar desktop">
-            <Default>
-              <div className="nav-social-container">
-                {/* <TwitterButton />
-              <FacebookButton /> */}
-              </div>
-            </Default>
             <HeaderLogo />
             <Link
               to="/home"
-              style={{
-                width: 150,
-                display: "block",
-                textDecoration: "none",
-                color: "white",
-                padding: 10,
-                textTransform: "uppercase",
-                height: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                marginLeft: 10
-              }}
-              className="orange-bg bold-m"
+              className="orange-bg bold-m navbar-enter-button"
             >
               <div style={{ textAlign: "center" }}> Enter Site </div>
             </Link>
@@ -86,27 +66,16 @@ class Navbar extends React.Component {
               <a
                 href="/donate"
                 target="_blank"
-                style={{
-                  width: 150,
-                  display: "block",
-                  textDecoration: "none",
-                  color: "white",
-                  padding: 10,
-                  textTransform: "uppercase",
-                  height: "100%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center"
-                }}
-                className="light-blue-bg bold-m"
+                className="light-blue-bg bold-m navbar-donate-button"
               >
-                <div> Donate </div>
+                <div>Donate</div>
               </a>
             </div>
             <div className="navbar-hanger">
-              {links.map(({ display, href, children }) => (
+              {links.map(({ display, href, children }, i) => (
                 <div
                   className={`hanger-link-container ${display.toLowerCase()}`}
+                  key={"nav-link-" + i}
                 >
                   <DesktopNavLink display={display} href={href} />
 
@@ -115,6 +84,7 @@ class Navbar extends React.Component {
                       {...child}
                       isChild={true}
                       heightOffset={(idx + 1) * 50}
+                      key={"nav-link-op-" + idx}
                     />
                   ))}
                 </div>
@@ -135,15 +105,15 @@ class Navbar extends React.Component {
               onStateChange={this.handleMenuChange}
               isOpen={this.state.open}
             >
-              {links.map(({ display, href, children }) => (
-                <div onClick={this.closeMenu}>
+              {links.map(({ display, href, children }, linkIndex) => (
+                <div onClick={this.closeMenu} key={"mobile-nav-link-" + linkIndex}>
                   <MobileNavLink display={display} href={href} />
-
-                  {(children || []).map(child => (
+                  {(children || []).map((child, optionIndex) => (
                     <MobileNavLink
                       display={child.display}
                       href={child.href}
                       isChild={true}
+                      key={"mobile-nav-link-op-" + optionIndex}
                     />
                   ))}
                 </div>

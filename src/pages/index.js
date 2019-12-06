@@ -46,9 +46,9 @@ export const SplashPageTemplate = ({
             width="60%"
             height="400"
             src={youtubeVideo}
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           />
         )}
         <div
@@ -70,9 +70,9 @@ export const SplashPageTemplate = ({
               width="100%"
               height="300"
               src={youtubeVideo}
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             />
           )}
 

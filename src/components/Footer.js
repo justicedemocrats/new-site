@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
       paidForMessage,
       copyright,
       phone,
-    } = this.props
+    } = this.props;
 
     return (
       <div>
@@ -55,31 +55,31 @@ export default class Footer extends React.Component {
           <div className="footer-section six columns">
             <div className="footer-section-title extra-bold-m">Quick Links</div>
             <div className="footer-section-contents quick-links standard-text">
-              {quickLinks.map(({ text, url }) => (
-                <a href={url} target="_blank" className="bold-m">
+              {quickLinks.map(({ text, url }, i) => (
+                <a href={url} target="_blank" className="bold-m" key={"footer-link-" + i}>
                   {text}
                 </a>
               ))}
             </div>
 
             <div className="social-icons">
-              {socialIcons.filter(({ type }) => type == 'social').map(({
+              {socialIcons.filter(({ type }) => type === 'social').map(({
                 icon,
                 url,
-              }) => (
-                <a href={url} target="_blank">
-                  <img src={icon} />
+              }, i) => (
+                <a href={url} target="_blank" key={"social-link-" + i}>
+                  <img alt={url + " logo"} src={icon} />
                 </a>
               ))}
 
               <div className="icon-divider" />
 
-              {socialIcons.filter(({ type }) => type == 'contact').map(({
+              {socialIcons.filter(({ type }) => type === 'contact').map(({
                 icon,
                 url,
-              }) => (
-                <a href={url} target="_blank">
-                  <img src={icon} />
+              }, i) => (
+                <a href={url} target="_blank" key={"contact-link-" + i}>
+                  <img alt={url + " logo"} src={icon} />
                 </a>
               ))}
             </div>

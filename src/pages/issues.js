@@ -51,8 +51,8 @@ const IssuePageTemplate = ({
             </div>
           </div>
 
-          {sections.map(({ title, icon, intro, planks }) => (
-            <div>
+          {sections.map(({ title, icon, intro, planks }, i) => (
+            <div key={i}>
               <div
                 id={lastWord(title).toLowerCase()}
                 name={lastWord(title).toLowerCase()}
