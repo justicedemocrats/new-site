@@ -9,7 +9,7 @@ electionDate: '2019-08-15'
 electionType: primary
 office: house
 incumbent: false
-website: 'https://jessicacisnerosforcongress.com'
+website: 'https://www.jessicacisnerosforcongress.com'
 donationLink: 'https://secure.actblue.com/donate/jessica-goal'
 outcome: Unknown
 image: /img/jd_site_jessicacisneros_550x600_061219.jpg
