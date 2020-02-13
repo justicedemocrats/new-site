@@ -19,7 +19,7 @@ introContent: >-
   who have a bold vision to transform our economy and democracy.
 firstCalloutIcon: /img/jd_site_home_icon_4jds_mini_350x200.png
 firstCalloutText: >-
-  We need a Democratic Party that fights for its voters, not just its corporate
+  We need a Democratic Party that fights for its voters, not its corporate
   donors. 
 
   That’s why we helped elect Alexandria Ocasio-Cortez to Congress. We need
