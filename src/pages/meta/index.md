@@ -36,23 +36,13 @@ socialIcons:
     type: contact
     url: 'mailto:us@justicedemocrats.com'
 ctaEnabled: true
-ctaName: primary-cuellar-1-11
-ctaTitle: Our First 2020 Target
-ctaImage: /img/cuellar-primary-graphic.png
-ctaBody: |-
-  We're launching our first primary target: Henry Cuellar, a fake Democrat.
-
-  ❌ Votes with Trump 69% of the time
-
-  ❌ 'A' Rating from the NRA
-
-  ❌ Voted to penalize sanctuary cities
-
-  ❌ Fundraises for the GOP
-
-  ✅ Let's recruit a grassroots progressive challenger
-ctaText: Support Our Challenge
-ctaUrl: 'https://secure.actblue.com/donate/cuellarprimaryfund?refcode=cuellarmodalpopup'
+ctaName: primarywin-jcisneros-3-03
+ctaTitle: Ben remove this text please
+ctaImage: /img/jd2020_jcisneroswin_site_popup_800x800.png
+ctaBody: Ben remove this text please
+ctaText: Ben remove this text please
+ctaUrl: >-
+  https://secure.actblue.com/donate/jdweb-20200303-site?refcode=jd-web-20200303-po
 launchModeEnabled: false
 launchingCandidateName: Jamaal Bowman
 launchingCandidateDonateUrl: 'https://secure.actblue.com/donate/jdjamaal-launch?refcode=jd-site'
