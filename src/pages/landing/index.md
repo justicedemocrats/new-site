@@ -59,7 +59,7 @@ blocks:
       disproportionately wealthier, whiter, and more male than the base. 
 
 
-      **Now it’s time for more leaders in the Democratic Party who don’t just
+      **Now it’s time for more leaders in the Democratic Party who don’t
       represent corporate donors, but the voters of the Democratic Party:**
       women, people of color, young people, and working-class people of all
       backgrounds to help build our progressive movement.
