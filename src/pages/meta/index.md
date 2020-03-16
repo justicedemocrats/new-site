@@ -31,7 +31,7 @@ socialIcons:
     url: 'https://www.youtube.com/channel/UC5KuItQubgNaAiWoZXypuiw'
   - icon: /img/jd_site_icons_contact_phone_100x100_white.svg
     type: contact
-    url: 'tel:8652459567'
+    url: 'tel:8654087313'
   - icon: /img/jd_site_icons_contact_email_100x100_white.svg
     type: contact
     url: 'mailto:us@justicedemocrats.com'
