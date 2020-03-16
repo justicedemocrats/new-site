@@ -12,7 +12,7 @@ header: >-
   democracy.
 
 
-  We need a Democratic Party that fights for its voters, not just its corporate
+  We need a Democratic Party that fights for its voters, not its corporate
   donors. That’s why we helped elect leaders like Alexandria Ocasio-Cortez to
   Congress. We need leadership in the Democratic Party that will represent and
   fight for our communities.
