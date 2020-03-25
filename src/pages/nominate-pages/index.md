@@ -284,4 +284,4 @@ stages:
 
 Help us find them by nominating a candidate, or by nominating a district where you want to help find a great candidate. 
 
-We're focused on recruiting candidates to run in districts where the incumbent Democrat is demographically and ideologically out-of-touch with the voters of the district.
+We're focused on recruiting candidates to run in districts where the incumbent Democrat is out-of-touch with the voters of the district.
