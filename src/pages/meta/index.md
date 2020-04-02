@@ -35,16 +35,15 @@ socialIcons:
   - icon: /img/jd_site_icons_contact_email_100x100_white.svg
     type: contact
     url: 'mailto:us@justicedemocrats.com'
-ctaEnabled: true
+ctaEnabled: false
 ctaName: primarywin-jcisneros-3-03
 ctaTitle: Ben remove this text please
 ctaImage: /img/jd2020_jcisneroswin_site_popup_800x800.png
 ctaBody: Ben remove this text please
 ctaText: Ben remove this text please
-ctaUrl: >-
-  https://secure.actblue.com/donate/jdweb-20200303-site?refcode=jd-web-20200303-po
+ctaUrl: 'https://secure.actblue.com/donate/justicedemocrats?refcode=website'
 launchModeEnabled: false
-launchingCandidateName: Jamaal Bowman
-launchingCandidateDonateUrl: 'https://secure.actblue.com/donate/jdjamaal-launch?refcode=jd-site'
+launchingCandidateName: Justice Democrats
+launchingCandidateDonateUrl: 'https://secure.actblue.com/donate/justicedemocrats?refcode=website'
 ---
 
