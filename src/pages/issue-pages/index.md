@@ -197,13 +197,10 @@ sections:
           before 2003.
         title: Abolish ICE
       - contents: >-
-          Super PACs should be banned, private donations to politicians and
-          campaigns should be banned, and a clean public financing system should
-          be implemented to end the takeover of our government by corporations
-          and billionaires. Americans deserve free and fair elections — free
-          from the corruption of big money donors. The Supreme Court has
-          effectively legalized bribery. We need public financing of our
-          elections.
+          We must confront the power of large corporations, billionaires, and
+          wealthy campaign contributors in our democracy. We must end Citizens
+          United. We must curtail the power of SuperPACs. We need a public
+          financing system.
         title: End Corruption
       - contents: >-
           America imprisons more people than any other nation in the world. With
@@ -231,11 +228,13 @@ sections:
       - contents: >-
           We recently gave Saudi Arabia billions in weapons and watched the
           civilian death toll in their vicious bombing campaign in Yemen tick
-          up. We continue sending Egypt arms as they violently crack down on
-          peaceful protesters. Israel received $38 billion in aid and promptly
-          announced new settlements. The first step to peace is not enabling
-          nations who regularly violate international law.
-        title: Stop Selling Arms to Human Rights Violators
+          up. We continued sending Egypt arms as they violently crack down on
+          peaceful protesters. Israel received $38 billion in aid and announced
+          new settlements and "annexation" of the West Bank. One major step
+          toward a progressive foreign policy is to ensure that our aid to other
+          nations is used to promote peace and security, not  to violate human
+          rights and undermine peace.
+        title: Progressive Foreign Policy
       - contents: >-
           The racist War on Drugs has torn families apart all across our
           country. Politicians in both parties created a system of mass
