@@ -85,12 +85,7 @@ sections:
       - answer: >-
           Justice Democrats is a federal political action committee. We are
           required to be a PAC to accept donations and spend money toward
-          electing federal candidates. PACs have a maximum contribution limit of
-          $5,000 and must report all donations and expenditures. 
-
-
-          This is not a SuperPAC, but a plain old regular PAC. You can learn
-          more about PACs at [**fec.gov**](https://www.fec.gov).  
+          electing federal candidates. 
 
 
           The PAC uses donation money to hire staff that recruits and trains
@@ -123,8 +118,9 @@ sections:
           program in which candidates can opt-in to get access to an auto-dialer
           for voter contact, a texting tool for event turnout, a volunteer
           portal, and other general help on their field program. We also help
-          candidates with recruiting campaign managers, message training, press,
-          creative work, and a host of other services that campaigns require.  
+          candidates with recruiting campaign managers, message training,
+          communications and press strategy, creative work, and a host of other
+          services that campaigns require.  
 
 
           The FEC requires that we charge campaigns money for any direct
@@ -136,8 +132,6 @@ sections:
           fundraises for candidates, but also provides them with the tools and
           people necessary to run a successful campaign.
         question: What type of organization is Justice Democrats?
-      - answer: 'Yes, the Justice Democrats PAC has a federal limit of $5,000 per year.'
-        question: Do you have a dollar amount cap on donations from any one individual?
     title: FUNDING
   - items:
       - answer: >-
