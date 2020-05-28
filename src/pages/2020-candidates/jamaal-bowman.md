@@ -10,7 +10,7 @@ electionType: primary
 office: house
 incumbent: false
 website: 'https://www.bowmanforcongress.com'
-donationLink: 'https://secure.actblue.com/donate/jdjamaal-launch'
+donationLink: 'https://secure.actblue.com/donate/jamaal-jd'
 outcome: Unknown
 image: >-
   /img/5d07cba7fc67ad0ef99ac332_jbowman2020_web_homebanner_photobackground_2400x1200.jpg
