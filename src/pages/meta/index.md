@@ -38,7 +38,7 @@ socialIcons:
 ctaEnabled: true
 ctaName: primarywin-jcisneros-3-03
 ctaTitle: Pop up Title Here
-ctaImage: /img/JD-Jamaal-Bowman-Victory-Popup-1600x1600.png
+ctaImage: /img/JD-Jamaal-Bowman-Victory-Popup-1600x1600_smile.png
 ctaBody: Pop up Body text. Could use some styling if we're going to use it.
 ctaText: Button Text Here
 ctaUrl: 'https://secure.actblue.com/donate/justice-democrats?refcode=jdweb-20200623-popup'
