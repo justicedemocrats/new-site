@@ -18,6 +18,38 @@ body.ReactModal__Body--open {
 }
 .ReactModal__Overlay--after-open {
   font-family: $jd-sans;
+  z-index: 1000000;
+  .cta-modal-close {
+    position: absolute;
+    display: block;
+    right: -10px;
+    top: -10px;
+    height: 30px;
+    width: 30px;
+    text-indent: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    border: none;
+    background: #00769c;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    box-shadow: none;
+    &::before  {
+      content: '\2715';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      right: auto;
+      bottom: auto;
+      transform: translate(calc(-50% + 0.5px), -50%);
+      text-indent: 0;
+      font-size: 18.5px;
+      line-height: normal;
+      font-family: Garamond, "Apple Garamond";
+    }
+  }
   div.modal-counter {
     display: flex;
     flex-direction: row;

@@ -35,15 +35,14 @@ socialIcons:
   - icon: /img/jd_site_icons_contact_email_100x100_white.svg
     type: contact
     url: 'mailto:us@justicedemocrats.com'
-ctaEnabled: false
+ctaEnabled: true
 ctaName: primarywin-jcisneros-3-03
-ctaTitle: Ben remove this text please
-ctaImage: /img/jd2020_jcisneroswin_site_popup_800x800.png
-ctaBody: Ben remove this text please
-ctaText: Ben remove this text please
-ctaUrl: 'https://secure.actblue.com/donate/justicedemocrats?refcode=website'
+ctaTitle: Pop up Title Here
+ctaImage: /img/JD-Jamaal-Bowman-Victory-Popup-1600x1600.png
+ctaBody: Pop up Body text. Could use some styling if we're going to use it.
+ctaText: Button Text Here
+ctaUrl: 'https://secure.actblue.com/donate/justice-democrats?refcode=jdweb-20200623-popup'
 launchModeEnabled: false
 launchingCandidateName: Justice Democrats
 launchingCandidateDonateUrl: 'https://secure.actblue.com/donate/justicedemocrats?refcode=website'
 ---
-

@@ -9,15 +9,18 @@ const customStyles = {
   content: {
     top: "100px",
     left: "50%",
+    top: "50%",
     right: "auto",
     bottom: "auto",
-    width: "75%",
-    transform: "translateX(-50%)",
+    width: "85%",
+    maxWidth: '750px',
+    transform: "translate(-50%, -50%)",
     borderRadius: 0,
     border: "none",
-    borderTop: "2px solid",
-    boxShadow: "0 2px 2px rgba(0,0,0,0.1)",
-    padding: 40
+    //borderTop: "2px solid",
+    boxShadow: "0px 10px 20px 0px rgba(0,0,0,0.5)",
+    padding: 0,
+    overflow: 'visible'
   }
 };
 
@@ -57,7 +60,7 @@ export default class CtaModal extends Component {
     const { ctaTitle, ctaImage, ctaBody, ctaText, ctaUrl } = this.props;
 
     return (
-      <Modal isOpen={true} style={customStyles} onRequestClose={this.close}>
+      <Modal isOpen={true} style={customStyles} onRequestClose={this.close} ariaHideApp={false}>
         <div
           className="cta-modal-content"
           style={{
@@ -66,7 +69,7 @@ export default class CtaModal extends Component {
             alignItems: "center"
           }}
         >
-          <div className="cta-title home-header-b extra-bold-m">{ctaTitle}</div>
+          {/* <div className="cta-title home-header-b extra-bold-m">{ctaTitle}</div>
           <div style={{ marginTop: 10, marginBottom: 10, width: "100%" }}>
             <HTMLContent
               content={ctaBody}
@@ -92,10 +95,12 @@ export default class CtaModal extends Component {
                 {ctaText}
               </a>
             </div>
-          </div>
+          </div> */}
+
+          <button onClick={this.close} className="cta-modal-close">Close</button>
 
           <a href={ctaUrl} target="_blank">
-            <img alt={"cta"} src={ctaImage} style={{ width: "100%" }} />
+            <img alt={"Jamaal Bowman Wins! Help elect more Justice Democrats! Donate"} src={ctaImage} style={{ width: "100%", maxWidth: '800px', display: 'block' }} />
           </a>
         </div>
       </Modal>
@@ -104,8 +109,22 @@ export default class CtaModal extends Component {
 
   modalAlreadySeen = () => {
     const { ctaName } = this.props;
-    const seen = !!store.get(ctaName);
-    store.set(ctaName, new Date());
+    var seen = null;
+    if (!store.get(ctaName)) {
+      seen = false;
+      store.set(ctaName, new Date());
+    } else {
+      const popupDate = new Date(store.get(ctaName));
+      const now = Date.now();
+      const thirtySecs = 30 * 1000;
+      const fiveDays = 5 * 24 * 60 * 60 * 1000;
+      if (now - popupDate > thirtySecs) {
+        store.set(ctaName, new Date());
+        seen = false;
+      } else {
+        seen = !!store.get(ctaName);
+      }
+    }
     return seen;
   };
 }
