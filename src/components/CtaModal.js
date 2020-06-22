@@ -118,7 +118,7 @@ export default class CtaModal extends Component {
       const now = Date.now();
       const thirtySecs = 30 * 1000;
       const fiveDays = 5 * 24 * 60 * 60 * 1000;
-      if (now - popupDate > thirtySecs) {
+      if (now - popupDate > fiveDays) {
         store.set(ctaName, new Date());
         seen = false;
       } else {
