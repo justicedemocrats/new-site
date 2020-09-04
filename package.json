@@ -37,7 +37,7 @@
     "react-mapbox-gl": "^4.0.0",
     "react-modal": "^3.6.1",
     "react-responsive": "^4.1.0",
-    "showdown": "^1.8.6",
+    "showdown": "^1.9.1",
     "store": "^2.0.12",
     "svgo": "^1.2.2",
     "uuid": "^3.2.1"
