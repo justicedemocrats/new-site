@@ -27,7 +27,7 @@
     "mdify": "^1.0.10",
     "moment": "^2.22.2",
     "netlify-cms": "^1.7.0",
-    "papaparse": "^4.6.1",
+    "papaparse": "^5.2.0",
     "prop-types": "15.6.2",
     "react": "16.5.2",
     "react-burger-menu": "^2.5.2",
