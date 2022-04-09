@@ -25,7 +25,7 @@
     "lodash.sortby": "^4.7.0",
     "mapbox-gl": "0.48.0",
     "mdify": "^1.0.10",
-    "moment": "^2.22.2",
+    "moment": "^2.29.2",
     "netlify-cms": "^1.7.0",
     "papaparse": "^4.6.1",
     "prop-types": "15.6.2",
